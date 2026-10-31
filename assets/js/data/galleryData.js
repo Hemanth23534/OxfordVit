@@ -1,88 +1,115 @@
 /**
  * OXFORD VIT – THE LIVING CAMPUS EXPERIENCE
- * Photo & Video Archive Gallery Data
+ * Photo & Video Archive Gallery Data (Synchronized with gallery.json)
  */
 
 export const galleryData = [
   {
-    id: 'gal-1',
+    id: 'gal-campuses-1',
     title: 'Main Academic Campus & Central Quadrangle',
     category: 'campuses',
     badge: 'Ravipadu Road Campus',
-    type: 'photo',
-    caption: 'The main institutional pavilion opposite Kamma Hostel, housing state-of-the-art lecture rooms and science laboratories.',
+    imagePath: 'assets/images/campuses/main-campus.svg',
+    caption: 'The main institutional pavilion opposite Kamma Hostel, housing executive lecture halls, digital labs, and the admissions bureau.',
     bgColor: '#493B4C'
   },
   {
-    id: 'gal-2',
-    title: 'Sankranti Sambaralu Cultural Festivities',
-    category: 'celebrations',
-    badge: 'Traditional Culture',
-    type: 'photo',
+    id: 'gal-campuses-2',
+    title: 'Balaji Bhavan Boys Residential Campus',
+    category: 'campuses',
+    badge: 'Reddy Nagar Hub',
+    imagePath: 'assets/images/campuses/balaji-bhavan.svg',
+    caption: 'Home of the elite IIT-JEE Super-60 cohort with round-the-clock academic mentorship and sports facilities.',
+    bgColor: '#526B54'
+  },
+  {
+    id: 'gal-campuses-3',
+    title: 'Yashoda Bhavan Girls Sanctuary & Gardens',
+    category: 'campuses',
+    badge: 'Dedicated Girls Wing',
+    imagePath: 'assets/images/campuses/yashoda-bhavan.svg',
+    caption: 'Peaceful, biometric-secured residential academy exclusively for girls with on-campus medical care.',
+    bgColor: '#B9A8D8'
+  },
+  {
+    id: 'gal-campuses-4',
+    title: 'Raman Bhavan STEM Labs & CBT Center',
+    category: 'campuses',
+    badge: 'STEM & Olympiads',
+    imagePath: 'assets/images/campuses/raman-bhavan.svg',
+    caption: 'High-tech computer-based testing suites and physics research laboratories named after Sir C.V. Raman.',
+    bgColor: '#493B4C'
+  },
+  {
+    id: 'gal-campuses-5',
+    title: 'Padmavathi Bhavan Tutorial Pods',
+    category: 'campuses',
+    badge: 'Central Study Pods',
+    imagePath: 'assets/images/campuses/padmavathi-bhavan.svg',
+    caption: 'Personalized small-cohort study halls and board examination presentation clinics.',
+    bgColor: '#E9A18C'
+  },
+  {
+    id: 'gal-campuses-6',
+    title: 'KSR Towers Institutional Directorate',
+    category: 'campuses',
+    badge: 'Directorate & Trust HQ',
+    imagePath: 'assets/images/campuses/ksr-towers.svg',
+    caption: 'Administrative nerve center in Arundelpet, headquarters of the KSR Charitable Trust.',
+    bgColor: '#D6B77A'
+  },
+  {
+    id: 'gal-events-1',
+    title: 'Sankranti Sambaralu & Cultural Utsav',
+    category: 'events',
+    badge: 'Cultural Festival',
+    imagePath: 'assets/images/events/sankranti-festival.svg',
     caption: 'Students and faculty celebrating traditional Telugu harvest festivities with Rangoli, Bhogi bonfire, and traditional attire.',
     bgColor: '#E9A18C'
   },
   {
-    id: 'gal-3',
-    title: 'Super-60 Interactive Problem Solving Pods',
-    category: 'academics',
-    badge: 'Balaji Bhavan',
-    type: 'photo',
-    caption: 'Small-cohort evening doubt clearance pods led by senior IIT-JEE Mathematics and Physics faculty.',
-    bgColor: '#526B54'
-  },
-  {
-    id: 'gal-4',
-    title: 'Prathibha Puraskaralu Rankers Felicitation',
-    category: 'celebrations',
+    id: 'gal-events-2',
+    title: 'Annual Prathibha Puraskaralu Convocation',
+    category: 'events',
     badge: 'Annual Awards',
-    type: 'photo',
-    caption: 'K. Sambasiva Rao (KSR) and Panadi Raghava felicitating state and national rankers with parents on stage.',
+    imagePath: 'assets/images/events/prathibha-puraskaralu.svg',
+    caption: 'K. Sambasiva Rao (KSR) and Panadi Raghava felicitating state and national rankers with gold medals in the presence of parents.',
     bgColor: '#D6B77A'
   },
   {
-    id: 'gal-5',
-    title: 'Yashoda Bhavan Girls Residence & Garden',
-    category: 'life',
-    badge: 'Residential Security',
-    type: 'photo',
-    caption: 'Peaceful, secured, and lush environment designed exclusively for girl scholars with 24/7 surveillance.',
-    bgColor: '#B9A8D8'
-  },
-  {
-    id: 'gal-6',
-    title: 'Sir C.V. Raman Science Laboratories',
-    category: 'academics',
-    badge: 'Raman Bhavan',
-    type: 'photo',
-    caption: 'Modern Physics and Organic Chemistry experiment setups supporting both practical exams and Olympiad demonstrations.',
-    bgColor: '#493B4C'
-  },
-  {
-    id: 'gal-7',
-    title: 'Annual Inter-Campus Sports Meet',
-    category: 'life',
-    badge: 'Sports & Fitness',
-    type: 'photo',
-    caption: 'Volleyball, badminton, and athletics tournaments promoting physical vigor, sportsmanship, and mental wellness.',
+    id: 'gal-events-3',
+    title: 'National Science Day Research Expo',
+    category: 'events',
+    badge: 'Science Fair',
+    imagePath: 'assets/images/events/science-day.svg',
+    caption: '50+ student-built physics, chemistry, and biological working models exhibited at Raman Bhavan.',
     bgColor: '#526B54'
   },
   {
-    id: 'gal-8',
-    title: 'KSR Charitable Trust Scholarship Award Ceremony',
-    category: 'celebrations',
-    badge: 'Philanthropy & Trust',
-    type: 'photo',
-    caption: 'Financial aid and merit scholarships distributed to talented students from rural and economically challenged backgrounds.',
+    id: 'gal-transport-1',
+    title: 'Integrated Institutional Bus Fleet',
+    category: 'transport',
+    badge: 'Regional Transport',
+    imagePath: 'assets/images/transport/campus-bus-fleet.svg',
+    caption: 'Fleet of GPS-tracked institution buses connecting Narasaraopet, Chilakaluripet, Vinukonda, Sattenapalle, and surrounding mandals.',
     bgColor: '#D6B77A'
   },
   {
-    id: 'gal-9',
-    title: 'Central Digital Reference Library',
-    category: 'academics',
-    badge: 'Main Campus',
-    type: 'photo',
-    caption: 'Thousands of specialized competitive exam reference books, national journals, and quiet reading booths.',
+    id: 'gal-achievements-1',
+    title: 'Wall of Champions Felicitations',
+    category: 'achievements',
+    badge: 'AIR Top Ranks',
+    imagePath: 'assets/images/achievements/champions-wall.svg',
+    caption: 'Celebrating JEE Advanced AIR 48, NEET 692 Marks, and AP EAPCET State Rank 19 achievers.',
     bgColor: '#493B4C'
+  },
+  {
+    id: 'gal-students-1',
+    title: 'Super-60 Evening Doubt Resolution Pods',
+    category: 'students',
+    badge: 'Residential Study',
+    imagePath: 'assets/images/students/study-session.svg',
+    caption: 'Focused 3-hour micro-pods with resident IIT-JEE faculty clearing mathematical and scientific doubts.',
+    bgColor: '#526B54'
   }
 ];

@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400" width="100%" height="100%">
+  <defs>
+    <linearGradient id="champBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#493B4C"/>
+      <stop offset="100%" stop-color="#211823"/>
+    </linearGradient>
+    <linearGradient id="goldPlate" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#D6B77A"/>
+      <stop offset="100%" stop-color="#B3914B"/>
+    </linearGradient>
+  </defs>
+  <rect width="600" height="400" rx="16" fill="url(#champBg)"/>
+
+  <!-- 3 Medallion Frames -->
+  <!-- Medallion 1: JEE Advanced -->
+  <g transform="translate(110, 140)">
+    <rect x="-70" y="-30" width="140" height="180" rx="12" fill="rgba(255,255,255,0.06)" stroke="#D6B77A" stroke-width="1.5"/>
+    <circle cx="0" cy="25" r="38" fill="url(#goldPlate)"/>
+    <text x="0" y="32" font-family="'Cinzel', serif" font-size="14" font-weight="800" fill="#493B4C" text-anchor="middle">AIR 48</text>
+    <text x="0" y="85" font-family="'Space Grotesk', sans-serif" font-size="12" font-weight="700" fill="#F7F3E9" text-anchor="middle">JEE ADVANCED</text>
+    <text x="0" y="105" font-family="'JetBrains Mono', monospace" font-size="10" fill="#D6B77A" text-anchor="middle">K. Vamsi Krishna</text>
+    <text x="0" y="125" font-family="'Space Grotesk', sans-serif" font-size="9" fill="#B9A8D8" text-anchor="middle">Balaji Bhavan</text>
+  </g>
+
+  <!-- Medallion 2: NEET UG -->
+  <g transform="translate(300, 120)">
+    <rect x="-80" y="-30" width="160" height="200" rx="14" fill="rgba(214,183,122,0.12)" stroke="#D6B77A" stroke-width="2.5"/>
+    <circle cx="0" cy="30" r="45" fill="url(#goldPlate)"/>
+    <text x="0" y="30" font-family="'Cinzel', serif" font-size="16" font-weight="800" fill="#493B4C" text-anchor="middle">692</text>
+    <text x="0" y="46" font-family="'JetBrains Mono', monospace" font-size="10" font-weight="700" fill="#493B4C" text-anchor="middle">/ 720</text>
+    <text x="0" y="100" font-family="'Space Grotesk', sans-serif" font-size="13" font-weight="700" fill="#F7F3E9" text-anchor="middle">NEET-UG AIR 112</text>
+    <text x="0" y="120" font-family="'JetBrains Mono', monospace" font-size="11" fill="#D6B77A" text-anchor="middle">P. Sai Meghana</text>
+    <text x="0" y="140" font-family="'Space Grotesk', sans-serif" font-size="10" fill="#526B54" text-anchor="middle">Yashoda Bhavan</text>
+  </g>
+
+  <!-- Medallion 3: BIEAP Board -->
+  <g transform="translate(490, 140)">
+    <rect x="-70" y="-30" width="140" height="180" rx="12" fill="rgba(255,255,255,0.06)" stroke="#D6B77A" stroke-width="1.5"/>
+    <circle cx="0" cy="25" r="38" fill="url(#goldPlate)"/>
+    <text x="0" y="32" font-family="'Cinzel', serif" font-size="14" font-weight="800" fill="#493B4C" text-anchor="middle">992</text>
+    <text x="0" y="85" font-family="'Space Grotesk', sans-serif" font-size="12" font-weight="700" fill="#F7F3E9" text-anchor="middle">STATE 1ST MARKS</text>
+    <text x="0" y="105" font-family="'JetBrains Mono', monospace" font-size="10" fill="#D6B77A" text-anchor="middle">M. Bhavya Sri</text>
+    <text x="0" y="125" font-family="'Space Grotesk', sans-serif" font-size="9" fill="#E9A18C" text-anchor="middle">Yashoda Bhavan</text>
+  </g>
+
+  <text x="300" y="55" font-family="'Cinzel', 'Playfair Display', serif" font-size="24" font-weight="700" fill="#D6B77A" text-anchor="middle" letter-spacing="2">WALL OF CHAMPIONS</text>
+  <text x="300" y="78" font-family="'Space Grotesk', sans-serif" font-size="12" font-weight="600" fill="#F7F3E9" text-anchor="middle" letter-spacing="1">VERIFIED ALL INDIA &amp; STATE TOP RANKS</text>
+</svg>

@@ -12,6 +12,7 @@ const PUBLIC_DIR = path.join(__dirname);
 const DATA_DIR = path.join(__dirname, 'data');
 const ADMISSIONS_FILE = path.join(DATA_DIR, 'admissions.json');
 const CONTENT_FILE = path.join(DATA_DIR, 'content.json');
+const GALLERY_FILE = path.join(__dirname, 'gallery.json');
 
 // Ensure data files exist
 if (!fs.existsSync(DATA_DIR)) {
@@ -169,6 +170,62 @@ const server = http.createServer((req, res) => {
           return sendJson(res, 200, { success: true, message: 'Content updated successfully.', data: updated });
         } catch (saveErr) {
           return sendJson(res, 500, { success: false, message: 'Error saving content updates.' });
+        }
+      });
+      return;
+    }
+  }
+
+  // 3. Dynamic Gallery Media Management API
+  if (parsedUrl === '/api/gallery') {
+    if (req.method === 'GET') {
+      try {
+        if (!fs.existsSync(GALLERY_FILE)) {
+          return sendJson(res, 200, { success: true, count: 0, data: [] });
+        }
+        const data = JSON.parse(fs.readFileSync(GALLERY_FILE, 'utf-8'));
+        const items = data.mediaItems || [];
+        return sendJson(res, 200, { success: true, count: items.length, data: items });
+      } catch (err) {
+        return sendJson(res, 500, { success: false, message: 'Error reading gallery media data.' });
+      }
+    }
+
+    if (req.method === 'POST') {
+      parseJsonBody(req, (err, payload) => {
+        if (err || !payload.title) {
+          return sendJson(res, 400, { success: false, message: 'Invalid payload: title is required.' });
+        }
+
+        try {
+          let data = { mediaItems: [] };
+          if (fs.existsSync(GALLERY_FILE)) {
+            data = JSON.parse(fs.readFileSync(GALLERY_FILE, 'utf-8'));
+          }
+
+          const newId = `gal-${Date.now()}`;
+          const newMedia = {
+            id: newId,
+            title: payload.title.trim(),
+            category: payload.category || 'events',
+            badge: payload.badge || 'New Media',
+            imagePath: payload.imagePath || 'assets/images/gallery/quadrangle-view.svg',
+            caption: payload.caption || '',
+            bgColor: payload.bgColor || '#493B4C',
+            publishedAt: new Date().toISOString()
+          };
+
+          if (!data.mediaItems) data.mediaItems = [];
+          data.mediaItems.unshift(newMedia);
+          fs.writeFileSync(GALLERY_FILE, JSON.stringify(data, null, 2));
+
+          return sendJson(res, 201, {
+            success: true,
+            message: 'New media item successfully added to gallery.',
+            data: newMedia
+          });
+        } catch (saveErr) {
+          return sendJson(res, 500, { success: false, message: 'Error persisting gallery media item.' });
         }
       });
       return;

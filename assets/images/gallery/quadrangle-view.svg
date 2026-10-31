@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400" width="100%" height="100%">
+  <defs>
+    <linearGradient id="quadBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#F7F3E9"/>
+      <stop offset="100%" stop-color="#D6B77A"/>
+    </linearGradient>
+  </defs>
+  <rect width="600" height="400" rx="16" fill="url(#quadBg)"/>
+
+  <!-- Academic Pavilion Architecture Silhouette -->
+  <rect x="80" y="160" width="440" height="150" fill="#493B4C" rx="6"/>
+  <!-- Central Portico Columns -->
+  <rect x="110" y="200" width="16" height="110" fill="#D6B77A"/>
+  <rect x="160" y="200" width="16" height="110" fill="#D6B77A"/>
+  <rect x="210" y="200" width="16" height="110" fill="#D6B77A"/>
+  <rect x="374" y="200" width="16" height="110" fill="#D6B77A"/>
+  <rect x="424" y="200" width="16" height="110" fill="#D6B77A"/>
+  <rect x="474" y="200" width="16" height="110" fill="#D6B77A"/>
+
+  <!-- Central Pediment / Triangular Crest -->
+  <polygon points="300,100 240,160 360,160" fill="#D6B77A"/>
+  <polygon points="300,115 255,155 345,155" fill="#493B4C"/>
+  <circle cx="300" cy="138" r="10" fill="#F7F3E9"/>
+
+  <!-- Manicured Botanical Gardens in Foreground -->
+  <ellipse cx="140" cy="330" rx="45" ry="16" fill="#526B54"/>
+  <ellipse cx="460" cy="330" rx="45" ry="16" fill="#526B54"/>
+  <circle cx="300" cy="330" r="22" fill="#526B54"/>
+
+  <text x="300" y="55" font-family="'Cinzel', 'Playfair Display', serif" font-size="24" font-weight="700" fill="#493B4C" text-anchor="middle" letter-spacing="2">CENTRAL ACADEMIC QUADRANGLE</text>
+  <text x="300" y="80" font-family="'Space Grotesk', sans-serif" font-size="12" font-weight="600" fill="#526B54" text-anchor="middle" letter-spacing="1">THE LIVING CAMPUS PAVILION • NARASARAOPET</text>
+</svg>

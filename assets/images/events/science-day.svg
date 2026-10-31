@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400" width="100%" height="100%">
+  <defs>
+    <linearGradient id="sciBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#2D3A2F"/>
+      <stop offset="50%" stop-color="#493B4C"/>
+      <stop offset="100%" stop-color="#1B261D"/>
+    </linearGradient>
+    <linearGradient id="flaskLiquid" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#B9A8D8"/>
+      <stop offset="100%" stop-color="#526B54"/>
+    </linearGradient>
+  </defs>
+  <rect width="600" height="400" rx="16" fill="url(#sciBg)"/>
+
+  <!-- Atomic Orbital Rings Centered -->
+  <g transform="translate(300, 200)" stroke="#D6B77A" stroke-width="1.8" fill="none">
+    <ellipse cx="0" cy="0" rx="140" ry="45" transform="rotate(30)" opacity="0.6"/>
+    <ellipse cx="0" cy="0" rx="140" ry="45" transform="rotate(-30)" opacity="0.6"/>
+    <ellipse cx="0" cy="0" rx="140" ry="45" transform="rotate(90)" opacity="0.6"/>
+    <circle cx="0" cy="0" r="14" fill="#D6B77A"/>
+    <!-- Electron Nodes -->
+    <circle cx="120" cy="70" r="5" fill="#E9A18C"/>
+    <circle cx="-120" cy="-70" r="5" fill="#B9A8D8"/>
+    <circle cx="0" cy="140" r="5" fill="#526B54"/>
+  </g>
+
+  <!-- Chemical Flask Silhouette Left -->
+  <path d="M120 280 L140 220 L140 180 L160 180 L160 220 L180 280 Z" fill="url(#flaskLiquid)" opacity="0.85" stroke="#F7F3E9" stroke-width="1.5"/>
+
+  <!-- Prism with Dispersed Spectrum Right -->
+  <polygon points="460,190 430,260 490,260" fill="none" stroke="#D6B77A" stroke-width="2"/>
+  <line x1="390" y1="230" x2="445" y2="225" stroke="#FFFFFF" stroke-width="2"/>
+  <line x1="475" y1="225" x2="530" y2="210" stroke="#E9A18C" stroke-width="1.5"/>
+  <line x1="475" y1="225" x2="530" y2="225" stroke="#D6B77A" stroke-width="1.5"/>
+  <line x1="475" y1="225" x2="530" y2="240" stroke="#B9A8D8" stroke-width="1.5"/>
+
+  <text x="300" y="55" font-family="'Cinzel', 'Playfair Display', serif" font-size="24" font-weight="700" fill="#D6B77A" text-anchor="middle" letter-spacing="2">NATIONAL SCIENCE DAY</text>
+  <text x="300" y="80" font-family="'Space Grotesk', sans-serif" font-size="12" font-weight="600" fill="#F7F3E9" text-anchor="middle" letter-spacing="1">RESEARCH EXPO &amp; RAMAN SCIENTIFIC EXHIBITION</text>
+  <text x="300" y="370" font-family="'JetBrains Mono', monospace" font-size="12" font-weight="700" fill="#B9A8D8" text-anchor="middle">RAMAN BHAVAN ADVANCED LABORATORIES • NARASARAOPET</text>
+</svg>

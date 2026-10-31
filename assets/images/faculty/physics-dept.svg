@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" width="100%" height="100%">
+  <defs>
+    <linearGradient id="physGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#526B54"/>
+      <stop offset="100%" stop-color="#2D3C2F"/>
+    </linearGradient>
+  </defs>
+  <rect width="400" height="400" rx="20" fill="url(#physGrad)"/>
+  <!-- Magnet / Field Lines -->
+  <circle cx="200" cy="180" r="80" fill="none" stroke="#D6B77A" stroke-width="2.5"/>
+  <ellipse cx="200" cy="180" rx="120" ry="40" fill="none" stroke="#F7F3E9" stroke-width="1.5" stroke-dasharray="5 5"/>
+  <circle cx="200" cy="180" r="16" fill="#D6B77A"/>
+  <text x="200" y="340" font-family="'Cinzel', serif" font-size="16" font-weight="700" fill="#F7F3E9" text-anchor="middle" letter-spacing="1.5">DEPARTMENT OF PHYSICS</text>
+  <text x="200" y="365" font-family="'Space Grotesk', sans-serif" font-size="11" fill="#D6B77A" text-anchor="middle">EXPERIMENTAL &amp; THEORETICAL PHYSICS</text>
+</svg>

@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" width="100%" height="100%">
+  <defs>
+    <linearGradient id="mgmtBg1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#493B4C"/>
+      <stop offset="100%" stop-color="#2D232F"/>
+    </linearGradient>
+    <linearGradient id="goldAura" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#D6B77A"/>
+      <stop offset="100%" stop-color="#B89758"/>
+    </linearGradient>
+  </defs>
+  <rect width="400" height="400" rx="24" fill="url(#mgmtBg1)"/>
+  <circle cx="200" cy="200" r="160" fill="none" stroke="url(#goldAura)" stroke-width="2" stroke-dasharray="8 6" opacity="0.6"/>
+  <circle cx="200" cy="165" r="75" fill="url(#goldAura)" opacity="0.9"/>
+  <path d="M120 330 C120 250, 280 250, 280 330 Z" fill="url(#goldAura)" opacity="0.85"/>
+  <circle cx="200" cy="155" r="45" fill="#493B4C"/>
+  <!-- Dignitary Collar / Robe Accent -->
+  <path d="M170 330 L200 255 L230 330 Z" fill="#F7F3E9" opacity="0.95"/>
+  <text x="200" y="370" font-family="'Cinzel', 'Playfair Display', serif" font-size="18" font-weight="700" fill="#D6B77A" text-anchor="middle" letter-spacing="1.5">DR. S. FRANCIS REDDY</text>
+  <text x="200" y="390" font-family="'Space Grotesk', sans-serif" font-size="11" font-weight="600" fill="#F7F3E9" text-anchor="middle" opacity="0.8">CHAIRMAN • OXFORD EDUCATIONAL GROUP</text>
+</svg>

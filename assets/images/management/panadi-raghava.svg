@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" width="100%" height="100%">
+  <defs>
+    <linearGradient id="mgmtBg3" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#493B4C"/>
+      <stop offset="100%" stop-color="#312235"/>
+    </linearGradient>
+    <linearGradient id="lavenderGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#B9A8D8"/>
+      <stop offset="100%" stop-color="#D6B77A"/>
+    </linearGradient>
+  </defs>
+  <rect width="400" height="400" rx="24" fill="url(#mgmtBg3)"/>
+  <circle cx="200" cy="200" r="160" fill="none" stroke="url(#lavenderGrad)" stroke-width="2" stroke-dasharray="10 5" opacity="0.6"/>
+  <!-- Mathematical Calculus / Matrix Symbols in Background -->
+  <text x="65" y="110" font-family="'JetBrains Mono', monospace" font-size="28" fill="#B9A8D8" opacity="0.35">∫</text>
+  <text x="320" y="130" font-family="'JetBrains Mono', monospace" font-size="26" fill="#D6B77A" opacity="0.35">∑</text>
+  <text x="75" y="270" font-family="'JetBrains Mono', monospace" font-size="24" fill="#E9A18C" opacity="0.35">lim</text>
+  <text x="315" y="280" font-family="'JetBrains Mono', monospace" font-size="28" fill="#B9A8D8" opacity="0.35">∞</text>
+  <circle cx="200" cy="165" r="75" fill="url(#lavenderGrad)" opacity="0.9"/>
+  <path d="M120 330 C120 250, 280 250, 280 330 Z" fill="url(#lavenderGrad)" opacity="0.85"/>
+  <circle cx="200" cy="155" r="45" fill="#493B4C"/>
+  <path d="M175 330 L200 255 L225 330 Z" fill="#F7F3E9" opacity="0.95"/>
+  <text x="200" y="370" font-family="'Cinzel', 'Playfair Display', serif" font-size="18" font-weight="700" fill="#D6B77A" text-anchor="middle" letter-spacing="1.5">PANADI RAGHAVA</text>
+  <text x="200" y="390" font-family="'Space Grotesk', sans-serif" font-size="11" font-weight="600" fill="#B9A8D8" text-anchor="middle" opacity="0.9">ACADEMIC DIRECTOR &amp; DEAN OF MATHEMATICS • @raghava_vit</text>
+</svg>

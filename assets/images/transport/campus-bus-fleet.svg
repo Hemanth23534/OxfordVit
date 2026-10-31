@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400" width="100%" height="100%">
+  <defs>
+    <linearGradient id="busBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#F7F3E9"/>
+      <stop offset="100%" stop-color="#E5DCBF"/>
+    </linearGradient>
+    <linearGradient id="busBody" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#D6B77A"/>
+      <stop offset="100%" stop-color="#C29D55"/>
+    </linearGradient>
+  </defs>
+  <rect width="600" height="400" rx="16" fill="url(#busBg)"/>
+
+  <!-- Road Horizon -->
+  <rect x="0" y="270" width="600" height="130" fill="#493B4C"/>
+  <line x1="0" y1="335" x2="600" y2="335" stroke="#D6B77A" stroke-width="4" stroke-dasharray="25 15"/>
+
+  <!-- Modern Institutional College Bus -->
+  <g transform="translate(100, 140)">
+    <!-- Main Coach Body -->
+    <rect x="0" y="0" width="400" height="130" rx="18" fill="url(#busBody)" stroke="#493B4C" stroke-width="3"/>
+    
+    <!-- Windshield & Passenger Windows -->
+    <rect x="15" y="15" width="55" height="50" rx="6" fill="#493B4C"/>
+    <rect x="80" y="15" width="55" height="50" rx="6" fill="#493B4C"/>
+    <rect x="145" y="15" width="55" height="50" rx="6" fill="#493B4C"/>
+    <rect x="210" y="15" width="55" height="50" rx="6" fill="#493B4C"/>
+    <rect x="275" y="15" width="55" height="50" rx="6" fill="#493B4C"/>
+    <rect x="340" y="15" width="45" height="70" rx="4" fill="#312235"/>
+
+    <!-- Institution Banner Stripe on Bus Body -->
+    <rect x="15" y="80" width="315" height="30" fill="#493B4C" rx="4"/>
+    <text x="172" y="100" font-family="'Cinzel', 'Playfair Display', serif" font-size="14" font-weight="700" fill="#D6B77A" text-anchor="middle" letter-spacing="1.5">OXFORD VIT JUNIOR COLLEGE</text>
+    <text x="172" y="122" font-family="'Space Grotesk', sans-serif" font-size="9" font-weight="700" fill="#F7F3E9" text-anchor="middle">NARASARAOPET • GPS TRACKED FLEET</text>
+
+    <!-- Wheels -->
+    <circle cx="85" cy="130" r="32" fill="#222" stroke="#666" stroke-width="5"/>
+    <circle cx="85" cy="130" r="14" fill="#D6B77A"/>
+    <circle cx="315" cy="130" r="32" fill="#222" stroke="#666" stroke-width="5"/>
+    <circle cx="315" cy="130" r="14" fill="#D6B77A"/>
+    
+    <!-- Headlight -->
+    <circle cx="5" cy="95" r="7" fill="#FFF3D6"/>
+  </g>
+
+  <text x="300" y="55" font-family="'Cinzel', 'Playfair Display', serif" font-size="24" font-weight="700" fill="#493B4C" text-anchor="middle" letter-spacing="2">INTEGRATED TRANSPORT FLEET</text>
+  <text x="300" y="80" font-family="'Space Grotesk', sans-serif" font-size="12" font-weight="600" fill="#526B54" text-anchor="middle" letter-spacing="1">CONNECTING NARASARAOPET &amp; SURROUNDING MANDALS</text>
+</svg>

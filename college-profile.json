@@ -1,0 +1,54 @@
+{
+  "institution": {
+    "name": "Oxford VIT Junior College & Academy",
+    "legalName": "Oxford VIT Educational Institutions",
+    "governingBody": "Oxford Educational Society & KSR Educational Initiatives",
+    "foundedYear": 1994,
+    "accreditation": "Affiliated to the Board of Intermediate Education, Andhra Pradesh (BIEAP)",
+    "institutionType": "Co-Educational Integrated Junior College & Competitive Academy",
+    "headquarters": {
+      "campus": "Main Junior College Campus",
+      "addressLine1": "Opposite Kamma Hostel, Ravipadu Road",
+      "locality": "Narasaraopet",
+      "district": "Palnadu District (formerly Guntur District)",
+      "state": "Andhra Pradesh",
+      "country": "India",
+      "pincode": "522601",
+      "coordinates": {
+        "latitude": 16.2361,
+        "longitude": 80.0527
+      }
+    },
+    "communication": {
+      "primaryHotline": "+91 92467 64999",
+      "admissionsHotline": "+91 77991 37799",
+      "officialEmail": "vitnrt@gmail.com",
+      "socialProfiles": {
+        "instagram": "https://www.instagram.com/raghava_vit/",
+        "threads": "https://www.threads.com/@raghava_vit",
+        "youtube": "https://www.youtube.com/results?search_query=oxford+vit+academy+narasaraopet"
+      }
+    },
+    "motto": "Where Knowledge Takes Shape",
+    "institutionalPillars": [
+      {
+        "title": "30+ Years Academic Pedagogy",
+        "description": "Consistent track record of district 1st ranks and state top scores in BIEAP Intermediate Board examinations."
+      },
+      {
+        "title": "Integrated National Testing Framework",
+        "description": "Simultaneous preparation for IIT-JEE Advanced, JEE Main, NEET-UG, and AP EAPCET with zero syllabus dissonance."
+      },
+      {
+        "title": "The Six Bhavans Unified Ecosystem",
+        "description": "Purpose-built specialized campuses for residential boys (Balaji), girls security (Yashoda), STEM labs (Raman), and directorate (KSR Towers)."
+      },
+      {
+        "title": "Philanthropic Empowerment",
+        "description": "Over ₹1.5 Crores awarded annually in merit-cum-means scholarships through the KSR Charitable Trust."
+      }
+    ],
+    "verificationStatus": "Verified - Official Regional Educational Directory & Public Management Presence",
+    "lastAuditDate": "2026-10-31"
+  }
+}

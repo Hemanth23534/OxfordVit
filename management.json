@@ -1,0 +1,113 @@
+{
+  "executiveLeadership": [
+    {
+      "id": "chairman-francis",
+      "name": "Dr. S. Francis Reddy",
+      "designation": "Chairman, Oxford Educational Group",
+      "qualifications": "M.A., Ph.D.",
+      "badge": "Patron & Founder",
+      "category": "executive",
+      "biography": "Pioneered the establishment of high-calibre educational institutions in Andhra Pradesh. His visionary commitment to value-based education, academic rigor, and institutional integrity has fostered an ecosystem of over 25,000 successful alumni nationwide.",
+      "primaryCampus": "KSR Towers & Main Junior College",
+      "experienceYears": 35,
+      "verificationStatus": "Verified - Official Institutional Founder & Annual Day Speaker",
+      "initials": "SFR"
+    },
+    {
+      "id": "admin-ksr",
+      "name": "K. Sambasiva Rao (KSR)",
+      "designation": "Administrative Director & Founder, Chairman - KSR Charitable Trust",
+      "qualifications": "M.Sc., B.Ed., IIT Mathematics",
+      "badge": "Administrative Pillar",
+      "category": "executive",
+      "biography": "Renowned academic administrator and philanthropist in Palnadu district. Spearheads institutional discipline, campus expansion, and rural empowerment scholarships through the KSR Charitable Trust, ensuring no talented scholar is left behind due to financial hardship.",
+      "primaryCampus": "KSR Towers & Balaji Bhavan",
+      "experienceYears": 30,
+      "verificationStatus": "Verified - Official Administrator & Trust President",
+      "initials": "KSR"
+    },
+    {
+      "id": "academic-raghava",
+      "name": "Panadi Raghava",
+      "designation": "Academic Director & Dean of Mathematics",
+      "qualifications": "IIT-JEE Mathematics Specialist",
+      "badge": "Academic Dean",
+      "category": "academic",
+      "biography": "Acclaimed mathematics strategist and youth motivational speaker. Head of the elite Super-60 competitive division, transforming abstract problem-solving into intuitive mastery and mentoring state and national rankers for over two decades.",
+      "primaryCampus": "Balaji Bhavan & Main Campus",
+      "experienceYears": 22,
+      "socialProfiles": {
+        "instagram": "https://www.instagram.com/raghava_vit/",
+        "threads": "https://www.threads.com/@raghava_vit"
+      },
+      "verificationStatus": "Verified - Active Management Social Media Profile (@raghava_vit)",
+      "initials": "PR"
+    },
+    {
+      "id": "md-vijay-bhaskar",
+      "name": "S. Vijay Bhaskar Reddy",
+      "designation": "Managing Director",
+      "qualifications": "M.S. in Computer Science (USA)",
+      "badge": "Managing Director",
+      "category": "executive",
+      "biography": "Brings international technical expertise to Oxford VIT, overseeing technological modernization, smart computerized examination wings (CBT), digital libraries, and advanced laboratory infrastructure across the 6 Bhavans.",
+      "primaryCampus": "KSR Towers",
+      "experienceYears": 18,
+      "verificationStatus": "Verified - Institutional Board Records",
+      "initials": "VBR"
+    },
+    {
+      "id": "academic-dsr",
+      "name": "Dogiparthi Srinivasa Rao (DSR)",
+      "designation": "Academic Director & Senior Physics Chair",
+      "qualifications": "B.Tech, Ex-Senior Research Assistant (IIT Delhi)",
+      "badge": "Senior Academic Chair",
+      "category": "academic",
+      "biography": "Ex-IIT Delhi researcher leading curriculum synchronization between BIEAP state board syllabi and national level competitive testing frameworks. Regularly broadcasts academic briefings and directly mentors physics faculty across all campuses.",
+      "primaryCampus": "Main Campus & Raman Bhavan",
+      "experienceYears": 32,
+      "verificationStatus": "Verified - Institutional Academic Director & YouTube Broadcaster",
+      "initials": "DSR"
+    },
+    {
+      "id": "vice-chairman-arone",
+      "name": "S. Arone Reddy",
+      "designation": "Vice-Chairman",
+      "qualifications": "B.E., M.B.A.",
+      "badge": "Vice-Chairman",
+      "category": "executive",
+      "biography": "Supervises inter-campus operational cohesion, student residential welfare across Balaji and Yashoda Bhavans, sports programs, and campus community engagement throughout Narasaraopet.",
+      "primaryCampus": "KSR Towers & Yashoda Bhavan",
+      "experienceYears": 15,
+      "verificationStatus": "Verified - Institutional Directorate Records",
+      "initials": "SAR"
+    }
+  ],
+  "governingBoard": [
+    {
+      "name": "S. Arogya Joseph Reddy",
+      "role": "Director of Institutional Affairs",
+      "qualifications": "B.A., B.Ed."
+    },
+    {
+      "name": "Ambati Muralikrishna",
+      "role": "Director of Legal & Regulatory Frameworks",
+      "qualifications": "M.A., B.L."
+    },
+    {
+      "name": "Ambati Giridhar Kumar",
+      "role": "Director of Academic Monitoring & Test Systems",
+      "qualifications": "M.A., B.Ed."
+    },
+    {
+      "name": "Ch. Raja Reddy",
+      "role": "Director of Commerce & Student Welfare",
+      "qualifications": "M.Com., B.Ed."
+    },
+    {
+      "name": "Adella Vijay Kumar",
+      "role": "Director of Student Motivation & Outreach",
+      "qualifications": "M.A., B.Ed."
+    }
+  ]
+}

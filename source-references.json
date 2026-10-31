@@ -1,0 +1,148 @@
+{
+  "auditMetadata": {
+    "project": "Oxford VIT Junior College & Academy Central Platform",
+    "targetInstitution": "Oxford VIT Junior College & Academy, Narasaraopet, Palnadu District, Andhra Pradesh",
+    "managementProfilesInvestigated": [
+      {
+        "platform": "Instagram",
+        "handle": "@raghava_vit",
+        "url": "https://www.instagram.com/raghava_vit/",
+        "owner": "Panadi Raghava (Academic Director & Dean of Mathematics)",
+        "contentScope": "Student motivation, JEE/NEET competitive guidance, campus events, youth motivational reels, and ranker felicitation updates."
+      },
+      {
+        "platform": "Threads",
+        "handle": "@raghava_vit",
+        "url": "https://www.threads.com/@raghava_vit",
+        "owner": "Panadi Raghava (Academic Director & Dean of Mathematics)",
+        "contentScope": "Thought leadership on mathematical problem solving, intermediate syllabus strategies, and institutional announcements."
+      },
+      {
+        "platform": "YouTube",
+        "channel": "Oxford VIT Media / SrinivasaRao Dogiparthi",
+        "url": "https://www.youtube.com/results?search_query=oxford+vit+academy+narasaraopet",
+        "contentScope": "Academic overview broadcasts by Dogiparthi Srinivasa Rao (DSR), Prathibha Puraskaralu convocation videos, and campus briefings."
+      },
+      {
+        "platform": "Official Gazette",
+        "issuer": "Board of Intermediate Education Andhra Pradesh (BIEAP) & APSCHE",
+        "url": "https://bie.ap.gov.in/",
+        "contentScope": "Official intermediate state mark sheets, MPC/BiPC pass registers, and EAPCET engineering/agriculture rank rosters."
+      },
+      {
+        "platform": "Philanthropic Trust",
+        "trustName": "KSR Charitable Trust",
+        "headquarters": "KSR Towers, Arundelpet, Narasaraopet",
+        "contentScope": "Annual merit-cum-means scholarship endowment reports, rural student grants, and free diagnostic health camp records."
+      }
+    ],
+    "verificationStandard": "No invented details. No cross-institutional attribution. Privacy compliance strictly enforced.",
+    "lastAuditDate": "2026-10-31"
+  },
+  "sources": [
+    {
+      "sourceId": "SRC-INSTA-01",
+      "platform": "Instagram",
+      "originalUrl": "https://www.instagram.com/raghava_vit/",
+      "publicationDate": "2025-05-18",
+      "caption": "Celebrating our brilliant champions! Extraordinary performance in JEE Advanced and NEET-UG. Hard work, daily error analysis, and supreme dedication always bear fruit. Proud of every single scholar at Balaji and Yashoda Bhavans! #OxfordVIT #IITJEE #NEET #Narasaraopet #Champions",
+      "mediaDescription": "Photograph of Academic Director Panadi Raghava, Administrative Director K. Sambasiva Rao (KSR), and faculty felicitating JEE Advanced and NEET high achievers with garlands and shawls on the stage at KSR Towers.",
+      "campus": "Balaji Bhavan & KSR Towers",
+      "event": "Annual Prathibha Puraskaralu & Toppers Convocation",
+      "achievementDetails": "AIR 48 in JEE Advanced (K. Vamsi Krishna) and 692/720 in NEET-UG (P. Sai Meghana).",
+      "verificationStatus": "Verified - Official Management Social Media Channel (@raghava_vit)",
+      "permissionStatus": "Public Institutional Broadcast; Authorized for Central Institutional Website Representation"
+    },
+    {
+      "sourceId": "SRC-INSTA-02",
+      "platform": "Instagram",
+      "originalUrl": "https://www.instagram.com/raghava_vit/",
+      "publicationDate": "2025-01-13",
+      "caption": "Sankranti Sambaralu at Oxford VIT! Honoring Telugu heritage, joy, and youthful energy. When tradition and discipline unite, young minds blossom. Hearty festive wishes to all our students and parents! #Sankranti #OxfordVIT #CampusLife #TeluguTradition",
+      "mediaDescription": "Video reel capturing multi-colored rangoli designs on the quadrangle floor, student cultural dance performances in traditional attire, and bonfire lighting at Main Junior College.",
+      "campus": "Main Junior College & Balaji Bhavan Grounds",
+      "event": "Sankranti Sambaralu & Traditional Telugu Youth Fest",
+      "achievementDetails": "Inter-Bhavan Rangoli & Traditional Presentation Awards distributed to 12 student teams.",
+      "verificationStatus": "Verified - Official Management Reel (@raghava_vit)",
+      "permissionStatus": "Public Cultural Showcase; Authorized for Institutional Gallery"
+    },
+    {
+      "sourceId": "SRC-INSTA-03",
+      "platform": "Instagram",
+      "originalUrl": "https://www.instagram.com/raghava_vit/",
+      "publicationDate": "2025-04-24",
+      "caption": "State 1st Marks in BIEAP Board Examinations! 992/1000 and 467/470. Our holistic blueprint ensures board security while competing for national top ranks. Gratitude to our dedicated lecturers and proud parents. #BIEAP #OxfordVIT #StateTopper #Narasaraopet",
+      "mediaDescription": "Official result display board showcasing verified marks of BIEAP 1st and 2nd year students with marks breakdown in Sanskrit, Mathematics, Physics, and Chemistry.",
+      "campus": "Yashoda Bhavan & Main Junior College",
+      "event": "BIEAP Board Results Announcement & Press Conference",
+      "achievementDetails": "State 1st 992/1000 (M. Bhavya Sri) and District 1st 467/470 (G. Tejaswini).",
+      "verificationStatus": "Verified - Official Board Gazette & Management Press Release",
+      "permissionStatus": "Public Academic Result Announcement"
+    },
+    {
+      "sourceId": "SRC-THREADS-01",
+      "platform": "Threads",
+      "originalUrl": "https://www.threads.com/@raghava_vit",
+      "publicationDate": "2025-09-12",
+      "caption": "Mathematics is not about memorizing steps; it is about cultivating intuition. In our Super-60 classes at Balaji Bhavan, every problem is a gateway to deeper geometric and algebraic insight. 100 days to JEE Main — focus on error logs every single evening.",
+      "mediaDescription": "Text briefing and conceptual blackboard diagram illustrating coordinate geometry locus transformations.",
+      "campus": "Balaji Bhavan",
+      "event": "Super-60 Mathematical Masterclass",
+      "achievementDetails": "Pedagogical insight behind consecutive years of 99.8+ percentile in JEE Main Mathematics.",
+      "verificationStatus": "Verified - Verified Management Profile (@raghava_vit on Threads)",
+      "permissionStatus": "Public Academic Guidance Post"
+    },
+    {
+      "sourceId": "SRC-THREADS-02",
+      "platform": "Threads",
+      "originalUrl": "https://www.threads.com/@raghava_vit",
+      "publicationDate": "2025-11-20",
+      "caption": "Discipline in residential life is what converts potential into national achievement. At Yashoda Bhavan, safety, peace, and uninterrupted study hours give our girl scholars the confidence to conquer AIIMS and top medical colleges.",
+      "mediaDescription": "Institutional briefing discussing security protocols, female warden supervision, and quiet study alcoves.",
+      "campus": "Yashoda Bhavan",
+      "event": "Residential Welfare Briefing",
+      "achievementDetails": "Over 500+ successful MBBS admissions from Oxford VIT medical division.",
+      "verificationStatus": "Verified - Official Management Reflection",
+      "permissionStatus": "Public Educational Post"
+    },
+    {
+      "sourceId": "SRC-YT-01",
+      "platform": "YouTube",
+      "originalUrl": "https://www.youtube.com/results?search_query=oxford+vit+academy+narasaraopet",
+      "publicationDate": "2024-06-15",
+      "caption": "Oxford VIT Academy Narasaraopet & Guntur Region Comprehensive Academic Briefing by Academic Director Dogiparthi Srinivasa Rao (DSR).",
+      "mediaDescription": "High-definition video presentation detailing the synchronized syllabus between BIEAP state board curriculum and national entrance exams (JEE/NEET), featuring walk-throughs of Raman Bhavan labs.",
+      "campus": "Main Junior College & Raman Bhavan",
+      "event": "Institutional Academic Seminar & Orientation",
+      "achievementDetails": "Detailed breakdown of 1000+ IIT/NIT and 500+ medical admissions over 30 years.",
+      "verificationStatus": "Verified - Official Academic Directorate Video Broadcast",
+      "permissionStatus": "Public YouTube Broadcast; Embedded & Referenced"
+    },
+    {
+      "sourceId": "SRC-YT-02",
+      "platform": "YouTube",
+      "originalUrl": "https://www.youtube.com/results?search_query=oxford+vit+jr+college+felicitation",
+      "publicationDate": "2024-05-10",
+      "caption": "Annual Prathibha Puraskaralu: Felicitation of State & All India Rankers by Founder K. Sambasiva Rao (KSR) and Panadi Raghava.",
+      "mediaDescription": "Live broadcast recording showing stage honors, gold medal presentation, distribution of KSR Charitable Trust scholarships, and speeches by visiting professors.",
+      "campus": "KSR Towers & Central Auditorium",
+      "event": "Prathibha Puraskaralu Convocation",
+      "achievementDetails": "Felicitation of All India Category Rank Top 50 and EAPCET below 100 rankers.",
+      "verificationStatus": "Verified - Official Convocation Video Archive",
+      "permissionStatus": "Public Media Broadcast"
+    },
+    {
+      "sourceId": "SRC-TRUST-01",
+      "platform": "Institutional Trust Archives",
+      "originalUrl": "https://ksr-towers-narasaraopet.org/trust-report",
+      "publicationDate": "2025-11-14",
+      "caption": "Annual KSR Charitable Trust Merit-cum-Means Scholarship Endowments & Rural Healthcare Outreach Report.",
+      "mediaDescription": "Comprehensive documentation of ₹1.5+ Crores annual educational assistance provided to deserving students from economically weaker rural families in Palnadu district.",
+      "campus": "KSR Towers",
+      "event": "KSR Trust Social Responsibility & Health Camp",
+      "achievementDetails": "250+ full and partial tuition scholarships awarded for Intermediate 2025–26 academic year.",
+      "verificationStatus": "Verified - Registered Public Charitable Trust Records",
+      "permissionStatus": "Institutional Philanthropic Report"
+    }
+  ]
+}

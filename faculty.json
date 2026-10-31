@@ -1,0 +1,148 @@
+{
+  "faculty": [
+    {
+      "id": "fac-raghava",
+      "name": "Panadi Raghava",
+      "department": "Mathematics",
+      "role": "Dean of Mathematics & Academic Director",
+      "qualification": "M.Sc., IIT-JEE Advanced Specialist",
+      "experience": "22+ Years",
+      "specialization": "Differential & Integral Calculus, Vectors, 3D Coordinate Geometry & Advanced Olympiads",
+      "campus": "Balaji Bhavan & Main Campus",
+      "avatarInitial": "PR",
+      "verificationStatus": "Verified - Senior Academic Dean & Author (@raghava_vit)"
+    },
+    {
+      "id": "fac-dsr",
+      "name": "Dogiparthi Srinivasa Rao (DSR)",
+      "department": "Physics",
+      "role": "Academic Director & Senior Physics Mentor",
+      "qualification": "B.Tech (Ex-Senior Research Assistant IIT Delhi)",
+      "experience": "32+ Years",
+      "specialization": "Classical Mechanics, Electrodynamics, Wave Optics & Integrated National Testing",
+      "campus": "Main Campus & Raman Bhavan",
+      "avatarInitial": "DSR",
+      "verificationStatus": "Verified - Senior Academic Director & Researcher"
+    },
+    {
+      "id": "fac-ksr",
+      "name": "K. Sambasiva Rao (KSR)",
+      "department": "Mathematics",
+      "role": "Administrative Director & Senior Mathematics Mentor",
+      "qualification": "M.Sc., B.Ed., IIT Mathematics",
+      "experience": "30+ Years",
+      "specialization": "Algebra, Trigonometry, Complex Numbers & State Board Scoring Blueprint",
+      "campus": "KSR Towers & Main Campus",
+      "avatarInitial": "KSR",
+      "verificationStatus": "Verified - Founder & Administrative Director"
+    },
+    {
+      "id": "fac-subbarao",
+      "name": "K. V. Subba Rao",
+      "department": "Physics",
+      "role": "Head of Department – Physics",
+      "qualification": "M.Sc. Physics (Gold Medalist)",
+      "experience": "20+ Years",
+      "specialization": "Thermal Physics, Modern Physics, Nuclear Physics & Error Mitigation in Laboratory Practicals",
+      "campus": "Balaji Bhavan & Raman Bhavan",
+      "avatarInitial": "KVS",
+      "verificationStatus": "Verified - Department Chair"
+    },
+    {
+      "id": "fac-rambabu",
+      "name": "M. Rambabu",
+      "department": "Chemistry",
+      "role": "Head of Department – Chemistry",
+      "qualification": "M.Sc. Organic Chemistry",
+      "experience": "19+ Years",
+      "specialization": "Organic Reaction Mechanisms, Stereochemistry, Biomolecules & Gaseous State",
+      "campus": "Main Campus & Yashoda Bhavan",
+      "avatarInitial": "MR",
+      "verificationStatus": "Verified - Department Chair"
+    },
+    {
+      "id": "fac-sureshkumar",
+      "name": "T. Suresh Kumar",
+      "department": "Chemistry",
+      "role": "Senior Lecturer in Inorganic Chemistry",
+      "qualification": "M.Sc., M.Phil. Chemistry",
+      "experience": "16+ Years",
+      "specialization": "Coordination Chemistry, Periodic Properties, Metallurgy & Chemical Bonding",
+      "campus": "Balaji Bhavan",
+      "avatarInitial": "TSK",
+      "verificationStatus": "Verified - Senior Lecturer"
+    },
+    {
+      "id": "fac-venkateswarlu",
+      "name": "G. Venkateswarlu",
+      "department": "Biology",
+      "role": "Dean of Medical Division & Senior Botany Faculty",
+      "qualification": "M.Sc. Botany, B.Ed.",
+      "experience": "21+ Years",
+      "specialization": "Plant Physiology, Genetics, Molecular Biology & Line-by-Line NCERT NEET Coaching",
+      "campus": "Yashoda Bhavan & Main Campus",
+      "avatarInitial": "GV",
+      "verificationStatus": "Verified - Dean of Medical Division"
+    },
+    {
+      "id": "fac-sivareddy",
+      "name": "Dr. P. Siva Reddy",
+      "department": "Biology",
+      "role": "Senior Zoology Faculty & Medical Mentor",
+      "qualification": "Ph.D. in Life Sciences",
+      "experience": "17+ Years",
+      "specialization": "Human Anatomy, Animal Kingdom, Human Health & Disease & Medical Counseling",
+      "campus": "Yashoda Bhavan",
+      "avatarInitial": "PSR",
+      "verificationStatus": "Verified - Senior Faculty"
+    },
+    {
+      "id": "fac-lakshminarayana",
+      "name": "S. Lakshmi Narayana",
+      "department": "Mathematics",
+      "role": "Senior Lecturer in Mathematics",
+      "qualification": "M.Sc. Mathematics",
+      "experience": "15+ Years",
+      "specialization": "Coordinate Geometry, Probability, Differential Equations & Speed Mathematics",
+      "campus": "Raman Bhavan",
+      "avatarInitial": "SLN",
+      "verificationStatus": "Verified - Senior Lecturer"
+    },
+    {
+      "id": "fac-radhakrishna",
+      "name": "V. Radhakrishna",
+      "department": "Physics",
+      "role": "Senior Lecturer in Physics",
+      "qualification": "M.Sc. Applied Physics",
+      "experience": "18+ Years",
+      "specialization": "Rotational Dynamics, Fluid Mechanics, Simple Harmonic Motion & Waves",
+      "campus": "Balaji Bhavan",
+      "avatarInitial": "VRK",
+      "verificationStatus": "Verified - Senior Lecturer"
+    },
+    {
+      "id": "fac-anjaneyulu",
+      "name": "K. Anjaneyulu",
+      "department": "Languages",
+      "role": "Head of Department – Sanskrit",
+      "qualification": "M.A. Sanskrit, Sahitya Shiromani",
+      "experience": "25+ Years",
+      "specialization": "Classical Sanskrit Literature, Grammar & State Board 99/100 Scoring Blueprint",
+      "campus": "All Bhavans",
+      "avatarInitial": "KA",
+      "verificationStatus": "Verified - Department Chair"
+    },
+    {
+      "id": "fac-marygrace",
+      "name": "P. Mary Grace",
+      "department": "Languages",
+      "role": "Senior Lecturer – English & Verbal Communication",
+      "qualification": "M.A. English Literature, B.Ed.",
+      "experience": "16+ Years",
+      "specialization": "Phonetics, Vocabulary Mastery, Creative Writing & Interview Presentation Skills",
+      "campus": "All Bhavans",
+      "avatarInitial": "PMG",
+      "verificationStatus": "Verified - Senior Lecturer"
+    }
+  ]
+}

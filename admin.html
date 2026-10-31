@@ -218,6 +218,71 @@
         <div id="announcement-feedback" style="margin-top: 0.75rem; font-size: 0.8125rem; font-family: var(--font-mono); display: none;"></div>
       </div>
 
+      <!-- Dynamic Gallery & Media Management Section -->
+      <div class="glass-card" style="padding: 2.5rem; border-radius: var(--radius-xl); margin-top: 3.5rem;">
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem; flex-wrap: wrap; gap: 0.5rem;">
+          <div>
+            <span class="badge badge-botanical" style="margin-bottom: 0.5rem;">Dynamic Media Publishing</span>
+            <h3 style="font-family: var(--font-serif); font-size: 1.5rem; color: var(--color-deep-plum); margin: 0;">
+              Publish New Campus Photos &amp; Events
+            </h3>
+          </div>
+          <span id="gallery-count-badge" class="badge badge-gold">Loading Gallery...</span>
+        </div>
+        <p style="font-size: 0.875rem; color: var(--text-secondary); margin-bottom: 1.75rem;">
+          Management can add new campus photographs, student celebrations, and academic events here. New entries are persisted in <code style="font-family: var(--font-mono); font-size: 0.75rem; background: rgba(0,0,0,0.06); padding: 2px 6px; border-radius: 4px;">gallery.json</code> via REST API and rendered immediately across the public gallery and lightbox without code redeployment.
+        </p>
+
+        <form id="form-gallery-publish" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1.25rem;">
+          <div class="form-group" style="margin-bottom: 0;">
+            <label for="gal-input-title" class="form-label">Photo / Event Title *</label>
+            <input type="text" id="gal-input-title" class="form-input" placeholder="e.g. Annual Sports Meet Finals at Balaji Bhavan" required>
+          </div>
+
+          <div class="form-group" style="margin-bottom: 0;">
+            <label for="gal-input-category" class="form-label">Media Category *</label>
+            <select id="gal-input-category" class="form-select" required>
+              <option value="campuses">Campuses &amp; Bhavans</option>
+              <option value="events">Celebrations &amp; Events</option>
+              <option value="students">Students &amp; Study Pods</option>
+              <option value="achievements">Achievements &amp; Awards</option>
+              <option value="transport">Transportation &amp; Bus Fleet</option>
+              <option value="faculty">Faculty &amp; Departments</option>
+            </select>
+          </div>
+
+          <div class="form-group" style="margin-bottom: 0;">
+            <label for="gal-input-path" class="form-label">Image Asset Path / URL *</label>
+            <input type="text" id="gal-input-path" class="form-input" placeholder="e.g. assets/images/events/sankranti-festival.svg" required>
+          </div>
+
+          <div class="form-group" style="margin-bottom: 0;">
+            <label for="gal-input-badge" class="form-label">Badge Tag</label>
+            <input type="text" id="gal-input-badge" class="form-input" placeholder="e.g. Sports Championship">
+          </div>
+
+          <div class="form-group" style="grid-column: 1 / -1; margin-bottom: 0;">
+            <label for="gal-input-caption" class="form-label">Caption / Description</label>
+            <input type="text" id="gal-input-caption" class="form-input" placeholder="e.g. Inter-campus volleyball finals held under floodlights with active student participation.">
+          </div>
+
+          <div style="grid-column: 1 / -1; display: flex; justify-content: flex-end; align-items: center; gap: 1rem; margin-top: 0.5rem;">
+            <div id="gallery-publish-feedback" style="font-size: 0.8125rem; font-family: var(--font-mono); display: none;"></div>
+            <button type="submit" class="btn btn-gold btn-sm">
+              + Publish to Dynamic Gallery
+            </button>
+          </div>
+        </form>
+
+        <!-- Current Gallery Items Preview Strip -->
+        <div style="margin-top: 2rem; padding-top: 1.5rem; border-top: 1px solid var(--border-subtle);">
+          <div style="font-size: 0.8125rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; color: var(--color-deep-plum); margin-bottom: 1rem;">Currently Published Media:</div>
+          <div id="gallery-preview-grid" style="display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 1rem;">
+            <!-- Populated dynamically via JS -->
+          </div>
+        </div>
+      </div>
+
     </div>
   </main>
 
@@ -374,8 +439,93 @@
         }
       });
 
+      // Dynamic Gallery Management
+      const formGalleryPublish = document.getElementById('form-gallery-publish');
+      const galInputTitle = document.getElementById('gal-input-title');
+      const galInputCategory = document.getElementById('gal-input-category');
+      const galInputPath = document.getElementById('gal-input-path');
+      const galInputBadge = document.getElementById('gal-input-badge');
+      const galInputCaption = document.getElementById('gal-input-caption');
+      const galFeedback = document.getElementById('gallery-publish-feedback');
+      const galCountBadge = document.getElementById('gallery-count-badge');
+      const galPreviewGrid = document.getElementById('gallery-preview-grid');
+
+      let galleryItems = [];
+
+      async function fetchGallery() {
+        try {
+          const res = await fetch('/api/gallery');
+          if (res.ok) {
+            const data = await res.json();
+            galleryItems = data.data || [];
+            if (galCountBadge) galCountBadge.textContent = `${galleryItems.length} Live Items`;
+            renderGalleryPreview();
+          }
+        } catch (err) {
+          console.warn('Error fetching gallery:', err);
+        }
+      }
+
+      function renderGalleryPreview() {
+        if (!galPreviewGrid) return;
+        if (galleryItems.length === 0) {
+          galPreviewGrid.innerHTML = '<p style="color: var(--text-muted); font-size: 0.8125rem;">No items in gallery.</p>';
+          return;
+        }
+
+        galPreviewGrid.innerHTML = galleryItems.slice(0, 8).map(item => `
+          <div style="background: rgba(255,255,255,0.7); border: 1px solid var(--border-subtle); border-radius: var(--radius-md); padding: 0.75rem; display: flex; flex-direction: column; gap: 0.4rem;">
+            <div style="height: 100px; border-radius: 4px; overflow: hidden; background: ${item.bgColor || '#493B4C'}; display: flex; align-items: center; justify-content: center;">
+              ${item.imagePath ? `<img src="${item.imagePath}" alt="${item.title}" style="width: 100%; height: 100%; object-fit: cover;">` : '<span style="color: #fff; font-size: 1.5rem;">📷</span>'}
+            </div>
+            <div style="font-weight: 700; font-size: 0.8125rem; color: var(--color-deep-plum); white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">
+              ${item.title}
+            </div>
+            <div style="display: flex; justify-content: space-between; align-items: center;">
+              <span class="badge badge-gold" style="font-size: 0.65rem;">${item.category}</span>
+              <span style="font-size: 0.6875rem; color: var(--text-muted); font-family: var(--font-mono);">${item.badge || ''}</span>
+            </div>
+          </div>
+        `).join('');
+      }
+
+      if (formGalleryPublish) {
+        formGalleryPublish.addEventListener('submit', async (e) => {
+          e.preventDefault();
+          const title = galInputTitle.value.trim();
+          const category = galInputCategory.value;
+          const imagePath = galInputPath.value.trim();
+          const badge = galInputBadge.value.trim() || 'Institutional Media';
+          const caption = galInputCaption.value.trim();
+
+          if (!title || !imagePath) return;
+
+          try {
+            const res = await fetch('/api/gallery', {
+              method: 'POST',
+              headers: { 'Content-Type': 'application/json' },
+              body: JSON.stringify({ title, category, imagePath, badge, caption })
+            });
+
+            if (res.ok) {
+              galFeedback.style.display = 'block';
+              galFeedback.style.color = 'var(--color-botanical)';
+              galFeedback.textContent = '✓ Published to gallery successfully.';
+              formGalleryPublish.reset();
+              fetchGallery();
+              setTimeout(() => { galFeedback.style.display = 'none'; }, 5000);
+            }
+          } catch (err) {
+            galFeedback.style.display = 'block';
+            galFeedback.style.color = 'var(--color-coral)';
+            galFeedback.textContent = '✕ Error publishing to gallery.';
+          }
+        });
+      }
+
       // Initial Load
       fetchAdmissions();
+      fetchGallery();
     });
   </script>
 

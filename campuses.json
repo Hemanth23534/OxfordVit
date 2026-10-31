@@ -1,0 +1,171 @@
+{
+  "campuses": [
+    {
+      "id": "main-campus",
+      "name": "Main Junior College Campus",
+      "category": "academic",
+      "tag": "Central Academic Quadrangle",
+      "role": "Institutional Headquarters & Day-Scholar Wing",
+      "address": "Opposite Kamma Hostel, Ravipadu Road, Narasaraopet, Palnadu District, AP - 522601",
+      "landmark": "Opposite Kamma Hostel",
+      "contactPhone": "+91 92467 64999",
+      "establishedYear": 1994,
+      "description": "The flagship campus housing executive lecture theatres, central science laboratories, the central admissions bureau, and the student transportation fleet hub.",
+      "courses": [
+        "MPC (Mathematics, Physics, Chemistry)",
+        "BiPC (Biology, Physics, Chemistry)",
+        "BIEAP Intermediate Board Preparation",
+        "AP EAPCET Day-Scholar Track"
+      ],
+      "facilities": [
+        "Centrally Air-Cooled Lecture Halls",
+        "State-of-the-Art Physics & Chemistry Labs",
+        "Comprehensive Botanical & Zoological Specimen Room",
+        "Central Admissions & Student Counseling Bureau",
+        "Digital Audio-Visual Seminar Hall",
+        "Dedicated Campus Fleet Bus Bay"
+      ],
+      "image": "assets/images/campuses/main-campus.svg",
+      "mapQuery": "Oxford+VIT+Junior+College+Ravipadu+Road+Narasaraopet",
+      "verificationStatus": "Verified - Physical Landmark & Official Headquarters"
+    },
+    {
+      "id": "balaji-bhavan",
+      "name": "Balaji Bhavan",
+      "category": "residential",
+      "tag": "Super-60 Boys Residential",
+      "role": "Premier Boys Residential Campus & Competitive Cell",
+      "address": "Reddy Nagar / Vengala Reddy Nagar, Narasaraopet, Palnadu District, AP - 522601",
+      "landmark": "Near Reddy Nagar Main Junction",
+      "contactPhone": "+91 92467 64999",
+      "establishedYear": 2004,
+      "description": "The intensive residential crucible for young men targeting top 100 ranks in IIT-JEE Advanced and BITSAT. Features continuous mentorship, 3-hour evening doubt sessions, and strict study hours.",
+      "courses": [
+        "IIT-JEE Super-60 Cohort (MPC)",
+        "National Olympiad Training (NSEP, NSEC, PRMO)",
+        "AP EAPCET Intensive Residential Track"
+      ],
+      "facilities": [
+        "Ergonomic Individual Study Desks",
+        "24/7 Silent Study Chambers & Reference Alcoves",
+        "Modern Steam Kitchen & Dining Hall",
+        "Commercial RO Mineral Water Plant",
+        "Night-Floodlit Sand Volleyball & Cricket Nets",
+        "24/7 Security & Resident Faculty Quarters"
+      ],
+      "image": "assets/images/campuses/balaji-bhavan.svg",
+      "mapQuery": "Oxfordvit+Balaji+Bhavan+Reddy+Nagar+Narasaraopet",
+      "verificationStatus": "Verified - Cybo / Scribd Educational Registry"
+    },
+    {
+      "id": "yashoda-bhavan",
+      "name": "Yashoda Bhavan",
+      "category": "girls",
+      "tag": "Girls Residential Academy",
+      "role": "Dedicated Girls Residential Campus & NEET Division",
+      "address": "Reddy Nagar / Ramireddypeta, Narasaraopet, Palnadu District, AP - 522601",
+      "landmark": "Reddy Nagar North Sector",
+      "contactPhone": "+91 77991 37799",
+      "establishedYear": 2008,
+      "description": "A purpose-built, secure sanctuary designed exclusively for girl scholars. Houses our premier NEET Medical Academy and top Board scoring batches under the supervision of senior lady faculty.",
+      "courses": [
+        "NEET Medical Academy (BiPC AIIMS Track)",
+        "Intermediate MPC & BiPC Board State Ranks Track",
+        "AP EAPCET Agriculture & Medical Track"
+      ],
+      "facilities": [
+        "Multi-Tier Electronic Biometric Security",
+        "Resident Female Wardens & Lady Lecturers",
+        "Landscaped Inner Courtyards for Morning Study",
+        "On-Campus Health Clinic & Lady Doctor on Call",
+        "Nutritious Vegetarian Steam Dining Facility",
+        "Indoor Badminton Court & Yoga Pavilion"
+      ],
+      "image": "assets/images/campuses/yashoda-bhavan.svg",
+      "mapQuery": "Oxfordvit+Yashoda+Bhavan+Reddy+Nagar+Narasaraopet",
+      "verificationStatus": "Verified - Cybo Institutional Listing"
+    },
+    {
+      "id": "raman-bhavan",
+      "name": "Raman Bhavan",
+      "category": "academic",
+      "tag": "STEM & Olympiad Hub",
+      "role": "Advanced Scientific Research, Laboratories & CBT Testing",
+      "address": "Arundelpet / Ramireddypeta, Near Sainath Towers, Narasaraopet, Palnadu District, AP - 522601",
+      "landmark": "Near Sainath Towers, Arundelpet",
+      "contactPhone": "+91 92467 64999",
+      "establishedYear": 2012,
+      "description": "Named after Nobel Laureate Sir C.V. Raman, this facility is dedicated to pure science experimentation, national olympiads, and computerized test simulations with 150+ networked terminals.",
+      "courses": [
+        "Advanced Physics & Organic Chemistry Labs",
+        "Computer-Based Testing (CBT) Practice Division",
+        "National Science Olympiad Foundation Wing"
+      ],
+      "facilities": [
+        "150+ Networked NTA Interface Terminals",
+        "Dedicated Optical & Spectrometry Physics Lab",
+        "Advanced Chemical Synthesis Fume Chambers",
+        "Digital Projector Math Lecture Halls",
+        "Fiber Optic High-Speed Internet Backbone",
+        "Full Battery UPS Power Backup"
+      ],
+      "image": "assets/images/campuses/raman-bhavan.svg",
+      "mapQuery": "Oxfordvit+Raman+Bhavan+Ramireddypeta+Arundelpet+Narasaraopet",
+      "verificationStatus": "Verified - Cybo / Regional Directory Listing"
+    },
+    {
+      "id": "padmavathi-bhavan",
+      "name": "Padmavathi Bhavan",
+      "category": "residential",
+      "tag": "Tutorial Pods & Residence",
+      "role": "Small-Cohort Tutorials & Specialized Accommodation",
+      "address": "Central Narasaraopet, Palnadu District, AP - 522601",
+      "landmark": "Central Narasaraopet Sector",
+      "contactPhone": "+91 92467 64999",
+      "establishedYear": 2015,
+      "description": "Focused on personalized, small-group academic intervention. Houses focused tutorial pods for students requiring targeted concept enhancement and peaceful study rooms.",
+      "courses": [
+        "Intensive Concept Clarification Pods",
+        "Handwriting & Board Exam Score Maximization Clinics",
+        "Weekend Cumulative Testing Cohorts"
+      ],
+      "facilities": [
+        "Small Group Micro-Lecture Chambers",
+        "One-on-One Faculty Doubt Desks",
+        "Hygienic Dining & Clean Water Systems",
+        "Curated Subject Reference Book Banks",
+        "Round-the-clock Supervisor Oversight"
+      ],
+      "image": "assets/images/campuses/padmavathi-bhavan.svg",
+      "mapQuery": "Oxfordvit+Padmavathi+Bhavan+Narasaraopet",
+      "verificationStatus": "Verified - Regional Campus Record"
+    },
+    {
+      "id": "ksr-towers",
+      "name": "KSR Towers",
+      "category": "administration",
+      "tag": "Directorate & Trust HQ",
+      "role": "Central Governance, Directorate & Philanthropy Center",
+      "address": "Arundelpet, Narasaraopet, Palnadu District, AP - 522601",
+      "landmark": "Arundelpet Commercial Sector",
+      "contactPhone": "+91 77991 37799",
+      "establishedYear": 2016,
+      "description": "The administrative nerve center of Oxford VIT and headquarters of the KSR Charitable Trust. Houses executive chambers of the Chairman, Administrative Director, and Academic Dean.",
+      "courses": [
+        "Central Directorate Governance",
+        "KSR Charitable Trust Scholarship Screening",
+        "Academic Policy Formulation & Board Coordination"
+      ],
+      "facilities": [
+        "Executive Directorate Boardroom",
+        "Trust Scholarship Counseling Chambers",
+        "Parent Consultation & Conference Suites",
+        "Central Examination Record Archives",
+        "High-Security Document Processing Center"
+      ],
+      "image": "assets/images/campuses/ksr-towers.svg",
+      "mapQuery": "KSR+Towers+Arundelpet+Narasaraopet",
+      "verificationStatus": "Verified - Cybo / Justdial Commercial Directory"
+    }
+  ]
+}
