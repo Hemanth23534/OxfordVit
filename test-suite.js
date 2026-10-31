@@ -568,6 +568,14 @@ async function runTests() {
   // Verify JavaScript modules exist
   assert(fs.existsSync(path.join(__dirname, 'assets/js/modules/timelineEngine.js')), 'timelineEngine.js exists');
   assert(fs.existsSync(path.join(__dirname, 'assets/js/modules/socialFeedEngine.js')), 'socialFeedEngine.js exists');
+  assert(fs.existsSync(path.join(__dirname, 'assets/js/modules/interactiveMap.js')), 'interactiveMap.js exists');
+  assert(fs.existsSync(path.join(__dirname, 'assets/js/modules/pageTransitions.js')), 'pageTransitions.js exists');
+
+  // Verify Interactive Campus Map containers
+  const campusesHtml = fs.readFileSync(path.join(__dirname, 'campuses.html'), 'utf8');
+  const indexHtml = fs.readFileSync(path.join(__dirname, 'index.html'), 'utf8');
+  assert(campusesHtml.includes('id="interactive-campus-map"'), 'campuses.html includes #interactive-campus-map');
+  assert(indexHtml.includes('id="interactive-campus-map"'), 'index.html includes #interactive-campus-map');
 
   // Verify gallery.html has campus selector
   const galleryHtml = fs.readFileSync(path.join(__dirname, 'gallery.html'), 'utf8');
@@ -575,7 +583,6 @@ async function runTests() {
   assert(galleryHtml.includes('id="gallery-count-display"'), 'gallery.html includes dynamic media count display');
 
   // Verify index.html has history and social-pulse sections
-  const indexHtml = fs.readFileSync(path.join(__dirname, 'index.html'), 'utf8');
   assert(indexHtml.includes('id="history"'), 'index.html includes #history timeline section');
   assert(indexHtml.includes('id="social-pulse"'), 'index.html includes #social-pulse section');
   assert(indexHtml.includes('id="social-modal"'), 'index.html includes #social-modal dialog');

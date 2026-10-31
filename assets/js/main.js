@@ -18,6 +18,8 @@ import { EventsEngine } from './modules/eventsEngine.js';
 import { CampusDetailEngine } from './modules/campusDetail.js';
 import { TimelineEngine } from './modules/timelineEngine.js';
 import { SocialFeedEngine } from './modules/socialFeedEngine.js';
+import { InteractiveCampusMap } from './modules/interactiveMap.js';
+import { PageTransitionsEngine } from './modules/pageTransitions.js';
 
 document.addEventListener('DOMContentLoaded', () => {
   console.log('🏛️ Initializing Oxford VIT – The Living Campus Experience...');
@@ -69,11 +71,19 @@ document.addEventListener('DOMContentLoaded', () => {
     new SocialFeedEngine();
   }
 
+  // 8g. Initialize Interactive Regional & Spatial Campus Map Engine
+  if (document.getElementById('interactive-campus-map')) {
+    new InteractiveCampusMap('interactive-campus-map');
+  }
+
   // 9. Initialize 3D Tilt & Specular Glare Logic
   new Tilt3DEngine();
 
   // 10. Initialize Editorial GSAP / ScrollTrigger Motion Engine
   new ScrollAnimationEngine();
+
+  // 11. Initialize Cinematic Dual-Curtain Page Transitions Engine
+  new PageTransitionsEngine();
 
   console.log('✨ Oxford VIT Platform successfully orchestrated.');
 });

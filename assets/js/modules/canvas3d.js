@@ -34,6 +34,10 @@ export class LivingCampus3D {
     this.isPaused = false;
     this.prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
+    // Target focal angles for interactive spatial navigation
+    this.hubOffset = { x: 0, y: 0, z: 0 };
+    window.livingCampus3DInstance = this;
+
     this.init();
   }
 
@@ -415,12 +419,12 @@ export class LivingCampus3D {
     this.mouseX += (this.targetMouseX - this.mouseX) * 0.04;
     this.mouseY += (this.targetMouseY - this.mouseY) * 0.04;
 
-    // Scroll-based 3D Camera Gliding
+    // Scroll-based 3D Camera Gliding with Hub Spatial Offsets
     const scrollProgress = this.scrollY * 0.15;
-    this.camera.position.x = this.mouseX * 0.65;
-    this.camera.position.y = 45 - (this.mouseY * 0.45) - (scrollProgress * 0.35);
-    this.camera.position.z = 540 - (scrollProgress * 0.5);
-    this.camera.lookAt(0, -scrollProgress * 0.3, 0);
+    this.camera.position.x = (this.mouseX * 0.65) + (this.hubOffset.x);
+    this.camera.position.y = 45 - (this.mouseY * 0.45) - (scrollProgress * 0.35) + (this.hubOffset.y);
+    this.camera.position.z = 540 - (scrollProgress * 0.5) + (this.hubOffset.z);
+    this.camera.lookAt(this.hubOffset.x * 0.3, -scrollProgress * 0.3 + (this.hubOffset.y * 0.2), 0);
 
     // Rotate Central Scholastic Monolith
     if (this.monolith) {
@@ -460,5 +464,50 @@ export class LivingCampus3D {
     }
 
     this.renderer.render(this.scene, this.camera);
+  }
+
+  /**
+   * Spatial 3D Navigation Coordinator:
+   * Smoothly pans and tilts the 3D nexus to illuminate active geographical hub.
+   */
+  focusCoordinates(hubName = 'all') {
+    if (typeof gsap !== 'undefined') {
+      let targetX = 0, targetY = 0, targetZ = 0;
+      let emissiveColor = 0x526B54; // Botanical green default
+
+      if (hubName === 'narasaraopet') {
+        targetX = -45;
+        targetY = 15;
+        targetZ = -30;
+        emissiveColor = 0x526B54; // Botanical green for headquarters
+      } else if (hubName === 'guntur') {
+        targetX = 55;
+        targetY = -10;
+        targetZ = -40;
+        emissiveColor = 0xD6B77A; // Champagne gold for competitive hub
+      } else if (hubName === 'bapatla') {
+        targetX = 35;
+        targetY = 30;
+        targetZ = 20;
+        emissiveColor = 0xB9A8D8; // Lavender for coastal outreach
+      }
+
+      gsap.to(this.hubOffset, {
+        x: targetX,
+        y: targetY,
+        z: targetZ,
+        duration: 1.4,
+        ease: 'power3.out'
+      });
+
+      if (this.monolith && this.monolith.material) {
+        gsap.to(this.monolith.material.emissive, {
+          r: ((emissiveColor >> 16) & 255) / 255,
+          g: ((emissiveColor >> 8) & 255) / 255,
+          b: (emissiveColor & 255) / 255,
+          duration: 1.2
+        });
+      }
+    }
   }
 }
