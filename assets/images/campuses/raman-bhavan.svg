@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="100%" height="100%">
+  <defs>
+    <linearGradient id="ramanSky" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#1E1620"/>
+      <stop offset="40%" stop-color="#2F2432"/>
+      <stop offset="80%" stop-color="#493B4C"/>
+      <stop offset="100%" stop-color="#E9A18C"/>
+    </linearGradient>
+    <linearGradient id="stemGlow" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#D6B77A"/>
+      <stop offset="50%" stop-color="#E9A18C"/>
+      <stop offset="100%" stop-color="#B9A8D8"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="800" height="500" fill="url(#ramanSky)"/>
+
+  <!-- Futuristic STEM Research & Olympiad Pavilion -->
+  <!-- Modern Cantilever Building Structure -->
+  <polygon points="180,160 620,130 650,380 150,380" fill="#FAF7F0" stroke="#D6B77A" stroke-width="2"/>
+
+  <!-- Geodesic Observatory Dome -->
+  <path d="M 320 140 A 80 80 0 0 1 480 140 Z" fill="rgba(214, 183, 122, 0.25)" stroke="#D6B77A" stroke-width="3"/>
+  <line x1="400" y1="60" x2="400" y2="140" stroke="#D6B77A" stroke-width="2"/>
+  <line x1="340" y1="90" x2="460" y2="90" stroke="#D6B77A" stroke-width="2"/>
+  <circle cx="400" cy="55" r="5" fill="#E9A18C"/>
+
+  <!-- Full-Height Laboratory Glass Curtain Wall -->
+  <g fill="rgba(73, 59, 76, 0.85)" stroke="#E9A18C" stroke-width="1.5">
+    <!-- Level 3 -->
+    <rect x="200" y="170" width="80" height="50" rx="3"/>
+    <rect x="300" y="165" width="80" height="50" rx="3"/>
+    <rect x="420" y="160" width="80" height="50" rx="3"/>
+    <rect x="520" y="155" width="80" height="50" rx="3"/>
+
+    <!-- Level 2 -->
+    <rect x="190" y="240" width="85" height="50" rx="3"/>
+    <rect x="295" y="235" width="85" height="50" rx="3"/>
+    <rect x="420" y="230" width="85" height="50" rx="3"/>
+    <rect x="525" y="225" width="85" height="50" rx="3"/>
+
+    <!-- Level 1 -->
+    <rect x="180" y="310" width="90" height="55" rx="3"/>
+    <rect x="290" y="305" width="90" height="55" rx="3"/>
+    <rect x="420" y="300" width="90" height="55" rx="3"/>
+    <rect x="530" y="295" width="90" height="55" rx="3"/>
+  </g>
+
+  <!-- Glowing Laser Optics / Physics Spectrum Line -->
+  <line x1="100" y1="130" x2="700" y2="130" stroke="url(#stemGlow)" stroke-width="3" stroke-dasharray="8 6"/>
+
+  <!-- Ground Plaza -->
+  <rect x="0" y="380" width="800" height="120" fill="#1E1620"/>
+  <rect x="0" y="380" width="800" height="8" fill="#E9A18C"/>
+
+  <rect x="230" y="445" width="340" height="36" rx="18" fill="rgba(47, 36, 50, 0.9)" stroke="#E9A18C"/>
+  <text x="400" y="468" font-family="sans-serif" font-size="13" font-weight="600" fill="#FFF2D6" text-anchor="middle" letter-spacing="1">RAMAN BHAVAN • STEM & OLYMPIAD HUB</text>
+</svg>

@@ -1,6 +1,6 @@
 /**
  * OXFORD VIT – THE LIVING CAMPUS EXPERIENCE
- * Multi-Campus Directory Data
+ * Multi-Campus Directory Data with Architectural Illustrations
  */
 
 export const campusesData = [
@@ -25,7 +25,7 @@ export const campusesData = [
     timing: '8:00 AM – 6:00 PM',
     phone: '+91 92467 64999',
     accentColor: '#D6B77A',
-    imagePlaceholder: 'linear-gradient(135deg, #493B4C, #526B54)'
+    imageSrc: 'assets/images/campuses/main-campus.svg'
   },
   {
     id: 'balaji-bhavan',
@@ -48,7 +48,7 @@ export const campusesData = [
     timing: '24 Hours Residential',
     phone: '+91 77991 37799',
     accentColor: '#526B54',
-    imagePlaceholder: 'linear-gradient(135deg, #526B54, #374938)'
+    imageSrc: 'assets/images/campuses/balaji-bhavan.svg'
   },
   {
     id: 'yashoda-bhavan',
@@ -71,7 +71,7 @@ export const campusesData = [
     timing: '24 Hours Residential / Day Scholar Safe Wing',
     phone: '+91 92467 64999',
     accentColor: '#B9A8D8',
-    imagePlaceholder: 'linear-gradient(135deg, #8372A5, #493B4C)'
+    imageSrc: 'assets/images/campuses/yashoda-bhavan.svg'
   },
   {
     id: 'raman-bhavan',
@@ -94,7 +94,7 @@ export const campusesData = [
     timing: '7:30 AM – 7:30 PM',
     phone: '+91 92467 64999',
     accentColor: '#E9A18C',
-    imagePlaceholder: 'linear-gradient(135deg, #C66E56, #493B4C)'
+    imageSrc: 'assets/images/campuses/raman-bhavan.svg'
   },
   {
     id: 'padmavathi-bhavan',
@@ -117,7 +117,7 @@ export const campusesData = [
     timing: '8:00 AM – 8:00 PM',
     phone: '+91 77991 37799',
     accentColor: '#D6B77A',
-    imagePlaceholder: 'linear-gradient(135deg, #D6B77A, #526B54)'
+    imageSrc: 'assets/images/campuses/padmavathi-bhavan.svg'
   },
   {
     id: 'ksr-towers',
@@ -140,6 +140,6 @@ export const campusesData = [
     timing: '9:00 AM – 6:30 PM',
     phone: '+91 92467 64999',
     accentColor: '#493B4C',
-    imagePlaceholder: 'linear-gradient(135deg, #493B4C, #1E1620)'
+    imageSrc: 'assets/images/campuses/ksr-towers.svg'
   }
 ];

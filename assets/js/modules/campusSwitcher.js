@@ -31,7 +31,8 @@ export class CampusSwitcher {
 
     this.container.innerHTML = filtered.map((campus) => `
       <article class="campus-card" id="card-${campus.id}" data-category="${campus.category}">
-        <div class="campus-card-img-wrap" style="background: ${campus.imagePlaceholder};">
+        <div class="campus-card-img-wrap">
+          <img src="${campus.imageSrc}" alt="${campus.name}" class="campus-card-img" loading="lazy" />
           <div class="campus-type-pill">${campus.badge}</div>
         </div>
         <div class="campus-card-content">
@@ -111,6 +112,9 @@ export class CampusSwitcher {
 
     this.modalContent.innerHTML = `
       <div style="margin-bottom: 1.5rem;">
+        <div style="border-radius: var(--radius-lg); overflow: hidden; margin-bottom: 1.25rem; border: 1px solid var(--border-gold); max-height: 260px;">
+          <img src="${campus.imageSrc}" alt="${campus.name}" style="width: 100%; height: 100%; object-fit: cover;" />
+        </div>
         <span class="section-tag gold">${campus.badge}</span>
         <h2 style="margin-top: 0.5rem; margin-bottom: 0.5rem; font-size: 2rem;">${campus.name}</h2>
         <p style="color: var(--color-botanical-green-dark); font-weight: 600; display: flex; align-items: center; gap: 0.5rem;">

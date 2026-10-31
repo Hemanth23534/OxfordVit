@@ -1,0 +1,93 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="100%" height="100%">
+  <defs>
+    <linearGradient id="skyGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#2F2432"/>
+      <stop offset="40%" stop-color="#493B4C"/>
+      <stop offset="70%" stop-color="#816FA2"/>
+      <stop offset="100%" stop-color="#D6B77A"/>
+    </linearGradient>
+    <linearGradient id="buildingGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FAF7F0"/>
+      <stop offset="50%" stop-color="#F7F3E9"/>
+      <stop offset="100%" stop-color="#D6B77A"/>
+    </linearGradient>
+    <linearGradient id="glassGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#B9A8D8" stop-opacity="0.8"/>
+      <stop offset="100%" stop-color="#493B4C" stop-opacity="0.9"/>
+    </linearGradient>
+    <linearGradient id="goldTrim" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#A68749"/>
+      <stop offset="50%" stop-color="#FFF2D6"/>
+      <stop offset="100%" stop-color="#D6B77A"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Sky & Aurora -->
+  <rect width="800" height="500" fill="url(#skyGrad)"/>
+  <circle cx="680" cy="120" r="90" fill="#FFF2D6" opacity="0.25" filter="blur(20px)"/>
+  <path d="M 0 350 Q 200 280 400 330 T 800 310 L 800 500 L 0 500 Z" fill="#526B54" opacity="0.6"/>
+  <path d="M 0 370 Q 250 320 500 360 T 800 350 L 800 500 L 0 500 Z" fill="#374938"/>
+
+  <!-- Main Institutional Campus Classical Facade -->
+  <rect x="140" y="210" width="520" height="190" rx="4" fill="url(#buildingGrad)"/>
+  
+  <!-- Central Portico & Triangular Pediment -->
+  <polygon points="400,120 260,205 540,205" fill="url(#buildingGrad)" stroke="url(#goldTrim)" stroke-width="3"/>
+  <rect x="250" y="200" width="300" height="12" fill="url(#goldTrim)"/>
+  
+  <!-- Neoclassical Columns -->
+  <g fill="url(#goldTrim)">
+    <rect x="280" y="212" width="14" height="188" rx="2"/>
+    <rect x="320" y="212" width="14" height="188" rx="2"/>
+    <rect x="360" y="212" width="14" height="188" rx="2"/>
+    <rect x="426" y="212" width="14" height="188" rx="2"/>
+    <rect x="466" y="212" width="14" height="188" rx="2"/>
+    <rect x="506" y="212" width="14" height="188" rx="2"/>
+  </g>
+
+  <!-- Central Grand Entrance Portal -->
+  <rect x="375" y="250" width="50" height="150" rx="25" fill="url(#glassGrad)"/>
+  <line x1="400" y1="250" x2="400" y2="400" stroke="#D6B77A" stroke-width="2"/>
+  
+  <!-- Left Wing Windows -->
+  <g fill="url(#glassGrad)">
+    <rect x="160" y="235" width="28" height="45" rx="3"/>
+    <rect x="198" y="235" width="28" height="45" rx="3"/>
+    <rect x="236" y="235" width="28" height="45" rx="3"/>
+    <rect x="160" y="300" width="28" height="45" rx="3"/>
+    <rect x="198" y="300" width="28" height="45" rx="3"/>
+    <rect x="236" y="300" width="28" height="45" rx="3"/>
+  </g>
+
+  <!-- Right Wing Windows -->
+  <g fill="url(#glassGrad)">
+    <rect x="536" y="235" width="28" height="45" rx="3"/>
+    <rect x="574" y="235" width="28" height="45" rx="3"/>
+    <rect x="612" y="235" width="28" height="45" rx="3"/>
+    <rect x="536" y="300" width="28" height="45" rx="3"/>
+    <rect x="574" y="300" width="28" height="45" rx="3"/>
+    <rect x="612" y="300" width="28" height="45" rx="3"/>
+  </g>
+
+  <!-- Golden Institutional Crest on Pediment -->
+  <circle cx="400" cy="170" r="18" fill="#493B4C" stroke="#D6B77A" stroke-width="2"/>
+  <text x="400" y="176" font-family="serif" font-size="14" font-weight="bold" fill="#FFF2D6" text-anchor="middle">OV</text>
+
+  <!-- Foreground Lawn & Flagpoles -->
+  <line x1="220" y1="180" x2="220" y2="420" stroke="#FFF2D6" stroke-width="2"/>
+  <polygon points="220,180 250,192 220,204" fill="#E9A18C"/>
+  <line x1="580" y1="180" x2="580" y2="420" stroke="#FFF2D6" stroke-width="2"/>
+  <polygon points="580,180 610,192 580,204" fill="#D6B77A"/>
+
+  <!-- Manicured Palms & Greenery -->
+  <g fill="#526B54">
+    <circle cx="110" cy="380" r="45"/>
+    <circle cx="690" cy="380" r="45"/>
+    <path d="M 90 410 Q 110 330 110 420 Z" fill="#374938"/>
+    <path d="M 690 410 Q 710 330 690 420 Z" fill="#374938"/>
+  </g>
+
+  <!-- Luminous Text Badge -->
+  <rect x="250" y="440" width="300" height="36" rx="18" fill="rgba(30, 22, 32, 0.75)" stroke="#D6B77A"/>
+  <text x="400" y="463" font-family="sans-serif" font-size="13" font-weight="600" fill="#FFF2D6" text-anchor="middle" letter-spacing="1">MAIN JUNIOR COLLEGE • RAVIPADU RD</text>
+</svg>

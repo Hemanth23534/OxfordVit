@@ -48,10 +48,16 @@ export class AchievementsEngine {
 
     this.rankersGrid.innerHTML = list.map(ranker => `
       <div class="ranker-card">
-        <div class="rank-badge-large">
-          <span class="rank-number">${ranker.rank}</span>
-          <span class="rank-sub">${ranker.exam.split(' ')[0]}</span>
+        <!-- Student Achiever Portrait Badge with Gold Laurels -->
+        <div style="position: relative; width: 90px; height: 90px; margin: 0 auto 1.25rem;">
+          <div style="width: 100%; height: 100%; border-radius: 50%; background: linear-gradient(135deg, var(--color-champagne-gold-light), var(--color-champagne-gold)); display: flex; align-items: center; justify-content: center; box-shadow: 0 8px 24px rgba(214, 183, 122, 0.4); border: 3px solid #fff; font-family: var(--font-serif); font-size: 1.75rem; font-weight: 700; color: var(--color-deep-plum);">
+            ${ranker.name.split(' ').map(n => n[0]).slice(0, 2).join('')}
+          </div>
+          <div style="position: absolute; bottom: -8px; left: 50%; transform: translateX(-50%); background: linear-gradient(135deg, var(--color-coral), var(--color-coral-dark)); color: #fff; font-family: var(--font-mono); font-size: 0.6875rem; font-weight: 800; padding: 2px 10px; border-radius: 12px; white-space: nowrap; border: 1.5px solid #fff; box-shadow: 0 4px 10px rgba(0,0,0,0.15);">
+            ${ranker.rank}
+          </div>
         </div>
+
         <h4 class="ranker-name">${ranker.name}</h4>
         <div class="ranker-exam">${ranker.exam} • ${ranker.score}</div>
         <span class="badge badge-botanical" style="margin-bottom: 0.85rem;">${ranker.stream}</span>

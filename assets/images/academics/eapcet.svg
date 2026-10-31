@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 240" width="100%" height="100%">
+  <defs>
+    <linearGradient id="eapcetGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#374938"/>
+      <stop offset="50%" stop-color="#526B54"/>
+      <stop offset="100%" stop-color="#2F2432"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="400" height="240" rx="16" fill="url(#eapcetGrad)"/>
+
+  <!-- Kinematics Trajectory Curve -->
+  <path d="M 60 170 Q 180 30 320 170" fill="none" stroke="#D6B77A" stroke-width="3" stroke-dasharray="6 4"/>
+  
+  <!-- Velocity Vectors along Curve -->
+  <line x1="120" y1="100" x2="155" y2="70" stroke="#FFF2D6" stroke-width="2"/>
+  <polygon points="158,67 148,70 152,78" fill="#FFF2D6"/>
+
+  <line x1="200" y1="65" x2="245" y2="65" stroke="#FFF2D6" stroke-width="2"/>
+  <polygon points="250,65 240,60 240,70" fill="#FFF2D6"/>
+
+  <line x1="260" y1="95" x2="295" y2="125" stroke="#FFF2D6" stroke-width="2"/>
+  <polygon points="298,128 295,118 288,124" fill="#FFF2D6"/>
+
+  <!-- Golden State Laurel Medallion -->
+  <g transform="translate(200, 140)">
+    <circle cx="0" cy="0" r="26" fill="#493B4C" stroke="#D6B77A" stroke-width="2"/>
+    <text x="0" y="6" font-family="sans-serif" font-size="14" font-weight="900" fill="#D6B77A" text-anchor="middle">TOP 100</text>
+  </g>
+
+  <text x="45" y="225" font-family="sans-serif" font-size="11" font-weight="700" letter-spacing="1.5" fill="#FFF2D6">AP EAPCET • ENGINEERING & AGRICULTURE</text>
+</svg>
