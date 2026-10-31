@@ -113,7 +113,7 @@ export const eventsData = {
       highlights: [
         'Free multi-specialty health check-ups for 1,200+ local families',
         'Distribution of notebooks, stationery and scholarship kits',
-        'Led by Founder K. Sambasiva Rao and student volunteer council'
+        'Led by Administrative Director K. Srinivasa Rao (KSR) and student volunteer council'
       ],
       tag: 'Community Impact'
     }

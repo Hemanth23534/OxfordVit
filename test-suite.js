@@ -106,6 +106,47 @@ async function runTests() {
     }
   });
 
+  // TEST 1C: Master Management & Leadership Directorate Verification
+  console.log('\n1C. Master Management & Leadership Directorate Verification:');
+  const mgmtRaw = JSON.parse(fs.readFileSync(path.join(__dirname, 'management.json'), 'utf8'));
+  assert(mgmtRaw.institutionalHierarchy && Array.isArray(mgmtRaw.institutionalHierarchy.tiers) && mgmtRaw.institutionalHierarchy.tiers.length === 3, 'management.json defines 3-Tier Institutional Hierarchy');
+  assert(Array.isArray(mgmtRaw.executiveLeadership) && mgmtRaw.executiveLeadership.length === 7, 'management.json contains all 7 verified leadership profiles');
+
+  const expectedLeaders = [
+    { id: 'chairman-francis', name: 'Sri S. Francis Reddy', role: 'Chairman, Oxford Group' },
+    { id: 'admin-ksr', name: 'K. Srinivasa Rao (KSR)', role: 'Administrative Director' },
+    { id: 'director-raja', name: 'Ch. Raja Reddy', role: 'Director' },
+    { id: 'academic-dsr', name: 'D. Srinivasa Rao (DSR)', role: 'Academic Director' },
+    { id: 'academic-ranga', name: 'P.V. Ranga Rao', role: 'Academic Director' },
+    { id: 'principal-raghava', name: 'Panadi Raghava', role: 'Principal & Academic Director' },
+    { id: 'manager-sambasiva', name: 'K. Sambasiva Rao', role: 'Administrative Manager' }
+  ];
+
+  expectedLeaders.forEach(exp => {
+    const leader = mgmtRaw.executiveLeadership.find(l => l.id === exp.id);
+    assert(leader !== undefined, `Management profile exists: ${exp.name} (${exp.id})`);
+    if (leader) {
+      assert(leader.name === exp.name, `Leader name verified: ${exp.name}`);
+      assert(leader.designation === exp.role, `Leader designation verified: ${exp.role}`);
+      assert(typeof leader.verificationStatus === 'string' && leader.verificationStatus.length > 0, `Leader has verification status badge: ${exp.id}`);
+      if (exp.id === 'chairman-francis') {
+        assert(leader.verificationStatus.includes('Pending') || leader.affiliationNote.includes('Oxford Educational Society'), 'Sri S. Francis Reddy has explicit Oxford Educational Society affiliation verification notice');
+      }
+      if (exp.id === 'admin-ksr') {
+        assert(leader.experienceYears === 30 && leader.additionalRole.includes('KSR Charitable Trust'), 'K. Srinivasa Rao (KSR) verified: 30 yrs, IIT Maths, KSR Trust');
+      }
+      if (exp.id === 'academic-dsr') {
+        assert(leader.experienceYears === 32 && leader.qualifications.includes('IIT Delhi'), 'D. Srinivasa Rao (DSR) verified: 32 yrs, Ex-SRA IIT Delhi, IIT Maths');
+      }
+      if (exp.id === 'academic-ranga') {
+        assert(leader.experienceYears === 19 && leader.qualifications.includes('IIT Roorkee'), 'P.V. Ranga Rao verified: 19 yrs, M.Sc. IIT Roorkee, IIT Chemistry');
+      }
+      if (exp.id === 'principal-raghava') {
+        assert(leader.experienceYears === 19 && leader.qualifications.includes('M.Sc.'), 'Panadi Raghava verified: 19 yrs, M.Sc., M.A., Mathematics & KSR Trust volunteer');
+      }
+    }
+  });
+
   // TEST 2: Static Asset & Image Directory Verification
   console.log('\n2. Static Asset Verification:');
   const requiredAssetDirs = [
@@ -132,10 +173,17 @@ async function runTests() {
     'assets/images/campuses/guntur-balaji-tower.svg',
     'assets/images/campuses/guntur-vasavi-tower.svg',
     'assets/images/campuses/guntur-vit-medical.svg',
-    'assets/images/campuses/bapatla-branch.svg'
+    'assets/images/campuses/bapatla-branch.svg',
+    'assets/images/management/dr-francis-reddy.svg',
+    'assets/images/management/k-srinivasa-rao.svg',
+    'assets/images/management/ch-raja-reddy.svg',
+    'assets/images/management/dogiparthi-srinivasa-rao.svg',
+    'assets/images/management/pv-ranga-rao.svg',
+    'assets/images/management/panadi-raghava.svg',
+    'assets/images/management/k-sambasiva-rao.svg'
   ];
   newSvgs.forEach(svg => {
-    assert(fs.existsSync(path.join(__dirname, svg)), `Architectural SVG artwork exists: ${svg}`);
+    assert(fs.existsSync(path.join(__dirname, svg)), `Heraldic / Architectural SVG artwork exists: ${svg}`);
   });
 
   // TEST 3: CSS and Vendor Library Verification
