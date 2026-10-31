@@ -2,15 +2,47 @@
   "institution": {
     "name": "Oxford VIT Junior College & Academy",
     "legalName": "Oxford VIT Educational Institutions",
-    "governingBody": "Oxford Educational Society & KSR Educational Initiatives",
+    "governingBody": "Oxford Educational Society & KSR Charitable Trust",
     "foundedYear": 1994,
     "accreditation": "Affiliated to the Board of Intermediate Education, Andhra Pradesh (BIEAP)",
-    "institutionType": "Co-Educational Integrated Junior College & Competitive Academy",
+    "institutionType": "Centralized Multi-Campus Educational Institution & Competitive Academy",
+    "geographicalHubs": [
+      {
+        "city": "Narasaraopet",
+        "district": "Palnadu District",
+        "role": "Founding Headquarters & Main Educational Hub",
+        "campuses": [
+          "Yashoda Bhavan (Main Campus)",
+          "Balaji Bhavan (Senior & Junior Sections)",
+          "Raman Bhavan (Senior IIT-JEE Super Wing)",
+          "Oxford IIT School / Concept School (Sister School & Foundation)",
+          "KSR Towers (Historical Campus Archive)"
+        ]
+      },
+      {
+        "city": "Guntur",
+        "district": "Guntur District",
+        "role": "Regional Competitive & Medical Hub",
+        "campuses": [
+          "Balaji Tower Campus (IIT-JEE & Medical Academy)",
+          "Vasavi Tower Girls Campus (Residential & Day)",
+          "VIT Medical Academy (Long-Term NEET Wing)"
+        ]
+      },
+      {
+        "city": "Bapatla",
+        "district": "Bapatla District",
+        "role": "Coastal Regional Branch",
+        "campuses": [
+          "VIT Junior College / Bapatla Branch (Pending Verification)"
+        ]
+      }
+    ],
     "headquarters": {
-      "campus": "Main Junior College Campus",
-      "addressLine1": "Opposite Kamma Hostel, Ravipadu Road",
+      "campus": "Yashoda Bhavan — Main Campus",
+      "addressLine1": "Opposite Kamma Hostel / Reddy Nagar, Ravipadu Road",
       "locality": "Narasaraopet",
-      "district": "Palnadu District (formerly Guntur District)",
+      "district": "Palnadu District (AP)",
       "state": "Andhra Pradesh",
       "country": "India",
       "pincode": "522601",
@@ -33,22 +65,22 @@
     "institutionalPillars": [
       {
         "title": "30+ Years Academic Pedagogy",
-        "description": "Consistent track record of district 1st ranks and state top scores in BIEAP Intermediate Board examinations."
+        "description": "Consistent track record of district 1st ranks and state top scores in BIEAP Intermediate Board examinations since 1994."
       },
       {
         "title": "Integrated National Testing Framework",
         "description": "Simultaneous preparation for IIT-JEE Advanced, JEE Main, NEET-UG, and AP EAPCET with zero syllabus dissonance."
       },
       {
-        "title": "The Six Bhavans Unified Ecosystem",
-        "description": "Purpose-built specialized campuses for residential boys (Balaji), girls security (Yashoda), STEM labs (Raman), and directorate (KSR Towers)."
+        "title": "Multi-City Specialized Ecosystem",
+        "description": "Dedicated centers across Narasaraopet (Founding Hub), Guntur (Competitive & Long-Term Medical Hub), and Bapatla (Coastal Branch)."
       },
       {
         "title": "Philanthropic Empowerment",
         "description": "Over ₹1.5 Crores awarded annually in merit-cum-means scholarships through the KSR Charitable Trust."
       }
     ],
-    "verificationStatus": "Verified - Official Regional Educational Directory & Public Management Presence",
+    "verificationStatus": "Verified Multi-Location Institutional Profile",
     "lastAuditDate": "2026-10-31"
   }
 }

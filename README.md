@@ -1,7 +1,8 @@
 # OXFORD VIT – THE LIVING CAMPUS EXPERIENCE
-### Oxford VIT Junior College & Academy • Narasaraopet
+### Oxford VIT Junior College & Academy • Multi-Location Centralized Portal
+#### Narasaraopet (Headquarters) • Guntur (Competitive Hub) • Bapatla (Coastal Branch)
 
-> **Headquarters / Main Campus:** Opposite Kamma Hostel, Ravipadu Road, Narasaraopet, Palnadu District, Andhra Pradesh 522601, India.  
+> **Headquarters / Main Campus:** Yashoda Bhavan, Reddy Nagar / Ramireddypeta, Narasaraopet, Palnadu District, Andhra Pradesh 522601, India.  
 > **Under the Aegis of:** KSR Charitable Trust  
 > **Leadership:** K. Sambasiva Rao (KSR, Administrative Director) & Panadi Raghava (Academic Director, `@raghava_vit`)
 
@@ -9,9 +10,9 @@
 
 ## 🏛️ Project Architecture & Purpose
 
-This repository houses the unified institutional web platform representing the entire **Oxford VIT** educational institution and its network of six verified Bhavans across Narasaraopet, Andhra Pradesh.
+This repository houses the unified institutional web platform representing the entire **Oxford VIT** educational institution across all its verified geographical divisions: **Narasaraopet**, **Guntur**, and **Bapatla**.
 
-Built purely in accordance with modern creative web engineering principles:
+Built strictly in accordance with pure creative web engineering:
 - **Zero Framework Bloat:** Strictly no React, Next.js, Vue, Angular, JSX, Tailwind, or Bootstrap.
 - **100% Pure Web Standards:** Pure HTML5, modular CSS3, Vanilla ES6+ JavaScript modules.
 - **Support Libraries:** Three.js (WebGL) for the 3D Living Campus constellation and GSAP / ScrollTrigger for editorial transitions.
@@ -30,37 +31,48 @@ Built purely in accordance with modern creative web engineering principles:
 
 ---
 
-## 📍 The Six Verified Bhavans & Campuses
+## 📍 Geographical Divisions & Campus Spectrum
 
-1. **Main Junior College Campus:** Opposite Kamma Hostel, Ravipadu Road (Pin 522601). Central administrative headquarters, lecture halls, and admissions bureau.
-2. **Balaji Bhavan:** Reddy Nagar / Vengala Reddy Nagar (Pin 522601). Super-60 cohort, boys residential campus, and intensive study pods.
-3. **Yashoda Bhavan:** Reddy Nagar / Ramireddypeta (Pin 522601). Dedicated girls residential academy with 24/7 security and infirmary.
-4. **Raman Bhavan:** Ramireddypeta / Arundelpet, near Sainath Towers (Pin 522601). Advanced STEM research labs, Olympiad center, and computer testing facility.
-5. **Padmavathi Bhavan:** Central Narasaraopet. Academic residence and personalized tutorial pods.
-6. **KSR Towers:** Arundelpet (Directorate & KSR Charitable Trust HQ). Executive directorate, counseling lounge, and charitable scholarship trust.
+### NARASARAOPET (Palnadu District Hub — Founding Headquarters)
+1. **Yashoda Bhavan — Main Campus:** Central academic headquarters, lecture amphitheatres, modern science labs, and premier girls residential academy.
+2. **Balaji Bhavan — Senior and Junior Intermediate Sections:** Super-60 competitive cell, boys residential campus, and intensive study pods.
+3. **Raman Bhavan — Senior IIT-JEE Super Wing:** Elite IIT-JEE Advanced cell, 150+ networked computer testing terminals (CBT), and national Olympiad labs.
+4. **Oxford IIT School / Concept School:** High school (Classes 6th to 10th) & early IIT foundation wing. (Sister School Category).
+5. **KSR Towers — Historical Campus Information:** Foundational tower and registered trust headquarters. Preserved for institutional archives and merit scholarships; distinguished from operational teaching campuses. (Historical Archive Category).
+
+### GUNTUR (Guntur District Hub — Competitive & Medical Corridor)
+1. **Balaji Tower Campus — IIT-JEE & Medical Academy:** Premier urban flagship in Guntur (Arundelpet / Brodipet) for high-achieving engineering and medical scholars.
+2. **Vasavi Tower Girls Campus — Girls Residential & Day Campus:** Secure, gated educational sanctuary in Guntur with 24/7 biometric security and resident lady faculty.
+3. **VIT Medical Academy — Long-Term NEET Wing:** Dedicated high-intensity repeater division for post-intermediate students targeting top government MBBS and AIIMS seats.
+
+### BAPATLA (Bapatla District — Coastal Regional Branch)
+1. **VIT Junior College / Bapatla Branch:** Dedicated profile serving coastal Andhra scholars with Intermediate MPC & BiPC courses and AP EAPCET coaching. *(Governance Status: Pending Verification — Regional Affiliation / Society Registration)*.
 
 ---
 
-## 📑 Pages Included in the Unified Portal
+## 📑 Complete Suite of Pages (14 HTML Pages)
 
-1. **`index.html`**: Cinematic full-screen 3D Living Campus homepage with interactive constellation, overview of Bhavans, academic programs, champions wall, video spotlight, and quick enquiry.
+1. **`index.html`**: Cinematic full-screen 3D Living Campus homepage with interactive constellation, overview of all 3 hubs, academic programs, champions wall, video spotlight, and quick enquiry.
 2. **`about.html`**: Institutional heritage (founded 1994), vision, mission, KSR Charitable Trust patronage, and leadership profiles.
-3. **`campuses.html`**: Centralized multi-campus directory with live filterable cards for all 6 Bhavans, amenities, courses, and interactive locator.
-4. **`academics.html`**: Deep-dive academic syllabi (MPC Super-60, BiPC Medical Academy, MEC/CEC), daily academic schedule, and weekly testing system.
-5. **`achievements.html`**: Wall of Champions with verified JEE Advanced, NEET, and AP EAPCET toppers, plus state-level BIEAP medalists.
-6. **`faculty.html`**: Comprehensive faculty roster across Mathematics, Physics, Chemistry, Biology, and Humanities.
-7. **`student-life.html`**: Residential culture, hostel amenities, nutritional dining, sports facilities, digital libraries, and bus transport grid.
-8. **`events.html`**: Cultural celebrations, Sankranti Sambaralu, Prathibha Puraskaralu convocations, Science Day, and Ramanujan Math Day.
-9. **`gallery.html`**: Filterable high-definition photo and video gallery connected dynamically to `/api/gallery`.
-10. **`admissions.html`**: Centralized online application and OVEST 2026 scholarship entrance examination registration.
-11. **`admin.html`**: Management administrative console for monitoring admission applications and publishing new photo/video media directly to the website.
+3. **`campuses.html`**: Master centralized multi-campus directory with live dual-level filtering (by city and by category), interactive locator, and facility cards for all 9 entities.
+4. **`narasaraopet.html`**: Dedicated city page for the Narasaraopet Hub with individual profiles for all 5 facilities, transportation routes, and historical archive section.
+5. **`guntur.html`**: Dedicated city page for the Guntur Hub with profiles for Balaji Tower, Vasavi Tower Girls, and VIT Medical Academy.
+6. **`bapatla.html`**: Dedicated profile page for the Bapatla Coastal Branch with verified regional information and governance disclosures.
+7. **`academics.html`**: Deep-dive academic syllabi (MPC Super-60, BiPC Medical Academy, MEC/CEC), daily academic schedule, and weekly testing system.
+8. **`achievements.html`**: Wall of Champions with verified JEE Advanced, NEET, and AP EAPCET toppers, plus state-level BIEAP medalists.
+9. **`faculty.html`**: Comprehensive faculty roster across Mathematics, Physics, Chemistry, Biology, and Humanities.
+10. **`student-life.html`**: Residential culture, hostel amenities, nutritional dining, sports facilities, digital libraries, and bus transport grid.
+11. **`events.html`**: Cultural celebrations, Sankranti Sambaralu, Prathibha Puraskaralu convocations, Science Day, and Ramanujan Math Day.
+12. **`gallery.html`**: Filterable high-definition photo and video gallery connected dynamically to `/api/gallery`.
+13. **`admissions.html`**: Centralized online application and OVEST 2026 scholarship entrance examination registration.
+14. **`admin.html`**: Management administrative console for monitoring admission applications and publishing new photo/video media directly to the website.
 
 ---
 
 ## 📊 Structured JSON Data Repositories
 
-- `college-profile.json`: BIEAP affiliation, institutional milestones, contact details, and core philosophies.
-- `campuses.json`: Address coordinates, facilities, and academic cohorts for all 6 Bhavans.
+- `college-profile.json`: BIEAP affiliation, multi-city geographical hubs, institutional milestones, contact details, and core philosophies.
+- `campuses.json`: Address coordinates, facilities, operational status, governance, and academic cohorts for all 9 campuses.
 - `management.json`: Executive profiles for Dr. S. Francis Reddy, K. Sambasiva Rao, Panadi Raghava, and trustees.
 - `faculty.json`: Faculty credentials, subjects, experience, and academic specializations.
 - `achievements.json`: Verified student ranks and competitive scores with full student privacy protection.
@@ -70,7 +82,7 @@ Built purely in accordance with modern creative web engineering principles:
 
 ---
 
-## 🚀 Quick Start & Verification
+## 🚀 Quick Start & Automated Verification
 
 ### Running the Platform
 ```bash
@@ -81,7 +93,7 @@ npm start
 
 ### Running the Automated Test Suite
 ```bash
-# Execute 155 automated end-to-end tests
+# Execute 192 automated end-to-end tests validating all pages, assets, and APIs
 npm test
 # or: node test-suite.js
 ```
@@ -109,9 +121,8 @@ server {
     listen 80;
     server_name oxfordvit.edu.in www.oxfordvit.edu.in;
 
-    # Gzip Compression
     gzip on;
-    gzip_types text/plain text/css application/json application/javascript text/xml application/xml;
+    gzip_types text/plain text/css application/json application/javascript text/xml application/xml image/svg+xml;
 
     location / {
         proxy_pass http://127.0.0.1:3000;
@@ -122,15 +133,6 @@ server {
         proxy_cache_bypass $http_upgrade;
     }
 }
-```
-
-### Option 3: Docker Deployment
-```dockerfile
-FROM node:20-alpine
-WORKDIR /app
-COPY . .
-EXPOSE 3000
-CMD ["node", "server.js"]
 ```
 
 ---

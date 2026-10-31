@@ -1,4 +1,5 @@
 // Complete Automated Verification & Testing Suite for Oxford VIT
+// Comprehensive Multi-Campus & Locations Verification (Narasaraopet, Guntur, Bapatla)
 const fs = require('fs');
 const path = require('path');
 const http = require('http');
@@ -41,7 +42,8 @@ function httpRequest(options, postData) {
 
 async function runTests() {
   console.log('====================================================');
-  console.log('OXFORD VIT – COMPLETE AUTOMATED VERIFICATION SUITE');
+  console.log('OXFORD VIT – COMPLETE AUTOMATED MULTI-LOCATION SUITE');
+  console.log('Narasaraopet • Guntur • Bapatla Institutional Portal');
   console.log('====================================================\n');
 
   // TEST 1: Structured Institutional Data Files
@@ -70,6 +72,40 @@ async function runTests() {
     }
   });
 
+  // TEST 1B: Verify Specific Multi-City & Campus Structure
+  console.log('\n1B. Multi-City & Campus Roster Verification:');
+  const campusesRaw = JSON.parse(fs.readFileSync(path.join(__dirname, 'campuses.json'), 'utf8'));
+  assert(Array.isArray(campusesRaw.cities) && campusesRaw.cities.length === 3, 'campuses.json specifies all 3 geographical hubs (Narasaraopet, Guntur, Bapatla)');
+  assert(Array.isArray(campusesRaw.campuses) && campusesRaw.campuses.length >= 9, `campuses.json contains all 9 verified campuses (found ${campusesRaw.campuses.length})`);
+
+  const expectedIds = [
+    'yashoda-bhavan',
+    'balaji-bhavan',
+    'raman-bhavan',
+    'ksr-towers',
+    'oxford-iit-school',
+    'guntur-balaji-tower',
+    'guntur-vasavi-tower',
+    'guntur-vit-medical',
+    'bapatla-branch'
+  ];
+
+  expectedIds.forEach(id => {
+    const found = campusesRaw.campuses.find(c => c.id === id);
+    assert(found !== undefined, `Verified campus entity exists: ${id}`);
+    if (found) {
+      if (id === 'ksr-towers') {
+        assert(found.operationalStatus.includes('Historical'), 'KSR Towers correctly marked as Historical Campus / Archive');
+      }
+      if (id === 'bapatla-branch') {
+        assert(found.governance.includes('Pending Verification'), 'Bapatla branch governance marked Pending Verification');
+      }
+      if (id === 'oxford-iit-school') {
+        assert(found.category === 'sister-school', 'Oxford IIT School classified as sister-school');
+      }
+    }
+  });
+
   // TEST 2: Static Asset & Image Directory Verification
   console.log('\n2. Static Asset Verification:');
   const requiredAssetDirs = [
@@ -88,6 +124,18 @@ async function runTests() {
     assert(fs.existsSync(fullPath) && fs.statSync(fullPath).isDirectory(), `Directory exists: ${dir}`);
     const files = fs.readdirSync(fullPath);
     assert(files.length > 0, `Directory contains assets (${files.length} found): ${dir}`);
+  });
+
+  // Check specific architectural SVGs for the new campuses
+  const newSvgs = [
+    'assets/images/campuses/oxford-iit-school.svg',
+    'assets/images/campuses/guntur-balaji-tower.svg',
+    'assets/images/campuses/guntur-vasavi-tower.svg',
+    'assets/images/campuses/guntur-vit-medical.svg',
+    'assets/images/campuses/bapatla-branch.svg'
+  ];
+  newSvgs.forEach(svg => {
+    assert(fs.existsSync(path.join(__dirname, svg)), `Architectural SVG artwork exists: ${svg}`);
   });
 
   // TEST 3: CSS and Vendor Library Verification
@@ -140,12 +188,15 @@ async function runTests() {
     assert(fs.existsSync(path.join(__dirname, mod)), `JS File exists: ${mod}`);
   });
 
-  // TEST 5: HTML Documents & SEO Metas
-  console.log('\n5. HTML Documents & SEO Metas:');
+  // TEST 5: HTML Documents & SEO Metas (All 14 pages)
+  console.log('\n5. HTML Documents & SEO Metas (All 14 Pages):');
   const htmlFiles = [
     'index.html',
     'about.html',
     'campuses.html',
+    'narasaraopet.html',
+    'guntur.html',
+    'bapatla.html',
     'academics.html',
     'achievements.html',
     'faculty.html',
@@ -171,8 +222,26 @@ async function runTests() {
   // TEST 6: Live Server HTTP Endpoint Testing
   console.log('\n6. Live Server HTTP Endpoint Testing (http://localhost:3000):');
   
-  // Test root and html routes
-  for (const page of ['/', '/index.html', '/about.html', '/campuses.html', '/academics.html', '/achievements.html', '/faculty.html', '/student-life.html', '/events.html', '/gallery.html', '/admissions.html', '/admin.html']) {
+  // Test root and all 14 html routes
+  const publicRoutes = [
+    '/',
+    '/index.html',
+    '/about.html',
+    '/campuses.html',
+    '/narasaraopet.html',
+    '/guntur.html',
+    '/bapatla.html',
+    '/academics.html',
+    '/achievements.html',
+    '/faculty.html',
+    '/student-life.html',
+    '/events.html',
+    '/gallery.html',
+    '/admissions.html',
+    '/admin.html'
+  ];
+
+  for (const page of publicRoutes) {
     try {
       const res = await httpRequest({
         hostname: 'localhost',
@@ -189,11 +258,11 @@ async function runTests() {
   // Test robots.txt and sitemap.xml
   try {
     const robots = await httpRequest({ hostname: 'localhost', port: 3000, path: '/robots.txt', method: 'GET' });
-    assert(robots.statusCode === 200 && robots.data.includes('Sitemap:'), 'GET /robots.txt returns HTTP 200 with Sitemap directive');
+    assert(robots.statusCode === 200 && robots.data.includes('narasaraopet.html') && robots.data.includes('guntur.html') && robots.data.includes('bapatla.html'), 'GET /robots.txt includes all 3 city pages');
     assert(robots.headers['content-type'].includes('text/plain'), `GET /robots.txt served with text/plain (${robots.headers['content-type']})`);
 
     const sitemap = await httpRequest({ hostname: 'localhost', port: 3000, path: '/sitemap.xml', method: 'GET' });
-    assert(sitemap.statusCode === 200 && sitemap.data.includes('<urlset'), 'GET /sitemap.xml returns HTTP 200 with valid XML');
+    assert(sitemap.statusCode === 200 && sitemap.data.includes('narasaraopet.html') && sitemap.data.includes('guntur.html') && sitemap.data.includes('bapatla.html'), 'GET /sitemap.xml contains all 3 city URLs');
     assert(sitemap.headers['content-type'].includes('application/xml'), `GET /sitemap.xml served with application/xml (${sitemap.headers['content-type']})`);
   } catch (e) {
     assert(false, `robots/sitemap verification failed: ${e.message}`);
@@ -259,7 +328,7 @@ async function runTests() {
     assert(false, `POST /api/admissions incomplete test failed: ${e.message}`);
   }
 
-  // POST /api/admissions valid submission
+  // POST /api/admissions valid submission with city selection
   let testAppId = null;
   try {
     const validPost = await httpRequest({
@@ -269,13 +338,13 @@ async function runTests() {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' }
     }, JSON.stringify({
-      studentName: 'Verification Suite Student',
-      parentName: 'Test Parent',
+      studentName: 'Multi-Location Test Scholar',
+      parentName: 'Verification Parent',
       mobile: '9848022338',
-      email: 'test@oxfordvit.edu.in',
-      course: 'MPC Super-60 (JEE Advanced Focus)',
-      campus: 'Main Campus (Ravipadu Road)',
-      qualification: 'BSEAP AP SSC 9.8 GPA'
+      email: 'admissions@oxfordvit.edu.in',
+      course: 'MPC Super-60 (IIT-JEE)',
+      campus: 'Yashoda Bhavan — Main Campus (Narasaraopet)',
+      qualification: 'BSEAP AP SSC 10.0 GPA'
     }));
     assert(validPost.statusCode === 201, 'POST /api/admissions accepts valid application with HTTP 201');
     const resObj = JSON.parse(validPost.data);

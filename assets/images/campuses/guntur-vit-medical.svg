@@ -1,0 +1,94 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="100%" height="100%">
+  <defs>
+    <linearGradient id="skyMedical" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#E1EBE7" />
+      <stop offset="50%" stop-color="#F2F7F4" />
+      <stop offset="100%" stop-color="#DCE7E1" />
+    </linearGradient>
+    <linearGradient id="medWhite" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFFFFF" />
+      <stop offset="100%" stop-color="#E8F1EC" />
+    </linearGradient>
+    <linearGradient id="botanicalTrim" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#526B54" />
+      <stop offset="50%" stop-color="#67836A" />
+      <stop offset="100%" stop-color="#3F5341" />
+    </linearGradient>
+    <linearGradient id="coralAccent" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#E9A18C" />
+      <stop offset="100%" stop-color="#D78670" />
+    </linearGradient>
+    <filter id="medShadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="16" stdDeviation="18" flood-color="#493B4C" flood-opacity="0.16" />
+    </filter>
+  </defs>
+
+  <!-- Sky Canvas -->
+  <rect width="800" height="500" fill="url(#skyMedical)" />
+  <circle cx="400" cy="140" r="220" fill="#67836A" opacity="0.16" filter="blur(50px)" />
+  <circle cx="200" cy="160" r="150" fill="#E9A18C" opacity="0.14" filter="blur(40px)" />
+
+  <!-- Ground Lawn -->
+  <rect x="0" y="410" width="800" height="90" fill="url(#botanicalTrim)" />
+  <rect x="0" y="405" width="800" height="6" fill="#D6B77A" />
+
+  <!-- VIT Medical Academy Main Modern Complex -->
+  <g filter="url(#medShadow)">
+    <!-- Main Center Block -->
+    <rect x="180" y="100" width="440" height="305" rx="10" fill="url(#medWhite)" stroke="#526B54" stroke-width="2.5" />
+    
+    <!-- Top Medical Caduceus / Cross Center Pavilion -->
+    <rect x="330" y="40" width="140" height="65" rx="6" fill="#526B54" stroke="#D6B77A" stroke-width="2" />
+    <!-- Medical Cross Emblem -->
+    <rect x="390" y="52" width="20" height="40" rx="3" fill="#FFFFFF" />
+    <rect x="380" y="62" width="40" height="20" rx="3" fill="#FFFFFF" />
+
+    <!-- Signage Bar -->
+    <rect x="200" y="115" width="400" height="36" rx="4" fill="#493B4C" />
+    <text x="400" y="132" font-family="'Plus Jakarta Sans', sans-serif" font-size="12" font-weight="900" fill="#FFFFFF" text-anchor="middle" letter-spacing="2">VIT MEDICAL ACADEMY</text>
+    <text x="400" y="145" font-family="'Plus Jakarta Sans', sans-serif" font-size="8.5" font-weight="700" fill="#E9A18C" text-anchor="middle" letter-spacing="1.5">LONG-TERM NEET WING • GUNTUR</text>
+
+    <!-- Glass Microbiology & Anatomy Laboratories (Upper level) -->
+    <g fill="#A9C7B6" opacity="0.75" stroke="#526B54" stroke-width="1.5">
+      <rect x="210" y="170" width="75" height="50" rx="4" />
+      <rect x="300" y="170" width="75" height="50" rx="4" />
+      <rect x="425" y="170" width="75" height="50" rx="4" />
+      <rect x="515" y="170" width="75" height="50" rx="4" />
+    </g>
+
+    <!-- Supervised NEET Study Pods (Middle level) -->
+    <g fill="#D6E6DC" opacity="0.85" stroke="#526B54" stroke-width="1.5">
+      <rect x="210" y="240" width="75" height="60" rx="4" />
+      <rect x="300" y="240" width="75" height="60" rx="4" />
+      <rect x="425" y="240" width="75" height="60" rx="4" />
+      <rect x="515" y="240" width="75" height="60" rx="4" />
+    </g>
+
+    <!-- Ground Level Entrance Portico -->
+    <rect x="340" y="325" width="120" height="80" fill="#526B54" />
+    <polygon points="320,325 400,295 480,325" fill="#D6B77A" />
+    <rect x="360" y="340" width="80" height="65" rx="3" fill="#FFFFFF" stroke="#493B4C" stroke-width="2" />
+    <line x1="400" y1="340" x2="400" y2="405" stroke="#526B54" stroke-width="2" />
+  </g>
+
+  <!-- Left & Right Flanking Palms -->
+  <g transform="translate(100, 360)">
+    <path d="M 0,50 Q 5,10 0,-40" stroke="#7A6553" stroke-width="7" fill="none" />
+    <ellipse cx="0" cy="-45" rx="35" ry="12" fill="#526B54" transform="rotate(-20 0 -45)" />
+    <ellipse cx="0" cy="-45" rx="35" ry="12" fill="#67836A" transform="rotate(30 0 -45)" />
+    <ellipse cx="0" cy="-45" rx="35" ry="12" fill="#445846" transform="rotate(80 0 -45)" />
+  </g>
+
+  <g transform="translate(700, 360)">
+    <path d="M 0,50 Q -5,10 0,-40" stroke="#7A6553" stroke-width="7" fill="none" />
+    <ellipse cx="0" cy="-45" rx="35" ry="12" fill="#526B54" transform="rotate(20 0 -45)" />
+    <ellipse cx="0" cy="-45" rx="35" ry="12" fill="#67836A" transform="rotate(-30 0 -45)" />
+    <ellipse cx="0" cy="-45" rx="35" ry="12" fill="#445846" transform="rotate(-80 0 -45)" />
+  </g>
+
+  <!-- High-Yield NEET Score Pill -->
+  <g transform="translate(620, 110)">
+    <rect width="130" height="34" rx="17" fill="#FAF8F5" stroke="#E9A18C" stroke-width="2" filter="url(#medShadow)" />
+    <text x="65" y="21" font-family="'Plus Jakarta Sans', sans-serif" font-size="9.5" font-weight="800" fill="#493B4C" text-anchor="middle">TARGET 700+ NEET</text>
+  </g>
+</svg>

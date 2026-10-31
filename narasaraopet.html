@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Narasaraopet Campuses & Bhavans | Oxford VIT Junior College & Academy</title>
+  
+  <meta name="description" content="Explore Oxford VIT campuses in Narasaraopet (Palnadu District): Yashoda Bhavan Main Campus, Balaji Bhavan Senior/Junior Sections, Raman Bhavan IIT-JEE Super Wing, Oxford IIT School, and KSR Towers Historical Archive.">
+  <meta name="keywords" content="Oxford VIT Narasaraopet, Yashoda Bhavan Main Campus, Balaji Bhavan Narasaraopet, Raman Bhavan IIT-JEE, Oxford IIT School Narasaraopet, KSR Towers Historical, Intermediate College Palnadu">
+  <meta name="theme-color" content="#493B4C">
+
+  <!-- Open Graph & Social Cards -->
+  <meta property="og:title" content="Narasaraopet Campuses & Bhavans | Oxford VIT Junior College & Academy">
+  <meta property="og:description" content="Explore Oxford VIT campuses in Narasaraopet: Yashoda Bhavan Main Campus, Balaji Bhavan Senior/Junior Sections, Raman Bhavan IIT-JEE Super Wing, Oxford IIT School, and KSR Towers.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://oxfordvit.edu.in/narasaraopet.html">
+  <meta property="og:image" content="https://oxfordvit.edu.in/assets/images/campuses/yashoda-bhavan.svg">
+
+  <!-- Favicon Crest SVG -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='20' fill='%23D6B77A'/%3E%3Cpath d='M50 15 L80 32 L80 68 L50 85 L20 68 L20 32 Z' fill='%23493B4C'/%3E%3Cpath d='M50 25 L70 37 L70 63 L50 75 L30 63 L30 37 Z' fill='%23F7F3E9'/%3E%3Ctext x='50' y='58' font-family='serif' font-size='26' font-weight='bold' fill='%23493B4C' text-anchor='middle'%3EOV%3C/text%3E%3C/svg%3E">
+
+  <!-- Core Design Tokens & Stylesheets -->
+  <link rel="stylesheet" href="assets/css/variables.css">
+  <link rel="stylesheet" href="assets/css/base.css">
+  <link rel="stylesheet" href="assets/css/components.css">
+  <link rel="stylesheet" href="assets/css/layout.css">
+  <link rel="stylesheet" href="assets/css/sections.css">
+  <link rel="stylesheet" href="assets/css/animations.css">
+
+  <!-- Vendor Supporting Libraries -->
+  <script src="assets/vendor/three.min.js"></script>
+  <script src="assets/vendor/gsap.min.js"></script>
+  <script src="assets/vendor/ScrollTrigger.min.js"></script>
+</head>
+<body>
+
+  <!-- Custom Luxury Cursor -->
+  <div class="custom-cursor-dot" aria-hidden="true"></div>
+  <div class="custom-cursor-ring" aria-hidden="true"></div>
+
+  <!-- Ambient Aurora Glow -->
+  <div class="aurora-backdrop" aria-hidden="true"></div>
+
+  <!-- Header & Navigation -->
+  <header class="site-header" role="banner">
+    <div class="header-container">
+      <a href="index.html" class="brand" aria-label="Oxford VIT Home">
+        <div class="brand-crest">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
+          </svg>
+        </div>
+        <div class="brand-text">
+          <span class="brand-name">OXFORD VIT</span>
+          <span class="brand-subtitle">Junior College & Academy • Narasaraopet</span>
+        </div>
+      </a>
+
+      <nav class="main-nav" role="navigation" aria-label="Primary Navigation">
+        <ul class="nav-list">
+          <li><a href="index.html" class="nav-link">Home</a></li>
+          <li><a href="about.html" class="nav-link">About</a></li>
+          <li><a href="campuses.html" class="nav-link active">Campuses</a></li>
+          <li><a href="narasaraopet.html" class="nav-link active" style="color: var(--color-botanical-green-dark); font-weight: 700;">Narasaraopet</a></li>
+          <li><a href="guntur.html" class="nav-link">Guntur</a></li>
+          <li><a href="bapatla.html" class="nav-link">Bapatla</a></li>
+          <li><a href="academics.html" class="nav-link">Academics</a></li>
+          <li><a href="achievements.html" class="nav-link">Achievements</a></li>
+          <li><a href="gallery.html" class="nav-link">Gallery</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-actions">
+        <a href="admissions.html" class="btn btn-gold btn-sm magnetic-btn">
+          <span>Admission Enquiry</span>
+        </a>
+        <button class="menu-toggle" aria-label="Toggle Navigation Menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer -->
+  <div class="mobile-drawer-overlay"></div>
+  <aside class="mobile-drawer" role="dialog" aria-modal="true">
+    <div>
+      <div class="brand" style="margin-bottom: 2rem;">
+        <div class="brand-crest">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
+          </svg>
+        </div>
+        <div class="brand-text">
+          <span class="brand-name">OXFORD VIT</span>
+          <span class="brand-subtitle">Narasaraopet Hub</span>
+        </div>
+      </div>
+      <ul class="mobile-nav-list">
+        <li><a href="index.html" class="mobile-nav-link">Home <span>→</span></a></li>
+        <li><a href="campuses.html" class="mobile-nav-link">All Campuses (Master Directory) <span>→</span></a></li>
+        <li><a href="narasaraopet.html" class="mobile-nav-link active">Narasaraopet Hub <span>→</span></a></li>
+        <li><a href="guntur.html" class="mobile-nav-link">Guntur Hub <span>→</span></a></li>
+        <li><a href="bapatla.html" class="mobile-nav-link">Bapatla Branch <span>→</span></a></li>
+        <li><a href="academics.html" class="mobile-nav-link">Academics & Super-60 <span>→</span></a></li>
+        <li><a href="achievements.html" class="mobile-nav-link">Wall of Champions <span>→</span></a></li>
+        <li><a href="gallery.html" class="mobile-nav-link">Media Gallery <span>→</span></a></li>
+        <li><a href="admissions.html" class="mobile-nav-link">Admissions 2026–27 <span>→</span></a></li>
+      </ul>
+    </div>
+  </aside>
+
+  <!-- Main Content -->
+  <main style="padding-top: calc(var(--header-height) + 2rem);">
+    
+    <!-- Hero Section -->
+    <section class="section" style="padding-bottom: 2.5rem;">
+      <div class="container">
+        
+        <!-- Breadcrumbs -->
+        <nav aria-label="Breadcrumb" style="margin-bottom: 1.5rem; font-size: 0.875rem; color: var(--text-muted);">
+          <a href="index.html" style="color: var(--color-botanical-green); text-decoration: none;">Home</a> / 
+          <a href="campuses.html" style="color: var(--color-botanical-green); text-decoration: none;">Campuses</a> / 
+          <span style="color: var(--color-deep-plum); font-weight: 600;">Narasaraopet Educational Network</span>
+        </nav>
+
+        <div class="section-header" style="max-width: 920px; text-align: left; margin-bottom: 2.5rem;">
+          <div style="display: flex; gap: 0.75rem; flex-wrap: wrap; margin-bottom: 1rem;">
+            <span class="section-tag botanical">Palnadu District Headquarters</span>
+            <span class="section-tag gold">Founding Educational Cradle (Est. 1994)</span>
+          </div>
+          <h1 class="section-title" style="font-size: clamp(2.2rem, 5vw, 3.6rem); margin-bottom: 1rem;">
+            Narasaraopet Institutional Network &amp; Campuses
+          </h1>
+          <p class="section-subtitle" style="font-size: 1.15rem; line-height: 1.7; max-width: 860px;">
+            The founding headquarters of Oxford VIT in Narasaraopet comprises specialized operational intermediate wings, the elite IIT-JEE Super Wing, a dedicated sister high school for early foundation, and the historic archives of KSR Towers.
+          </p>
+        </div>
+
+        <!-- City Key Stats Bar -->
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1.25rem; margin-bottom: 3.5rem;">
+          <div class="glass-card" style="padding: 1.5rem; text-align: center;">
+            <div style="font-size: 2.5rem; font-family: var(--font-serif); font-weight: 800; color: var(--color-champagne-gold-dark);">5</div>
+            <div style="font-size: 0.875rem; font-weight: 600; color: var(--color-deep-plum); text-transform: uppercase; letter-spacing: 0.05em;">Bhavans &amp; Facilities</div>
+            <div style="font-size: 0.75rem; color: var(--text-muted); margin-top: 4px;">Narasaraopet Network</div>
+          </div>
+          <div class="glass-card" style="padding: 1.5rem; text-align: center;">
+            <div style="font-size: 2.5rem; font-family: var(--font-serif); font-weight: 800; color: var(--color-botanical-green);">1994</div>
+            <div style="font-size: 0.875rem; font-weight: 600; color: var(--color-deep-plum); text-transform: uppercase; letter-spacing: 0.05em;">Founding Heritage</div>
+            <div style="font-size: 0.75rem; color: var(--text-muted); margin-top: 4px;">30+ Years of Academic Trust</div>
+          </div>
+          <div class="glass-card" style="padding: 1.5rem; text-align: center;">
+            <div style="font-size: 2.5rem; font-family: var(--font-serif); font-weight: 800; color: var(--color-coral);">35+</div>
+            <div style="font-size: 0.875rem; font-weight: 600; color: var(--color-deep-plum); text-transform: uppercase; letter-spacing: 0.05em;">Fleet Buses</div>
+            <div style="font-size: 0.75rem; color: var(--text-muted); margin-top: 4px;">Connecting Palnadu Mandals</div>
+          </div>
+          <div class="glass-card" style="padding: 1.5rem; text-align: center;">
+            <div style="font-size: 2.5rem; font-family: var(--font-serif); font-weight: 800; color: var(--color-deep-plum);">150+</div>
+            <div style="font-size: 0.875rem; font-weight: 600; color: var(--color-deep-plum); text-transform: uppercase; letter-spacing: 0.05em;">CBT Lab Terminals</div>
+            <div style="font-size: 0.75rem; color: var(--text-muted); margin-top: 4px;">At Raman Bhavan Super Wing</div>
+          </div>
+        </div>
+
+        <!-- =========================================================================
+             SECTION 1: CURRENTLY OPERATIONAL INTERMEDIATE CAMPUSES
+             ========================================================================= -->
+        <div style="margin-bottom: 4rem;">
+          <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 2rem; border-bottom: 2px solid var(--border-gold); padding-bottom: 0.75rem;">
+            <div>
+              <span class="section-tag botanical" style="font-size: 0.75rem;">Category I</span>
+              <h2 style="font-size: 1.75rem; color: var(--color-deep-plum); margin-top: 0.25rem;">
+                Currently Operational Intermediate Campuses &amp; Wings
+              </h2>
+            </div>
+            <span class="badge badge-botanical">3 Operational Bhavans</span>
+          </div>
+
+          <div style="display: flex; flex-direction: column; gap: 2.5rem;">
+            
+            <!-- 1. Yashoda Bhavan — Main Campus -->
+            <article class="glass-card" style="padding: 2rem; display: grid; grid-template-columns: 1fr 1.35fr; gap: 2.5rem; align-items: center;">
+              <div style="border-radius: var(--radius-lg); overflow: hidden; border: 1.5px solid var(--border-gold); background: #FAF7F2;">
+                <img src="assets/images/campuses/yashoda-bhavan.svg" alt="Yashoda Bhavan — Main Campus" style="width: 100%; height: auto; display: block;" loading="lazy" />
+              </div>
+              <div>
+                <div style="display: flex; gap: 0.5rem; flex-wrap: wrap; margin-bottom: 0.75rem;">
+                  <span class="badge badge-gold">1. Main Campus</span>
+                  <span class="badge badge-botanical">✓ Operational</span>
+                  <span class="badge" style="background: rgba(185, 168, 216, 0.2); color: var(--color-deep-plum);">Flagship Center</span>
+                </div>
+                <h3 style="font-size: 1.85rem; color: var(--color-deep-plum); margin-bottom: 0.5rem;">Yashoda Bhavan — Main Campus</h3>
+                <p style="color: var(--color-botanical-green-dark); font-weight: 600; display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.75rem;">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+                  Reddy Nagar / Ramireddypeta, Narasaraopet, Palnadu District, AP - 522601
+                </p>
+                <p style="color: var(--text-secondary); line-height: 1.65; margin-bottom: 1.25rem;">
+                  The designated Main Campus of Oxford VIT in Narasaraopet. Housing executive digital lecture amphitheatres, central biological and physical science laboratories, the central admissions counseling bureau, and premier residential facilities under round-the-clock security.
+                </p>
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; margin-bottom: 1.5rem; background: rgba(247, 243, 233, 0.6); padding: 1rem; border-radius: var(--radius-md);">
+                  <div>
+                    <div style="font-size: 0.75rem; text-transform: uppercase; color: var(--text-muted); font-weight: 700;">Academic Programs</div>
+                    <div style="font-size: 0.875rem; font-weight: 600; color: var(--color-deep-plum);">MPC (IIT-JEE), BiPC (NEET), EAPCET</div>
+                  </div>
+                  <div>
+                    <div style="font-size: 0.75rem; text-transform: uppercase; color: var(--text-muted); font-weight: 700;">Governance</div>
+                    <div style="font-size: 0.875rem; font-weight: 600; color: var(--color-botanical-green-dark);">Central Directorate &amp; Trust</div>
+                  </div>
+                </div>
+                <div style="display: flex; gap: 0.75rem; flex-wrap: wrap;">
+                  <a href="https://www.google.com/maps/search/Yashoda+Bhavan+Reddy+Nagar+Narasaraopet" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-outline">
+                    Google Maps Directions ↗
+                  </a>
+                  <a href="tel:+917799137799" class="btn btn-sm btn-gold">
+                    Campus Helpline: +91 77991 37799
+                  </a>
+                </div>
+              </div>
+            </article>
+
+            <!-- 2. Balaji Bhavan — Senior and Junior Intermediate Sections -->
+            <article class="glass-card" style="padding: 2rem; display: grid; grid-template-columns: 1fr 1.35fr; gap: 2.5rem; align-items: center;">
+              <div style="border-radius: var(--radius-lg); overflow: hidden; border: 1.5px solid var(--border-gold); background: #FAF7F2;">
+                <img src="assets/images/campuses/balaji-bhavan.svg" alt="Balaji Bhavan — Senior and Junior Intermediate Sections" style="width: 100%; height: auto; display: block;" loading="lazy" />
+              </div>
+              <div>
+                <div style="display: flex; gap: 0.5rem; flex-wrap: wrap; margin-bottom: 0.75rem;">
+                  <span class="badge badge-gold">2. Intermediate Sections</span>
+                  <span class="badge badge-botanical">✓ Operational</span>
+                  <span class="badge" style="background: rgba(82, 107, 84, 0.15); color: var(--color-botanical-green-dark);">Super-60 Cohort</span>
+                </div>
+                <h3 style="font-size: 1.85rem; color: var(--color-deep-plum); margin-bottom: 0.5rem;">Balaji Bhavan — Senior &amp; Junior Intermediate Sections</h3>
+                <p style="color: var(--color-botanical-green-dark); font-weight: 600; display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.75rem;">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+                  Reddy Nagar / Vengala Reddy Nagar, Narasaraopet, Palnadu District, AP - 522601
+                </p>
+                <p style="color: var(--text-secondary); line-height: 1.65; margin-bottom: 1.25rem;">
+                  The premier academic crucible dedicated to Senior (2nd Year) and Junior (1st Year) Intermediate cohorts. Hosts our intensive Super-60 competitive cell with 24/7 supervised study pods, resident faculty mentors, evening test simulations, and pure vegetarian dining.
+                </p>
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; margin-bottom: 1.5rem; background: rgba(247, 243, 233, 0.6); padding: 1rem; border-radius: var(--radius-md);">
+                  <div>
+                    <div style="font-size: 0.75rem; text-transform: uppercase; color: var(--text-muted); font-weight: 700;">Academic Sections</div>
+                    <div style="font-size: 0.875rem; font-weight: 600; color: var(--color-deep-plum);">Junior &amp; Senior MPC/BiPC Super-60</div>
+                  </div>
+                  <div>
+                    <div style="font-size: 0.75rem; text-transform: uppercase; color: var(--text-muted); font-weight: 700;">Living Culture</div>
+                    <div style="font-size: 0.875rem; font-weight: 600; color: var(--color-botanical-green-dark);">Supervised Reading Chambers &amp; Pods</div>
+                  </div>
+                </div>
+                <div style="display: flex; gap: 0.75rem; flex-wrap: wrap;">
+                  <a href="https://www.google.com/maps/search/Balaji+Bhavan+Reddy+Nagar+Narasaraopet" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-outline">
+                    Google Maps Directions ↗
+                  </a>
+                  <a href="tel:+919246764999" class="btn btn-sm btn-gold">
+                    Campus Helpline: +91 92467 64999
+                  </a>
+                </div>
+              </div>
+            </article>
+
+            <!-- 3. Raman Bhavan — Senior IIT-JEE Super Wing -->
+            <article class="glass-card" style="padding: 2rem; display: grid; grid-template-columns: 1fr 1.35fr; gap: 2.5rem; align-items: center;">
+              <div style="border-radius: var(--radius-lg); overflow: hidden; border: 1.5px solid var(--border-gold); background: #FAF7F2;">
+                <img src="assets/images/campuses/raman-bhavan.svg" alt="Raman Bhavan — Senior IIT-JEE Super Wing" style="width: 100%; height: auto; display: block;" loading="lazy" />
+              </div>
+              <div>
+                <div style="display: flex; gap: 0.5rem; flex-wrap: wrap; margin-bottom: 0.75rem;">
+                  <span class="badge badge-gold">3. Specialized Wing</span>
+                  <span class="badge badge-botanical">✓ Operational</span>
+                  <span class="badge" style="background: rgba(185, 168, 216, 0.25); color: var(--color-deep-plum);">IIT-JEE &amp; CBT Testing</span>
+                </div>
+                <h3 style="font-size: 1.85rem; color: var(--color-deep-plum); margin-bottom: 0.5rem;">Raman Bhavan — Senior IIT-JEE Super Wing</h3>
+                <p style="color: var(--color-botanical-green-dark); font-weight: 600; display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.75rem;">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+                  Ramireddypeta / Arundelpet (near Sainath Towers), Narasaraopet, AP - 522601
+                </p>
+                <p style="color: var(--text-secondary); line-height: 1.65; margin-bottom: 1.25rem;">
+                  Named in honor of Nobel Laureate Sir C.V. Raman, this specialized wing serves as the intellectual crucible for senior IIT-JEE Advanced candidates and Olympiad contenders. Features 150+ networked terminals running real-time NTA test engines, physics demonstration theatres, and advanced mathematics problem-solving pods.
+                </p>
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; margin-bottom: 1.5rem; background: rgba(247, 243, 233, 0.6); padding: 1rem; border-radius: var(--radius-md);">
+                  <div>
+                    <div style="font-size: 0.75rem; text-transform: uppercase; color: var(--text-muted); font-weight: 700;">Specialization</div>
+                    <div style="font-size: 0.875rem; font-weight: 600; color: var(--color-deep-plum);">JEE Advanced Top-100 Cohort &amp; CBT</div>
+                  </div>
+                  <div>
+                    <div style="font-size: 0.75rem; text-transform: uppercase; color: var(--text-muted); font-weight: 700;">Testing Lab</div>
+                    <div style="font-size: 0.875rem; font-weight: 600; color: var(--color-botanical-green-dark);">150+ Computer Terminals (NTA Interface)</div>
+                  </div>
+                </div>
+                <div style="display: flex; gap: 0.75rem; flex-wrap: wrap;">
+                  <a href="https://www.google.com/maps/search/Raman+Bhavan+Ramireddypeta+Arundelpet+Narasaraopet" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-outline">
+                    Google Maps Directions ↗
+                  </a>
+                  <a href="tel:+919246764999" class="btn btn-sm btn-gold">
+                    Campus Helpline: +91 92467 64999
+                  </a>
+                </div>
+              </div>
+            </article>
+
+          </div>
+        </div>
+
+        <!-- =========================================================================
+             SECTION 2: SISTER SCHOOL & SPECIALIZED FOUNDATION ACADEMY
+             ========================================================================= -->
+        <div style="margin-bottom: 4rem;">
+          <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 2rem; border-bottom: 2px solid var(--border-gold); padding-bottom: 0.75rem;">
+            <div>
+              <span class="section-tag gold" style="font-size: 0.75rem;">Category II</span>
+              <h2 style="font-size: 1.75rem; color: var(--color-deep-plum); margin-top: 0.25rem;">
+                Sister School &amp; Specialized IIT Foundation Wing
+              </h2>
+            </div>
+            <span class="badge" style="background: rgba(233, 161, 140, 0.2); color: #B34024;">High School &amp; Foundation</span>
+          </div>
+
+          <!-- Oxford IIT School / Concept School -->
+          <article class="glass-card" style="padding: 2rem; display: grid; grid-template-columns: 1fr 1.35fr; gap: 2.5rem; align-items: center; border: 1.5px solid var(--color-champagne-gold);">
+            <div style="border-radius: var(--radius-lg); overflow: hidden; border: 1.5px solid var(--border-gold); background: #FAF7F2;">
+              <img src="assets/images/campuses/oxford-iit-school.svg" alt="Oxford IIT School / Concept School" style="width: 100%; height: auto; display: block;" loading="lazy" />
+            </div>
+            <div>
+              <div style="display: flex; gap: 0.5rem; flex-wrap: wrap; margin-bottom: 0.75rem;">
+                <span class="badge badge-gold">Sister School</span>
+                <span class="badge badge-botanical">✓ Operational</span>
+                <span class="badge" style="background: rgba(233, 161, 140, 0.25); color: #B34024;">Classes 6th–10th Foundation</span>
+              </div>
+              <h3 style="font-size: 1.85rem; color: var(--color-deep-plum); margin-bottom: 0.5rem;">
+                Oxford IIT School / Concept School
+              </h3>
+              <p style="color: var(--color-botanical-green-dark); font-weight: 600; display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.75rem;">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+                Central Education Zone, Narasaraopet, Palnadu District, AP - 522601
+              </p>
+              <p style="color: var(--text-secondary); line-height: 1.65; margin-bottom: 1.25rem;">
+                A specialized foundational educational sister institution preparing younger minds (Classes 6th through 10th) with solid conceptual frameworks in Mathematics, Physics, Chemistry, and Biology. Features early Olympiad training, child-friendly laboratory sessions, athletic sports drills, and continuous formative assessment.
+              </p>
+              
+              <div style="padding: 0.75rem 1rem; border-radius: var(--radius-sm); margin-bottom: 1.25rem; background: rgba(214, 183, 122, 0.12); border-left: 3px solid var(--color-champagne-gold);">
+                <div style="font-size: 0.8rem; font-weight: 700; color: var(--color-deep-plum);">Institutional Classification &amp; Relationship:</div>
+                <div style="font-size: 0.875rem; color: var(--text-secondary); font-weight: 600;">
+                  Sister Educational Institution under dedicated Concept School Trust • Seamless transition pipeline into Oxford VIT Intermediate Super-60.
+                </div>
+              </div>
+
+              <div style="display: flex; gap: 0.75rem; flex-wrap: wrap;">
+                <a href="https://www.google.com/maps/search/Oxford+IIT+School+Narasaraopet" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-outline">
+                  Google Maps Location ↗
+                </a>
+                <a href="tel:+919246764999" class="btn btn-sm btn-gold">
+                  School Admissions: +91 92467 64999
+                </a>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <!-- =========================================================================
+             SECTION 3: HISTORICAL CAMPUS INFORMATION (SEPARATE SECTION)
+             ========================================================================= -->
+        <div style="margin-bottom: 4rem;">
+          <div style="padding: 1.5rem 2rem; background: linear-gradient(135deg, rgba(73, 59, 76, 0.08), rgba(214, 183, 122, 0.12)); border-radius: var(--radius-lg); border: 1.5px dashed var(--color-champagne-gold); margin-bottom: 2rem;">
+            <div style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: 0.5rem;">
+              <span style="font-size: 1.5rem;">🏛️</span>
+              <span class="section-tag gold" style="font-size: 0.75rem;">Category III — Historical Building &amp; Trust Origin</span>
+            </div>
+            <h2 style="font-size: 1.75rem; color: var(--color-deep-plum); margin-bottom: 0.5rem;">
+              Historical Campus Information &amp; Archival Records
+            </h2>
+            <p style="color: var(--text-secondary); font-size: 0.95rem; line-height: 1.6; margin: 0;">
+              <strong>Notice:</strong> In adherence to institutional transparency, historical buildings are documented separately from currently operational teaching campuses. The facility below serves as our heritage founding landmark, registered trust headquarters, and student merit scholarship repository.
+            </p>
+          </div>
+
+          <!-- KSR Towers — Historical Campus -->
+          <article class="glass-card historical-campus-card" style="padding: 2.25rem; display: grid; grid-template-columns: 1fr 1.35fr; gap: 2.5rem; align-items: center;">
+            <div style="border-radius: var(--radius-lg); overflow: hidden; border: 1.5px dashed var(--color-champagne-gold); background: #FAF7F2;">
+              <img src="assets/images/campuses/ksr-towers.svg" alt="KSR Towers — Historical Campus Information" style="width: 100%; height: auto; display: block;" loading="lazy" />
+            </div>
+            <div>
+              <div style="display: flex; gap: 0.5rem; flex-wrap: wrap; margin-bottom: 0.75rem;">
+                <span class="badge" style="background: rgba(73, 59, 76, 0.15); color: var(--color-deep-plum); border: 1px dashed var(--color-deep-plum);">🏛️ Historical Landmark</span>
+                <span class="badge badge-gold">Trust Origin &amp; Directorate</span>
+                <span class="badge" style="background: rgba(214, 183, 122, 0.2); color: var(--color-deep-plum);">No Classroom Lectures</span>
+              </div>
+              <h3 style="font-size: 1.85rem; color: var(--color-deep-plum); margin-bottom: 0.5rem;">
+                KSR Towers — Historical Campus Information
+              </h3>
+              <p style="color: var(--color-botanical-green-dark); font-weight: 600; display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.75rem;">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+                Arundelpet Commercial Sector, Narasaraopet, Palnadu District, AP - 522601
+              </p>
+              <p style="color: var(--text-secondary); line-height: 1.65; margin-bottom: 1.25rem;">
+                KSR Towers represents the historical foundational executive building of Oxford VIT and the registered administrative home of the KSR Charitable Trust. This building preserves our institutional archives, photographic memories of early rankers, governing council chambers, and the trust scholarship bureau founded by Administrative Director K. Sambasiva Rao (KSR).
+              </p>
+              
+              <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; margin-bottom: 1.5rem; background: rgba(247, 243, 233, 0.7); padding: 1rem; border-radius: var(--radius-md); border: 1px solid var(--border-gold);">
+                <div>
+                  <div style="font-size: 0.75rem; text-transform: uppercase; color: var(--text-muted); font-weight: 700;">Operational Status</div>
+                  <div style="font-size: 0.875rem; font-weight: 700; color: var(--color-deep-plum);">Historical Campus / Heritage Archive</div>
+                </div>
+                <div>
+                  <div style="font-size: 0.75rem; text-transform: uppercase; color: var(--text-muted); font-weight: 700;">Active Function</div>
+                  <div style="font-size: 0.875rem; font-weight: 600; color: var(--color-botanical-green-dark);">KSR Charitable Trust Scholarships &amp; Archives</div>
+                </div>
+              </div>
+
+              <div style="display: flex; gap: 0.75rem; flex-wrap: wrap;">
+                <a href="https://www.google.com/maps/search/KSR+Towers+Arundelpet+Narasaraopet" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-outline">
+                  View Location on Map ↗
+                </a>
+                <a href="about.html#management" class="btn btn-sm btn-outline">
+                  Read Leadership Heritage ↗
+                </a>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <!-- =========================================================================
+             SECTION 4: TRANSPORTATION NETWORK ACROSS PALNADU
+             ========================================================================= -->
+        <section class="glass-card" style="padding: 2.5rem; margin-bottom: 4rem;">
+          <div style="max-width: 800px; margin-bottom: 2rem;">
+            <span class="section-tag botanical">Student Transit Network</span>
+            <h2 style="font-size: 1.75rem; color: var(--color-deep-plum); margin-top: 0.25rem;">
+              Palnadu District Day-Scholar Transit Grid
+            </h2>
+            <p style="color: var(--text-secondary); line-height: 1.6;">
+              Oxford VIT operates a fleet of 35+ GPS-enabled institutional buses connecting students across all major mandals, towns, and villages of Palnadu District directly to our Narasaraopet campuses every morning and evening.
+            </p>
+          </div>
+
+          <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1.25rem;">
+            <div style="background: rgba(247, 243, 233, 0.7); padding: 1.25rem; border-radius: var(--radius-md); border-left: 3px solid var(--color-botanical-green);">
+              <div style="font-weight: 700; color: var(--color-deep-plum); margin-bottom: 4px;">Route 1: Vinukonda Sector</div>
+              <div style="font-size: 0.8125rem; color: var(--text-secondary);">Vinukonda, Karumanchi, Sivapuram, Ravipadu Road.</div>
+            </div>
+            <div style="background: rgba(247, 243, 233, 0.7); padding: 1.25rem; border-radius: var(--radius-md); border-left: 3px solid var(--color-champagne-gold);">
+              <div style="font-weight: 700; color: var(--color-deep-plum); margin-bottom: 4px;">Route 2: Chilakaluripet Sector</div>
+              <div style="font-size: 0.8125rem; color: var(--text-secondary);">Chilakaluripet, Purushothapatnam, Jonnalagadda, Reddy Nagar.</div>
+            </div>
+            <div style="background: rgba(247, 243, 233, 0.7); padding: 1.25rem; border-radius: var(--radius-md); border-left: 3px solid var(--color-coral);">
+              <div style="font-weight: 700; color: var(--color-deep-plum); margin-bottom: 4px;">Route 3: Sattenapalle Sector</div>
+              <div style="font-size: 0.8125rem; color: var(--text-secondary);">Sattenapalle, Dhulipalla, Muppalla, Arundelpet.</div>
+            </div>
+            <div style="background: rgba(247, 243, 233, 0.7); padding: 1.25rem; border-radius: var(--radius-md); border-left: 3px solid var(--color-lavender);">
+              <div style="font-weight: 700; color: var(--color-deep-plum); margin-bottom: 4px;">Route 4: Macherla &amp; Piduguralla</div>
+              <div style="font-size: 0.8125rem; color: var(--text-secondary);">Piduguralla, Karempudi, Rompicherla, Narasaraopet Central.</div>
+            </div>
+          </div>
+        </section>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Institutional Footer -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="footer-container">
+      <div class="footer-grid">
+        <div class="footer-col footer-col-brand">
+          <div class="brand">
+            <div class="brand-crest">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+            </div>
+            <div class="brand-text">
+              <span class="brand-name" style="color: #fff;">OXFORD VIT</span>
+              <span class="brand-subtitle" style="color: var(--color-champagne-gold);">Palnadu • Guntur • Bapatla</span>
+            </div>
+          </div>
+          <p class="footer-desc" style="margin-top: 1rem;">
+            One centralized educational institution representing all verified campuses across Andhra Pradesh. Under the aegis of KSR Charitable Trust.
+          </p>
+        </div>
+
+        <div class="footer-col">
+          <h4 class="footer-heading">Geographical Hubs</h4>
+          <ul class="footer-links">
+            <li><a href="narasaraopet.html" style="color: var(--color-champagne-gold); font-weight: 700;">Narasaraopet (Headquarters)</a></li>
+            <li><a href="guntur.html">Guntur (Competitive Hub)</a></li>
+            <li><a href="bapatla.html">Bapatla (Coastal Branch)</a></li>
+            <li><a href="campuses.html">Master Campuses Directory</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4 class="footer-heading">Academic Divisions</h4>
+          <ul class="footer-links">
+            <li><a href="academics.html#super60">MPC Super-60 (IIT-JEE)</a></li>
+            <li><a href="academics.html#medical">BiPC Medical Academy (NEET)</a></li>
+            <li><a href="academics.html#eapcet">AP EAPCET Intensive</a></li>
+            <li><a href="admissions.html">OVEST 2026 Scholarships</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4 class="footer-heading">Narasaraopet Helpline</h4>
+          <p style="font-size: 0.875rem; color: #D4CDD7; line-height: 1.6;">
+            <strong>Main Campus:</strong> Opp. Kamma Hostel, Ravipadu Road, Narasaraopet - 522601.<br>
+            <strong>Phone:</strong> +91 92467 64999 / +91 77991 37799<br>
+            <strong>Instagram:</strong> <a href="https://www.instagram.com/raghava_vit/" target="_blank" rel="noopener noreferrer" style="color: var(--color-champagne-gold);">@raghava_vit</a>
+          </p>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2026 Oxford VIT Junior College &amp; Academy. All verified rights reserved.</p>
+        <p style="font-size: 0.8125rem; color: var(--color-champagne-gold);">
+          Narasaraopet • Guntur • Bapatla Educational Network
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script type="module" src="assets/js/main.js"></script>
+</body>
+</html>

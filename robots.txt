@@ -3,6 +3,9 @@ Allow: /
 Allow: /index.html
 Allow: /about.html
 Allow: /campuses.html
+Allow: /narasaraopet.html
+Allow: /guntur.html
+Allow: /bapatla.html
 Allow: /academics.html
 Allow: /achievements.html
 Allow: /faculty.html
