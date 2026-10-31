@@ -1,0 +1,121 @@
+/**
+ * OXFORD VIT – THE LIVING CAMPUS EXPERIENCE
+ * Institutional Events, Celebrations & Academic Conferences Data
+ */
+
+export const eventsData = {
+  categories: [
+    { id: 'all', label: 'All Celebrations & Events' },
+    { id: 'academic', label: 'Academic Conclaves & Olympiads' },
+    { id: 'cultural', label: 'Cultural & Youth Festivals' },
+    { id: 'awards', label: 'Prathibha Puraskaralu & Honors' },
+    { id: 'welfare', label: 'KSR Trust Welfare Drives' }
+  ],
+  events: [
+    {
+      id: 'event-sankranti',
+      title: 'Sankranti Sambaralu & Cultural Utsav',
+      category: 'cultural',
+      date: 'January 12, 2026',
+      month: 'JAN',
+      day: '12',
+      campus: 'Main Junior College & Balaji Bhavan Grounds',
+      featured: true,
+      description: 'A vibrant celebration of Andhra Pradesh heritage featuring traditional Telugu music, Haridasu performances, rangoli competitions, kite-flying leagues, and festive feasts across all student residential Bhavans.',
+      highlights: [
+        'Inter-Bhavan traditional rangoli design competition with cash prizes',
+        'Traditional attire showcase and folk cultural presentations',
+        'Special festive luncheon prepared using traditional methods',
+        'Honoring student cultural achievers by Dr. S. Francis Reddy'
+      ],
+      tag: 'Annual Tradition'
+    },
+    {
+      id: 'event-prathibha',
+      title: 'Annual Prathibha Puraskaralu & Convocation',
+      category: 'awards',
+      date: 'April 18, 2026',
+      month: 'APR',
+      day: '18',
+      campus: 'KSR Towers & Central Auditorium',
+      featured: true,
+      description: 'The premier institutional honors ceremony where JEE Advanced, NEET, and AP EAPCET state rankers are presented with gold medals, certificates of honor, and cash endowments in the presence of esteemed dignitaries.',
+      highlights: [
+        'Felicitation of AIR top rankers with gold medals and plaques',
+        'Distribution of ₹1.5 Crore KSR Charitable Trust merit scholarships',
+        'Keynote addresses by IIT professors and senior medical officers',
+        'Parent felicitation and emotional alumni tribute sessions'
+      ],
+      tag: 'Flagship Convocation'
+    },
+    {
+      id: 'event-science-day',
+      title: 'National Science Day & Research Expo',
+      category: 'academic',
+      date: 'February 28, 2026',
+      month: 'FEB',
+      day: '28',
+      campus: 'Raman Bhavan Advanced Labs',
+      featured: false,
+      description: 'Commemorating the Raman Effect with live physics demonstrations, chemical synthesis experiments, biology micro-specimen galleries, and student innovation displays judged by guest scientists.',
+      highlights: [
+        '50+ student-built physics and robotics demonstration models',
+        'Spectrophotometry and chemistry magic experiment lab shows',
+        'Science quiz championship with teams from all 6 Bhavans',
+        'Interactive lectures by Dogiparthi Srinivasa Rao (DSR)'
+      ],
+      tag: 'Scientific Discovery'
+    },
+    {
+      id: 'event-ramanujan',
+      title: 'Srinivasa Ramanujan National Mathematics Day',
+      category: 'academic',
+      date: 'December 22, 2025',
+      month: 'DEC',
+      day: '22',
+      campus: 'Raman Bhavan & Central Library',
+      featured: false,
+      description: 'A day-long intellectual festival celebrating mathematical intuition, featuring speed mental arithmetic tournaments, non-routine geometry challenge pods, and masterclasses by Panadi Raghava.',
+      highlights: [
+        'The Oxford Ramanujan Speed Math Marathon for intermediate scholars',
+        'Paper presentations on modern applications of infinite series',
+        'Awarding the prestigious Ramanujan Junior Fellowship trophy'
+      ],
+      tag: 'Mathematics League'
+    },
+    {
+      id: 'event-sports-meet',
+      title: 'Oxford VIT Inter-Bhavan Sports Championship',
+      category: 'cultural',
+      date: 'December 10–12, 2025',
+      month: 'DEC',
+      day: '10-12',
+      campus: 'Balaji & Yashoda Sports Pavilions',
+      featured: false,
+      description: 'A 3-day multi-sport tournament bringing together residential and day-scholar teams competing in cricket, volleyball, badminton, table tennis, and rapid chess.',
+      highlights: [
+        'Night-floodlit inter-campus volleyball and cricket finals',
+        'Individual championship trophies for track sprint events',
+        'Certified medical and physiotherapy teams on standby'
+      ],
+      tag: 'Sports Championship'
+    },
+    {
+      id: 'event-ksr-welfare',
+      title: 'KSR Charitable Trust Rural Health & Educational Outreach',
+      category: 'welfare',
+      date: 'November 14, 2025',
+      month: 'NOV',
+      day: '14',
+      campus: 'KSR Towers & Surrounding Rural Mandals',
+      featured: false,
+      description: 'Annual social responsibility campaign providing free diagnostic health camps, distribution of academic textbooks, and educational counselling for economically disadvantaged students.',
+      highlights: [
+        'Free multi-specialty health check-ups for 1,200+ local families',
+        'Distribution of notebooks, stationery and scholarship kits',
+        'Led by Founder K. Sambasiva Rao and student volunteer council'
+      ],
+      tag: 'Community Impact'
+    }
+  ]
+};

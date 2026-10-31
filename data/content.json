@@ -1,0 +1,23 @@
+{
+  "announcements": [
+    {
+      "id": 1,
+      "title": "Admissions Open for Academic Session 2026-27 across all 6 Bhavans",
+      "date": "2026-10-31",
+      "active": true
+    },
+    {
+      "id": 2,
+      "title": "Oxford VIT Entrance & Scholarship Test (OVEST 2026) Schedule Announced",
+      "date": "2026-10-28",
+      "active": true
+    },
+    {
+      "id": 3,
+      "title": "Super-60 Batch Screening Camps at KSR Towers and Main Campus",
+      "date": "2026-10-25",
+      "active": true
+    }
+  ],
+  "lastUpdated": "2026-10-31T13:13:09.682Z"
+}

@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Student Life & Residential Hostels | Oxford VIT Junior College & Academy</title>
+  
+  <meta name="description" content="Explore residential student life at Oxford VIT: Balaji Bhavan (Boys Hostel), Yashoda Bhavan (Girls Hostel), modern steam kitchen nutrition, sports, yoga, and 24/7 care in Narasaraopet.">
+  <meta name="keywords" content="Oxford VIT Student Life, Balaji Bhavan Boys Hostel, Yashoda Bhavan Girls Hostel, Narasaraopet Intermediate Hostels, Student Sports Oxford VIT">
+  <meta name="theme-color" content="#493B4C">
+
+  <!-- Favicon Crest SVG -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='20' fill='%23D6B77A'/%3E%3Cpath d='M50 15 L80 32 L80 68 L50 85 L20 68 L20 32 Z' fill='%23493B4C'/%3E%3Cpath d='M50 25 L70 37 L70 63 L50 75 L30 63 L30 37 Z' fill='%23F7F3E9'/%3E%3Ctext x='50' y='58' font-family='serif' font-size='26' font-weight='bold' fill='%23493B4C' text-anchor='middle'%3EOV%3C/text%3E%3C/svg%3E">
+
+  <!-- Core Design Tokens & Stylesheets -->
+  <link rel="stylesheet" href="assets/css/variables.css">
+  <link rel="stylesheet" href="assets/css/base.css">
+  <link rel="stylesheet" href="assets/css/components.css">
+  <link rel="stylesheet" href="assets/css/layout.css">
+  <link rel="stylesheet" href="assets/css/sections.css">
+  <link rel="stylesheet" href="assets/css/animations.css">
+
+  <!-- Vendor Supporting Libraries -->
+  <script src="assets/vendor/three.min.js"></script>
+  <script src="assets/vendor/gsap.min.js"></script>
+  <script src="assets/vendor/ScrollTrigger.min.js"></script>
+</head>
+<body>
+
+  <!-- Custom Luxury Cursor -->
+  <div class="custom-cursor-dot" aria-hidden="true"></div>
+  <div class="custom-cursor-ring" aria-hidden="true"></div>
+
+  <!-- Ambient Aurora & 3D Background Canvas -->
+  <div class="aurora-backdrop" aria-hidden="true"></div>
+  <div id="canvas3d-container" aria-hidden="true"></div>
+
+  <!-- Header -->
+  <header class="site-header scrolled" role="banner">
+    <div class="header-container">
+      <a href="index.html" class="brand" aria-label="Oxford VIT Home">
+        <div class="brand-crest">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
+          </svg>
+        </div>
+        <div class="brand-text">
+          <span class="brand-name">OXFORD VIT</span>
+          <span class="brand-subtitle">Junior College & Academy • Narasaraopet</span>
+        </div>
+      </a>
+
+      <nav class="main-nav" role="navigation" aria-label="Primary Navigation">
+        <ul class="nav-list">
+          <li><a href="index.html" class="nav-link">Home</a></li>
+          <li><a href="about.html" class="nav-link">About</a></li>
+          <li><a href="campuses.html" class="nav-link">Our Campuses</a></li>
+          <li><a href="academics.html" class="nav-link">Academics</a></li>
+          <li><a href="achievements.html" class="nav-link">Achievements</a></li>
+          <li><a href="faculty.html" class="nav-link">Management & Faculty</a></li>
+          <li><a href="student-life.html" class="nav-link active">Student Life</a></li>
+          <li><a href="events.html" class="nav-link">Events</a></li>
+          <li><a href="gallery.html" class="nav-link">Gallery</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-actions">
+        <a href="admissions.html" class="btn btn-gold btn-sm magnetic-btn">
+          <span>Admission Enquiry</span>
+        </a>
+        <button class="menu-toggle" aria-label="Toggle Navigation Menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer -->
+  <div class="mobile-drawer-overlay"></div>
+  <aside class="mobile-drawer" role="dialog" aria-modal="true">
+    <div>
+      <div class="brand" style="margin-bottom: 2rem;">
+        <div class="brand-crest">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
+          </svg>
+        </div>
+        <div class="brand-text">
+          <span class="brand-name">OXFORD VIT</span>
+          <span class="brand-subtitle">Narasaraopet</span>
+        </div>
+      </div>
+      <ul class="mobile-nav-list">
+        <li><a href="index.html" class="mobile-nav-link">Home <span>→</span></a></li>
+        <li><a href="about.html" class="mobile-nav-link">About Oxford VIT <span>→</span></a></li>
+        <li><a href="campuses.html" class="mobile-nav-link">Our Campuses <span>→</span></a></li>
+        <li><a href="academics.html" class="mobile-nav-link">Academics & Curricula <span>→</span></a></li>
+        <li><a href="achievements.html" class="mobile-nav-link">Achievements & Ranks <span>→</span></a></li>
+        <li><a href="faculty.html" class="mobile-nav-link">Management & Faculty <span>→</span></a></li>
+        <li><a href="student-life.html" class="mobile-nav-link active">Student Life & Hostels <span>→</span></a></li>
+        <li><a href="events.html" class="mobile-nav-link">Events & Celebrations <span>→</span></a></li>
+        <li><a href="gallery.html" class="mobile-nav-link">Photo & Video Gallery <span>→</span></a></li>
+        <li><a href="admissions.html" class="mobile-nav-link">Admission Enquiry <span>→</span></a></li>
+      </ul>
+    </div>
+  </aside>
+
+  <main id="main-content">
+    
+    <!-- Hero Banner -->
+    <section class="section" style="padding-top: 10rem; padding-bottom: 3.5rem; text-align: center; position: relative;">
+      <div class="container">
+        <span class="badge badge-gold" style="margin-bottom: 1rem;">Campus Ecosystem</span>
+        <h1 class="liquid-heading" style="font-size: clamp(2.5rem, 5vw, 4rem); max-width: 900px; margin: 0 auto 1.5rem; line-height: 1.15;">
+          A Second Home Built on Care & Discipline
+        </h1>
+        <p style="font-size: 1.125rem; color: var(--text-secondary); max-width: 750px; margin: 0 auto 2.5rem; line-height: 1.8;">
+          At Oxford VIT, academic excellence is anchored in residential serenity. With separate dedicated hostels for boys and girls, hygienic steam kitchen dining, supervised sports, and 24/7 medical oversight, students flourish in body, mind, and spirit.
+        </p>
+
+        <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+          <a href="#residential-bhavans" class="btn btn-primary magnetic-btn">
+            <span>The Residential Bhavans</span>
+          </a>
+          <a href="#nutrition-dining" class="btn btn-outline magnetic-btn">
+            <span>Dining & Nutrition</span>
+          </a>
+          <a href="#wellness-sports" class="btn btn-gold magnetic-btn">
+            <span>Sports & Wellness</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Residential Bhavans -->
+    <section id="residential-bhavans" class="section" style="background: rgba(247, 243, 233, 0.4); border-top: 1px solid var(--border-subtle); border-bottom: 1px solid var(--border-subtle);">
+      <div class="container">
+        
+        <div class="section-header" style="text-align: center; margin-bottom: 4rem;">
+          <span class="badge badge-botanical">Residential Accommodation</span>
+          <h2 class="section-title">Dedicated Residential Hostels</h2>
+          <p class="section-subtitle">
+            Distinct, secure campuses engineered specifically for uninterrupted academic focus and tranquil rest.
+          </p>
+        </div>
+
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(340px, 1fr)); gap: 2.5rem;">
+          
+          <!-- Balaji Bhavan: Boys Campus -->
+          <div class="glass-card" style="padding: 2.5rem; border-radius: var(--radius-xl); overflow: hidden;" data-tilt>
+            <div style="text-align: center; margin-bottom: 1.5rem;">
+              <img src="assets/images/campuses/balaji-bhavan.svg" alt="Balaji Bhavan Boys Hostel" style="width: 100%; max-height: 200px; border-radius: var(--radius-lg); background: #fff; padding: 1rem; border: 1px solid var(--border-subtle); box-shadow: 0 8px 24px rgba(0,0,0,0.06);">
+            </div>
+            <div style="display: flex; gap: 0.5rem; margin-bottom: 0.75rem;">
+              <span class="badge badge-gold">Boys Residential</span>
+              <span class="badge badge-botanical">Super-60 Hub</span>
+            </div>
+            <h3 style="font-family: var(--font-serif); font-size: 1.75rem; color: var(--color-deep-plum); margin-bottom: 0.5rem;">Balaji Bhavan</h3>
+            <div style="font-size: 0.8125rem; color: var(--text-muted); font-family: var(--font-mono); margin-bottom: 1rem;">
+              📍 Reddy Nagar / Vengala Reddy Nagar, Narasaraopet
+            </div>
+            <p style="font-size: 0.9375rem; color: var(--text-secondary); line-height: 1.7; margin-bottom: 1.5rem;">
+              Home to our elite IIT-JEE Super-60 boys cohort. Designed with wide cross-ventilated dormitories, individual ergonomic study desks, round-the-clock power backup, silent study halls, and resident faculty available for doubt resolution till 10:30 PM.
+            </p>
+            <div style="background: rgba(247, 243, 233, 0.7); padding: 1.25rem; border-radius: var(--radius-md); border-left: 3px solid var(--color-champagne-gold);">
+              <div style="font-size: 0.75rem; font-weight: 700; text-transform: uppercase; color: var(--color-deep-plum); margin-bottom: 0.35rem;">Bhavan Amenities:</div>
+              <ul style="padding-left: 1.2rem; font-size: 0.8125rem; color: var(--text-secondary); margin: 0; line-height: 1.6;">
+                <li>24/7 CCTV surveillance & dedicated resident wardens</li>
+                <li>Night floodlit volleyball & cricket nets on campus grounds</li>
+                <li>Dedicated hot water solar heating systems</li>
+                <li>Daily laundry services & room housekeeping</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Yashoda Bhavan: Girls Campus -->
+          <div class="glass-card" style="padding: 2.5rem; border-radius: var(--radius-xl); overflow: hidden;" data-tilt>
+            <div style="text-align: center; margin-bottom: 1.5rem;">
+              <img src="assets/images/campuses/yashoda-bhavan.svg" alt="Yashoda Bhavan Girls Hostel" style="width: 100%; max-height: 200px; border-radius: var(--radius-lg); background: #fff; padding: 1rem; border: 1px solid var(--border-subtle); box-shadow: 0 8px 24px rgba(0,0,0,0.06);">
+            </div>
+            <div style="display: flex; gap: 0.5rem; margin-bottom: 0.75rem;">
+              <span class="badge badge-botanical">Girls Residential</span>
+              <span class="badge badge-gold">NEET Medical Hub</span>
+            </div>
+            <h3 style="font-family: var(--font-serif); font-size: 1.75rem; color: var(--color-deep-plum); margin-bottom: 0.5rem;">Yashoda Bhavan</h3>
+            <div style="font-size: 0.8125rem; color: var(--text-muted); font-family: var(--font-mono); margin-bottom: 1rem;">
+              📍 Ramireddypeta / Reddy Nagar, Narasaraopet
+            </div>
+            <p style="font-size: 0.9375rem; color: var(--text-secondary); line-height: 1.7; margin-bottom: 1.5rem;">
+              A premier, highly secure sanctuary exclusively for girl scholars. Supervised round-the-clock by senior female wardens and resident lady lecturers. Features serene landscaped courtyards, spacious air-cooled study rooms, and an attached infirmary.
+            </p>
+            <div style="background: rgba(247, 243, 233, 0.7); padding: 1.25rem; border-radius: var(--radius-md); border-left: 3px solid var(--color-botanical);">
+              <div style="font-size: 0.75rem; font-weight: 700; text-transform: uppercase; color: var(--color-deep-plum); margin-bottom: 0.35rem;">Bhavan Amenities:</div>
+              <ul style="padding-left: 1.2rem; font-size: 0.8125rem; color: var(--text-secondary); margin: 0; line-height: 1.6;">
+                <li>Multi-tier biometric security & perimeter electronic surveillance</li>
+                <li>Indoor badminton court and yoga pavilion inside the campus</li>
+                <li>Resident lady doctor and 24/7 emergency vehicle standby</li>
+                <li>Strict parent calling hours & peaceful learning atmosphere</li>
+              </ul>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Nutrition & Dining Infrastructure -->
+    <section id="nutrition-dining" class="section">
+      <div class="container">
+        
+        <div class="section-header" style="text-align: center; margin-bottom: 4rem;">
+          <span class="badge badge-coral">Culinary Hygiene & Health</span>
+          <h2 class="section-title">Steam Kitchen & Wholesome Nutrition</h2>
+          <p class="section-subtitle">
+            A healthy mind requires pure, energizing nutrition. Food is prepared with love and medical-grade hygiene.
+          </p>
+        </div>
+
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem;">
+          
+          <div class="glass-card" style="padding: 2.25rem 1.75rem;" data-tilt>
+            <div style="font-size: 2.25rem; margin-bottom: 1rem;">🍲</div>
+            <h3 style="font-family: var(--font-serif); font-size: 1.35rem; color: var(--color-deep-plum); margin-bottom: 0.5rem;">Steam Cooking Plant</h3>
+            <p style="font-size: 0.875rem; color: var(--text-secondary); line-height: 1.6;">
+              State-of-the-art industrial stainless-steel boilers and steam kettles ensure zero soot, retain maximum vitamins and minerals, and maintain uniform cooking temperature across all meal preparations.
+            </p>
+          </div>
+
+          <div class="glass-card" style="padding: 2.25rem 1.75rem;" data-tilt>
+            <div style="font-size: 2.25rem; margin-bottom: 1rem;">💧</div>
+            <h3 style="font-family: var(--font-serif); font-size: 1.35rem; color: var(--color-deep-plum); margin-bottom: 0.5rem;">Multi-Stage RO Plant</h3>
+            <p style="font-size: 0.875rem; color: var(--text-secondary); line-height: 1.6;">
+              Centralized commercial Reverse Osmosis (RO) filtration plants installed across every Bhavan provide pure, mineral-balanced drinking water tested weekly for TDS, microbiological safety, and pH standards.
+            </p>
+          </div>
+
+          <div class="glass-card" style="padding: 2.25rem 1.75rem;" data-tilt>
+            <div style="font-size: 2.25rem; margin-bottom: 1rem;">🥛</div>
+            <h3 style="font-family: var(--font-serif); font-size: 1.35rem; color: var(--color-deep-plum); margin-bottom: 0.5rem;">Daily Dairy & Protein</h3>
+            <p style="font-size: 0.875rem; color: var(--text-secondary); line-height: 1.6;">
+              Sourced directly from certified regional dairy farms. Pure milk served every morning and night, fresh buttermilk served with lunch, and protein-rich pulses, sprouts, and paneer rotated daily.
+            </p>
+          </div>
+
+          <div class="glass-card" style="padding: 2.25rem 1.75rem;" data-tilt>
+            <div style="font-size: 2.25rem; margin-bottom: 1rem;">🩺</div>
+            <h3 style="font-family: var(--font-serif); font-size: 1.35rem; color: var(--color-deep-plum); margin-bottom: 0.5rem;">Nutritional Supervision</h3>
+            <p style="font-size: 0.875rem; color: var(--text-secondary); line-height: 1.6;">
+              Weekly rotating menus curated by qualified clinical dietitians to sustain mental alertness during study hours without lethargy or digestion issues. Special diet provided during exam weeks.
+            </p>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Wellness, Sports & Healthcare -->
+    <section id="wellness-sports" class="section" style="background: rgba(247, 243, 233, 0.4); border-top: 1px solid var(--border-subtle);">
+      <div class="container">
+        
+        <div class="section-header" style="text-align: center; margin-bottom: 4rem;">
+          <span class="badge badge-gold">Physical & Mental Vigour</span>
+          <h2 class="section-title">Sports, Yoga & Emotional Well-Being</h2>
+          <p class="section-subtitle">
+            Balancing the rigorous demands of competitive exams with vitality, play, and psychological peace.
+          </p>
+        </div>
+
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 2.5rem;">
+          
+          <div class="glass-card" style="padding: 2.5rem; border-radius: var(--radius-xl);" data-tilt>
+            <span class="badge badge-botanical" style="margin-bottom: 1rem;">Outdoor Athletics</span>
+            <h3 style="font-family: var(--font-serif); font-size: 1.5rem; color: var(--color-deep-plum); margin-bottom: 1rem;">Sports Facilities & Courts</h3>
+            <p style="font-size: 0.9375rem; color: var(--text-secondary); line-height: 1.7; margin-bottom: 1.25rem;">
+              Daily 4:30 PM to 5:00 PM recreation allows students to burn off mental fatigue. Our campus grounds feature:
+            </p>
+            <ul style="padding-left: 1.2rem; font-size: 0.875rem; color: var(--text-secondary); line-height: 1.7; margin: 0;">
+              <li>Full-size sand volleyball courts with evening floodlights</li>
+              <li>Cricket nets with practice bowling turf</li>
+              <li>Badminton courts with anti-skid surfaces</li>
+              <li>Indoor recreation rooms with tournament carrom boards & chess tables</li>
+              <li>Annual Inter-Bhavan Sports Trophy held every winter</li>
+            </ul>
+          </div>
+
+          <div class="glass-card" style="padding: 2.5rem; border-radius: var(--radius-xl);" data-tilt>
+            <span class="badge badge-lavender" style="margin-bottom: 1rem;">Mindfulness & Healthcare</span>
+            <h3 style="font-family: var(--font-serif); font-size: 1.5rem; color: var(--color-deep-plum); margin-bottom: 1rem;">Yoga, Healthcare & Mentorship</h3>
+            <p style="font-size: 0.9375rem; color: var(--text-secondary); line-height: 1.7; margin-bottom: 1.25rem;">
+              Emotional stability is the foundation of examination victory. We surround every scholar with structured care:
+            </p>
+            <ul style="padding-left: 1.2rem; font-size: 0.875rem; color: var(--text-secondary); line-height: 1.7; margin: 0;">
+              <li>Morning 5:30 AM guided pranayama and Surya Namaskar routines</li>
+              <li>Monthly youth motivation addresses by Panadi Raghava</li>
+              <li>24/7 campus infirmary with full-time resident nursing staff</li>
+              <li>Tie-ups with premier multi-speciality hospitals in Narasaraopet</li>
+              <li>Dedicated student counselors for exam stress mitigation</li>
+            </ul>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Site Footer -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="brand">
+            <div class="brand-crest">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
+              </svg>
+            </div>
+            <div class="brand-text">
+              <span class="brand-name">OXFORD VIT</span>
+              <span class="brand-subtitle">Junior College & Academy</span>
+            </div>
+          </div>
+          <p class="footer-tagline">
+            "Where Knowledge Takes Shape." One unified institutional website serving the entire Oxford VIT campus ecosystem in Narasaraopet.
+          </p>
+        </div>
+
+        <div class="footer-col">
+          <h4>The 6 Bhavans</h4>
+          <ul class="footer-links">
+            <li><a href="campuses.html">Main Junior College</a></li>
+            <li><a href="campuses.html">Balaji Bhavan</a></li>
+            <li><a href="campuses.html">Yashoda Bhavan</a></li>
+            <li><a href="campuses.html">Raman Bhavan</a></li>
+            <li><a href="campuses.html">Padmavathi Bhavan</a></li>
+            <li><a href="campuses.html">KSR Towers</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Institutional Pages</h4>
+          <ul class="footer-links">
+            <li><a href="about.html">About Oxford VIT</a></li>
+            <li><a href="academics.html">Academics & Streams</a></li>
+            <li><a href="achievements.html">Wall of Champions</a></li>
+            <li><a href="faculty.html">Management & Faculty</a></li>
+            <li><a href="student-life.html">Student Life & Hostels</a></li>
+            <li><a href="admissions.html">Admission Enquiry</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Central Office</h4>
+          <p style="font-size: 0.9rem; color: rgba(247,243,233,0.8); line-height: 1.6;">
+            Opposite Kamma Hostel, Ravipadu Road, Narasaraopet, Palnadu District, AP - 522601.<br>
+            Hotlines: <strong>+91 92467 64999 / +91 77991 37799</strong><br>
+            Email: <span style="font-family: var(--font-mono);">vitnrt@gmail.com</span>
+          </p>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>© 2026 Oxford VIT Junior College & Academy. All Rights Reserved.</div>
+        <div class="social-links">
+          <a href="https://www.instagram.com/raghava_vit/" target="_blank" rel="noopener noreferrer" class="social-btn">IG</a>
+          <a href="https://www.threads.com/@raghava_vit" target="_blank" rel="noopener noreferrer" class="social-btn">TH</a>
+          <a href="admin.html" class="social-btn" title="Admin Portal" style="font-size: 0.75rem;">ADM</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script type="module" src="assets/js/main.js"></script>
+</body>
+</html>

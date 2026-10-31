@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Administrative Portal & Admissions Registry | Oxford VIT</title>
+  
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="theme-color" content="#493B4C">
+
+  <!-- Favicon Crest SVG -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='20' fill='%23D6B77A'/%3E%3Cpath d='M50 15 L80 32 L80 68 L50 85 L20 68 L20 32 Z' fill='%23493B4C'/%3E%3Cpath d='M50 25 L70 37 L70 63 L50 75 L30 63 L30 37 Z' fill='%23F7F3E9'/%3E%3Ctext x='50' y='58' font-family='serif' font-size='26' font-weight='bold' fill='%23493B4C' text-anchor='middle'%3EOV%3C/text%3E%3C/svg%3E">
+
+  <!-- Core Design Tokens & Stylesheets -->
+  <link rel="stylesheet" href="assets/css/variables.css">
+  <link rel="stylesheet" href="assets/css/base.css">
+  <link rel="stylesheet" href="assets/css/components.css">
+  <link rel="stylesheet" href="assets/css/layout.css">
+  <link rel="stylesheet" href="assets/css/sections.css">
+  <link rel="stylesheet" href="assets/css/animations.css">
+
+  <style>
+    .admin-table {
+      width: 100%;
+      border-collapse: separate;
+      border-spacing: 0;
+      margin-top: 1.5rem;
+    }
+    .admin-table th {
+      background: var(--color-deep-plum);
+      color: var(--color-champagne-gold);
+      padding: 1rem 1.25rem;
+      text-align: left;
+      font-family: var(--font-mono);
+      font-size: 0.8125rem;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      border: none;
+    }
+    .admin-table th:first-child { border-top-left-radius: var(--radius-md); }
+    .admin-table th:last-child { border-top-right-radius: var(--radius-md); }
+    .admin-table td {
+      padding: 1rem 1.25rem;
+      border-bottom: 1px solid var(--border-subtle);
+      background: rgba(255, 255, 255, 0.6);
+      font-size: 0.875rem;
+      color: var(--color-deep-plum);
+    }
+    .admin-table tr:hover td {
+      background: rgba(214, 183, 122, 0.15);
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Ambient Aurora -->
+  <div class="aurora-backdrop" aria-hidden="true"></div>
+
+  <!-- Header -->
+  <header class="site-header scrolled" role="banner">
+    <div class="header-container">
+      <a href="index.html" class="brand" aria-label="Oxford VIT Home">
+        <div class="brand-crest">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
+          </svg>
+        </div>
+        <div class="brand-text">
+          <span class="brand-name">OXFORD VIT</span>
+          <span class="brand-subtitle">Central Management Portal</span>
+        </div>
+      </a>
+
+      <div class="header-actions">
+        <a href="index.html" class="btn btn-outline btn-sm">
+          <span>← Back to Website</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <main style="padding-top: 8rem; padding-bottom: 6rem;">
+    <div class="container">
+      
+      <!-- Dashboard Header -->
+      <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 2.5rem; flex-wrap: wrap; gap: 1rem;">
+        <div>
+          <span class="badge badge-gold" style="margin-bottom: 0.5rem;">Central Admissions Registry</span>
+          <h1 style="font-family: var(--font-serif); font-size: 2.5rem; color: var(--color-deep-plum); margin-bottom: 0.5rem;">
+            Institutional Dashboard
+          </h1>
+          <p style="color: var(--text-secondary); margin: 0;">
+            Real-time synchronization across all 6 Bhavans in Narasaraopet via centralized Node.js REST API.
+          </p>
+        </div>
+
+        <div style="display: flex; gap: 0.75rem;">
+          <button id="btn-refresh-admissions" class="btn btn-outline btn-sm">
+            ↻ Refresh Data
+          </button>
+          <button id="btn-export-json" class="btn btn-gold btn-sm">
+            Export JSON
+          </button>
+        </div>
+      </div>
+
+      <!-- Live Statistics Cards -->
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1.5rem; margin-bottom: 3rem;">
+        
+        <div class="glass-card" style="padding: 1.75rem;">
+          <div style="font-size: 0.75rem; font-family: var(--font-mono); color: var(--text-muted); text-transform: uppercase;">Total Registrations</div>
+          <div id="stat-total" style="font-family: var(--font-serif); font-size: 2.5rem; color: var(--color-deep-plum); font-weight: 700;">--</div>
+          <div style="font-size: 0.75rem; color: var(--color-botanical);">All campuses combined</div>
+        </div>
+
+        <div class="glass-card" style="padding: 1.75rem;">
+          <div style="font-size: 0.75rem; font-family: var(--font-mono); color: var(--text-muted); text-transform: uppercase;">Super-60 (MPC)</div>
+          <div id="stat-super60" style="font-family: var(--font-serif); font-size: 2.5rem; color: var(--color-champagne-gold); font-weight: 700;">--</div>
+          <div style="font-size: 0.75rem; color: var(--text-muted);">Balaji & Raman Bhavans</div>
+        </div>
+
+        <div class="glass-card" style="padding: 1.75rem;">
+          <div style="font-size: 0.75rem; font-family: var(--font-mono); color: var(--text-muted); text-transform: uppercase;">Medical Academy (BiPC)</div>
+          <div id="stat-neet" style="font-family: var(--font-serif); font-size: 2.5rem; color: var(--color-botanical); font-weight: 700;">--</div>
+          <div style="font-size: 0.75rem; color: var(--text-muted);">Yashoda & Main Campuses</div>
+        </div>
+
+        <div class="glass-card" style="padding: 1.75rem;">
+          <div style="font-size: 0.75rem; font-family: var(--font-mono); color: var(--text-muted); text-transform: uppercase;">Active Bhavans</div>
+          <div style="font-family: var(--font-serif); font-size: 2.5rem; color: var(--color-coral); font-weight: 700;">6</div>
+          <div style="font-size: 0.75rem; color: var(--text-muted);">Narasaraopet Network</div>
+        </div>
+
+      </div>
+
+      <!-- Filter & Search Controls -->
+      <div class="glass-card" style="padding: 2rem; border-radius: var(--radius-xl); margin-bottom: 2rem;">
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1.25rem;">
+          
+          <div class="form-group" style="margin-bottom: 0;">
+            <label for="admin-filter-campus" class="form-label">Filter by Campus</label>
+            <select id="admin-filter-campus" class="form-select">
+              <option value="all">All Campuses</option>
+              <option value="Main Junior College">Main Junior College</option>
+              <option value="Balaji Bhavan">Balaji Bhavan</option>
+              <option value="Yashoda Bhavan">Yashoda Bhavan</option>
+              <option value="Raman Bhavan">Raman Bhavan</option>
+              <option value="Padmavathi Bhavan">Padmavathi Bhavan</option>
+              <option value="KSR Towers">KSR Towers</option>
+            </select>
+          </div>
+
+          <div class="form-group" style="margin-bottom: 0;">
+            <label for="admin-filter-stream" class="form-label">Filter by Stream</label>
+            <select id="admin-filter-stream" class="form-select">
+              <option value="all">All Streams</option>
+              <option value="Super-60">IIT-JEE Super-60</option>
+              <option value="NEET">NEET Medical Academy</option>
+              <option value="EAPCET">AP EAPCET</option>
+              <option value="Board">Intermediate Board</option>
+            </select>
+          </div>
+
+          <div class="form-group" style="margin-bottom: 0;">
+            <label for="admin-search-query" class="form-label">Search Applicant or Token</label>
+            <input type="text" id="admin-search-query" class="form-input" placeholder="Type candidate name, phone...">
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Admissions Registry Table -->
+      <div class="glass-card" style="padding: 2rem; border-radius: var(--radius-xl); overflow-x: auto;">
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem;">
+          <h3 style="font-family: var(--font-serif); font-size: 1.35rem; color: var(--color-deep-plum); margin: 0;">
+            Registered Candidates
+          </h3>
+          <span id="admin-table-count" class="badge badge-botanical">0 Records</span>
+        </div>
+
+        <table class="admin-table">
+          <thead>
+            <tr>
+              <th>Ref Token</th>
+              <th>Student & Parent</th>
+              <th>Contact</th>
+              <th>Program & Stream</th>
+              <th>Target Campus</th>
+              <th>10th Score / Date</th>
+            </tr>
+          </thead>
+          <tbody id="admin-table-body">
+            <tr>
+              <td colspan="6" style="text-align: center; padding: 3rem; color: var(--text-muted);">
+                Loading registrations from server registry...
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- Institutional Announcement Broadcaster Section -->
+      <div class="glass-card" style="padding: 2.5rem; border-radius: var(--radius-xl); margin-top: 3.5rem;">
+        <span class="badge badge-gold" style="margin-bottom: 0.75rem;">Central Content Management</span>
+        <h3 style="font-family: var(--font-serif); font-size: 1.5rem; color: var(--color-deep-plum); margin-bottom: 0.5rem;">
+          Live Marquee & Alert Broadcaster
+        </h3>
+        <p style="font-size: 0.875rem; color: var(--text-secondary); margin-bottom: 1.5rem;">
+          Publish dynamic news alerts and admission notices across all pages without recompilation. Updates are committed directly to <code style="font-family: var(--font-mono); font-size: 0.75rem; background: rgba(0,0,0,0.06); padding: 2px 6px; border-radius: 4px;">data/content.json</code> via REST API.
+        </p>
+
+        <form id="form-announcement" style="display: flex; gap: 1rem; flex-wrap: wrap;">
+          <input type="text" id="input-announcement" class="form-input" placeholder="e.g. OVEST 2026 Phase-1 Registration Closes April 30. Limited Hostel Seats Available." style="flex-grow: 1; min-width: 300px;" required>
+          <button type="submit" class="btn btn-primary btn-sm">
+            Broadcast Announcement
+          </button>
+        </form>
+        <div id="announcement-feedback" style="margin-top: 0.75rem; font-size: 0.8125rem; font-family: var(--font-mono); display: none;"></div>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- Client Script for Admin Portal -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      let admissionsList = [];
+
+      const tableBody = document.getElementById('admin-table-body');
+      const tableCount = document.getElementById('admin-table-count');
+      const statTotal = document.getElementById('stat-total');
+      const statSuper60 = document.getElementById('stat-super60');
+      const statNeet = document.getElementById('stat-neet');
+      const filterCampus = document.getElementById('admin-filter-campus');
+      const filterStream = document.getElementById('admin-filter-stream');
+      const searchQuery = document.getElementById('admin-search-query');
+      const btnRefresh = document.getElementById('btn-refresh-admissions');
+      const btnExport = document.getElementById('btn-export-json');
+      const formAnnouncement = document.getElementById('form-announcement');
+      const inputAnnouncement = document.getElementById('input-announcement');
+      const feedbackAnnouncement = document.getElementById('announcement-feedback');
+
+      async function fetchAdmissions() {
+        try {
+          const res = await fetch('/api/admissions');
+          if (res.ok) {
+            const data = await res.json();
+            admissionsList = data.data || [];
+            updateStats();
+            renderTable();
+          } else {
+            tableBody.innerHTML = '<tr><td colspan="6" style="text-align: center; color: var(--color-coral);">Failed to fetch data from API.</td></tr>';
+          }
+        } catch (err) {
+          tableBody.innerHTML = '<tr><td colspan="6" style="text-align: center; color: var(--color-coral);">Server unreachable. Please verify that node server.js is running.</td></tr>';
+        }
+      }
+
+      function updateStats() {
+        statTotal.textContent = admissionsList.length;
+        statSuper60.textContent = admissionsList.filter(a => a.course && a.course.includes('Super-60')).length;
+        statNeet.textContent = admissionsList.filter(a => a.course && a.course.includes('NEET')).length;
+      }
+
+      function renderTable() {
+        const campusVal = filterCampus.value;
+        const streamVal = filterStream.value;
+        const query = searchQuery.value.trim().toLowerCase();
+
+        const filtered = admissionsList.filter(item => {
+          if (campusVal !== 'all' && (!item.campus || !item.campus.includes(campusVal))) {
+            return false;
+          }
+          if (streamVal !== 'all' && (!item.course || !item.course.includes(streamVal))) {
+            return false;
+          }
+          if (query) {
+            const matchName = (item.studentName || '').toLowerCase().includes(query);
+            const matchPhone = (item.mobile || '').includes(query);
+            const matchToken = (item.id || '').toLowerCase().includes(query);
+            if (!matchName && !matchPhone && !matchToken) return false;
+          }
+          return true;
+        });
+
+        tableCount.textContent = `${filtered.length} Record${filtered.length === 1 ? '' : 's'}`;
+
+        if (filtered.length === 0) {
+          tableBody.innerHTML = `
+            <tr>
+              <td colspan="6" style="text-align: center; padding: 3rem; color: var(--text-muted);">
+                No matching admissions found.
+              </td>
+            </tr>
+          `;
+          return;
+        }
+
+        tableBody.innerHTML = filtered.map(item => `
+          <tr>
+            <td>
+              <span style="font-family: var(--font-mono); font-weight: 700; color: var(--color-deep-plum); background: rgba(214,183,122,0.25); padding: 4px 8px; border-radius: 4px; border: 1px solid var(--border-gold);">
+                ${item.id || 'N/A'}
+              </span>
+            </td>
+            <td>
+              <strong style="color: var(--color-deep-plum); font-size: 0.9375rem;">${item.studentName}</strong>
+              <div style="font-size: 0.75rem; color: var(--text-muted);">Parent: ${item.parentName || 'Not specified'}</div>
+            </td>
+            <td>
+              <div style="font-family: var(--font-mono); font-size: 0.8125rem; color: var(--color-botanical); font-weight: 600;">
+                📞 ${item.mobile}
+              </div>
+              ${item.email ? `<div style="font-size: 0.75rem; color: var(--text-muted); font-family: var(--font-mono);">${item.email}</div>` : ''}
+            </td>
+            <td>
+              <span class="badge badge-botanical" style="font-size: 0.72rem;">${item.course}</span>
+            </td>
+            <td>
+              <div style="font-size: 0.8125rem; color: var(--color-deep-plum); font-weight: 500;">
+                ${item.campus}
+              </div>
+            </td>
+            <td>
+              <div style="font-size: 0.8125rem; color: var(--color-coral); font-weight: 600;">
+                ${item.qualification || 'Awaiting 10th Result'}
+              </div>
+              <div style="font-size: 0.72rem; color: var(--text-muted); font-family: var(--font-mono);">
+                ${item.submittedAt ? new Date(item.submittedAt).toLocaleDateString() : 'Active'}
+              </div>
+            </td>
+          </tr>
+        `).join('');
+      }
+
+      filterCampus.addEventListener('change', renderTable);
+      filterStream.addEventListener('change', renderTable);
+      searchQuery.addEventListener('input', renderTable);
+      btnRefresh.addEventListener('click', fetchAdmissions);
+
+      btnExport.addEventListener('click', () => {
+        const jsonStr = JSON.stringify(admissionsList, null, 2);
+        const blob = new Blob([jsonStr], { type: 'application/json' });
+        const url = URL.createObjectURL(blob);
+        const a = document.createElement('a');
+        a.href = url;
+        a.download = `oxford-vit-admissions-${new Date().toISOString().split('T')[0]}.json`;
+        a.click();
+        URL.revokeObjectURL(url);
+      });
+
+      formAnnouncement.addEventListener('submit', async (e) => {
+        e.preventDefault();
+        const text = inputAnnouncement.value.trim();
+        if (!text) return;
+
+        try {
+          const res = await fetch('/api/content', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ liveAnnouncement: text })
+          });
+          if (res.ok) {
+            feedbackAnnouncement.style.display = 'block';
+            feedbackAnnouncement.style.color = 'var(--color-botanical)';
+            feedbackAnnouncement.textContent = '✓ Announcement successfully broadcasted across Oxford VIT platform.';
+            inputAnnouncement.value = '';
+            setTimeout(() => { feedbackAnnouncement.style.display = 'none'; }, 5000);
+          }
+        } catch (err) {
+          feedbackAnnouncement.style.display = 'block';
+          feedbackAnnouncement.style.color = 'var(--color-coral)';
+          feedbackAnnouncement.textContent = '✕ Error saving announcement to server.';
+        }
+      });
+
+      // Initial Load
+      fetchAdmissions();
+    });
+  </script>
+
+</body>
+</html>

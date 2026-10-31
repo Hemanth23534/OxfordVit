@@ -105,6 +105,141 @@ export const managementData = {
     }
   ],
 
+  facultyDirectory: [
+    {
+      id: 'fac-raghava',
+      name: 'Panadi Raghava',
+      department: 'mathematics',
+      role: 'Dean of Mathematics & Academic Director',
+      qualification: 'M.Sc., IIT-JEE Specialist',
+      experience: '22+ Years Experience',
+      focus: 'Calculus, Vectors & 3D Geometry, Advanced Olympiad Problem Solving',
+      campus: 'Balaji & Main Campus',
+      avatarInitial: 'PR'
+    },
+    {
+      id: 'fac-dsr',
+      name: 'Dogiparthi Srinivasa Rao (DSR)',
+      department: 'physics',
+      role: 'Academic Director & Senior Physics Mentor',
+      qualification: 'B.Tech (Ex-SRA IIT Delhi)',
+      experience: '32+ Years Experience',
+      focus: 'Classical Mechanics, Electrodynamics & Wave Optics',
+      campus: 'Main Campus & Raman Bhavan',
+      avatarInitial: 'DSR'
+    },
+    {
+      id: 'fac-ksr',
+      name: 'K. Sambasiva Rao (KSR)',
+      department: 'mathematics',
+      role: 'Administrative Director & Senior Mathematics Mentor',
+      qualification: 'M.Sc., B.Ed., IIT Mathematics',
+      experience: '30+ Years Experience',
+      focus: 'Algebra, Trigonometry & Board Score Maximization',
+      campus: 'KSR Towers & Main Campus',
+      avatarInitial: 'KSR'
+    },
+    {
+      id: 'fac-subbarao',
+      name: 'K. V. Subba Rao',
+      department: 'physics',
+      role: 'Head of Department – Physics',
+      qualification: 'M.Sc. Physics (Gold Medalist)',
+      experience: '20+ Years Experience',
+      focus: 'Thermodynamics, Modern Physics & Experimental Precision',
+      campus: 'Balaji Bhavan & Raman Bhavan',
+      avatarInitial: 'KVS'
+    },
+    {
+      id: 'fac-rambabu',
+      name: 'M. Rambabu',
+      department: 'chemistry',
+      role: 'Head of Department – Chemistry',
+      qualification: 'M.Sc. Organic Chemistry',
+      experience: '19+ Years Experience',
+      focus: 'Organic Reaction Mechanisms & Stereochemistry',
+      campus: 'Main Campus & Yashoda Bhavan',
+      avatarInitial: 'MR'
+    },
+    {
+      id: 'fac-sureshkumar',
+      name: 'T. Suresh Kumar',
+      department: 'chemistry',
+      role: 'Senior Lecturer in Inorganic Chemistry',
+      qualification: 'M.Sc., M.Phil. Chemistry',
+      experience: '16+ Years Experience',
+      focus: 'Coordination Compounds, Chemical Bonding & Metallurgy',
+      campus: 'Balaji Bhavan',
+      avatarInitial: 'TSK'
+    },
+    {
+      id: 'fac-venkateswarlu',
+      name: 'G. Venkateswarlu',
+      department: 'biology',
+      role: 'Dean of Medical Division & Senior Botany Faculty',
+      qualification: 'M.Sc. Botany, B.Ed.',
+      experience: '21+ Years Experience',
+      focus: 'Plant Physiology, Genetics & Molecular Biology (NEET Specialization)',
+      campus: 'Yashoda Bhavan & Main Campus',
+      avatarInitial: 'GV'
+    },
+    {
+      id: 'fac-sivareddy',
+      name: 'Dr. P. Siva Reddy',
+      department: 'biology',
+      role: 'Senior Zoology Faculty & Medical Mentor',
+      qualification: 'Ph.D. in Life Sciences',
+      experience: '17+ Years Experience',
+      focus: 'Human Physiology, Biotechnology & Evolution Dynamics',
+      campus: 'Yashoda Bhavan',
+      avatarInitial: 'PSR'
+    },
+    {
+      id: 'fac-lakshminarayana',
+      name: 'S. Lakshmi Narayana',
+      department: 'mathematics',
+      role: 'Senior Lecturer in Mathematics',
+      qualification: 'M.Sc. Mathematics',
+      experience: '15+ Years Experience',
+      focus: 'Coordinate Geometry, Probability & Differential Equations',
+      campus: 'Raman Bhavan',
+      avatarInitial: 'SLN'
+    },
+    {
+      id: 'fac-radhakrishna',
+      name: 'V. Radhakrishna',
+      department: 'physics',
+      role: 'Senior Lecturer in Physics',
+      qualification: 'M.Sc. Applied Physics',
+      experience: '18+ Years Experience',
+      focus: 'Rotational Dynamics, Fluid Mechanics & Semiconductor Physics',
+      campus: 'Balaji Bhavan',
+      avatarInitial: 'VRK'
+    },
+    {
+      id: 'fac-anjaneyulu',
+      name: 'K. Anjaneyulu',
+      department: 'languages',
+      role: 'Head of Department – Sanskrit',
+      qualification: 'M.A. Sanskrit, Sahitya Shiromani',
+      experience: '25+ Years Experience',
+      focus: 'Classical Sanskrit Literature, Grammar & 99/100 Board Scoring Blueprint',
+      campus: 'All Bhavans',
+      avatarInitial: 'KA'
+    },
+    {
+      id: 'fac-marygrace',
+      name: 'P. Mary Grace',
+      department: 'languages',
+      role: 'Senior Lecturer – English & Verbal Communication',
+      qualification: 'M.A. English Literature, B.Ed.',
+      experience: '16+ Years Experience',
+      focus: 'Phonetics, Vocabulary Mastery, Creative Writing & Interview Prep',
+      campus: 'All Bhavans',
+      avatarInitial: 'PMG'
+    }
+  ],
+
   mediaAndYoutube: [
     {
       id: 'yt-1',
