@@ -2538,16 +2538,23 @@
 }
 
 .crest-icon-ring {
-  width: 72px;
-  height: 72px;
+  width: 76px;
+  height: 76px;
   border-radius: 50%;
-  background: linear-gradient(135deg, rgba(214, 183, 122, 0.2), rgba(82, 107, 84, 0.2));
+  background: rgba(255, 255, 255, 0.95);
   border: 2px solid var(--color-champagne-gold);
   display: flex;
   align-items: center;
   justify-content: center;
   margin: 0 auto 0.75rem;
   box-shadow: 0 0 25px rgba(214, 183, 122, 0.4);
+  padding: 6px;
+}
+
+.crest-icon-ring img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
 }
 
 .crest-title {

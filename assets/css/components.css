@@ -39,6 +39,31 @@
   padding: 2rem;
 }
 
+.preloader-logo-wrap {
+  margin-bottom: 2.25rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  filter: drop-shadow(0 10px 28px rgba(214, 183, 122, 0.45));
+  animation: preloaderPulse 2.4s ease-in-out infinite;
+}
+
+.preloader-logo-img {
+  max-width: 340px;
+  width: 86vw;
+  height: auto;
+  max-height: 130px;
+  object-fit: contain;
+  display: block;
+}
+
+@media (max-width: 480px) {
+  .preloader-logo-img {
+    max-width: 260px;
+    max-height: 95px;
+  }
+}
+
 .preloader-crest {
   width: 76px;
   height: 76px;

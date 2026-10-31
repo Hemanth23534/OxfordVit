@@ -38,12 +38,10 @@ export class PageTransitionsEngine {
         <div class="transition-panel panel-right"></div>
         <div class="transition-brand-crest">
           <div class="crest-icon-ring">
-            <svg width="42" height="42" viewBox="0 0 24 24" fill="currentColor">
-              <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
-            </svg>
+            <img src="assets/images/logo/oxford-vit-crest-transparent.png" alt="Oxford VIT Emblem">
           </div>
-          <div class="crest-title">OXFORD VIT</div>
-          <div class="crest-tagline">Where Knowledge Takes Shape</div>
+          <div class="crest-title">OXFORD'S VIT</div>
+          <div class="crest-tagline">IIT-JEE &amp; NEET ACADEMY</div>
         </div>
       `;
       document.body.appendChild(overlay);

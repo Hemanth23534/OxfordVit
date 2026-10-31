@@ -655,6 +655,42 @@ async function runTests() {
     assert(hasRaghava, `${f} contains verified social media link to @raghava_vit`);
   });
 
+  // 10. Official Institutional Branding & Logo Suite Verification
+  console.log('\n10. Official Institutional Branding & Logo Suite Verification:');
+  const expectedLogoFiles = [
+    'supplied-official-logo-original.png',
+    'oxford-vit-official-logo.png',
+    'oxford-vit-official-logo-transparent.png',
+    'oxford-vit-crest.png',
+    'oxford-vit-crest-transparent.png',
+    'favicon.png'
+  ];
+
+  expectedLogoFiles.forEach(file => {
+    const fullPath = path.join(__dirname, 'assets/images/logo', file);
+    assert(fs.existsSync(fullPath), `Official branding asset exists: assets/images/logo/${file}`);
+    assert(fs.statSync(fullPath).size > 1000, `Official branding asset is valid non-empty binary: ${file}`);
+  });
+
+  allHtmlFiles.forEach(f => {
+    const content = fs.readFileSync(path.join(__dirname, f), 'utf8');
+    const hasFaviconPng = content.includes('assets/images/logo/favicon.png');
+    const hasOfficialLogo = content.includes('assets/images/logo/oxford-vit-official-logo-transparent.png');
+    const hasObsoleteSvgFavicon = content.includes('data:image/svg+xml');
+    const hasObsoleteGeometricCrest = content.includes('class="brand-crest"');
+
+    assert(hasFaviconPng, `${f} uses official PNG favicon`);
+    assert(hasOfficialLogo, `${f} uses official Oxford's VIT transparent logo in header & footer`);
+    assert(!hasObsoleteSvgFavicon, `${f} has completely removed obsolete placeholder SVG favicon`);
+    assert(!hasObsoleteGeometricCrest, `${f} has completely removed obsolete geometric brand-crest SVG`);
+  });
+
+  // Preloader verification in index.html
+  const preloaderHasOfficialLogo = indexHtml.includes('class="preloader-logo-wrap"') && indexHtml.includes('assets/images/logo/oxford-vit-official-logo-transparent.png');
+  const preloaderHasNoOldCrest = !indexHtml.includes('class="preloader-crest"');
+  assert(preloaderHasOfficialLogo, 'index.html cinematic preloader displays official Oxford VIT logo');
+  assert(preloaderHasNoOldCrest, 'index.html cinematic preloader has zero geometric placeholder crests');
+
   console.log('\n====================================================');
   console.log(`FINAL RESULTS: ${passedTests} PASSED, ${failedTests} FAILED out of ${totalTests} TOTAL CHECKS`);
   console.log('====================================================\n');
