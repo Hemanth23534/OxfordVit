@@ -1,0 +1,16 @@
+User-agent: *
+Allow: /
+Allow: /index.html
+Allow: /about.html
+Allow: /campuses.html
+Allow: /academics.html
+Allow: /achievements.html
+Allow: /faculty.html
+Allow: /student-life.html
+Allow: /events.html
+Allow: /gallery.html
+Allow: /admissions.html
+Disallow: /admin.html
+Disallow: /api/
+
+Sitemap: https://oxfordvit.edu.in/sitemap.xml

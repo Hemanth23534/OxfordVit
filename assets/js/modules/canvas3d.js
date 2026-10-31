@@ -31,11 +31,26 @@ export class LivingCampus3D {
     this.windowHalfY = window.innerHeight / 2;
     this.scrollY = 0;
     this.clock = new THREE.Clock();
+    this.isPaused = false;
+    this.prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
     this.init();
   }
 
   init() {
+    // 0. Verify WebGL support gracefully
+    try {
+      const testCanvas = document.createElement('canvas');
+      const gl = testCanvas.getContext('webgl') || testCanvas.getContext('experimental-webgl');
+      if (!gl) {
+        console.warn('WebGL not supported by client device; using fallback aurora background.');
+        return;
+      }
+    } catch (e) {
+      console.warn('WebGL detection error; graceful fallback active.');
+      return;
+    }
+
     // 1. Scene & Atmospheric Fog
     this.scene = new THREE.Scene();
     this.scene.fog = new THREE.FogExp2(0xF7F3E9, 0.0016);
@@ -45,14 +60,15 @@ export class LivingCampus3D {
     this.camera = new THREE.PerspectiveCamera(46, aspect, 1, 2500);
     this.camera.position.set(0, 45, 540);
 
-    // 3. High-Performance Renderer
+    // 3. High-Performance Mobile-Optimized Renderer
+    const isMobile = window.innerWidth < 768;
     this.renderer = new THREE.WebGLRenderer({
       alpha: true,
-      antialias: true,
+      antialias: !isMobile,
       powerPreference: 'high-performance'
     });
     this.renderer.setSize(window.innerWidth, window.innerHeight);
-    this.renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+    this.renderer.setPixelRatio(Math.min(window.devicePixelRatio, isMobile ? 1.25 : 1.75));
     this.renderer.toneMapping = THREE.ACESFilmicToneMapping;
     this.renderer.toneMappingExposure = 1.15;
     this.container.appendChild(this.renderer.domElement);
@@ -85,13 +101,24 @@ export class LivingCampus3D {
     this.createFloatingEducationalGeometries();
     this.createGoldenStardustParticles();
 
-    // 6. Listeners
+    // 6. Listeners & Battery-Saving Visibility Observers
     window.addEventListener('resize', this.onWindowResize.bind(this));
     window.addEventListener('mousemove', this.onMouseMove.bind(this));
     window.addEventListener('scroll', this.onScroll.bind(this), { passive: true });
 
-    // 7. Render Loop
-    this.animate();
+    document.addEventListener('visibilitychange', () => {
+      this.isPaused = document.hidden;
+      if (!this.isPaused && !this.prefersReducedMotion) {
+        this.animate();
+      }
+    });
+
+    // 7. Render Loop or Static Poster Render if Reduced Motion Preferred
+    if (this.prefersReducedMotion) {
+      this.renderer.render(this.scene, this.camera);
+    } else {
+      this.animate();
+    }
   }
 
   /**
@@ -372,6 +399,14 @@ export class LivingCampus3D {
   }
 
   animate() {
+    if (this.isPaused || this.prefersReducedMotion) return;
+
+    // Pause heavy 3D rendering if scrolled deep past the hero (beyond 2800px)
+    if (this.scrollY > 2800) {
+      setTimeout(() => requestAnimationFrame(this.animate.bind(this)), 200);
+      return;
+    }
+
     requestAnimationFrame(this.animate.bind(this));
 
     const elapsedTime = this.clock.getElapsedTime();
