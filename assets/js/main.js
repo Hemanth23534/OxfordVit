@@ -16,6 +16,8 @@ import { NavigationHandler } from './modules/navigation.js';
 import { FacultyDirectoryEngine } from './modules/facultyDirectory.js';
 import { EventsEngine } from './modules/eventsEngine.js';
 import { CampusDetailEngine } from './modules/campusDetail.js';
+import { TimelineEngine } from './modules/timelineEngine.js';
+import { SocialFeedEngine } from './modules/socialFeedEngine.js';
 
 document.addEventListener('DOMContentLoaded', () => {
   console.log('🏛️ Initializing Oxford VIT – The Living Campus Experience...');
@@ -56,6 +58,16 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // 8d. Initialize Detailed Campus Profile Engine
   new CampusDetailEngine();
+
+  // 8e. Initialize Institutional History Timeline Engine
+  if (document.querySelector('.timeline-container') || document.querySelector('.timeline-cards-track')) {
+    new TimelineEngine();
+  }
+
+  // 8f. Initialize Verified Social Media & Pulse Engine (@raghava_vit)
+  if (document.querySelector('.social-feed-section') || document.querySelector('.social-feed-grid')) {
+    new SocialFeedEngine();
+  }
 
   // 9. Initialize 3D Tilt & Specular Glare Logic
   new Tilt3DEngine();

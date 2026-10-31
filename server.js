@@ -13,6 +13,8 @@ const DATA_DIR = path.join(__dirname, 'data');
 const ADMISSIONS_FILE = path.join(DATA_DIR, 'admissions.json');
 const CONTENT_FILE = path.join(DATA_DIR, 'content.json');
 const GALLERY_FILE = path.join(__dirname, 'gallery.json');
+const HISTORY_FILE = path.join(__dirname, 'history.json');
+const SOCIAL_FILE = path.join(__dirname, 'social-feed.json');
 
 // Ensure data files exist
 if (!fs.existsSync(DATA_DIR)) {
@@ -231,6 +233,38 @@ const server = http.createServer((req, res) => {
         }
       });
       return;
+    }
+  }
+
+  // 4. Institutional History & Milestones API
+  if (parsedUrl === '/api/history') {
+    if (req.method === 'GET') {
+      try {
+        if (!fs.existsSync(HISTORY_FILE)) {
+          return sendJson(res, 200, { success: true, count: 0, data: [] });
+        }
+        const data = JSON.parse(fs.readFileSync(HISTORY_FILE, 'utf-8'));
+        const milestones = data.milestones || [];
+        return sendJson(res, 200, { success: true, count: milestones.length, data: milestones, institutionalMetadata: data.institutionalMetadata || {} });
+      } catch (err) {
+        return sendJson(res, 500, { success: false, message: 'Error reading history milestones data.' });
+      }
+    }
+  }
+
+  // 5. Verified Social Media Broadcasts API (@raghava_vit Instagram & Threads)
+  if (parsedUrl === '/api/social') {
+    if (req.method === 'GET') {
+      try {
+        if (!fs.existsSync(SOCIAL_FILE)) {
+          return sendJson(res, 200, { success: true, count: 0, data: [], profiles: {} });
+        }
+        const data = JSON.parse(fs.readFileSync(SOCIAL_FILE, 'utf-8'));
+        const posts = data.posts || [];
+        return sendJson(res, 200, { success: true, count: posts.length, data: posts, profiles: data.profiles || {} });
+      } catch (err) {
+        return sendJson(res, 500, { success: false, message: 'Error reading social media feed data.' });
+      }
     }
   }
 

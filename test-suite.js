@@ -56,6 +56,8 @@ async function runTests() {
     'achievements.json',
     'events.json',
     'gallery.json',
+    'history.json',
+    'social-feed.json',
     'source-references.json',
     'data/content.json',
     'data/admissions.json'
@@ -397,7 +399,7 @@ async function runTests() {
 
   // Test Static JSON endpoints
   console.log('\n7. Static Institutional JSON Endpoints:');
-  for (const jsonEndpoint of ['/campuses.json', '/faculty.json', '/achievements.json', '/management.json', '/college-profile.json', '/events.json']) {
+  for (const jsonEndpoint of ['/campuses.json', '/faculty.json', '/achievements.json', '/management.json', '/college-profile.json', '/events.json', '/history.json', '/social-feed.json']) {
     try {
       const res = await httpRequest({ hostname: 'localhost', port: 3000, path: jsonEndpoint, method: 'GET' });
       assert(res.statusCode === 200, `GET ${jsonEndpoint} returns HTTP 200`);
@@ -429,6 +431,43 @@ async function runTests() {
     assert(gallery.success === true && Array.isArray(gallery.data) && gallery.data.length > 0, `GET /api/gallery delivers media items (${gallery.data.length} items)`);
   } catch (e) {
     assert(false, `GET /api/gallery failed: ${e.message}`);
+  }
+
+  // GET /api/history
+  try {
+    const res = await httpRequest({ hostname: 'localhost', port: 3000, path: '/api/history', method: 'GET' });
+    assert(res.statusCode === 200, 'GET /api/history returns HTTP 200');
+    const hist = JSON.parse(res.data);
+    assert(hist.success === true && Array.isArray(hist.data) && hist.data.length === 12, `GET /api/history delivers all 12 milestones (found ${hist.data.length})`);
+    
+    // Check first and last milestones
+    const m1994 = hist.data.find(m => m.year === 1994);
+    assert(m1994 !== undefined && typeof m1994.verificationStatus === 'string' && m1994.verificationStatus.includes('Founding Record'), '1994 foundation milestone has verified status');
+    assert(typeof m1994.managementActivity === 'string', '1994 milestone includes managementActivity');
+    assert(typeof m1994.academicActivity === 'string', '1994 milestone includes academicActivity');
+
+    const m2026 = hist.data.find(m => m.year === 2026);
+    assert(m2026 !== undefined && m2026.category.includes('digital'), '2026 digital unification milestone verified');
+  } catch (e) {
+    assert(false, `GET /api/history failed: ${e.message}`);
+  }
+
+  // GET /api/social
+  try {
+    const res = await httpRequest({ hostname: 'localhost', port: 3000, path: '/api/social', method: 'GET' });
+    assert(res.statusCode === 200, 'GET /api/social returns HTTP 200');
+    const soc = JSON.parse(res.data);
+    assert(soc.success === true && Array.isArray(soc.data) && soc.data.length === 10, `GET /api/social delivers all 10 social broadcasts (found ${soc.data.length})`);
+    assert(soc.profiles && soc.profiles.raghava_vit && typeof soc.profiles.raghava_vit.instagramUrl === 'string' && soc.profiles.raghava_vit.instagramUrl.includes('instagram.com/raghava_vit'), 'Profiles include official @raghava_vit Instagram URL');
+    assert(soc.profiles && soc.profiles.raghava_vit && typeof soc.profiles.raghava_vit.threadsUrl === 'string' && soc.profiles.raghava_vit.threadsUrl.includes('threads.com/@raghava_vit'), 'Profiles include official @raghava_vit Threads URL');
+
+    const p1 = soc.data[0];
+    assert(typeof p1.originalUrl === 'string' && p1.originalUrl.includes('raghava_vit'), 'Social post has originalUrl referencing @raghava_vit');
+    assert(typeof p1.verificationStatus === 'string' && p1.verificationStatus.length > 0, 'Social post has verificationStatus');
+    assert(typeof p1.permissionStatus === 'string' && p1.permissionStatus.length > 0, 'Social post has permissionStatus');
+    assert(typeof p1.campus === 'string' && p1.campus.length > 0, 'Social post is mapped to an institutional campus');
+  } catch (e) {
+    assert(false, `GET /api/social failed: ${e.message}`);
   }
 
   // GET /api/admissions
@@ -499,6 +538,62 @@ async function runTests() {
   } catch (e) {
     assert(false, `404 route test failed: ${e.message}`);
   }
+
+  // -------------------------------------------------------------------------
+  // 9. Institutional History, Social Media & Campus Galleries Verification
+  // -------------------------------------------------------------------------
+  console.log('\n9. Institutional History, Social Media & Campus Galleries Verification:');
+
+  // Verify all 10 campuses have media items in gallery.json
+  const galleryRaw = JSON.parse(fs.readFileSync(path.join(__dirname, 'gallery.json'), 'utf8'));
+  const galleryItems = galleryRaw.mediaItems || [];
+  const expectedCampusIds = [
+    'yashoda-bhavan',
+    'balaji-bhavan',
+    'raman-bhavan',
+    'ksr-towers',
+    'vit-olympiad-school',
+    'oxford-iit-school',
+    'guntur-balaji-tower',
+    'guntur-vasavi-tower',
+    'guntur-vit-medical',
+    'bapatla-branch'
+  ];
+
+  expectedCampusIds.forEach(cId => {
+    const hasMedia = galleryItems.some(item => item.campusId === cId);
+    assert(hasMedia, `gallery.json contains verified media for campus: ${cId}`);
+  });
+
+  // Verify JavaScript modules exist
+  assert(fs.existsSync(path.join(__dirname, 'assets/js/modules/timelineEngine.js')), 'timelineEngine.js exists');
+  assert(fs.existsSync(path.join(__dirname, 'assets/js/modules/socialFeedEngine.js')), 'socialFeedEngine.js exists');
+
+  // Verify gallery.html has campus selector
+  const galleryHtml = fs.readFileSync(path.join(__dirname, 'gallery.html'), 'utf8');
+  assert(galleryHtml.includes('id="gallery-campus-filter"'), 'gallery.html includes campus-specific gallery selector dropdown');
+  assert(galleryHtml.includes('id="gallery-count-display"'), 'gallery.html includes dynamic media count display');
+
+  // Verify index.html has history and social-pulse sections
+  const indexHtml = fs.readFileSync(path.join(__dirname, 'index.html'), 'utf8');
+  assert(indexHtml.includes('id="history"'), 'index.html includes #history timeline section');
+  assert(indexHtml.includes('id="social-pulse"'), 'index.html includes #social-pulse section');
+  assert(indexHtml.includes('id="social-modal"'), 'index.html includes #social-modal dialog');
+
+  // Verify about.html has timeline and social sections
+  const aboutHtml = fs.readFileSync(path.join(__dirname, 'about.html'), 'utf8');
+  assert(aboutHtml.includes('timeline-container'), 'about.html includes timeline-container');
+  assert(aboutHtml.includes('social-feed-section'), 'about.html includes social-feed-section');
+  assert(aboutHtml.includes('id="social-modal"'), 'about.html includes #social-modal dialog');
+
+  // Verify all 15 HTML files contain verified links to @raghava_vit on Instagram & Threads
+  const allHtmlFiles = fs.readdirSync(__dirname).filter(f => f.endsWith('.html'));
+  assert(allHtmlFiles.length === 15, `Found all 15 HTML files (found ${allHtmlFiles.length})`);
+  allHtmlFiles.forEach(f => {
+    const content = fs.readFileSync(path.join(__dirname, f), 'utf8');
+    const hasRaghava = content.includes('raghava_vit');
+    assert(hasRaghava, `${f} contains verified social media link to @raghava_vit`);
+  });
 
   console.log('\n====================================================');
   console.log(`FINAL RESULTS: ${passedTests} PASSED, ${failedTests} FAILED out of ${totalTests} TOTAL CHECKS`);

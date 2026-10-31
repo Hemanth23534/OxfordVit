@@ -125,14 +125,43 @@
           Immerse yourself in our architectural grounds, science laboratories, cultural fests, and student celebrations. Click any item to explore in high-resolution full-screen lightbox.
         </p>
 
-        <!-- Gallery Filter Tabs -->
-        <div class="gallery-tabs tabs-nav" style="justify-content: center; flex-wrap: wrap;">
+        <!-- Gallery Filter Controls -->
+        <div class="gallery-tabs tabs-nav" style="justify-content: center; flex-wrap: wrap; margin-bottom: 1.5rem;">
           <button class="tab-btn active" data-category="all">All Media</button>
           <button class="tab-btn" data-category="campuses">Campuses &amp; Bhavans</button>
           <button class="tab-btn" data-category="events">Celebrations &amp; Events</button>
           <button class="tab-btn" data-category="students">Students &amp; Study Pods</button>
           <button class="tab-btn" data-category="achievements">Wall of Champions</button>
           <button class="tab-btn" data-category="transport">Transport Fleet</button>
+        </div>
+
+        <!-- Campus-Specific Gallery Selector (10 Verified Campuses) -->
+        <div style="display: flex; justify-content: center; align-items: center; gap: 1rem; flex-wrap: wrap; background: rgba(255, 255, 255, 0.7); backdrop-filter: blur(10px); padding: 0.85rem 1.75rem; border-radius: 999px; border: 1px solid var(--border-gold); max-width: 680px; margin: 0 auto;">
+          <label for="gallery-campus-filter" style="font-size: 0.875rem; font-weight: 600; color: var(--color-deep-plum); white-space: nowrap; display: flex; align-items: center; gap: 0.4rem;">
+            <span>📍 Campus Gallery:</span>
+          </label>
+          <select id="gallery-campus-filter" style="border: 1px solid var(--border-gold); background: #FAF7F0; color: var(--color-deep-plum); padding: 0.45rem 1rem; border-radius: var(--radius-md); font-family: var(--font-sans); font-size: 0.875rem; font-weight: 500; cursor: pointer; outline: none;">
+            <option value="all">✦ All 10 Campuses &amp; Bhavans</option>
+            <optgroup label="Narasaraopet Headquarters (6 Locations)">
+              <option value="yashoda-bhavan">Yashoda Bhavan (Main Campus)</option>
+              <option value="balaji-bhavan">Balaji Bhavan (Inter Sections)</option>
+              <option value="raman-bhavan">Raman Bhavan (Super Wing &amp; CBT)</option>
+              <option value="ksr-towers">KSR Towers (Administrative Archive)</option>
+              <option value="vit-olympiad-school">VIT Olympiad School</option>
+              <option value="oxford-iit-school">Oxford IIT School (Concept School)</option>
+            </optgroup>
+            <optgroup label="Guntur Competitive Hub (3 Locations)">
+              <option value="guntur-balaji-tower">Balaji Tower (IIT &amp; Medical Academy)</option>
+              <option value="guntur-vasavi-tower">Vasavi Tower (Girls Campus)</option>
+              <option value="guntur-vit-medical">VIT Medical Academy (Long-Term NEET)</option>
+            </optgroup>
+            <optgroup label="Bapatla Coastal Outreach (1 Location)">
+              <option value="bapatla-branch">VIT Junior College (Bapatla Branch)</option>
+            </optgroup>
+          </select>
+          <span id="gallery-count-display" style="font-family: var(--font-mono); font-size: 0.8125rem; color: var(--color-botanical); font-weight: 600; white-space: nowrap;">
+            20 Verified Media Items
+          </span>
         </div>
       </div>
     </section>
