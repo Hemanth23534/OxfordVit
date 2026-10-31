@@ -1,76 +1,77 @@
 /**
  * OXFORD VIT – THE LIVING CAMPUS EXPERIENCE
  * Master Management & Leadership Directorate Data
- * Contains: 7 Verified Management Profiles & Institutional Hierarchy
+ * Contains: 6 Verified Management Profiles & Institutional Hierarchy
  */
 
 export const leadershipHierarchy = [
   {
     tier: 1,
-    title: 'Group Patronage & Governance',
-    subtitle: 'Institutional Vision, Societal Values & Oversight',
-    leaders: ['chairman-francis']
+    title: 'Institutional Leadership & Chairmen',
+    subtitle: 'Institutional Leadership, Strategic Vision & Senior Mentorship',
+    leaders: ['admin-ksr', 'academic-dsr']
   },
   {
     tier: 2,
     title: 'Executive & Academic Directorate',
-    subtitle: 'Administrative Policy, Academic Planning & Competitive Syllabi',
-    leaders: ['admin-ksr', 'academic-dsr', 'academic-ranga']
+    subtitle: 'Campus Expansion, Strategy & Chemical Sciences Mastery',
+    leaders: ['director-raja', 'academic-ranga']
   },
   {
     tier: 3,
     title: 'Institutional Strategy & Campus Administration',
     subtitle: 'Campus Operations, Principalship & Student Welfare Services',
-    leaders: ['director-raja', 'principal-raghava', 'manager-sambasiva']
+    leaders: ['principal-raghava', 'manager-sambasiva']
   }
 ];
 
 export const managementProfiles = [
   {
-    id: 'chairman-francis',
-    name: 'Sri S. Francis Reddy',
-    designation: 'Chairman, Oxford Group',
-    tierLevel: 1,
-    category: 'executive',
-    qualifications: 'Founder, Oxford Educational Society (Est. 1999)',
-    experienceYears: 35,
-    specialization: 'Educational Group Governance & Institutional Philanthropy',
-    responsibilities: 'Overall institutional vision, high-level governance, and philanthropic group direction.',
-    additionalRole: 'Founder President, Oxford Educational Society',
-    verificationStatus: 'Verified Group Chairman (Society Relationship: Pending Formal Institutional Verification)',
-    affiliationNotice: 'Founder of Oxford Educational Society (est. 1999). Relationship between Oxford Educational Society and Oxford VIT represents historical founding patronage and society alignment; formal institutional registry synchronization is ongoing.',
-    badge: 'Chairman & Founder',
-    biography: 'Visionary educational pioneer in Andhra Pradesh who established the Oxford Educational Society in 1999. Revered institutional patriarch whose commitment to disciplined values, academic rigor, and moral ethics laid the foundational bedrock for pre-university institutions across the region.',
-    primaryCampus: 'Central Directorate & KSR Towers',
-    imageSrc: 'assets/images/management/dr-francis-reddy.svg',
-    initials: 'SFR',
-    accentColor: '#D6B77A'
-  },
-  {
     id: 'admin-ksr',
-    name: 'K. Srinivasa Rao (KSR)',
-    designation: 'Administrative Director',
-    tierLevel: 2,
+    name: 'K. Srinivasa Rao (KSR Sir)',
+    designation: 'Chairman / Institutional Leadership',
+    tierLevel: 1,
     category: 'executive',
     qualifications: 'M.Sc., B.Ed.',
     experienceYears: 30,
-    specialization: 'IIT Mathematics & Educational Administration',
-    responsibilities: 'Administrative governance, multi-campus expansion, institutional discipline, and philanthropic trust scholarships.',
+    specialization: 'Senior IIT Mathematics Mentor',
+    responsibilities: 'Institutional leadership, administrative governance, multi-campus expansion, institutional discipline, and philanthropic trust scholarships.',
     additionalRole: 'President & Founder, KSR Charitable Trust',
-    verificationStatus: 'Verified Administrative Director & Registered Trust Leader',
-    affiliationNotice: 'Primary administrative architect of Oxford VIT and founding head of the KSR Charitable Trust.',
-    badge: 'Administrative Director',
-    biography: 'Distinguished academic administrator with three decades of impactful leadership in pre-university education and IIT Mathematics pedagogy. As Administrative Director and head of the KSR Charitable Trust, he oversees institutional discipline, modern infrastructure development across all Bhavans, and awards annual merit-cum-means scholarships to deserving rural achievers.',
+    verificationStatus: 'Verified Chairman & Registered Trust Leader',
+    affiliationNotice: 'Institutional Chairman of Oxford VIT and founding head of the KSR Charitable Trust.',
+    badge: 'Chairman / Institutional Leadership',
+    biography: 'Distinguished institutional leader and educator with 30 years of impactful leadership in pre-university education and IIT Mathematics pedagogy. As Chairman and head of the KSR Charitable Trust, he oversees institutional discipline, modern infrastructure development across all Bhavans, and awards annual merit-cum-means scholarships to deserving achievers.',
     primaryCampus: 'KSR Towers & Balaji Bhavan',
     imageSrc: 'assets/images/management/k-srinivasa-rao.svg',
     initials: 'KSR',
     accentColor: '#526B54'
   },
   {
+    id: 'academic-dsr',
+    name: 'D. Srinivasa Rao (DSR Sir)',
+    designation: 'Chairman / Institutional Leadership',
+    tierLevel: 1,
+    category: 'academic',
+    qualifications: 'B.Tech.',
+    experienceYears: 32,
+    background: 'Ex-SRA, IIT Delhi',
+    specialization: 'Senior IIT Mathematics Mentor and Academic Planning',
+    responsibilities: 'Institutional leadership, central academic planning, IIT-JEE Super Wing curriculum synchronization, weekly cumulative testing architecture, and faculty mentoring.',
+    additionalRole: 'Chief Academic Council Chairperson & National Test Analyst',
+    verificationStatus: 'Verified Chairman & Chief Academic Council Chair (Ex-SRA, IIT Delhi)',
+    affiliationNotice: 'Institutional Chairman of Oxford VIT leading senior curriculum planning, IIT-JEE Super Wing direction, and competitive examination strategy.',
+    badge: 'Chairman / Institutional Leadership',
+    biography: 'Accomplished institutional leader, mathematician, and academic planner with 32 years of teaching distinction, bringing elite research discipline from his background as an Ex-Senior Research Assistant (Ex-SRA) at IIT Delhi. As Chairman, he architects Oxford VIT\'s rigorous weekly test models, Super Wing curricula, and personalized error-analysis clinics.',
+    primaryCampus: 'Raman Bhavan (IIT-JEE Super Wing) & Main Campus',
+    imageSrc: 'assets/images/management/dogiparthi-srinivasa-rao.svg',
+    initials: 'DSR',
+    accentColor: '#D6B77A'
+  },
+  {
     id: 'director-raja',
     name: 'Ch. Raja Reddy',
     designation: 'Director',
-    tierLevel: 3,
+    tierLevel: 2,
     category: 'executive',
     qualifications: 'M.Com., B.Ed.',
     experienceYears: 24,
@@ -85,26 +86,6 @@ export const managementProfiles = [
     imageSrc: 'assets/images/management/ch-raja-reddy.svg',
     initials: 'CRR',
     accentColor: '#493B4C'
-  },
-  {
-    id: 'academic-dsr',
-    name: 'D. Srinivasa Rao (DSR)',
-    designation: 'Academic Director',
-    tierLevel: 2,
-    category: 'academic',
-    qualifications: 'B.Tech. (Ex-SRA, IIT Delhi)',
-    experienceYears: 32,
-    specialization: 'IIT Mathematics & Comprehensive Academic Planning',
-    responsibilities: 'Central academic calendar planning, IIT-JEE Super Wing curriculum synchronization, weekly cumulative testing architecture, and faculty mentoring.',
-    additionalRole: 'Chief Academic Council Chairperson & National Test Analyst',
-    verificationStatus: 'Verified Academic Director (Academic Media Broadcaster & Council Chair)',
-    affiliationNotice: 'Leads senior curriculum planning and competitive exam strategy for national engineering cohorts.',
-    badge: 'Academic Director (Planning)',
-    biography: 'Accomplished mathematician and academic planner with 32 years of teaching distinction, bringing elite research discipline from his background as a Senior Research Assistant (SRA) at IIT Delhi. Architect of Oxford VIT rigorous weekly test models and personalized error-analysis clinics.',
-    primaryCampus: 'Raman Bhavan (IIT-JEE Super Wing) & Main Campus',
-    imageSrc: 'assets/images/management/dogiparthi-srinivasa-rao.svg',
-    initials: 'DSR',
-    accentColor: '#526B54'
   },
   {
     id: 'academic-ranga',
@@ -199,7 +180,7 @@ export const mediaAndYoutube = [
   {
     id: 'yt-3',
     title: 'Institutional Foundation Day & Family Celebrations',
-    speaker: 'Sri S. Francis Reddy & Ch. Raja Reddy',
+    speaker: 'Chairman K. Srinivasa Rao & Director Ch. Raja Reddy',
     description: 'Celebration of institutional milestones, educational expansion, and staff excellence awards.',
     tag: 'Anniversary Ceremony',
     url: 'https://www.youtube.com/results?search_query=oxford+educational+institutions+anniversary',

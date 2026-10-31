@@ -73,7 +73,7 @@ Built strictly in accordance with pure creative web engineering:
 
 - `college-profile.json`: BIEAP affiliation, multi-city geographical hubs, institutional milestones, contact details, and core philosophies.
 - `campuses.json`: Address coordinates, facilities, operational status, governance, and academic cohorts for all 9 campuses.
-- `management.json`: Executive profiles for Dr. S. Francis Reddy, K. Sambasiva Rao, Panadi Raghava, and trustees.
+- `management.json`: Executive profiles for Chairmen K. Srinivasa Rao (KSR Sir) and D. Srinivasa Rao (DSR Sir), Directorate, and campus leaders.
 - `faculty.json`: Faculty credentials, subjects, experience, and academic specializations.
 - `achievements.json`: Verified student ranks and competitive scores with full student privacy protection.
 - `events.json`: Calendar of annual cultural, scientific, and community welfare events.

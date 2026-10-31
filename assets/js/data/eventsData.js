@@ -26,7 +26,7 @@ export const eventsData = {
         'Inter-Bhavan traditional rangoli design competition with cash prizes',
         'Traditional attire showcase and folk cultural presentations',
         'Special festive luncheon prepared using traditional methods',
-        'Honoring student cultural achievers by Dr. S. Francis Reddy'
+        'Honoring student cultural achievers by Chairman K. Srinivasa Rao (KSR Sir)'
       ],
       tag: 'Annual Tradition'
     },

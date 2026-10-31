@@ -197,7 +197,7 @@ export const socialPosts = [
     category: 'celebrations',
     categoryLabel: 'National Pride & Student Life',
     caption: 'Tricolor flying high across all Oxford VIT campuses in Narasaraopet, Guntur, and Bapatla. Independence Day is a reminder that disciplined youth build a powerful India. Salutes to our martyrs and our dedicated teachers shaping the next generation. #IndependenceDay #JaiHind',
-    mediaDescription: 'Flag hoisting ceremony led by Director Ch. Raja Reddy and Chairman Sri S. Francis Reddy with NCC student cadets parade at Main Campus grounds.',
+    mediaDescription: 'Flag hoisting ceremony led by Chairman K. Srinivasa Rao and Director Ch. Raja Reddy with NCC student cadets parade at Main Campus grounds.',
     image: 'assets/images/campuses/main-campus.svg',
     campus: 'Main Junior College & Balaji Tower Guntur',
     event: '79th Independence Day Flag Hoisting & Parade',

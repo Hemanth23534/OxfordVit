@@ -3,60 +3,61 @@
     "tiers": [
       {
         "level": 1,
-        "title": "Group Patronage & Governance",
-        "description": "Foundational patronage, society oversight and long-term vision.",
-        "leaders": ["chairman-francis"]
+        "title": "Institutional Leadership & Chairmen",
+        "description": "Foundational governance, institutional leadership, academic planning, and senior IIT mathematics mentorship.",
+        "leaders": ["admin-ksr", "academic-dsr"]
       },
       {
         "level": 2,
         "title": "Executive & Academic Directorate",
-        "description": "Executive policy, philanthropic trusts, centralized academic calendar and competitive curriculum direction.",
-        "leaders": ["admin-ksr", "academic-dsr", "academic-ranga"]
+        "description": "Multi-campus operational strategy, chemical sciences curriculum direction, and competitive testing frameworks.",
+        "leaders": ["director-raja", "academic-ranga"]
       },
       {
         "level": 3,
-        "title": "Institutional Strategy & Campus Leadership",
-        "description": "Multi-campus operational execution, principalship, student mentorship and on-ground administration.",
-        "leaders": ["director-raja", "principal-raghava", "manager-sambasiva"]
+        "title": "Campus Leadership & Operational Administration",
+        "description": "Multi-campus operational execution, principalship, student mentorship, and on-ground logistics.",
+        "leaders": ["principal-raghava", "manager-sambasiva"]
       }
     ]
   },
   "executiveLeadership": [
     {
-      "id": "chairman-francis",
-      "name": "Sri S. Francis Reddy",
-      "designation": "Chairman, Oxford Group",
-      "qualifications": "Founder, Oxford Educational Society (Est. 1999)",
-      "experienceYears": 35,
-      "specialization": "Educational Group Governance & Institutional Philanthropy",
-      "responsibilities": "Overall vision, institutional patronage, and educational group governance.",
-      "additionalRole": "Founder President, Oxford Educational Society",
-      "verificationStatus": "Verified Group Chairman (Society Relationship: Pending Formal Institutional Verification)",
-      "affiliationNote": "Founder of Oxford Educational Society (est. 1999). Relationship between Oxford Educational Society and Oxford VIT represents historical founding patronage and society alignment; formal institutional registry synchronization is ongoing.",
-      "badge": "Chairman & Founder",
-      "category": "executive",
-      "biography": "Visionary educational pioneer in Andhra Pradesh who founded the Oxford Educational Society in 1999. Revered institutional patriarch whose commitment to disciplined values, academic rigor, and moral ethics laid the foundational bedrock for pre-university institutions across the region.",
-      "primaryCampus": "Central Directorate & KSR Towers",
-      "imageSrc": "assets/images/management/dr-francis-reddy.svg",
-      "initials": "SFR"
-    },
-    {
       "id": "admin-ksr",
-      "name": "K. Srinivasa Rao (KSR)",
-      "designation": "Administrative Director",
+      "name": "K. Srinivasa Rao (KSR Sir)",
+      "designation": "Chairman / Institutional Leadership",
       "qualifications": "M.Sc., B.Ed.",
       "experienceYears": 30,
-      "specialization": "IIT Mathematics & Educational Administration",
-      "responsibilities": "Administrative governance, institutional expansion across Bhavans, disciplinary frameworks, and philanthropic scholarships.",
+      "specialization": "Senior IIT Mathematics Mentor",
+      "responsibilities": "Institutional leadership, administrative governance, multi-campus expansion across Bhavans, disciplinary frameworks, and philanthropic trust scholarships.",
       "additionalRole": "President & Trustee, KSR Charitable Trust",
-      "verificationStatus": "Verified Administrative Director & Registered Trust Leader",
-      "affiliationNote": "Primary administrative architect of Oxford VIT and founding head of the KSR Charitable Trust.",
-      "badge": "Administrative Director",
+      "verificationStatus": "Verified Chairman & Registered Trust Leader",
+      "affiliationNote": "Institutional Chairman of Oxford VIT and founding head of the KSR Charitable Trust.",
+      "badge": "Chairman / Institutional Leadership",
       "category": "executive",
-      "biography": "Distinguished academic administrator with three decades of impactful leadership in pre-university education and IIT Mathematics pedagogy. As Administrative Director and head of the KSR Charitable Trust, he oversees institutional discipline, modern infrastructure development across all Bhavans, and awards annual merit-cum-means scholarships to deserving rural achievers.",
+      "biography": "Distinguished institutional leader and educator with 30 years of impactful leadership in pre-university education and IIT Mathematics pedagogy. As Chairman and head of the KSR Charitable Trust, he oversees institutional discipline, modern infrastructure development across all Bhavans, and awards annual merit-cum-means scholarships to deserving achievers.",
       "primaryCampus": "KSR Towers & Balaji Bhavan",
       "imageSrc": "assets/images/management/k-srinivasa-rao.svg",
       "initials": "KSR"
+    },
+    {
+      "id": "academic-dsr",
+      "name": "D. Srinivasa Rao (DSR Sir)",
+      "designation": "Chairman / Institutional Leadership",
+      "qualifications": "B.Tech.",
+      "experienceYears": 32,
+      "background": "Ex-SRA, IIT Delhi",
+      "specialization": "Senior IIT Mathematics Mentor and Academic Planning",
+      "responsibilities": "Institutional leadership, central academic planning, IIT-JEE Super Wing curriculum synchronization, weekly cumulative testing architecture, and faculty mentoring.",
+      "additionalRole": "Chief Academic Council Chairperson & National Test Analyst",
+      "verificationStatus": "Verified Chairman & Chief Academic Council Chair (Ex-SRA, IIT Delhi)",
+      "affiliationNote": "Institutional Chairman of Oxford VIT leading senior curriculum planning, IIT-JEE Super Wing direction, and competitive examination strategy.",
+      "badge": "Chairman / Institutional Leadership",
+      "category": "academic",
+      "biography": "Accomplished institutional leader, mathematician, and academic planner with 32 years of teaching distinction, bringing elite research discipline from his background as an Ex-Senior Research Assistant (Ex-SRA) at IIT Delhi. As Chairman, he architects Oxford VIT's rigorous weekly test models, Super Wing curricula, and personalized error-analysis clinics.",
+      "primaryCampus": "Raman Bhavan (IIT-JEE Super Wing) & Main Campus",
+      "imageSrc": "assets/images/management/dogiparthi-srinivasa-rao.svg",
+      "initials": "DSR"
     },
     {
       "id": "director-raja",
@@ -75,24 +76,6 @@
       "primaryCampus": "Central Operations Directorate & Yashoda Bhavan",
       "imageSrc": "assets/images/management/ch-raja-reddy.svg",
       "initials": "CRR"
-    },
-    {
-      "id": "academic-dsr",
-      "name": "D. Srinivasa Rao (DSR)",
-      "designation": "Academic Director",
-      "qualifications": "B.Tech. (Ex-SRA, IIT Delhi)",
-      "experienceYears": 32,
-      "specialization": "IIT Mathematics & Comprehensive Academic Planning",
-      "responsibilities": "Central academic calendar planning, IIT-JEE Super Wing curriculum synchronization, weekly cumulative testing architecture, and faculty mentoring.",
-      "additionalRole": "Chief Academic Council Chairperson & National Test Analyst",
-      "verificationStatus": "Verified Academic Director (Academic Media Broadcaster & Council Chair)",
-      "affiliationNote": "Leads senior curriculum planning and competitive exam strategy for national engineering cohorts.",
-      "badge": "Academic Director (Planning)",
-      "category": "academic",
-      "biography": "Accomplished mathematician and academic planner with 32 years of teaching distinction, bringing elite research discipline from his background as a Senior Research Assistant (SRA) at IIT Delhi. Architect of Oxford VIT's rigorous weekly test models and personalized error-analysis clinics.",
-      "primaryCampus": "Raman Bhavan (IIT-JEE Super Wing) & Main Campus",
-      "imageSrc": "assets/images/management/dogiparthi-srinivasa-rao.svg",
-      "initials": "DSR"
     },
     {
       "id": "academic-ranga",

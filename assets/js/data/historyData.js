@@ -8,8 +8,8 @@ export const historicalOverview = {
   foundingYear: 1994,
   foundingLocation: 'Narasaraopet, Palnadu District, Andhra Pradesh',
   foundingPatrons: [
-    'Sri S. Francis Reddy (Chairman, Oxford Group)',
-    'K. Srinivasa Rao (KSR - Administrative Director)'
+    'K. Srinivasa Rao (KSR - Chairman)',
+    'D. Srinivasa Rao (DSR - Chairman)'
   ],
   expansionSummary: 'Originating in Narasaraopet as a high-discipline intermediate college, the institution progressively expanded with specialized Bhavans (Balaji Bhavan, Yashoda Bhavan, Raman Bhavan, KSR Towers, VIT Olympiad School, Oxford IIT School), established a major competitive and medical coaching hub in Guntur city (Balaji Tower, Vasavi Tower, VIT Medical Academy), and extended regional access through the Bapatla coastal branch.',
   trustAffiliation: 'Under the aegis of KSR Charitable Trust (Arundelpet, Narasaraopet)',
@@ -24,7 +24,7 @@ export const historyMilestones = [
     city: 'Narasaraopet',
     campus: 'Main Junior College',
     category: 'foundation',
-    description: 'Sri S. Francis Reddy and K. Srinivasa Rao (KSR) establish Oxford Junior College in Narasaraopet to bring premier, disciplined Intermediate MPC and BiPC education to students of the Palnadu agrarian hinterland.',
+    description: 'K. Srinivasa Rao (KSR) and founding educators establish Oxford Junior College in Narasaraopet to bring premier, disciplined Intermediate MPC and BiPC education to students of the Palnadu agrarian hinterland.',
     managementActivity: 'Formulation of the founding academic charter, faculty recruitment from reputed universities, and initiation of low-cost rural student quotas.',
     academicActivity: 'Launch of intermediate curriculum synchronized with early state engineering and medical entrance tests.',
     trustActivity: 'Foundational educational assistance corpus instituted for meritorious rural children.',
