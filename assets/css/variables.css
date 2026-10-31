@@ -1,19 +1,21 @@
 /* ==========================================================================
    OXFORD VIT – THE LIVING CAMPUS EXPERIENCE
-   Design Tokens & System Variables
+   Design Tokens & System Variables: Ethereal Aurora & Iridescent Glass
    ========================================================================== */
 
 :root {
   /* -------------------------------------------------------------------------
      Unique Institutional Color Palette
+     Ethereal Ivory + Champagne Gold + Botanical Green + Lavender + Coral + Plum
      ------------------------------------------------------------------------- */
   --color-warm-ivory: #F7F3E9;
   --color-warm-ivory-rgb: 247, 243, 233;
+  --color-warm-ivory-pure: #FAF7F0;
 
   --color-champagne-gold: #D6B77A;
   --color-champagne-gold-rgb: 214, 183, 122;
-  --color-champagne-gold-light: #F0DFC0;
-  --color-champagne-gold-dark: #A38448;
+  --color-champagne-gold-light: #F3E5C8;
+  --color-champagne-gold-dark: #A68749;
 
   --color-botanical-green: #526B54;
   --color-botanical-green-rgb: 82, 107, 84;
@@ -22,12 +24,12 @@
 
   --color-lavender: #B9A8D8;
   --color-lavender-rgb: 185, 168, 216;
-  --color-lavender-light: #D9CEEC;
-  --color-lavender-dark: #8372A5;
+  --color-lavender-light: #DDD4EE;
+  --color-lavender-dark: #816FA2;
 
   --color-coral: #E9A18C;
   --color-coral-rgb: 233, 161, 140;
-  --color-coral-light: #F7C6B8;
+  --color-coral-light: #F7C8BC;
   --color-coral-dark: #C66E56;
 
   --color-deep-plum: #493B4C;
@@ -37,34 +39,45 @@
   --color-deep-plum-ultra: #1E1620;
 
   /* -------------------------------------------------------------------------
+     Aurora Atmosphere & Iridescent Shimmer Tokens
+     ------------------------------------------------------------------------- */
+  --aurora-gradient-1: radial-gradient(circle at 20% 30%, rgba(185, 168, 216, 0.22) 0%, transparent 50%);
+  --aurora-gradient-2: radial-gradient(circle at 80% 20%, rgba(214, 183, 122, 0.25) 0%, transparent 50%);
+  --aurora-gradient-3: radial-gradient(circle at 50% 80%, rgba(82, 107, 84, 0.18) 0%, transparent 60%);
+  --iridescent-sheen: linear-gradient(135deg, rgba(255, 255, 255, 0.5) 0%, rgba(214, 183, 122, 0.25) 25%, rgba(185, 168, 216, 0.25) 50%, rgba(233, 161, 140, 0.2) 75%, rgba(255, 255, 255, 0.6) 100%);
+  --liquid-gold-gradient: linear-gradient(120deg, #D6B77A 0%, #FFF2D6 25%, #A68749 50%, #FAF0DB 75%, #D6B77A 100%);
+
+  /* -------------------------------------------------------------------------
      Surfaces & Glassmorphism Tokens
      ------------------------------------------------------------------------- */
   --surface-canvas: var(--color-warm-ivory);
-  --surface-card-light: rgba(247, 243, 233, 0.85);
-  --surface-card-glass: rgba(247, 243, 233, 0.65);
-  --surface-card-dark: rgba(73, 59, 76, 0.92);
-  --surface-card-dark-glass: rgba(73, 59, 76, 0.72);
+  --surface-card-light: rgba(247, 243, 233, 0.88);
+  --surface-card-glass: rgba(247, 243, 233, 0.68);
+  --surface-card-iridescent: rgba(255, 255, 255, 0.72);
+  --surface-card-dark: rgba(73, 59, 76, 0.94);
+  --surface-card-dark-glass: rgba(73, 59, 76, 0.78);
   --surface-gold-tint: rgba(214, 183, 122, 0.12);
   --surface-botanical-tint: rgba(82, 107, 84, 0.08);
 
   --border-subtle: rgba(73, 59, 76, 0.1);
   --border-gold: rgba(214, 183, 122, 0.45);
   --border-gold-bright: rgba(214, 183, 122, 0.85);
-  --border-glass-light: rgba(255, 255, 255, 0.4);
+  --border-iridescent: rgba(255, 255, 255, 0.65);
+  --border-glass-light: rgba(255, 255, 255, 0.45);
   --border-glass-dark: rgba(214, 183, 122, 0.25);
 
-  --blur-glass: 16px;
-  --blur-glass-deep: 24px;
+  --blur-glass: 18px;
+  --blur-glass-deep: 28px;
 
   /* -------------------------------------------------------------------------
      Shadows & Atmospheric Depth
      ------------------------------------------------------------------------- */
   --shadow-subtle: 0 4px 16px rgba(73, 59, 76, 0.06);
   --shadow-card: 0 12px 36px rgba(73, 59, 76, 0.08);
-  --shadow-card-hover: 0 24px 56px rgba(73, 59, 76, 0.15);
-  --shadow-gold-glow: 0 0 35px rgba(214, 183, 122, 0.35);
-  --shadow-lavender-glow: 0 0 35px rgba(185, 168, 216, 0.35);
-  --shadow-coral-glow: 0 0 30px rgba(233, 161, 140, 0.4);
+  --shadow-card-hover: 0 24px 60px rgba(73, 59, 76, 0.16);
+  --shadow-gold-glow: 0 0 40px rgba(214, 183, 122, 0.38);
+  --shadow-lavender-glow: 0 0 40px rgba(185, 168, 216, 0.35);
+  --shadow-coral-glow: 0 0 35px rgba(233, 161, 140, 0.4);
 
   /* -------------------------------------------------------------------------
      Typography
@@ -74,10 +87,10 @@
   --font-mono: 'Space Grotesk', 'Courier New', monospace;
 
   --text-primary: var(--color-deep-plum);
-  --text-secondary: rgba(73, 59, 76, 0.78);
-  --text-muted: rgba(73, 59, 76, 0.55);
+  --text-secondary: rgba(73, 59, 76, 0.8);
+  --text-muted: rgba(73, 59, 76, 0.58);
   --text-inverted: var(--color-warm-ivory);
-  --text-inverted-secondary: rgba(247, 243, 233, 0.8);
+  --text-inverted-secondary: rgba(247, 243, 233, 0.82);
   --text-gold: var(--color-champagne-gold-dark);
 
   /* -------------------------------------------------------------------------
@@ -111,13 +124,14 @@
      Transitions & Motion
      ------------------------------------------------------------------------- */
   --transition-fast: 0.2s cubic-bezier(0.16, 1, 0.3, 1);
-  --transition-normal: 0.35s cubic-bezier(0.16, 1, 0.3, 1);
-  --transition-slow: 0.65s cubic-bezier(0.16, 1, 0.3, 1);
-  --transition-bounce: 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
+  --transition-normal: 0.38s cubic-bezier(0.16, 1, 0.3, 1);
+  --transition-slow: 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+  --transition-bounce: 0.55s cubic-bezier(0.34, 1.56, 0.64, 1);
   
   --z-canvas3d: 0;
   --z-content: 10;
   --z-header: 1000;
   --z-modal: 2000;
   --z-cursor: 9999;
+  --z-preloader: 10000;
 }

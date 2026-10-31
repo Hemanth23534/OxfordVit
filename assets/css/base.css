@@ -1,6 +1,6 @@
 /* ==========================================================================
    OXFORD VIT – THE LIVING CAMPUS EXPERIENCE
-   Base Reset, Typography & Global Styles
+   Base Reset, Custom Luxury Cursor & Typography
    ========================================================================== */
 
 @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,900;1,400;1,600&family=Space+Grotesk:wght@400;500;600;700&display=swap');
@@ -31,6 +31,72 @@ body {
   min-height: 100vh;
   position: relative;
   overflow-x: hidden;
+}
+
+/* -------------------------------------------------------------------------
+   Ambient Aurora Canvas Overlay
+   ------------------------------------------------------------------------- */
+.aurora-backdrop {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 1;
+  background-image: 
+    var(--aurora-gradient-1),
+    var(--aurora-gradient-2),
+    var(--aurora-gradient-3);
+  opacity: 0.75;
+  filter: blur(40px);
+}
+
+/* -------------------------------------------------------------------------
+   Custom Luxury Cursor (Desktop)
+   ------------------------------------------------------------------------- */
+.custom-cursor-dot {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 8px;
+  height: 8px;
+  background-color: var(--color-champagne-gold-dark);
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: var(--z-cursor);
+  transform: translate(-50%, -50%);
+  transition: transform 0.1s ease, background-color 0.2s ease;
+  will-change: transform;
+}
+
+.custom-cursor-ring {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 36px;
+  height: 36px;
+  border: 1.5px solid var(--color-champagne-gold);
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: calc(var(--z-cursor) - 1);
+  transform: translate(-50%, -50%);
+  transition: width 0.3s cubic-bezier(0.16, 1, 0.3, 1),
+              height 0.3s cubic-bezier(0.16, 1, 0.3, 1),
+              border-color 0.3s ease,
+              background-color 0.3s ease;
+  will-change: transform;
+}
+
+.custom-cursor-ring.active {
+  width: 64px;
+  height: 64px;
+  border-color: var(--color-coral);
+  background-color: rgba(233, 161, 140, 0.15);
+  backdrop-filter: blur(2px);
+}
+
+@media (pointer: coarse), (max-width: 1024px) {
+  .custom-cursor-dot, .custom-cursor-ring {
+    display: none !important;
+  }
 }
 
 /* -------------------------------------------------------------------------
@@ -151,7 +217,7 @@ button {
 
 .section-header {
   text-align: center;
-  max-width: 760px;
+  max-width: 780px;
   margin: 0 auto clamp(2.5rem, 5vw, 4.5rem);
 }
 
@@ -175,13 +241,13 @@ button {
 .section-tag.gold {
   color: var(--color-champagne-gold-dark);
   background: rgba(214, 183, 122, 0.15);
-  border-color: rgba(214, 183, 122, 0.3);
+  border-color: rgba(214, 183, 122, 0.35);
 }
 
 .section-tag.coral {
   color: var(--color-coral-dark);
   background: rgba(233, 161, 140, 0.15);
-  border-color: rgba(233, 161, 140, 0.3);
+  border-color: rgba(233, 161, 140, 0.35);
 }
 
 .section-tag.lavender {
@@ -200,9 +266,16 @@ button {
   line-height: 1.7;
 }
 
-/* -------------------------------------------------------------------------
-   Screen Reader & Accessibility
-   ------------------------------------------------------------------------- */
+/* Editorial Image Mask */
+.editorial-mask {
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+  position: relative;
+  box-shadow: var(--shadow-card);
+  border: 1.5px solid var(--border-gold);
+}
+
+/* Screen Reader */
 .sr-only {
   position: absolute;
   width: 1px;

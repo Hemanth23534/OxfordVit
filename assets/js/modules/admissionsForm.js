@@ -1,6 +1,7 @@
 /**
  * OXFORD VIT – THE LIVING CAMPUS EXPERIENCE
  * Admissions Application & Entrance Registration Logic
+ * Fields: Student Name, Parent Name, Mobile, Email, Course, Preferred Campus
  */
 
 export class AdmissionsHandler {
@@ -27,21 +28,29 @@ export class AdmissionsHandler {
   handleSubmit(e) {
     e.preventDefault();
 
-    const studentName = document.getElementById('adm-name').value.trim();
-    const phone = document.getElementById('adm-phone').value.trim();
-    const stream = document.getElementById('adm-stream').value;
+    const studentName = document.getElementById('adm-student-name').value.trim();
+    const parentName = document.getElementById('adm-parent-name').value.trim();
+    const mobile = document.getElementById('adm-mobile').value.trim();
+    const email = document.getElementById('adm-email').value.trim();
+    const course = document.getElementById('adm-course').value;
     const campus = document.getElementById('adm-campus').value;
-    const marks = document.getElementById('adm-marks').value.trim();
 
-    if (!studentName || !phone || !stream || !campus) {
+    if (!studentName || !parentName || !mobile || !email || !course || !campus) {
       alert('Please fill out all mandatory fields to submit your admission inquiry.');
       return;
     }
 
-    // Phone validation (Indian 10-digit format)
-    const phoneClean = phone.replace(/[^0-9]/g, '');
+    // Phone validation (10 digits)
+    const phoneClean = mobile.replace(/[^0-9]/g, '');
     if (phoneClean.length < 10) {
-      alert('Please enter a valid 10-digit phone number.');
+      alert('Please enter a valid 10-digit mobile number.');
+      return;
+    }
+
+    // Email validation
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(email)) {
+      alert('Please enter a valid email address.');
       return;
     }
 

@@ -21,7 +21,19 @@ export class ScrollAnimationEngine {
     if (this.hasGSAP && this.hasScrollTrigger) {
       gsap.registerPlugin(ScrollTrigger);
       this.initHeaderScroll();
-      this.initHeroEntrance();
+
+      // Listen for cinematic preloader completion to fire hero entrance
+      window.addEventListener('oxfordVitLoaded', () => {
+        this.initHeroEntrance();
+      });
+
+      // Fallback if preloader was already dismissed or skipped
+      setTimeout(() => {
+        if (!document.getElementById('cinematic-preloader')?.classList.contains('loaded')) {
+          this.initHeroEntrance();
+        }
+      }, 2000);
+
       this.initSectionHeaders();
       this.initStatCounters();
       this.initCardStaggers();
@@ -50,7 +62,7 @@ export class ScrollAnimationEngine {
     const heroTl = gsap.timeline({ defaults: { ease: 'power3.out', duration: 1.1 } });
 
     heroTl
-      .from('.hero-badge-wrap', { opacity: 0, y: 25, delay: 0.2 })
+      .from('.hero-badge-wrap', { opacity: 0, y: 25, delay: 0.1 })
       .from('.hero-title', { opacity: 0, y: 35, duration: 1.2 }, '-=0.8')
       .from('.hero-description', { opacity: 0, y: 25 }, '-=0.8')
       .from('.hero-cta-group', { opacity: 0, y: 20 }, '-=0.7')
@@ -115,7 +127,8 @@ export class ScrollAnimationEngine {
       '.management-grid',
       '.faculty-grid',
       '.student-life-grid',
-      '.events-grid'
+      '.events-grid',
+      '.media-grid'
     ];
 
     cardContainers.forEach((selector) => {
@@ -138,7 +151,6 @@ export class ScrollAnimationEngine {
   }
 
   fallbackReveals() {
-    // Pure CSS intersection observer fallback if GSAP isn't present
     const observer = new IntersectionObserver((entries) => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
@@ -148,7 +160,7 @@ export class ScrollAnimationEngine {
       });
     }, { threshold: 0.15 });
 
-    document.querySelectorAll('.glass-card, .campus-card, .academic-program-card, .leader-card, .event-card').forEach((el) => {
+    document.querySelectorAll('.glass-card, .campus-card, .academic-program-card, .leader-card, .event-card, .youtube-preview-card').forEach((el) => {
       el.classList.add('reveal-on-scroll');
       observer.observe(el);
     });
