@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" width="100%" height="100%">
+  <defs>
+    <linearGradient id="anjiBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#493B4C"/>
+      <stop offset="100%" stop-color="#241B26"/>
+    </linearGradient>
+    <linearGradient id="coralGold" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#E9A18C"/>
+      <stop offset="100%" stop-color="#D6B77A"/>
+    </linearGradient>
+  </defs>
+  <rect width="400" height="400" rx="24" fill="url(#anjiBg)"/>
+  <circle cx="200" cy="180" r="140" fill="none" stroke="url(#coralGold)" stroke-width="2" stroke-dasharray="6 4" opacity="0.6"/>
+  <circle cx="200" cy="155" r="70" fill="url(#coralGold)" opacity="0.9"/>
+  <path d="M125 315 C125 240, 275 240, 275 315 Z" fill="url(#coralGold)" opacity="0.85"/>
+  <circle cx="200" cy="145" r="42" fill="#493B4C"/>
+  <text x="200" y="157" font-family="'Cinzel', 'Playfair Display', Georgia, serif" font-size="28" font-weight="700" fill="#E9A18C" text-anchor="middle">ANJ</text>
+  <text x="200" y="352" font-family="'Cinzel', 'Playfair Display', serif" font-size="19" font-weight="700" fill="#E9A18C" text-anchor="middle" letter-spacing="1.5">ANJI SIR</text>
+  <text x="200" y="375" font-family="'Space Grotesk', sans-serif" font-size="11" font-weight="600" fill="#F7F3E9" text-anchor="middle" opacity="0.8">IIT &amp; SENIOR CHEMISTRY • NARASARAOPET</text>
+</svg>

@@ -647,139 +647,164 @@
         <!-- =========================================================================
              3. SUBJECT-WISE ACADEMIC FACULTY DIRECTORY
              ========================================================================= -->
-        <section id="faculty-section" style="margin-bottom: 4rem;">
+        <section id="faculty-section" style="margin-bottom: 5rem;">
           
-          <div style="text-align: center; max-width: 800px; margin: 0 auto 3rem;">
-            <span class="section-tag botanical">Senior Teaching Faculty</span>
+          <div style="text-align: center; max-width: 860px; margin: 0 auto 2.5rem;">
+            <span class="section-tag botanical">Interactive Faculty Directory</span>
             <h2 style="font-size: 2.2rem; color: var(--color-deep-plum); margin-top: 0.25rem;">
-              Subject-Wise Academic Chairs &amp; Senior Faculty
+              Subject-Wise Academic Faculty Directory
             </h2>
             <p style="color: var(--text-secondary); font-size: 1rem; line-height: 1.6;">
-              Distinguished educators with decades of combined classroom experience across Mathematics, Physical Sciences, Chemical Sciences, Biological Sciences, and Humanities.
+              Explore our senior and junior educators across Mathematics, Physics, Chemistry, Biology, and Languages. Filter by geographical hub, campus, subject, or competitive track. Records marked with an amber badge denote initial department entries with surname or full civil confirmation pending.
             </p>
           </div>
 
-          <!-- Department Grid -->
-          <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 2rem;">
+          <!-- Interactive 6-Facet Filter & Search Panel -->
+          <div class="faculty-filter-panel">
             
-            <!-- Mathematics Department -->
-            <div class="glass-card" style="padding: 2rem;">
-              <div style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: 1.25rem; border-bottom: 2px solid var(--border-gold); padding-bottom: 0.75rem;">
-                <span style="font-size: 1.5rem;">📐</span>
-                <div>
-                  <h3 style="font-size: 1.25rem; color: var(--color-deep-plum); margin: 0;">Department of Mathematics</h3>
-                  <div style="font-size: 0.75rem; color: var(--color-botanical-green); font-weight: 600;">Super-60 &amp; Olympiad Chairs</div>
-                </div>
+            <div class="filter-grid-layout">
+              
+              <!-- Filter 1: City -->
+              <div class="filter-field">
+                <label for="filter-city">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+                  City Hub
+                </label>
+                <select id="filter-city">
+                  <option value="all">All Cities</option>
+                  <option value="narasaraopet">Narasaraopet (Headquarters)</option>
+                  <option value="guntur">Guntur (Competitive Hub)</option>
+                  <option value="bapatla">Bapatla (Coastal Branch)</option>
+                </select>
               </div>
-              <ul style="display: flex; flex-direction: column; gap: 1rem; font-size: 0.875rem;">
-                <li>
-                  <strong>Prof. V. Radhakrishna</strong> — <em>Senior IIT-JEE Specialist</em> (26 Yrs Exp)<br>
-                  <span style="color: var(--text-muted); font-size: 0.78125rem;">Calculus, Coordinate Geometry &amp; Vector Algebra</span>
-                </li>
-                <li>
-                  <strong>P. Chenna Kesava Rao</strong> — <em>Senior Lecturer (MPC)</em> (20 Yrs Exp)<br>
-                  <span style="color: var(--text-muted); font-size: 0.78125rem;">Algebra, Probability &amp; Trigonometric Analytics</span>
-                </li>
-                <li>
-                  <strong>M. Srinivasa Reddy</strong> — <em>Olympiad Foundation Chair</em> (17 Yrs Exp)<br>
-                  <span style="color: var(--text-muted); font-size: 0.78125rem;">Number Theory &amp; PRMO / RMO Coaching</span>
-                </li>
-              </ul>
+
+              <!-- Filter 2: Campus -->
+              <div class="filter-field">
+                <label for="filter-campus">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 21h18M3 7v14M21 7v14M6 11h4M6 15h4M14 11h4M14 15h4M12 3 2 7h20l-10-4z"/></svg>
+                  Campus Bhavan
+                </label>
+                <select id="filter-campus">
+                  <option value="all">All Campuses</option>
+                  <option value="balaji-bhavan">Balaji Bhavan (Senior &amp; Junior Wing)</option>
+                  <option value="raman-bhavan">Raman Bhavan (Senior IIT-JEE Super Wing)</option>
+                  <option value="yashoda-bhavan">Yashoda Bhavan (Main Campus / Girls)</option>
+                  <option value="main-campus">Main Junior College Campus</option>
+                  <option value="ksr-towers">KSR Towers (Central Mentorship)</option>
+                  <option value="guntur-balaji-tower">Balaji Tower (Guntur Campus)</option>
+                  <option value="guntur-vit-medical">VIT Medical Academy (Guntur)</option>
+                  <option value="bapatla-branch">Bapatla Branch Campus</option>
+                </select>
+              </div>
+
+              <!-- Filter 3: Department -->
+              <div class="filter-field">
+                <label for="filter-dept">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1-2.5-2.5Z"/><path d="M6 6h10M6 10h10"/></svg>
+                  Department
+                </label>
+                <select id="filter-dept">
+                  <option value="all">All Departments</option>
+                  <option value="mathematics">Mathematics</option>
+                  <option value="physics">Physics</option>
+                  <option value="chemistry">Chemistry</option>
+                  <option value="biology">Biology &amp; Medical Sciences</option>
+                  <option value="languages">Languages &amp; Humanities</option>
+                </select>
+              </div>
+
+              <!-- Filter 4: Subject -->
+              <div class="filter-field">
+                <label for="filter-subject">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m16 6 4 14M12 6v14M8 8v12M4 4v16"/></svg>
+                  Subject Course
+                </label>
+                <select id="filter-subject">
+                  <option value="all">All Subjects</option>
+                  <option value="iit-mathematics">IIT Mathematics</option>
+                  <option value="senior-maths-2a">Senior Mathematics 2A</option>
+                  <option value="senior-maths-2b">Senior Mathematics 2B</option>
+                  <option value="senior-physics">Senior Physics</option>
+                  <option value="iit-chemistry">IIT &amp; Senior Chemistry</option>
+                  <option value="junior-physics">Junior Physics</option>
+                  <option value="junior-chemistry">Junior Chemistry</option>
+                  <option value="botany">Botany (NEET)</option>
+                  <option value="zoology">Zoology (NEET)</option>
+                  <option value="sanskrit">Sanskrit</option>
+                </select>
+              </div>
+
+              <!-- Filter 5: Senior / Junior Section -->
+              <div class="filter-field">
+                <label for="filter-section">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+                  Academic Section
+                </label>
+                <select id="filter-section">
+                  <option value="all">All Sections (Senior &amp; Junior)</option>
+                  <option value="senior">Senior Section (2nd Year Intermediate)</option>
+                  <option value="junior">Junior Section (1st Year Intermediate)</option>
+                </select>
+              </div>
+
+              <!-- Filter 6: Teaching Track -->
+              <div class="filter-field">
+                <label for="filter-track">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="m10 15 5-3-5-3v6Z"/></svg>
+                  Teaching Track
+                </label>
+                <select id="filter-track">
+                  <option value="all">All Tracks</option>
+                  <option value="iit-jee">IIT-JEE Advanced &amp; Main</option>
+                  <option value="neet">NEET Medical Division</option>
+                  <option value="intermediate">Intermediate Board (IPE) &amp; EAPCET</option>
+                </select>
+              </div>
+
             </div>
 
-            <!-- Physics Department -->
-            <div class="glass-card" style="padding: 2rem;">
-              <div style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: 1.25rem; border-bottom: 2px solid var(--border-gold); padding-bottom: 0.75rem;">
-                <span style="font-size: 1.5rem;">⚡</span>
-                <div>
-                  <h3 style="font-size: 1.25rem; color: var(--color-deep-plum); margin: 0;">Department of Physics</h3>
-                  <div style="font-size: 0.75rem; color: var(--color-botanical-green); font-weight: 600;">Mechanics &amp; Electromagnetism</div>
-                </div>
-              </div>
-              <ul style="display: flex; flex-direction: column; gap: 1rem; font-size: 0.875rem;">
-                <li>
-                  <strong>Dr. K. Srinivasulu</strong> — <em>Ph.D., Senior Physics Chair</em> (24 Yrs Exp)<br>
-                  <span style="color: var(--text-muted); font-size: 0.78125rem;">Electrodynamics, Optics &amp; Modern Physics</span>
-                </li>
-                <li>
-                  <strong>M. Venkateswara Rao</strong> — <em>Senior IIT Faculty</em> (21 Yrs Exp)<br>
-                  <span style="color: var(--text-muted); font-size: 0.78125rem;">Rotational Dynamics, Thermodynamics &amp; Fluid Mechanics</span>
-                </li>
-                <li>
-                  <strong>Ch. Ramakrishna</strong> — <em>Laboratory Practical Director</em> (16 Yrs Exp)<br>
-                  <span style="color: var(--text-muted); font-size: 0.78125rem;">Experimental Physics &amp; Precision Error Analysis</span>
-                </li>
-              </ul>
+            <!-- Search Bar Row -->
+            <div style="margin-bottom: 1rem;">
+              <input type="text" id="filter-search" class="filter-search-input" placeholder="🔍 Search faculty by name (e.g. DSR, BSR, Raja, Ramesh), subject, topic, or specialization..." aria-label="Search faculty directory">
             </div>
 
-            <!-- Chemistry Department -->
-            <div class="glass-card" style="padding: 2rem;">
-              <div style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: 1.25rem; border-bottom: 2px solid var(--border-gold); padding-bottom: 0.75rem;">
-                <span style="font-size: 1.5rem;">🧪</span>
-                <div>
-                  <h3 style="font-size: 1.25rem; color: var(--color-deep-plum); margin: 0;">Department of Chemistry</h3>
-                  <div style="font-size: 0.75rem; color: var(--color-botanical-green); font-weight: 600;">Organic &amp; Physical Chemistry</div>
-                </div>
-              </div>
-              <ul style="display: flex; flex-direction: column; gap: 1rem; font-size: 0.875rem;">
-                <li>
-                  <strong>P.V. Ranga Rao</strong> — <em>M.Sc., IIT Roorkee</em> (19 Yrs Exp)<br>
-                  <span style="color: var(--text-muted); font-size: 0.78125rem;">Organic Synthesis, Reaction Mechanisms &amp; Kinetics</span>
-                </li>
-                <li>
-                  <strong>Dr. T. Subba Rao</strong> — <em>Ph.D., Inorganic Specialist</em> (22 Yrs Exp)<br>
-                  <span style="color: var(--text-muted); font-size: 0.78125rem;">Coordination Chemistry &amp; Qualitative Salt Analysis</span>
-                </li>
-                <li>
-                  <strong>S. Madhusudhan</strong> — <em>Physical Chemistry Expert</em> (18 Yrs Exp)<br>
-                  <span style="color: var(--text-muted); font-size: 0.78125rem;">Chemical Equilibrium, Electrochemistry &amp; Thermodynamics</span>
-                </li>
-              </ul>
-            </div>
+            <!-- Active Chips Container -->
+            <div id="active-filter-chips" class="active-filter-chips" style="margin-bottom: 1rem;"></div>
 
-            <!-- Biology Department -->
-            <div class="glass-card" style="padding: 2rem;">
-              <div style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: 1.25rem; border-bottom: 2px solid var(--border-gold); padding-bottom: 0.75rem;">
-                <span style="font-size: 1.5rem;">🧬</span>
-                <div>
-                  <h3 style="font-size: 1.25rem; color: var(--color-deep-plum); margin: 0;">Department of Biology (NEET)</h3>
-                  <div style="font-size: 0.75rem; color: var(--color-botanical-green); font-weight: 600;">Botany &amp; Zoology AIIMS Track</div>
-                </div>
+            <!-- Filter Toolbar Bottom (Counter & Reset) -->
+            <div class="filter-toolbar-bottom">
+              <div id="faculty-count-badge" class="filter-stats-badge">
+                Showing 19 of 19 Faculty Members
               </div>
-              <ul style="display: flex; flex-direction: column; gap: 1rem; font-size: 0.875rem;">
-                <li>
-                  <strong>Dr. M. Padmavathi</strong> — <em>Ph.D., Senior Botany Mentor</em> (23 Yrs Exp)<br>
-                  <span style="color: var(--text-muted); font-size: 0.78125rem;">Plant Physiology, Genetics &amp; Molecular Biology</span>
-                </li>
-                <li>
-                  <strong>K. Anjaneyulu</strong> — <em>Senior Zoology Specialist</em> (20 Yrs Exp)<br>
-                  <span style="color: var(--text-muted); font-size: 0.78125rem;">Human Anatomy, Physiology &amp; Animal Taxonomy</span>
-                </li>
-              </ul>
-            </div>
 
-            <!-- Languages & Humanities -->
-            <div class="glass-card" style="padding: 2rem;">
-              <div style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: 1.25rem; border-bottom: 2px solid var(--border-gold); padding-bottom: 0.75rem;">
-                <span style="font-size: 1.5rem;">📖</span>
-                <div>
-                  <h3 style="font-size: 1.25rem; color: var(--color-deep-plum); margin: 0;">Languages &amp; Ethics</h3>
-                  <div style="font-size: 0.75rem; color: var(--color-botanical-green); font-weight: 600;">English, Sanskrit &amp; Board Ranks</div>
-                </div>
+              <div class="filter-actions-group">
+                <span style="font-size: 0.78125rem; color: var(--text-muted);">
+                  🔒 Faculty personal contact numbers are kept private.
+                </span>
+                <button id="filter-reset-btn" class="filter-reset-btn" aria-label="Reset all filters">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8"/><path d="M3 3v5h5"/></svg>
+                  Reset Filters
+                </button>
               </div>
-              <ul style="display: flex; flex-direction: column; gap: 1rem; font-size: 0.875rem;">
-                <li>
-                  <strong>Prof. G. Rama Murthy</strong> — <em>Senior English Lecturer</em> (25 Yrs Exp)<br>
-                  <span style="color: var(--text-muted); font-size: 0.78125rem;">Grammar, Phonetics, Prose &amp; Communication Skills</span>
-                </li>
-                <li>
-                  <strong>Vidwan S. Lakshminarayana</strong> — <em>Sanskrit Scholar</em> (27 Yrs Exp)<br>
-                  <span style="color: var(--text-muted); font-size: 0.78125rem;">Classical Sanskrit Literature &amp; 100/100 Board Scoring</span>
-                </li>
-              </ul>
             </div>
 
           </div>
+
+          <!-- Dynamic Faculty Cards Grid -->
+          <div id="faculty-cards-grid" class="faculty-cards-grid" aria-live="polite">
+            <!-- Populated via facultyDirectory.js -->
+          </div>
+
+          <!-- Academic Dossier Modal Dialog -->
+          <div id="faculty-modal-overlay" class="faculty-modal-overlay" role="dialog" aria-modal="true" aria-hidden="true">
+            <div class="faculty-modal-card">
+              <button id="faculty-modal-close" class="faculty-modal-close-btn" aria-label="Close Academic Dossier">✕</button>
+              <div id="faculty-modal-content">
+                <!-- Injected via JavaScript -->
+              </div>
+            </div>
+          </div>
+
         </section>
 
       </div>

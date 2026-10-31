@@ -147,6 +147,41 @@ async function runTests() {
     }
   });
 
+  // TEST 1D: Subject-Wise Teaching Faculty Directory Verification
+  console.log('\n1D. Subject-Wise Teaching Faculty Directory Verification:');
+  const facultyRaw = JSON.parse(fs.readFileSync(path.join(__dirname, 'faculty.json'), 'utf8'));
+  assert(Array.isArray(facultyRaw.faculty) && facultyRaw.faculty.length >= 12, `faculty.json contains comprehensive faculty roster (${facultyRaw.faculty.length} found)`);
+
+  const suppliedSeniorFaculty = [
+    { name: 'D. Srinivasa Rao (DSR Sir)', subject: 'IIT Mathematics', isInformal: false },
+    { name: 'K. Srinivasa Rao (KSR Sir)', subject: 'IIT Mathematics', isInformal: false },
+    { name: 'Panadi Raghava Sir', subject: 'IIT Mathematics', isInformal: false },
+    { name: 'BSR Sir', subject: 'Senior Mathematics 2A', isInformal: true },
+    { name: 'Sankar Sir', subject: 'Senior Mathematics 2A', isInformal: true },
+    { name: 'Raja Sir', subject: 'Senior Mathematics 2B', isInformal: true },
+    { name: 'Praveen Kumar Sir', subject: 'Senior Mathematics 2B', isInformal: true },
+    { name: 'MSR Sir', subject: 'Senior Physics', isInformal: true },
+    { name: 'Ramesh Sir', subject: 'Senior Physics', isInformal: true },
+    { name: 'P.V. Ranga Rao Sir', subject: 'IIT and Senior Chemistry', isInformal: false },
+    { name: 'VS Sir', subject: 'IIT and Senior Chemistry', isInformal: true },
+    { name: 'Anji Sir', subject: 'IIT and Senior Chemistry', isInformal: true }
+  ];
+
+  suppliedSeniorFaculty.forEach(exp => {
+    const found = facultyRaw.faculty.find(f => f.name === exp.name);
+    assert(found !== undefined, `Supplied faculty record exists: ${exp.name}`);
+    if (found) {
+      assert(found.subject === exp.subject, `Faculty subject matches: ${exp.name} -> ${exp.subject}`);
+      assert(found.isInformal === exp.isInformal, `Informal status properly marked: ${exp.name} (isInformal: ${found.isInformal})`);
+      if (exp.isInformal) {
+        assert(found.status === 'pending-confirmation', `Informal name marked pending confirmation: ${exp.name}`);
+        assert(found.verificationBadge.includes('Pending') || found.verificationBadge.includes('Informal'), `Verification badge flags pending confirmation: ${exp.name}`);
+      } else {
+        assert(found.status === 'verified', `Verified faculty marked verified: ${exp.name}`);
+      }
+    }
+  });
+
   // TEST 2: Static Asset & Image Directory Verification
   console.log('\n2. Static Asset Verification:');
   const requiredAssetDirs = [
@@ -180,7 +215,15 @@ async function runTests() {
     'assets/images/management/dogiparthi-srinivasa-rao.svg',
     'assets/images/management/pv-ranga-rao.svg',
     'assets/images/management/panadi-raghava.svg',
-    'assets/images/management/k-sambasiva-rao.svg'
+    'assets/images/management/k-sambasiva-rao.svg',
+    'assets/images/faculty/bsr-sir.svg',
+    'assets/images/faculty/sankar-sir.svg',
+    'assets/images/faculty/raja-sir.svg',
+    'assets/images/faculty/praveen-kumar-sir.svg',
+    'assets/images/faculty/msr-sir.svg',
+    'assets/images/faculty/ramesh-sir.svg',
+    'assets/images/faculty/vs-sir.svg',
+    'assets/images/faculty/anji-sir.svg'
   ];
   newSvgs.forEach(svg => {
     assert(fs.existsSync(path.join(__dirname, svg)), `Heraldic / Architectural SVG artwork exists: ${svg}`);
@@ -230,7 +273,8 @@ async function runTests() {
     'assets/js/data/campusesData.js',
     'assets/js/data/eventsData.js',
     'assets/js/data/galleryData.js',
-    'assets/js/data/managementData.js'
+    'assets/js/data/managementData.js',
+    'assets/js/data/facultyData.js'
   ];
   jsModules.forEach(mod => {
     assert(fs.existsSync(path.join(__dirname, mod)), `JS File exists: ${mod}`);
@@ -264,6 +308,16 @@ async function runTests() {
     if (html !== 'admin.html') {
       assert(content.includes('og:title'), `${html} has Open Graph meta tags`);
       assert(content.includes('meta name="description"'), `${html} has meta description`);
+    }
+    if (html === 'faculty.html') {
+      assert(content.includes('id="filter-city"'), 'faculty.html includes City filter');
+      assert(content.includes('id="filter-campus"'), 'faculty.html includes Campus filter');
+      assert(content.includes('id="filter-dept"'), 'faculty.html includes Department filter');
+      assert(content.includes('id="filter-subject"'), 'faculty.html includes Subject filter');
+      assert(content.includes('id="filter-section"'), 'faculty.html includes Section filter');
+      assert(content.includes('id="filter-track"'), 'faculty.html includes Track filter');
+      assert(content.includes('id="filter-search"'), 'faculty.html includes live Search input');
+      assert(content.includes('id="faculty-modal-overlay"'), 'faculty.html includes Academic Dossier Modal');
     }
   });
 
