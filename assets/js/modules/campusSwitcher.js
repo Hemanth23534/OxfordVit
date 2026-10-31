@@ -41,6 +41,8 @@ export class CampusSwitcher {
     if (this.currentCategory !== 'all') {
       if (this.currentCategory === 'academic') {
         filtered = filtered.filter(c => c.category === 'junior-college' || c.category === 'specialized-academy');
+      } else if (this.currentCategory === 'sister-school') {
+        filtered = filtered.filter(c => c.category === 'sister-school' || c.category === 'school-wing');
       } else {
         filtered = filtered.filter(c => c.category === this.currentCategory);
       }
@@ -114,16 +116,13 @@ export class CampusSwitcher {
               ${governanceBadge}
             </div>
 
-            <div class="campus-card-footer">
-              <a href="${campus.cityPageUrl}" class="btn btn-sm btn-outline" style="text-decoration: none;">
-                ${campus.city} City Page ↗
-              </a>
-              <button class="btn btn-sm btn-gold view-campus-btn" data-id="${campus.id}">
-                Campus Profile
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                  <path d="m9 18 6-6-6-6"/>
-                </svg>
+            <div class="campus-card-footer" style="display: flex; gap: 0.5rem; justify-content: space-between; align-items: center;">
+              <button class="btn btn-sm btn-outline view-campus-btn" data-id="${campus.id}" style="padding: 0.35rem 0.65rem; font-size: 0.8rem;">
+                Quick Preview
               </button>
+              <a href="campus-detail.html?id=${campus.id}" class="btn btn-sm btn-gold" style="text-decoration: none; padding: 0.35rem 0.75rem; font-size: 0.8rem;">
+                Campus Profile →
+              </a>
             </div>
           </div>
         </article>
@@ -262,15 +261,15 @@ export class CampusSwitcher {
           <div style="font-size: 0.8rem; text-transform: uppercase; color: var(--text-muted); font-weight: 600;">Location Hub</div>
           <div style="font-weight: 700; color: var(--color-deep-plum);">${campus.city} (${campus.district})</div>
         </div>
-        <div style="display: flex; gap: 0.75rem;">
+        <div style="display: flex; gap: 0.5rem; flex-wrap: wrap;">
           <a href="${campus.cityPageUrl}" class="btn btn-outline btn-sm">
             ${campus.city} City Portal
           </a>
-          <a href="tel:${campus.phone.replace(/\s+/g, '')}" class="btn btn-gold btn-sm">
-            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
-            </svg>
-            Helpline: ${campus.phone}
+          <a href="campus-detail.html?id=${campus.id}" class="btn btn-gold btn-sm">
+            Full 15-Dimension Profile ↗
+          </a>
+          <a href="tel:${campus.phone.replace(/[^0-9+]/g, '').slice(0, 13)}" class="btn btn-outline btn-sm">
+            Helpline: ${campus.phone.split('(')[0].trim()}
           </a>
         </div>
       </div>

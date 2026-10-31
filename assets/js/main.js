@@ -15,6 +15,7 @@ import { AdmissionsHandler } from './modules/admissionsForm.js';
 import { NavigationHandler } from './modules/navigation.js';
 import { FacultyDirectoryEngine } from './modules/facultyDirectory.js';
 import { EventsEngine } from './modules/eventsEngine.js';
+import { CampusDetailEngine } from './modules/campusDetail.js';
 
 document.addEventListener('DOMContentLoaded', () => {
   console.log('🏛️ Initializing Oxford VIT – The Living Campus Experience...');
@@ -52,6 +53,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // 8c. Initialize Institutional Events & Celebrations Engine
   new EventsEngine();
+
+  // 8d. Initialize Detailed Campus Profile Engine
+  new CampusDetailEngine();
 
   // 9. Initialize 3D Tilt & Specular Glare Logic
   new Tilt3DEngine();

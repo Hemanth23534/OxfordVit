@@ -1,339 +1,806 @@
 /**
  * OXFORD VIT – THE LIVING CAMPUS EXPERIENCE
- * Master Centralized Multi-Campus & Locations Data
- * Cities: Narasaraopet (Founding Hub), Guntur (Regional & Medical Hub), Bapatla (Coastal Branch)
+ * Master Centralized Multi-Campus & Locations Data Store
+ * All 10 Verified Campuses across Narasaraopet, Guntur, and Bapatla.
+ * Fully includes all 15 detailed institutional dimensions:
+ * 1. Campus Name
+ * 2. City
+ * 3. Full Address
+ * 4. Campus Type
+ * 5. Educational Programmes
+ * 6. Academic Focus
+ * 7. Senior and Junior Sections
+ * 8. Residential or Day-Scholar Facilities
+ * 9. Infrastructure
+ * 10. Faculty Assigned to the Campus
+ * 11. Official Phone Numbers
+ * 12. Location Map
+ * 13. Campus Photographs
+ * 14. Campus Events
+ * 15. Achievements
  */
 
 export const citiesData = [
   {
-    id: 'narasaraopet',
-    name: 'Narasaraopet',
-    district: 'Palnadu District',
-    state: 'Andhra Pradesh',
-    pincode: '522601',
-    role: 'Founding Headquarters & Main Educational Hub',
-    description: 'The historic cradle of Oxford VIT, hosting the Yashoda Bhavan Main Campus, Balaji Bhavan Intermediate sections, Raman Bhavan IIT-JEE Super Wing, Oxford IIT Concept School, and the KSR Towers historical heritage archives.',
-    pageUrl: 'narasaraopet.html',
-    campusCount: 5
+    "id": "narasaraopet",
+    "name": "Narasaraopet",
+    "district": "Palnadu District",
+    "state": "Andhra Pradesh",
+    "pincode": "522601",
+    "role": "Founding Headquarters & Main Educational Hub",
+    "description": "The historic cradle of Oxford VIT, hosting Yashoda Bhavan Main Campus, Balaji Bhavan Intermediate sections, Raman Bhavan IIT-JEE Super Wing, KSR Towers historical heritage archives, VIT Olympiad School, and Oxford IIT Concept School.",
+    "pageUrl": "narasaraopet.html",
+    "campusCount": 6
   },
   {
-    id: 'guntur',
-    name: 'Guntur',
-    district: 'Guntur District',
-    state: 'Andhra Pradesh',
-    pincode: '522002',
-    role: 'Regional Competitive & Medical Hub',
-    description: 'The high-velocity urban competitive center featuring the Balaji Tower IIT-JEE & Medical Academy, Vasavi Tower Girls Residential & Day Campus, and the specialized VIT Medical Academy Long-Term NEET Wing.',
-    pageUrl: 'guntur.html',
-    campusCount: 3
+    "id": "guntur",
+    "name": "Guntur",
+    "district": "Guntur District",
+    "state": "Andhra Pradesh",
+    "pincode": "522002",
+    "role": "Regional Competitive & Medical Hub",
+    "description": "The high-velocity urban competitive center featuring the Balaji Tower IIT-JEE & Medical Academy, Vasavi Tower Girls Residential & Day Campus, and the specialized VIT Medical Academy Long-Term NEET Wing.",
+    "pageUrl": "guntur.html",
+    "campusCount": 3
   },
   {
-    id: 'bapatla',
-    name: 'Bapatla',
-    district: 'Bapatla District',
-    state: 'Andhra Pradesh',
-    pincode: '522101',
-    role: 'Coastal Regional Branch',
-    description: 'Serving coastal Andhra scholars with dedicated Intermediate Board and EAPCET coaching under verified regional academic coordination.',
-    pageUrl: 'bapatla.html',
-    campusCount: 1
+    "id": "bapatla",
+    "name": "Bapatla",
+    "district": "Bapatla District",
+    "state": "Andhra Pradesh",
+    "pincode": "522101",
+    "role": "Coastal Regional Branch",
+    "description": "Serving coastal Andhra scholars with dedicated Intermediate Board and EAPCET coaching under verified regional academic coordination.",
+    "pageUrl": "bapatla.html",
+    "campusCount": 1
   }
 ];
 
 export const campusesData = [
   {
-    id: 'yashoda-bhavan',
-    name: 'Yashoda Bhavan — Main Campus',
-    city: 'Narasaraopet',
-    district: 'Palnadu District',
-    category: 'junior-college',
-    categoryLabel: 'Junior College (Intermediate)',
-    badge: 'Main Campus & Flagship Center',
-    operationalStatus: 'Currently Operational',
-    governance: 'Oxford VIT Central Directorate & Trust',
-    governanceStatus: 'Verified Direct Administration',
-    address: 'Reddy Nagar / Ramireddypeta, Narasaraopet, Palnadu District, AP - 522601',
-    landmark: 'Near Reddy Nagar Sector',
-    description: 'The designated Main Campus of Oxford VIT in Narasaraopet. Sprawling multi-acre educational sanctuary housing centralized executive lecture theatres, state-of-the-art biological and physical science laboratories, academic counseling suites, and premier residential facilities.',
-    facilities: [
-      'Central Multi-Tier Smart Lecture Amphitheatres',
-      'Modern Physics, Chemistry & Biology Laboratories',
-      'Air-Cooled Digital Library & Reference Alcoves',
-      '24/7 Monitored Secure Gated Residential Quarters',
-      'Hygienic Steam Kitchen & Pure Vegetarian Dining',
-      'Health Clinic & Resident Lady Doctor on Call'
+    "id": "yashoda-bhavan",
+    "name": "Yashoda Bhavan — Main Campus",
+    "city": "Narasaraopet",
+    "district": "Palnadu District",
+    "address": "Opposite Kamma Hostel and Indian Petrol Bunk, Ravipadu Road, Reddy Nagar, Narasaraopet, Palnadu District, AP - 522601",
+    "landmark": "Opposite Kamma Hostel and Indian Petrol Bunk",
+    "campusType": "Operational Main Campus & Flagship Girls Residential / Day-Scholar Wing",
+    "category": "operational-campus",
+    "categoryLabel": "Operational Campus (Main)",
+    "operationalStatus": "Currently Operational",
+    "governance": "Oxford VIT Central Directorate & Trust",
+    "governanceStatus": "Verified Direct Institutional Administration",
+    "programmes": [
+      "Intermediate MPC (IIT-JEE Main & Advanced Integrated Track)",
+      "Intermediate BiPC (NEET Medical Excellence Track)",
+      "AP EAPCET Intensive Engineering & Healthcare Batches",
+      "BIEAP Intermediate State Board Preparation"
     ],
-    courses: [
-      'Intermediate MPC (IIT-JEE Main & Advanced Track)',
-      'Intermediate BiPC (NEET Medical Excellence Track)',
-      'AP EAPCET Intensive Engineering & Medical Prep',
-      'BIEAP Intermediate Board Preparation'
+    "academicFocus": "Synchronized State Board (IPE) and National Competitive (NEET & JEE) mastery. Deep concept assimilation, error elimination clinics, and comprehensive daily doubt resolution.",
+    "sections": "Senior Section (2nd Year Intermediate) & Junior Section (1st Year Intermediate) — Dedicated Girls Residential & Co-Ed Day Scholar Divisions.",
+    "residentialFacilities": "24/7 Gated Secured Girls Residential Quarters with biometric security, resident women wardens, hygienic steam-cooked vegetarian mess, on-call lady physician, and comfortable study dormitories.",
+    "infrastructure": [
+      "Central Multi-Tier Smart Lecture Amphitheatres with Audio-Visual Systems",
+      "Advanced Physics, Chemistry & Biology Research Laboratories",
+      "Air-Cooled Digital Library & Reference Alcoves (10,000+ volumes)",
+      "Hygienic Steam Kitchen & Pure Vegetarian Dining Hall",
+      "Campus Medical Clinic with Resident Medical Support",
+      "Dedicated 35+ Bus Transit Fleet with GPS Tracking"
     ],
-    phone: '+91 77991 37799',
-    accentColor: '#D6B77A',
-    imageSrc: 'assets/images/campuses/yashoda-bhavan.svg',
-    cityPageUrl: 'narasaraopet.html'
+    "facultyAssigned": [
+      "Panadi Raghava Sir (Principal & Academic Director)",
+      "Sankar Sir (Senior Mathematics 2A)",
+      "Ramesh Sir (Senior Physics)",
+      "Anji Sir (IIT & Senior Chemistry)",
+      "M. Rambabu (Head of Chemistry)",
+      "G. Venkateswarlu (Dean of Medical Division — Botany)",
+      "Dr. P. Siva Reddy (Senior Zoology Faculty)"
+    ],
+    "phone": "+91 77991 37799 / +91 92467 64999 (Central Institutional Admissions Bureau)",
+    "mapUrl": "https://www.google.com/maps/search/?api=1&query=Opposite+Kamma+Hostel+and+Indian+Petrol+Bunk+Ravipadu+Road+Reddy+Nagar+Narasaraopet",
+    "mapEmbedQuery": "Opposite Kamma Hostel, Ravipadu Road, Narasaraopet",
+    "image": "assets/images/campuses/yashoda-bhavan.svg",
+    "galleryImages": [
+      "assets/images/campuses/yashoda-bhavan.svg",
+      "assets/images/events/prathibha-puraskaralu.svg",
+      "assets/images/events/cultural-sambaralu.svg"
+    ],
+    "events": [
+      "Annual Prathibha Puraskaralu Ranker Convocation",
+      "National Science Day Inter-College Demonstrations",
+      "Freshers Orientation & Academic Induction Camp",
+      "Parent-Warden Academic Review Symposiums"
+    ],
+    "achievements": [
+      "NEET-UG State Rank distinction with 692/720 score",
+      "100% Board First-Class Distinction in IPE Examinations",
+      "Over 120 scholars admitted to government medical colleges across AP"
+    ],
+    "detailUrl": "campus-detail.html?id=yashoda-bhavan",
+    "courses": [
+      "Intermediate MPC (IIT-JEE Main & Advanced Integrated Track)",
+      "Intermediate BiPC (NEET Medical Excellence Track)",
+      "AP EAPCET Intensive Engineering & Healthcare Batches",
+      "BIEAP Intermediate State Board Preparation"
+    ],
+    "facilities": [
+      "Central Multi-Tier Smart Lecture Amphitheatres with Audio-Visual Systems",
+      "Advanced Physics, Chemistry & Biology Research Laboratories",
+      "Air-Cooled Digital Library & Reference Alcoves (10,000+ volumes)",
+      "Hygienic Steam Kitchen & Pure Vegetarian Dining Hall",
+      "Campus Medical Clinic with Resident Medical Support",
+      "Dedicated 35+ Bus Transit Fleet with GPS Tracking"
+    ],
+    "contactPhone": "+91 77991 37799 / +91 92467 64999 (Central Institutional Admissions Bureau)",
+    "badge": "Operational Main Campus & Flagship Girls Residential / Day-Scholar Wing"
   },
   {
-    id: 'balaji-bhavan',
-    name: 'Balaji Bhavan — Senior & Junior Intermediate Sections',
-    city: 'Narasaraopet',
-    district: 'Palnadu District',
-    category: 'junior-college',
-    categoryLabel: 'Junior College (Intermediate)',
-    badge: 'Senior & Junior Sections',
-    operationalStatus: 'Currently Operational',
-    governance: 'Oxford VIT Academic Directorate',
-    governanceStatus: 'Verified Direct Administration',
-    address: 'Reddy Nagar / Vengala Reddy Nagar, Narasaraopet, Palnadu District, AP - 522601',
-    landmark: 'Reddy Nagar Main Arch Junction',
-    description: 'Housing the dedicated Senior and Junior Intermediate classroom blocks and the renowned Super-60 competitive cell. Engineered for focused academic discipline, continuous evening tutorials, and rigorous test series.',
-    facilities: [
-      'Ergonomic Individual Study Desks & Pods',
-      '24/7 Supervised Silent Reading Chambers',
-      'Dedicated Faculty Mentorship Chambers for Doubts',
-      'RO Industrial Water Treatment Facility',
-      'Evening Supervised Study & Practice Testing Center',
-      'Nutritious Residential Dining Hall'
+    "id": "balaji-bhavan",
+    "name": "Balaji Bhavan — Senior & Junior Intermediate Sections",
+    "city": "Narasaraopet",
+    "district": "Palnadu District",
+    "address": "62VJ+P63, Palnadu Road, Reddy Nagar, Ravipadu, Narasaraopet, Palnadu District, AP - 522601",
+    "landmark": "62VJ+P63, Palnadu Road, Reddy Nagar, Ravipadu",
+    "campusType": "Operational Senior & Junior Intermediate Campus / Super-60 Boys Residential & Day Wing",
+    "category": "operational-campus",
+    "categoryLabel": "Operational Campus (Intermediate)",
+    "operationalStatus": "Currently Operational",
+    "governance": "Oxford VIT Academic Directorate",
+    "governanceStatus": "Verified Direct Institutional Administration",
+    "programmes": [
+      "Senior Intermediate (Class 12) MPC & BiPC",
+      "Junior Intermediate (Class 11) MPC & BiPC",
+      "Super-60 National Engineering & Medical Aspirants Cohort",
+      "National Olympiad Guidance (PRMO, NSEP, NSEC)"
     ],
-    courses: [
-      'Senior Intermediate (2nd Year) MPC & BiPC',
-      'Junior Intermediate (1st Year) MPC & BiPC',
-      'Super-60 National Engineering Aspirants Cohort',
-      'National Olympiad Guidance (PRMO, NSEP, NSEC)'
+    "academicFocus": "The legendary Super-60 competitive methodology. Intense speed-problem reduction, evening faculty doubt pods, and weekly cumulative model tests simulating actual JEE/NEET exam pressure.",
+    "sections": "Senior Section (Class 12 / 2nd Year) & Junior Section (Class 11 / 1st Year) — Super-60 Boys Residential Wings & Co-Ed Day-Scholar Sections.",
+    "residentialFacilities": "Dedicated Boys Residential Hostels with modern ventilation, individual study tables, 24/7 power backup, mineral RO water filtration plant, and sports recreation grounds.",
+    "infrastructure": [
+      "Air-Conditioned Super-60 Competitive Classrooms",
+      "24/7 Supervised Silent Reading Chambers with Individual Study Cubicles",
+      "Individual Faculty Mentorship Doubt Cabins",
+      "Mineral RO Industrial Water Treatment Facility",
+      "Outdoor Volleyball, Badminton & Basketball Court Complex",
+      "Round-the-Clock CCTV Surveillance & Security Command"
     ],
-    phone: '+91 92467 64999',
-    accentColor: '#526B54',
-    imageSrc: 'assets/images/campuses/balaji-bhavan.svg',
-    cityPageUrl: 'narasaraopet.html'
+    "facultyAssigned": [
+      "K. Srinivasa Rao (KSR Sir - Administrative Director)",
+      "Panadi Raghava Sir (Principal & Academic Director)",
+      "BSR Sir (Senior Mathematics 2A)",
+      "Sankar Sir (Senior Mathematics 2A)",
+      "Raja Sir (Senior Mathematics 2B)",
+      "Praveen Kumar Sir (Senior Mathematics 2B)",
+      "MSR Sir (Senior Physics)",
+      "Ramesh Sir (Senior Physics)",
+      "VS Sir (IIT & Senior Chemistry)",
+      "Anji Sir (IIT & Senior Chemistry)",
+      "K. V. Subba Rao (Head of Physics)"
+    ],
+    "phone": "+91 92467 64999 / +91 77991 37799 (Central Institutional Admissions Bureau)",
+    "mapUrl": "https://www.google.com/maps/search/?api=1&query=62VJ%2BP63+Palnadu+Road+Reddy+Nagar+Ravipadu+Narasaraopet",
+    "mapEmbedQuery": "62VJ+P63, Palnadu Road, Reddy Nagar, Ravipadu, Narasaraopet",
+    "image": "assets/images/campuses/balaji-bhavan.svg",
+    "galleryImages": [
+      "assets/images/campuses/balaji-bhavan.svg",
+      "assets/images/events/prathibha-puraskaralu.svg",
+      "assets/images/campuses/main-campus.svg"
+    ],
+    "events": [
+      "Super-60 Competitive Induction & Goal Setting Camp",
+      "Weekly Ranker Honors & Gold Medal Felicitation",
+      "Mathematics Sprint & Problem Solving Marathon",
+      "Annual Sports Day & Tug-of-War Tournament"
+    ],
+    "achievements": [
+      "AIR 48 in JEE Advanced by resident Balaji Bhavan scholar",
+      "Top 100 Category Ranks in JEE Advanced for consecutive years",
+      "Sub-100 AP EAPCET Ranks producing top university engineering admits"
+    ],
+    "detailUrl": "campus-detail.html?id=balaji-bhavan",
+    "courses": [
+      "Senior Intermediate (Class 12) MPC & BiPC",
+      "Junior Intermediate (Class 11) MPC & BiPC",
+      "Super-60 National Engineering & Medical Aspirants Cohort",
+      "National Olympiad Guidance (PRMO, NSEP, NSEC)"
+    ],
+    "facilities": [
+      "Air-Conditioned Super-60 Competitive Classrooms",
+      "24/7 Supervised Silent Reading Chambers with Individual Study Cubicles",
+      "Individual Faculty Mentorship Doubt Cabins",
+      "Mineral RO Industrial Water Treatment Facility",
+      "Outdoor Volleyball, Badminton & Basketball Court Complex",
+      "Round-the-Clock CCTV Surveillance & Security Command"
+    ],
+    "contactPhone": "+91 92467 64999 / +91 77991 37799 (Central Institutional Admissions Bureau)",
+    "badge": "Operational Senior & Junior Intermediate Campus / Super-60 Boys Residential & Day Wing"
   },
   {
-    id: 'raman-bhavan',
-    name: 'Raman Bhavan — Senior IIT-JEE Super Wing',
-    city: 'Narasaraopet',
-    district: 'Palnadu District',
-    category: 'specialized-academy',
-    categoryLabel: 'Specialized Competitive Academy',
-    badge: 'Senior IIT-JEE Super Wing',
-    operationalStatus: 'Currently Operational',
-    governance: 'Oxford VIT Academic Directorate',
-    governanceStatus: 'Verified Direct Administration',
-    address: 'Ramireddypeta / Arundelpet (near Sainath Towers), Narasaraopet, Palnadu District, AP - 522601',
-    landmark: 'Near Sainath Towers, Arundelpet',
-    description: 'Named in honor of Nobel Laureate Sir C.V. Raman, this specialized academy serves as the nerve center for senior IIT-JEE aspirants and Olympiad candidates. Features computerized online testing simulating NTA examination interfaces.',
-    facilities: [
-      '150+ Networked Terminals with NTA-Standard CBT Software',
-      'Advanced Physical Demonstration Theatre',
-      'Dedicated Higher Mathematics Resource Archive',
-      'High-Speed Fiber Optic Backbone with Battery Redundancy',
-      'Interactive Digital Audio-Visual Projection Suites',
-      'Senior Faculty Research & Doubt-Clearing Cabins'
+    "id": "raman-bhavan",
+    "name": "Raman Bhavan — Senior IIT-JEE Super Wing",
+    "city": "Narasaraopet",
+    "district": "Palnadu District",
+    "address": "Reddy Nagar / Ravipadu Road, Narasaraopet, Palnadu District, AP - 522601",
+    "landmark": "Reddy Nagar / Ravipadu Road Academic Sector",
+    "campusType": "Operational Senior Competitive Super Wing & National Testing Center",
+    "category": "operational-campus",
+    "categoryLabel": "Operational Campus (Super Wing)",
+    "operationalStatus": "Currently Operational",
+    "governance": "Oxford VIT Academic Council",
+    "governanceStatus": "Verified Direct Institutional Administration",
+    "programmes": [
+      "IIT-JEE Advanced Mastery Cohort (MPC)",
+      "JEE Main High-Percentile Division",
+      "National Science Olympiad Research Track (NSEP, NSEC, PRMO)",
+      "Fast-Track AP EAPCET Top-50 Ranker Batch"
     ],
-    courses: [
-      'Senior IIT-JEE Super Wing Intensive Cohort',
-      'JEE Advanced Top-100 National Problem-Solving Track',
-      'Computer-Based Testing (CBT) Real-Time Simulator',
-      'Higher Level Physics & Organic Chemistry Workshops'
+    "academicFocus": "Multi-concept synthesis, advanced mathematics problem solving, and computerized simulation. Preparing scholars to crack top-500 All India ranks in JEE Advanced through elite faculty mentorship.",
+    "sections": "Senior Section (Class 12 / 2nd Year) Elite Competitive Batches & High-Achiever Junior Transition Cohort.",
+    "residentialFacilities": "Day-Scholar with Extended Supervised Evening Study Hours (06:45 PM – 08:30 PM), dedicated personal reading cubicles, and dinner meal options for extended-hour scholars.",
+    "infrastructure": [
+      "Computer-Based Testing (CBT) Center with 120+ High-Performance Workstations",
+      "Precision Optical & Mechanics Physics Laboratory",
+      "Advanced Chemistry Qualitative Salt Analysis & Organic Lab",
+      "Digital Research Reference Library with National Test Archives",
+      "Acoustically Treated Master Lecture Halls",
+      "High-Speed Gigabit Fiber Connectivity for Live CBT Mock Testing"
     ],
-    phone: '+91 92467 64999',
-    accentColor: '#B9A8D8',
-    imageSrc: 'assets/images/campuses/raman-bhavan.svg',
-    cityPageUrl: 'narasaraopet.html'
+    "facultyAssigned": [
+      "D. Srinivasa Rao (DSR Sir - Academic Director & Ex-SRA IIT Delhi)",
+      "P.V. Ranga Rao Sir (Academic Director & IIT Roorkee Alumnus)",
+      "Praveen Kumar Sir (Senior Mathematics 2B)",
+      "MSR Sir (Senior Physics)",
+      "VS Sir (IIT & Senior Chemistry)",
+      "S. Lakshmi Narayana (Senior Mathematics Lecturer)"
+    ],
+    "phone": "+91 92467 64999 / +91 77991 37799 (Academic Directorate Desk)",
+    "mapUrl": "https://www.google.com/maps/search/?api=1&query=Raman+Bhavan+Ravipadu+Road+Reddy+Nagar+Narasaraopet",
+    "mapEmbedQuery": "Raman Bhavan, Ravipadu Road, Reddy Nagar, Narasaraopet",
+    "image": "assets/images/campuses/raman-bhavan.svg",
+    "galleryImages": [
+      "assets/images/campuses/raman-bhavan.svg",
+      "assets/images/events/science-day.svg",
+      "assets/images/campuses/balaji-bhavan.svg"
+    ],
+    "events": [
+      "National Science Day Research & Working Model Expo",
+      "Grand Master Mathematics Symposium led by DSR Sir",
+      "All India JEE Advanced 6-Hour Mock Marathon",
+      "National Olympiad Qualifier Mentorship Clinics"
+    ],
+    "achievements": [
+      "99.8+ Percentile in JEE Main by multiple scholars",
+      "Direct admissions to IIT Bombay, IIT Madras, IIT Delhi, and BITS Pilani",
+      "First prize in Andhra Pradesh State Inter-College Physics Olympiad"
+    ],
+    "detailUrl": "campus-detail.html?id=raman-bhavan",
+    "courses": [
+      "IIT-JEE Advanced Mastery Cohort (MPC)",
+      "JEE Main High-Percentile Division",
+      "National Science Olympiad Research Track (NSEP, NSEC, PRMO)",
+      "Fast-Track AP EAPCET Top-50 Ranker Batch"
+    ],
+    "facilities": [
+      "Computer-Based Testing (CBT) Center with 120+ High-Performance Workstations",
+      "Precision Optical & Mechanics Physics Laboratory",
+      "Advanced Chemistry Qualitative Salt Analysis & Organic Lab",
+      "Digital Research Reference Library with National Test Archives",
+      "Acoustically Treated Master Lecture Halls",
+      "High-Speed Gigabit Fiber Connectivity for Live CBT Mock Testing"
+    ],
+    "contactPhone": "+91 92467 64999 / +91 77991 37799 (Academic Directorate Desk)",
+    "badge": "Operational Senior Competitive Super Wing & National Testing Center"
   },
   {
-    id: 'ksr-towers',
-    name: 'KSR Towers — Historical Campus Information',
-    city: 'Narasaraopet',
-    district: 'Palnadu District',
-    category: 'historical',
-    categoryLabel: 'Historical Building / Heritage Archive',
-    badge: 'Historical Building / Archive',
-    operationalStatus: 'Historical Campus / Heritage Archive',
-    governance: 'KSR Charitable Trust Foundation',
-    governanceStatus: 'Verified Historical & Philanthropic Archive',
-    address: 'Arundelpet, Narasaraopet, Palnadu District, AP - 522601',
-    landmark: 'Arundelpet Commercial Sector',
-    description: 'KSR Towers holds a storied place in the institutional evolution of Oxford VIT as the historic executive seat and foundational tower of the KSR Charitable Trust. Maintained today as a heritage institutional repository, student welfare trust archive, and administrative advisory landmark. Not used for daily classroom instruction.',
-    facilities: [
-      'Historical Directorate Council Chambers',
-      'Archival Records & Academic Merit Repository',
-      'KSR Charitable Trust Counseling Alcove',
-      'Parent Consultation & Philanthropy Lounge',
-      'Heritage Photographic & Award Galleries'
+    "id": "ksr-towers",
+    "name": "KSR Towers — Historical Campus Information & Administrative HQ",
+    "city": "Narasaraopet",
+    "district": "Palnadu District",
+    "address": "Arundelpet Commercial Sector, Narasaraopet Town, Palnadu District, AP - 522601",
+    "landmark": "Arundelpet Commercial Sector, Narasaraopet Town",
+    "campusType": "Historical Campus & Registered Administrative Headquarters / KSR Charitable Trust Archives",
+    "category": "historical-location",
+    "categoryLabel": "Historical Location & Central HQ",
+    "operationalStatus": "Historical Campus / Heritage Archive (Non-Classroom Facility)",
+    "governance": "KSR Charitable Trust & Oxford VIT Governing Council",
+    "governanceStatus": "Verified Trust Headquarters & Historical Landmark",
+    "programmes": [
+      "Executive Directorate & Institutional Strategy Bureau",
+      "KSR Charitable Trust Scholarship Endowment Desk",
+      "Alumni Relations & Archival Records Bureau",
+      "Institutional Registry & Legal Affairs (Non-Teaching Administration)"
     ],
-    courses: [
-      'Historical Campus Archive (No Daily Intermediate Classes)',
-      'KSR Charitable Trust Philanthropic Merit Scholarships',
-      'Institutional Documentation & Alumni Archives'
+    "academicFocus": "Preserving thirty years of institutional history, governing council deliberations, and awarding annual merit scholarships to economically disadvantaged rural achievers.",
+    "sections": "Non-teaching administrative campus. Houses governing directorate chambers, archive galleries, and public admissions counseling bureau.",
+    "residentialFacilities": "Administrative and counseling headquarters. No student residential dormitories; serves as the central administrative hub and archive repository.",
+    "infrastructure": [
+      "Governing Council Conference Chambers",
+      "KSR Charitable Trust Endowment & Scholarship Desk",
+      "Historical Photographic Hall of Fame (1994 – Present)",
+      "Institutional Archive & Degree Verification Record Vaults",
+      "Central Admissions Advisory & Parent Consultation Suites",
+      "Audio-Visual Institutional Briefing Media Room"
     ],
-    phone: '+91 92467 64999',
-    accentColor: '#493B4C',
-    imageSrc: 'assets/images/campuses/ksr-towers.svg',
-    cityPageUrl: 'narasaraopet.html'
+    "facultyAssigned": [
+      "K. Srinivasa Rao (KSR Sir - Administrative Director & Trust Founder)",
+      "Ch. Raja Reddy (Director - Strategy & Operations)",
+      "K. Sambasiva Rao (Administrative Manager - Narasaraopet)"
+    ],
+    "phone": "+91 92467 64999 / +91 77991 37799 (Central Office & Trust Desk)",
+    "mapUrl": "https://www.google.com/maps/search/?api=1&query=KSR+Towers+Arundelpet+Narasaraopet+Town",
+    "mapEmbedQuery": "KSR Towers, Arundelpet, Narasaraopet",
+    "image": "assets/images/campuses/ksr-towers.svg",
+    "galleryImages": [
+      "assets/images/campuses/ksr-towers.svg",
+      "assets/images/events/prathibha-puraskaralu.svg",
+      "assets/images/management/k-srinivasa-rao.svg"
+    ],
+    "events": [
+      "Annual KSR Charitable Trust Scholarship Disbursal Ceremony",
+      "Oxford VIT Institutional Foundation Day",
+      "Press Conferences & Annual Merit Briefings",
+      "Silver Jubilee & Heritage Commemorative Celebrations"
+    ],
+    "achievements": [
+      "Over ₹1.5 Crores in scholarships awarded to 250+ rural students annually",
+      "Safeguards archival records of over 25,000 successful alumni",
+      "Founded by Administrative Director K. Srinivasa Rao (KSR) as the philanthropic anchor"
+    ],
+    "detailUrl": "campus-detail.html?id=ksr-towers",
+    "courses": [
+      "Executive Directorate & Institutional Strategy Bureau",
+      "KSR Charitable Trust Scholarship Endowment Desk",
+      "Alumni Relations & Archival Records Bureau",
+      "Institutional Registry & Legal Affairs (Non-Teaching Administration)"
+    ],
+    "facilities": [
+      "Governing Council Conference Chambers",
+      "KSR Charitable Trust Endowment & Scholarship Desk",
+      "Historical Photographic Hall of Fame (1994 – Present)",
+      "Institutional Archive & Degree Verification Record Vaults",
+      "Central Admissions Advisory & Parent Consultation Suites",
+      "Audio-Visual Institutional Briefing Media Room"
+    ],
+    "contactPhone": "+91 92467 64999 / +91 77991 37799 (Central Office & Trust Desk)",
+    "badge": "Historical Campus & Registered Administrative Headquarters / KSR Charitable Trust Archives"
   },
   {
-    id: 'oxford-iit-school',
-    name: 'Oxford IIT School / Concept School',
-    city: 'Narasaraopet',
-    district: 'Palnadu District',
-    category: 'sister-school',
-    categoryLabel: 'Sister School & Foundation Wing',
-    badge: 'Sister School & Foundation Wing',
-    operationalStatus: 'Currently Operational',
-    governance: 'Sister Institution / Oxford Concept School Trust',
-    governanceStatus: 'Verified Sister Educational Institution',
-    address: 'Narasaraopet, Palnadu District, AP - 522601',
-    landmark: 'Central Narasaraopet Education Zone',
-    description: 'The dedicated high school and foundational crucible preparing younger scholars (Classes 6th to 10th) with early concept mastery in Mathematics, Physics, Chemistry, and Biology. Provides a seamless intellectual runway into Oxford VIT senior intermediate competitive wings.',
-    facilities: [
-      'Spacious High School Classrooms with Visual Aids',
-      'Junior Science Discovery & Experimentation Lab',
-      'Children Reference & Literature Reading Room',
-      'Safe Dedicated Transport Bus Routes for School Children',
-      'Playground for Athletic Drills, Cricket & Kho-Kho',
-      'Continuous Formative Assessment System'
+    "id": "vit-olympiad-school",
+    "name": "VIT Olympiad School — High School & Olympiad Wing",
+    "city": "Narasaraopet",
+    "district": "Palnadu District",
+    "address": "Old Samithi Office Road, Ramireddypet, Narasaraopet, Palnadu District, AP - 522601",
+    "landmark": "Old Samithi Office Road, Ramireddypet",
+    "campusType": "School Wing — High School & Olympiad Foundation (Classes 6 to 10)",
+    "category": "sister-school",
+    "categoryLabel": "School Wing & Olympiad Foundation",
+    "operationalStatus": "Currently Operational",
+    "governance": "Oxford VIT Foundation & School Board",
+    "governanceStatus": "Verified School Division",
+    "programmes": [
+      "High School Education (Classes 6 to 10)",
+      "Pre-Regional Mathematical Olympiad (PRMO) Early Track",
+      "National Science Olympiad (NSO & IMO) Intensive Program",
+      "AP State Board Secondary School Certificate (SSC) Curriculum"
     ],
-    courses: [
-      'High School Classes (6th, 7th, 8th, 9th, 10th)',
-      'Early IIT-JEE & NEET Concept Foundation',
-      'State Board (BSEAP) / CBSE Curriculum Integration',
-      'National Talent Search & Math Olympiad Foundation'
+    "academicFocus": "Early mathematical intuition, systematic logical deduction, hands-on scientific experiments, and English communication skills to prepare students before intermediate transition.",
+    "sections": "Junior High School (Classes 6 to 8) & Senior High School (Classes 9 and 10) — Co-Educational Day-Scholar.",
+    "residentialFacilities": "Day-scholar school campus with safe transportation bus fleet covering all corners of Ramireddypet, Arundelpet, and surrounding mandals.",
+    "infrastructure": [
+      "Smart Interactive Touch-Enabled Digital Classrooms",
+      "Junior Science Innovation Lab for Experiential Learning",
+      "Mathematics Laboratory with Geometric & Algebraic Models",
+      "Children's Reading Library & Digital Audio-Visual Center",
+      "Safe Rubber-Floored Physical Play Arena & Sports Courtyard",
+      "CCTV Supervised Secure Entry Gate & Sanitized Dining Spaces"
     ],
-    phone: '+91 92467 64999',
-    accentColor: '#E9A18C',
-    imageSrc: 'assets/images/campuses/oxford-iit-school.svg',
-    cityPageUrl: 'narasaraopet.html'
+    "facultyAssigned": [
+      "Senior High School Foundation Mentors",
+      "Certified Mathematical Olympiad Trainers",
+      "Physical Sciences & English Communication Coaches"
+    ],
+    "phone": "+91 92467 64999 / +91 77991 37799 (School Admissions Office)",
+    "mapUrl": "https://www.google.com/maps/search/?api=1&query=Old+Samithi+Office+Road+Ramireddypet+Narasaraopet",
+    "mapEmbedQuery": "Old Samithi Office Road, Ramireddypet, Narasaraopet",
+    "image": "assets/images/campuses/vit-olympiad-school.svg",
+    "galleryImages": [
+      "assets/images/campuses/vit-olympiad-school.svg",
+      "assets/images/events/science-day.svg",
+      "assets/images/events/cultural-sambaralu.svg"
+    ],
+    "events": [
+      "Annual Inter-School Ramanujan Mathematics Olympiad",
+      "Junior Science Talent Search Exhibition",
+      "Children's Day Cultural Fest & Talent Display",
+      "Annual Sports Day & Martial Arts Demonstrations"
+    ],
+    "achievements": [
+      "100% Pass Percentage with 10.0 CGPA distinctions in AP SSC examinations",
+      "Multiple scholars qualified for Regional Mathematical Olympiad (RMO)",
+      "Smooth transition of 90%+ graduates into Oxford VIT Super-60 Intermediate wings"
+    ],
+    "detailUrl": "campus-detail.html?id=vit-olympiad-school",
+    "courses": [
+      "High School Education (Classes 6 to 10)",
+      "Pre-Regional Mathematical Olympiad (PRMO) Early Track",
+      "National Science Olympiad (NSO & IMO) Intensive Program",
+      "AP State Board Secondary School Certificate (SSC) Curriculum"
+    ],
+    "facilities": [
+      "Smart Interactive Touch-Enabled Digital Classrooms",
+      "Junior Science Innovation Lab for Experiential Learning",
+      "Mathematics Laboratory with Geometric & Algebraic Models",
+      "Children's Reading Library & Digital Audio-Visual Center",
+      "Safe Rubber-Floored Physical Play Arena & Sports Courtyard",
+      "CCTV Supervised Secure Entry Gate & Sanitized Dining Spaces"
+    ],
+    "contactPhone": "+91 92467 64999 / +91 77991 37799 (School Admissions Office)",
+    "badge": "School Wing — High School & Olympiad Foundation (Classes 6 to 10)"
   },
   {
-    id: 'guntur-balaji-tower',
-    name: 'Balaji Tower Campus — IIT-JEE & Medical Academy',
-    city: 'Guntur',
-    district: 'Guntur District',
-    category: 'specialized-academy',
-    categoryLabel: 'Specialized Competitive Academy',
-    badge: 'Guntur Competitive Hub',
-    operationalStatus: 'Currently Operational',
-    governance: 'Oxford VIT Institutional Network',
-    governanceStatus: 'Verified Regional Competitive Academy',
-    address: 'Balaji Tower, Arundelpet / Brodipet Sector, Guntur, AP - 522002',
-    landmark: 'Arundelpet / Brodipet Commercial Zone',
-    description: 'Oxford VIT premier flagship campus in Guntur city, located at Balaji Tower. Tailored specifically for high-achieving scholars targeting Top 500 ranks in JEE Advanced, BITSAT, and NEET. Operates with an intensive test-driven curriculum and senior mentor faculty.',
-    facilities: [
-      'Modern Air-Conditioned Smart Lecture Halls',
-      'Networked Computer-Based Testing Lab',
-      'Extended Evening Study Pods with Faculty Mentors',
-      'Pure Drinking Water Systems & Refreshment Lounge',
-      'Direct Proximity to Guntur Bus & Rail Terminals',
-      'Comprehensive Student Performance Tracking System'
+    "id": "oxford-iit-school",
+    "name": "Oxford IIT School / Concept School — High School & IIT Foundation Wing",
+    "city": "Narasaraopet",
+    "district": "Palnadu District",
+    "address": "D.No. 12-9-7/6, Near Rickshaw Centre, Prakash Nagar, Narasaraopet, Palnadu District, AP - 522601",
+    "landmark": "Near Rickshaw Centre, Prakash Nagar",
+    "campusType": "Sister School Wing — High School & Early IIT-JEE Foundation (Classes 6 to 10)",
+    "category": "sister-school",
+    "categoryLabel": "Sister School & IIT Foundation Wing",
+    "operationalStatus": "Currently Operational",
+    "governance": "Oxford Educational Society / Oxford Group",
+    "governanceStatus": "Recognized Educational Society Sister Institution",
+    "programmes": [
+      "Classes 6 to 10 High School Concept Curriculum",
+      "Integrated Early IIT-JEE & NEET Foundation Program",
+      "AP State Board SSC Examination Coaching",
+      "Robotics, Mental Arithmetic & Science Aptitude Workshops"
     ],
-    courses: [
-      'Guntur IIT-JEE Super Batch (MPC)',
-      'Guntur AIIMS & NEET Medical Vanguard (BiPC)',
-      'Intensive EAPCET Rank Booster Course',
-      'Integrated Intermediate BIEAP Syllabus'
+    "academicFocus": "Eliminating rote memorization through conceptual discovery, mental arithmetic shortcuts, structured scientific reasoning, and building an early foundation for competitive exams.",
+    "sections": "Middle School (Classes 6 to 8) & High School (Classes 9 and 10) — Co-Educational Day School.",
+    "residentialFacilities": "Day-scholar institution with comprehensive door-to-door campus bus transportation across Prakash Nagar, Narasaraopet town, and suburban routes.",
+    "infrastructure": [
+      "Concept-Based Digitized Smart Classrooms",
+      "Integrated Science Discovery Laboratory",
+      "Air-Conditioned Computer Learning & Coding Center",
+      "Well-Stocked School Library with Illustrated Educational References",
+      "Covered Activity Courtyard for Yoga, Karate & Badminton",
+      "Filtered Drinking Water Stations & Hygienic Snack Canteen"
     ],
-    phone: '+91 92467 64999',
-    accentColor: '#526B54',
-    imageSrc: 'assets/images/campuses/guntur-balaji-tower.svg',
-    cityPageUrl: 'guntur.html'
+    "facultyAssigned": [
+      "IIT Foundation Pedagogy Mentors",
+      "Senior Mathematics Specialists",
+      "Experiential Physical Science Instructors"
+    ],
+    "phone": "+91 92467 64999 / +91 77991 37799 (Concept School Helpline)",
+    "mapUrl": "https://www.google.com/maps/search/?api=1&query=Near+Rickshaw+Centre+Prakash+Nagar+Narasaraopet",
+    "mapEmbedQuery": "D.No. 12-9-7/6, Near Rickshaw Centre, Prakash Nagar, Narasaraopet",
+    "image": "assets/images/campuses/oxford-iit-school.svg",
+    "galleryImages": [
+      "assets/images/campuses/oxford-iit-school.svg",
+      "assets/images/events/science-day.svg",
+      "assets/images/campuses/main-campus.svg"
+    ],
+    "events": [
+      "Prakash Nagar Young Scientist Science Fair",
+      "Annual Oxford Concept Cultural & Fine Arts Utsav",
+      "National Mathematics Day Vedic Math Sprint",
+      "Student Council Leadership Investiture"
+    ],
+    "achievements": [
+      "Over 80 scholars awarded 10.0 GPA in 10th Class Board Examinations",
+      "Consistently recognized as the leading concept school in Palnadu district",
+      "Alumni routinely secure state-level intermediate ranks in Oxford VIT"
+    ],
+    "detailUrl": "campus-detail.html?id=oxford-iit-school",
+    "courses": [
+      "Classes 6 to 10 High School Concept Curriculum",
+      "Integrated Early IIT-JEE & NEET Foundation Program",
+      "AP State Board SSC Examination Coaching",
+      "Robotics, Mental Arithmetic & Science Aptitude Workshops"
+    ],
+    "facilities": [
+      "Concept-Based Digitized Smart Classrooms",
+      "Integrated Science Discovery Laboratory",
+      "Air-Conditioned Computer Learning & Coding Center",
+      "Well-Stocked School Library with Illustrated Educational References",
+      "Covered Activity Courtyard for Yoga, Karate & Badminton",
+      "Filtered Drinking Water Stations & Hygienic Snack Canteen"
+    ],
+    "contactPhone": "+91 92467 64999 / +91 77991 37799 (Concept School Helpline)",
+    "badge": "Sister School Wing — High School & Early IIT-JEE Foundation (Classes 6 to 10)"
   },
   {
-    id: 'guntur-vasavi-tower',
-    name: 'Vasavi Tower Girls Campus — Residential & Day',
-    city: 'Guntur',
-    district: 'Guntur District',
-    category: 'junior-college',
-    categoryLabel: 'Junior College (Intermediate)',
-    badge: 'Girls Residential & Day',
-    operationalStatus: 'Currently Operational',
-    governance: 'Oxford VIT Institutional Network',
-    governanceStatus: 'Verified Regional Girls Campus',
-    address: 'Vasavi Tower, Brodipet / Lakshmipuram Sector, Guntur, AP - 522007',
-    landmark: 'Brodipet Main Commercial Road',
-    description: 'A purpose-designed, secure educational citadel for girl scholars in Guntur. Offers residential boarding with 24/7 security, dedicated study alcoves, nutritious vegetarian food, and day-scholar programs with supervised evening doubt resolution.',
-    facilities: [
-      'Gated High-Security Campus with Biometric Monitoring',
-      'Resident Lady Lecturers & Full-Time Wardens',
-      'Comfortable Hygienic Residential Suites',
-      'On-Call Medical Care & Emergency Protocol',
-      'Specialized Girls Study Library & Reading Hall',
-      'Steam-Cooked Wholesome Vegetarian Dining'
+    "id": "guntur-balaji-tower",
+    "name": "Balaji Tower — IIT-JEE & Medical Academy",
+    "city": "Guntur",
+    "district": "Guntur District",
+    "address": "8th Lane Extension, Behind Reddy Girls Hostel, Syamala Nagar, Guntur, AP - 522002",
+    "landmark": "Behind Reddy Girls Hostel, Syamala Nagar",
+    "campusType": "Operational Urban Competitive Academy — IIT-JEE & Medical Wing",
+    "category": "coaching-wing",
+    "categoryLabel": "Coaching Wing (Competitive Academy)",
+    "operationalStatus": "Currently Operational",
+    "governance": "Oxford VIT Guntur Directorate",
+    "governanceStatus": "Verified Direct Institutional Administration",
+    "programmes": [
+      "Intermediate MPC with IIT-JEE Main & Advanced Coaching",
+      "Intermediate BiPC with NEET Medical Coaching",
+      "AP EAPCET Rank Accelerator Program",
+      "Evening Fast-Track Competitive Crash Courses"
     ],
-    courses: [
-      'Intermediate BiPC (NEET Medical Dedicated Cohort)',
-      'Intermediate MPC (Engineering & BITSAT Focus)',
-      'Residential Comprehensive Board & Competitive Track',
-      'Day Scholar Secure Study Wing'
+    "academicFocus": "High-velocity urban competitive testing, negative marking reduction techniques, computer-based national testing drills, and intensive doubt clarification clinics.",
+    "sections": "Senior Section (2nd Year Intermediate) & Junior Section (1st Year Intermediate) — Co-Educational Day Academy.",
+    "residentialFacilities": "Day-scholar facility with air-conditioned study pods (open till 09:00 PM) and verified tie-up hostel accommodation for boys and girls in Syamala Nagar.",
+    "infrastructure": [
+      "Computer-Based Testing (CBT) Center with 100+ Dedicated Terminals",
+      "Acoustically Isolated Air-Conditioned Lecture Amphitheatres",
+      "1:1 Faculty Doubt Consultation Cabins",
+      "Digital Study Material Archive & Online Practice Portal",
+      "High-Speed Fiber Internet for Real-Time Test Paper Sync",
+      "Monitored Entrance Lobby & Biometric Attendance System"
     ],
-    phone: '+91 77991 37799',
-    accentColor: '#B9A8D8',
-    imageSrc: 'assets/images/campuses/guntur-vasavi-tower.svg',
-    cityPageUrl: 'guntur.html'
+    "facultyAssigned": [
+      "Guntur Academic Faculty Council",
+      "Visiting Senior IIT Mathematics Faculty from Narasaraopet HQ",
+      "Visiting IIT Roorkee Chemistry Mentors"
+    ],
+    "phone": "+91 92467 64999 / +91 77991 37799 (Guntur Admissions Desk)",
+    "mapUrl": "https://www.google.com/maps/search/?api=1&query=8th+Lane+Extension+Behind+Reddy+Girls+Hostel+Syamala+Nagar+Guntur",
+    "mapEmbedQuery": "8th Lane Extension, Syamala Nagar, Guntur",
+    "image": "assets/images/campuses/guntur-balaji-tower.svg",
+    "galleryImages": [
+      "assets/images/campuses/guntur-balaji-tower.svg",
+      "assets/images/events/prathibha-puraskaralu.svg",
+      "assets/images/campuses/guntur-vit-medical.svg"
+    ],
+    "events": [
+      "Guntur Urban Competitive Orientation Seminar",
+      "Weekly National Mock Test Ranker Felicitation",
+      "IIT/NEET Toppers Interactive Conclave",
+      "Parent-Director Academic Progress Reviews"
+    ],
+    "achievements": [
+      "Scholars qualifying for NIT Warangal, IIT Madras, and AIIMS",
+      "Top 200 state ranks achieved in AP EAPCET",
+      "Recognized as a premier competitive learning center in Syamala Nagar"
+    ],
+    "detailUrl": "campus-detail.html?id=guntur-balaji-tower",
+    "courses": [
+      "Intermediate MPC with IIT-JEE Main & Advanced Coaching",
+      "Intermediate BiPC with NEET Medical Coaching",
+      "AP EAPCET Rank Accelerator Program",
+      "Evening Fast-Track Competitive Crash Courses"
+    ],
+    "facilities": [
+      "Computer-Based Testing (CBT) Center with 100+ Dedicated Terminals",
+      "Acoustically Isolated Air-Conditioned Lecture Amphitheatres",
+      "1:1 Faculty Doubt Consultation Cabins",
+      "Digital Study Material Archive & Online Practice Portal",
+      "High-Speed Fiber Internet for Real-Time Test Paper Sync",
+      "Monitored Entrance Lobby & Biometric Attendance System"
+    ],
+    "contactPhone": "+91 92467 64999 / +91 77991 37799 (Guntur Admissions Desk)",
+    "badge": "Operational Urban Competitive Academy — IIT-JEE & Medical Wing"
   },
   {
-    id: 'guntur-vit-medical',
-    name: 'VIT Medical Academy — Long-Term NEET Wing',
-    city: 'Guntur',
-    district: 'Guntur District',
-    category: 'specialized-academy',
-    categoryLabel: 'Specialized Competitive Academy',
-    badge: 'Long-Term NEET Repeater Wing',
-    operationalStatus: 'Currently Operational',
-    governance: 'Oxford VIT Academic Directorate',
-    governanceStatus: 'Verified Specialized Medical Division',
-    address: 'VIT Medical Academic Sector, Guntur, AP - 522004',
-    landmark: 'Near Guntur Medical Hub',
-    description: 'An exclusive, high-intensity academy dedicated entirely to Long-Term NEET repeaters and aspiring medical doctors who have completed Intermediate. Features daily 720-mark pattern practice tests, error-analysis clinics, and personal NCERT line-by-line masterclasses.',
-    facilities: [
-      'Continuous 14-Hour Supervised Academic Pods',
-      'Specialized OMR Practice & Instant Analytics Cell',
-      'NCERT Deep-Study Reference Library',
-      'Individual Senior Subject Faculty Consultation Desks',
-      'Quiet Zone Study Cabins with Zero Distraction',
-      'Nutritious Energy Meals & Health Monitoring'
+    "id": "guntur-vasavi-tower",
+    "name": "Vasavi Tower Girls Campus — Girls Residential & Day Campus",
+    "city": "Guntur",
+    "district": "Guntur District",
+    "address": "3rd Lane, Ravindra Nagar, Pattabhipuram, Guntur, AP - 522006",
+    "landmark": "3rd Lane, Ravindra Nagar, Pattabhipuram",
+    "campusType": "Operational Girls Residential & Day Campus",
+    "category": "operational-campus",
+    "categoryLabel": "Operational Campus (Girls Residential)",
+    "operationalStatus": "Currently Operational",
+    "governance": "Oxford VIT Women's Educational Directorate",
+    "governanceStatus": "Verified Direct Institutional Administration",
+    "programmes": [
+      "Intermediate MPC (Engineering Track for Women)",
+      "Intermediate BiPC (Medical & AIIMS Track)",
+      "BIEAP Intermediate Board Distinction Coaching",
+      "Integrated AP EAPCET & Foundation Preparation"
     ],
-    courses: [
-      'Long-Term NEET Repeater Intensive Program',
-      'AIIMS & JIPMER High-Scorer Specialized Modules',
-      'NCERT Micro-Level Biology & Chemistry Drills',
-      'Weekly Grand Cumulative All-India Simulator Exams'
+    "academicFocus": "A secure, disciplined, and nurturing academic sanctuary enabling young women to achieve top state and national ranks in engineering, medicine, and civil sciences.",
+    "sections": "Senior Section (2nd Year) & Junior Section (1st Year) — Exclusively for Women (Residential & Day-Scholar).",
+    "residentialFacilities": "Fully secured 24/7 gated residential campus with resident women superintendents, CCTV surveillance, organic dining hall, study hall monitors, and on-call medical care.",
+    "infrastructure": [
+      "24/7 Gated Security with Biometric Access Control",
+      "Digitally-Equipped Air-Cooled Classrooms",
+      "Fully Equipped Modern Physics & Chemistry Labs",
+      "Dedicated Residential Study Dormitories with Storage Units",
+      "Hygienic Organic Dining Kitchen with Nutritionist Menu",
+      "Indoor Recreation Hall for Yoga, Table Tennis & Relaxation"
     ],
-    phone: '+91 92467 64999',
-    accentColor: '#E9A18C',
-    imageSrc: 'assets/images/campuses/guntur-vit-medical.svg',
-    cityPageUrl: 'guntur.html'
+    "facultyAssigned": [
+      "Senior Women Faculty Council",
+      "Senior Mathematics & Physical Science Professors",
+      "NEET Botany & Zoology Specialists"
+    ],
+    "phone": "+91 92467 64999 / +91 77991 37799 (Girls Campus Desk)",
+    "mapUrl": "https://www.google.com/maps/search/?api=1&query=3rd+Lane+Ravindra+Nagar+Pattabhipuram+Guntur",
+    "mapEmbedQuery": "3rd Lane, Ravindra Nagar, Pattabhipuram, Guntur",
+    "image": "assets/images/campuses/guntur-vasavi-tower.svg",
+    "galleryImages": [
+      "assets/images/campuses/guntur-vasavi-tower.svg",
+      "assets/images/events/cultural-sambaralu.svg",
+      "assets/images/campuses/guntur-balaji-tower.svg"
+    ],
+    "events": [
+      "International Women in Science & Technology Day",
+      "Vasavi Tower Annual Cultural Sambaralu",
+      "State Board Scoring Masterclass Series",
+      "Parent-Warden Monthly Consultative Meets"
+    ],
+    "achievements": [
+      "State-level girls rankers in IPE Board scoring 992/1000",
+      "100% distinction track record in Intermediate BiPC medical streams",
+      "Numerous alumni admitted to premier government medical colleges"
+    ],
+    "detailUrl": "campus-detail.html?id=guntur-vasavi-tower",
+    "courses": [
+      "Intermediate MPC (Engineering Track for Women)",
+      "Intermediate BiPC (Medical & AIIMS Track)",
+      "BIEAP Intermediate Board Distinction Coaching",
+      "Integrated AP EAPCET & Foundation Preparation"
+    ],
+    "facilities": [
+      "24/7 Gated Security with Biometric Access Control",
+      "Digitally-Equipped Air-Cooled Classrooms",
+      "Fully Equipped Modern Physics & Chemistry Labs",
+      "Dedicated Residential Study Dormitories with Storage Units",
+      "Hygienic Organic Dining Kitchen with Nutritionist Menu",
+      "Indoor Recreation Hall for Yoga, Table Tennis & Relaxation"
+    ],
+    "contactPhone": "+91 92467 64999 / +91 77991 37799 (Girls Campus Desk)",
+    "badge": "Operational Girls Residential & Day Campus"
   },
   {
-    id: 'bapatla-branch',
-    name: 'VIT Junior College / Bapatla Branch',
-    city: 'Bapatla',
-    district: 'Bapatla District',
-    category: 'junior-college',
-    categoryLabel: 'Junior College (Intermediate)',
-    badge: 'Coastal Regional Branch',
-    operationalStatus: 'Currently Operational',
-    governance: 'Pending Verification - Regional Affiliation / Society Registration',
-    governanceStatus: 'Pending Verification - Regional Affiliation',
-    address: 'Bapatla Town, Bapatla District, AP - 522101',
-    landmark: 'Central Bapatla Educational Sector',
-    description: 'Serving students from Bapatla, Chirala, Karlapalem, and surrounding coastal agricultural belts. Focuses on foundational Intermediate board excellence (MPC and BiPC) alongside AP EAPCET competitive preparation, bringing quality coaching closer to coastal scholars.',
-    facilities: [
-      'Well-Lit Ventilated Classroom Blocks',
-      'Integrated Science Practical Laboratory',
-      'Student Study & Reference Textbook Library',
-      'Dedicated Local Bus Transportation Routes',
-      'Regular Parent-Teacher Progress Meetings',
-      'Career Guidance for Agricultural & Engineering Degrees'
+    "id": "guntur-vit-medical",
+    "name": "VIT Medical Academy — Long-Term NEET Wing",
+    "city": "Guntur",
+    "district": "Guntur District",
+    "address": "Competitive Sector, Guntur, AP - 522002",
+    "landmark": "Near Competitive Coaching Sector, Guntur",
+    "campusType": "Specialized Intensive Coaching Wing — Long-Term NEET Medical Droppers",
+    "category": "coaching-wing",
+    "categoryLabel": "Coaching Wing (Long-Term NEET)",
+    "operationalStatus": "Currently Operational",
+    "governance": "Oxford VIT Medical Directorate",
+    "governanceStatus": "Verified Direct Institutional Administration",
+    "programmes": [
+      "1-Year Intensive Long-Term NEET-UG Repeater Course",
+      "AIIMS & JIPMER High-Yield Capsule Batch",
+      "Line-by-Line NCERT Biology Mastery Program",
+      "Physics & Chemistry Numerical Problem Sprint Series"
     ],
-    courses: [
-      'Intermediate MPC (Board Excellence & EAPCET)',
-      'Intermediate BiPC (Board & Medical Foundation)',
-      'AP EAPCET Regional Fast-Track Cohort',
-      'Foundation English & Science Workshops'
+    "academicFocus": "Exclusively focused on the NEET-UG examination for repeater scholars. Daily 180-question timed mock exams, forensic negative-marking analysis, and NCERT line-by-line dissections.",
+    "sections": "Long-Term Dedicated Medical Batches (12th Passed Aspirants) — Co-Educational Residential & Day-Scholar.",
+    "residentialFacilities": "Intensive Medical Residential Camp with individual silent study cubicles, night study supervision, high-nutrition meals, and stress-management counseling.",
+    "infrastructure": [
+      "Anatomical 3D Projection Labs & Digital Medical Diagrams",
+      "Individual Air-Cooled Exam Pods for Daily 3-Hour Practice",
+      "24/7 Silent Reading Halls with Ergonomic High-Back Chairs",
+      "Comprehensive Question Bank Vault (over 30,000 solved MCQs)",
+      "Daily Computerized Error-Analysis Result Kiosks",
+      "Nutritious Vegetarian Kitchen Optimized for Brain Health"
     ],
-    phone: '+91 92467 64999',
-    accentColor: '#D6B77A',
-    imageSrc: 'assets/images/campuses/bapatla-branch.svg',
-    cityPageUrl: 'bapatla.html'
+    "facultyAssigned": [
+      "Senior NEET Biology Deans & Medical Mentors",
+      "Organic & Physical Chemistry Competitive Faculty",
+      "Physics Numerical Mitigation Specialists"
+    ],
+    "phone": "+91 92467 64999 / +91 77991 37799 (Medical Academy Hotline)",
+    "mapUrl": "https://www.google.com/maps/search/?api=1&query=VIT+Medical+Academy+NEET+Guntur",
+    "mapEmbedQuery": "VIT Medical Academy, Guntur",
+    "image": "assets/images/campuses/guntur-vit-medical.svg",
+    "galleryImages": [
+      "assets/images/campuses/guntur-vit-medical.svg",
+      "assets/images/events/prathibha-puraskaralu.svg",
+      "assets/images/campuses/guntur-vasavi-tower.svg"
+    ],
+    "events": [
+      "Grand NEET Diagnostic Diagnostic Mock Marathon",
+      "AIIMS Senior Doctors Interactive Guidance Session",
+      "Error Reduction & Mental Calmness Workshop",
+      "National NEET Mock Test Merit Honors Ceremony"
+    ],
+    "achievements": [
+      "Over 85% of long-term repeater cohort securing MBBS seats",
+      "Peak score of 692/720 in NEET-UG competitive examination",
+      "Over 300 doctor alumni serving in prominent hospitals nationwide"
+    ],
+    "detailUrl": "campus-detail.html?id=guntur-vit-medical",
+    "courses": [
+      "1-Year Intensive Long-Term NEET-UG Repeater Course",
+      "AIIMS & JIPMER High-Yield Capsule Batch",
+      "Line-by-Line NCERT Biology Mastery Program",
+      "Physics & Chemistry Numerical Problem Sprint Series"
+    ],
+    "facilities": [
+      "Anatomical 3D Projection Labs & Digital Medical Diagrams",
+      "Individual Air-Cooled Exam Pods for Daily 3-Hour Practice",
+      "24/7 Silent Reading Halls with Ergonomic High-Back Chairs",
+      "Comprehensive Question Bank Vault (over 30,000 solved MCQs)",
+      "Daily Computerized Error-Analysis Result Kiosks",
+      "Nutritious Vegetarian Kitchen Optimized for Brain Health"
+    ],
+    "contactPhone": "+91 92467 64999 / +91 77991 37799 (Medical Academy Hotline)",
+    "badge": "Specialized Intensive Coaching Wing — Long-Term NEET Medical Droppers"
+  },
+  {
+    "id": "bapatla-branch",
+    "name": "VIT Junior College / Bapatla Branch",
+    "city": "Bapatla",
+    "district": "Bapatla District",
+    "address": "Coastal Sector / Town Center, Bapatla, Bapatla District, AP - 522101 (Exact plot / survey number pending institutional confirmation)",
+    "landmark": "Bapatla Town Center (Registry Pending)",
+    "campusType": "Regional Branch Profile — Pending Full Registry Confirmation",
+    "category": "junior-college",
+    "categoryLabel": "Junior College (Regional Branch)",
+    "operationalStatus": "Operational Branch (Pending Formal Registry Confirmation)",
+    "governance": "Regional Academic Directorate (Pending Verification)",
+    "governanceStatus": "Pending Verification - Formal Society Registry Confirmation",
+    "programmes": [
+      "Intermediate MPC (Mathematics, Physics, Chemistry)",
+      "Intermediate BiPC (Biology, Physics, Chemistry)",
+      "AP EAPCET Regional Preparation",
+      "BIEAP Intermediate Board Distinction Coaching"
+    ],
+    "academicFocus": "Providing coastal rural scholars with the exact disciplined pedagogy, structured study schedules, and faculty mentorship developed at the Narasaraopet headquarters.",
+    "sections": "Senior Section (2nd Year) & Junior Section (1st Year) — Co-Educational Day-Scholar Batches.",
+    "residentialFacilities": "Day-scholar program with regional bus routes across Bapatla mandal (Exact residential hostel accommodations are currently pending institutional confirmation).",
+    "infrastructure": [
+      "Spacious Ventilated Lecture Classrooms with Modern Chalk & Digital Boards",
+      "Core Physical & Chemical Science Demonstration Laboratories",
+      "Reference Reading Alcoves & Board Examination Study Archives",
+      "Safe Campus Transit Buses Connecting Surrounding Coastal Villages",
+      "Filtered Drinking Water Stations & Protected Boundary Perimeter"
+    ],
+    "facultyAssigned": [
+      "Bapatla Branch Academic Faculty Council",
+      "Visiting Senior Lecturers from Narasaraopet Headquarters"
+    ],
+    "phone": "+91 92467 64999 (Central Hotline; Dedicated direct local line pending formal publication)",
+    "mapUrl": "https://www.google.com/maps/search/?api=1&query=VIT+Junior+College+Bapatla",
+    "mapEmbedQuery": "VIT Junior College, Bapatla",
+    "image": "assets/images/campuses/bapatla-branch.svg",
+    "galleryImages": [
+      "assets/images/campuses/bapatla-branch.svg",
+      "assets/images/campuses/main-campus.svg",
+      "assets/images/events/science-day.svg"
+    ],
+    "events": [
+      "Bapatla Coastal Talent Search & Scholarship Examination",
+      "Intermediate Board Orientation for 10th Pass Students",
+      "Parent-Faculty Interactive Academic Alignment Meets"
+    ],
+    "achievements": [
+      "Top mandal percentile scorers in Andhra Pradesh Intermediate Board",
+      "Expanding quality STEM education to coastal farming and rural families",
+      "Scholarship quotas extended via KSR Charitable Trust"
+    ],
+    "detailUrl": "campus-detail.html?id=bapatla-branch",
+    "courses": [
+      "Intermediate MPC (Mathematics, Physics, Chemistry)",
+      "Intermediate BiPC (Biology, Physics, Chemistry)",
+      "AP EAPCET Regional Preparation",
+      "BIEAP Intermediate Board Distinction Coaching"
+    ],
+    "facilities": [
+      "Spacious Ventilated Lecture Classrooms with Modern Chalk & Digital Boards",
+      "Core Physical & Chemical Science Demonstration Laboratories",
+      "Reference Reading Alcoves & Board Examination Study Archives",
+      "Safe Campus Transit Buses Connecting Surrounding Coastal Villages",
+      "Filtered Drinking Water Stations & Protected Boundary Perimeter"
+    ],
+    "contactPhone": "+91 92467 64999 (Central Hotline; Dedicated direct local line pending formal publication)",
+    "badge": "Regional Branch Profile — Pending Full Registry Confirmation"
   }
 ];
+
+// CommonJS compatibility for Node test scripts
+if (typeof module !== 'undefined' && module.exports) {
+  module.exports = { citiesData, campusesData };
+}

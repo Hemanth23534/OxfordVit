@@ -76,13 +76,14 @@ async function runTests() {
   console.log('\n1B. Multi-City & Campus Roster Verification:');
   const campusesRaw = JSON.parse(fs.readFileSync(path.join(__dirname, 'campuses.json'), 'utf8'));
   assert(Array.isArray(campusesRaw.cities) && campusesRaw.cities.length === 3, 'campuses.json specifies all 3 geographical hubs (Narasaraopet, Guntur, Bapatla)');
-  assert(Array.isArray(campusesRaw.campuses) && campusesRaw.campuses.length >= 9, `campuses.json contains all 9 verified campuses (found ${campusesRaw.campuses.length})`);
+  assert(Array.isArray(campusesRaw.campuses) && campusesRaw.campuses.length >= 10, `campuses.json contains all 10 verified campuses (found ${campusesRaw.campuses.length})`);
 
   const expectedIds = [
     'yashoda-bhavan',
     'balaji-bhavan',
     'raman-bhavan',
     'ksr-towers',
+    'vit-olympiad-school',
     'oxford-iit-school',
     'guntur-balaji-tower',
     'guntur-vasavi-tower',
@@ -94,6 +95,23 @@ async function runTests() {
     const found = campusesRaw.campuses.find(c => c.id === id);
     assert(found !== undefined, `Verified campus entity exists: ${id}`);
     if (found) {
+      // 15-Dimension Verification
+      assert(typeof found.name === 'string' && found.name.length > 0, `Campus ${id} has Name (1)`);
+      assert(typeof found.city === 'string' && found.city.length > 0, `Campus ${id} has City (2)`);
+      assert(typeof found.address === 'string' && found.address.length > 0, `Campus ${id} has Full Address (3)`);
+      assert(typeof found.campusType === 'string' && found.campusType.length > 0, `Campus ${id} has Campus Type (4)`);
+      assert(Array.isArray(found.programmes) && found.programmes.length > 0, `Campus ${id} has Educational Programmes (5)`);
+      assert(typeof found.academicFocus === 'string' && found.academicFocus.length > 0, `Campus ${id} has Academic Focus (6)`);
+      assert(typeof found.sections === 'string' && found.sections.length > 0, `Campus ${id} has Senior & Junior Sections (7)`);
+      assert(typeof found.residentialFacilities === 'string' && found.residentialFacilities.length > 0, `Campus ${id} has Residential/Day Facilities (8)`);
+      assert(Array.isArray(found.infrastructure) && found.infrastructure.length > 0, `Campus ${id} has Infrastructure (9)`);
+      assert(Array.isArray(found.facultyAssigned) && found.facultyAssigned.length > 0, `Campus ${id} has Assigned Faculty (10)`);
+      assert(typeof found.phone === 'string' && found.phone.length > 0, `Campus ${id} has Official Phone (11)`);
+      assert(typeof found.mapUrl === 'string' && found.mapUrl.includes('google.com/maps'), `Campus ${id} has Location Map (12)`);
+      assert(typeof found.image === 'string' && found.image.length > 0, `Campus ${id} has Campus Photographs (13)`);
+      assert(Array.isArray(found.events) && found.events.length > 0, `Campus ${id} has Campus Events (14)`);
+      assert(Array.isArray(found.achievements) && found.achievements.length > 0, `Campus ${id} has Achievements (15)`);
+
       if (id === 'ksr-towers') {
         assert(found.operationalStatus.includes('Historical'), 'KSR Towers correctly marked as Historical Campus / Archive');
       }
@@ -102,6 +120,9 @@ async function runTests() {
       }
       if (id === 'oxford-iit-school') {
         assert(found.category === 'sister-school', 'Oxford IIT School classified as sister-school');
+      }
+      if (id === 'vit-olympiad-school') {
+        assert(found.category === 'sister-school' || found.category === 'school-wing', 'VIT Olympiad School classified as school wing');
       }
     }
   });
@@ -204,6 +225,7 @@ async function runTests() {
 
   // Check specific architectural SVGs for the new campuses
   const newSvgs = [
+    'assets/images/campuses/vit-olympiad-school.svg',
     'assets/images/campuses/oxford-iit-school.svg',
     'assets/images/campuses/guntur-balaji-tower.svg',
     'assets/images/campuses/guntur-vasavi-tower.svg',
@@ -258,6 +280,7 @@ async function runTests() {
     'assets/js/main.js',
     'assets/js/modules/canvas3d.js',
     'assets/js/modules/campusSwitcher.js',
+    'assets/js/modules/campusDetail.js',
     'assets/js/modules/achievements.js',
     'assets/js/modules/facultyDirectory.js',
     'assets/js/modules/galleryModal.js',
@@ -280,12 +303,13 @@ async function runTests() {
     assert(fs.existsSync(path.join(__dirname, mod)), `JS File exists: ${mod}`);
   });
 
-  // TEST 5: HTML Documents & SEO Metas (All 14 pages)
-  console.log('\n5. HTML Documents & SEO Metas (All 14 Pages):');
+  // TEST 5: HTML Documents & SEO Metas (All 15 pages)
+  console.log('\n5. HTML Documents & SEO Metas (All 15 Pages):');
   const htmlFiles = [
     'index.html',
     'about.html',
     'campuses.html',
+    'campus-detail.html',
     'narasaraopet.html',
     'guntur.html',
     'bapatla.html',
@@ -330,6 +354,7 @@ async function runTests() {
     '/index.html',
     '/about.html',
     '/campuses.html',
+    '/campus-detail.html',
     '/narasaraopet.html',
     '/guntur.html',
     '/bapatla.html',

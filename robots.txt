@@ -3,6 +3,7 @@ Allow: /
 Allow: /index.html
 Allow: /about.html
 Allow: /campuses.html
+Allow: /campus-detail.html
 Allow: /narasaraopet.html
 Allow: /guntur.html
 Allow: /bapatla.html
