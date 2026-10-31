@@ -1,0 +1,95 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="100%" height="100%">
+  <defs>
+    <linearGradient id="skyCoastal" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#DCE7E9" />
+      <stop offset="60%" stop-color="#F7F3E9" />
+      <stop offset="100%" stop-color="#E2EDEF" />
+    </linearGradient>
+    <linearGradient id="coastalFacade" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFFFFF" />
+      <stop offset="100%" stop-color="#EDE7DA" />
+    </linearGradient>
+    <linearGradient id="terracottaRoof" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#D78670" />
+      <stop offset="50%" stop-color="#E9A18C" />
+      <stop offset="100%" stop-color="#C57059" />
+    </linearGradient>
+    <linearGradient id="sandLawn" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#5E7960" />
+      <stop offset="100%" stop-color="#465A48" />
+    </linearGradient>
+    <filter id="softCoastShadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="12" stdDeviation="15" flood-color="#493B4C" flood-opacity="0.14" />
+    </filter>
+  </defs>
+
+  <!-- Sky Canvas -->
+  <rect width="800" height="500" fill="url(#skyCoastal)" />
+  <circle cx="200" cy="140" r="180" fill="#D6B77A" opacity="0.2" filter="blur(45px)" />
+  <circle cx="600" cy="120" r="160" fill="#B9A8D8" opacity="0.16" filter="blur(40px)" />
+
+  <!-- Ground Lawn -->
+  <rect x="0" y="390" width="800" height="110" fill="url(#sandLawn)" />
+  <rect x="0" y="385" width="800" height="7" fill="#D6B77A" />
+
+  <!-- Bapatla Regional Junior College Campus Building -->
+  <g filter="url(#softCoastShadow)">
+    <!-- Base Campus Block -->
+    <rect x="160" y="150" width="480" height="235" rx="8" fill="url(#coastalFacade)" stroke="#D6B77A" stroke-width="2" />
+    
+    <!-- Terracotta Slanted Roof -->
+    <polygon points="140,150 400,85 660,150" fill="url(#terracottaRoof)" stroke="#C57059" stroke-width="2" />
+
+    <!-- Central Porch & Main Flagstaff -->
+    <rect x="330" y="115" width="140" height="270" fill="#FAF8F5" stroke="#D6B77A" stroke-width="1.5" />
+    <polygon points="320,115 400,60 480,115" fill="#D6B77A" />
+    
+    <!-- Flag Pole on Top -->
+    <line x1="400" y1="60" x2="400" y2="25" stroke="#493B4C" stroke-width="2.5" />
+    <polygon points="400,25 430,35 400,45" fill="#E9A18C" />
+
+    <!-- Signage Bar -->
+    <rect x="200" y="165" width="400" height="30" rx="4" fill="#493B4C" />
+    <text x="400" y="181" font-family="'Plus Jakarta Sans', sans-serif" font-size="11.5" font-weight="800" fill="#FAF8F5" text-anchor="middle" letter-spacing="2">VIT JUNIOR COLLEGE • BAPATLA BRANCH</text>
+    <text x="400" y="191" font-family="'Plus Jakarta Sans', sans-serif" font-size="7.5" font-weight="600" fill="#D6B77A" text-anchor="middle" letter-spacing="1.5">INTERMEDIATE MPC &amp; BiPC • BAPATLA DISTRICT</text>
+
+    <!-- Classrooms Windows -->
+    <g fill="#493B4C" opacity="0.8">
+      <!-- Left side -->
+      <rect x="195" y="215" width="42" height="50" rx="3" fill="#D4DFE2" stroke="#D6B77A" stroke-width="1.5" />
+      <rect x="260" y="215" width="42" height="50" rx="3" fill="#D4DFE2" stroke="#D6B77A" stroke-width="1.5" />
+      <rect x="195" y="295" width="42" height="60" rx="3" fill="#D4DFE2" stroke="#D6B77A" stroke-width="1.5" />
+      <rect x="260" y="295" width="42" height="60" rx="3" fill="#D4DFE2" stroke="#D6B77A" stroke-width="1.5" />
+      
+      <!-- Right side -->
+      <rect x="500" y="215" width="42" height="50" rx="3" fill="#D4DFE2" stroke="#D6B77A" stroke-width="1.5" />
+      <rect x="565" y="215" width="42" height="50" rx="3" fill="#D4DFE2" stroke="#D6B77A" stroke-width="1.5" />
+      <rect x="500" y="295" width="42" height="60" rx="3" fill="#D4DFE2" stroke="#D6B77A" stroke-width="1.5" />
+      <rect x="565" y="295" width="42" height="60" rx="3" fill="#D4DFE2" stroke="#D6B77A" stroke-width="1.5" />
+    </g>
+
+    <!-- Main Entrance Double Doors -->
+    <path d="M 365,385 L 365,290 Q 400,265 435,290 L 435,385 Z" fill="#493B4C" />
+    <line x1="400" y1="280" x2="400" y2="385" stroke="#D6B77A" stroke-width="2" />
+  </g>
+
+  <!-- Coastal Coconut / Palm Trees -->
+  <g transform="translate(80, 360)">
+    <path d="M 0,40 Q 15,-20 0,-90" stroke="#7A6553" stroke-width="8" fill="none" />
+    <ellipse cx="0" cy="-90" rx="45" ry="12" fill="#526B54" transform="rotate(-30 0 -90)" />
+    <ellipse cx="0" cy="-90" rx="45" ry="12" fill="#67836A" transform="rotate(20 0 -90)" />
+    <ellipse cx="0" cy="-90" rx="45" ry="12" fill="#445846" transform="rotate(75 0 -90)" />
+  </g>
+  <g transform="translate(710, 360)">
+    <path d="M 0,40 Q -15,-20 0,-90" stroke="#7A6553" stroke-width="8" fill="none" />
+    <ellipse cx="0" cy="-90" rx="45" ry="12" fill="#526B54" transform="rotate(30 0 -90)" />
+    <ellipse cx="0" cy="-90" rx="45" ry="12" fill="#67836A" transform="rotate(-20 0 -90)" />
+    <ellipse cx="0" cy="-90" rx="45" ry="12" fill="#445846" transform="rotate(-75 0 -90)" />
+  </g>
+
+  <!-- Coastal Region Verification Badge -->
+  <g transform="translate(60, 100)">
+    <rect width="160" height="34" rx="17" fill="#FAF8F5" stroke="#D6B77A" stroke-width="1.5" filter="url(#softCoastShadow)" />
+    <text x="80" y="21" font-family="'Plus Jakarta Sans', sans-serif" font-size="9" font-weight="700" fill="#493B4C" text-anchor="middle">COASTAL BAPATLA BRANCH</text>
+  </g>
+</svg>

@@ -221,7 +221,7 @@ export class CampusDetailEngine {
 
             <!-- Featured Image Display -->
             <div style="position: relative; border-radius: var(--radius-lg); overflow: hidden; border: 1px solid var(--border-gold); background: #FAF7F2; text-align: center; max-height: 480px; display: flex; align-items: center; justify-content: center; margin-bottom: 1rem;">
-              <img id="campus-featured-img" src="${campus.image || campus.imageSrc}" alt="${campus.name}" style="width: 100%; height: auto; max-height: 480px; object-fit: contain; display: block;" />
+              <img id="campus-featured-img" src="${campus.imageSrc || campus.image || 'assets/images/campuses/campus-placeholder.svg'}" alt="${campus.name}" style="width: 100%; height: auto; max-height: 480px; object-fit: contain; display: block;" onerror="this.onerror=null; this.src='assets/images/campuses/campus-placeholder.svg';" />
               <div style="position: absolute; bottom: 12px; left: 16px; background: rgba(73, 59, 76, 0.85); color: #fff; padding: 6px 14px; border-radius: var(--radius-sm); font-size: 0.8rem; backdrop-filter: blur(8px);">
                 🏛️ ${campus.name} — ${campus.city}
               </div>
@@ -231,7 +231,7 @@ export class CampusDetailEngine {
             <div style="display: flex; gap: 0.75rem; overflow-x: auto; padding-bottom: 0.5rem;">
               ${galleryList.map((img, idx) => `
                 <div class="gallery-thumb-item ${idx === 0 ? 'active' : ''}" data-src="${img}" style="width: 110px; height: 75px; flex-shrink: 0; border-radius: var(--radius-sm); overflow: hidden; border: 2px solid ${idx === 0 ? 'var(--color-champagne-gold)' : 'var(--border-gold)'}; cursor: pointer; transition: transform 0.2s ease, border-color 0.2s ease; background: #fff;">
-                  <img src="${img}" alt="Thumbnail ${idx + 1}" style="width: 100%; height: 100%; object-fit: cover;" />
+                  <img src="${img}" alt="Thumbnail ${idx + 1}" style="width: 100%; height: 100%; object-fit: cover;" onerror="this.onerror=null; this.src='assets/images/campuses/campus-placeholder.svg';" />
                 </div>
               `).join('')}
             </div>

@@ -219,7 +219,18 @@ async function runTests() {
   // TEST 2: Static Asset & Image Directory Verification
   console.log('\n2. Static Asset Verification:');
   const requiredAssetDirs = [
+    'assets/images/logo',
     'assets/images/campuses',
+    'assets/images/campuses/narasaraopet/yashoda-bhavan',
+    'assets/images/campuses/narasaraopet/balaji-bhavan',
+    'assets/images/campuses/narasaraopet/raman-bhavan',
+    'assets/images/campuses/narasaraopet/ksr-towers',
+    'assets/images/campuses/narasaraopet/vit-olympiad-school',
+    'assets/images/campuses/narasaraopet/oxford-iit-school',
+    'assets/images/campuses/guntur/balaji-tower',
+    'assets/images/campuses/guntur/vasavi-tower',
+    'assets/images/campuses/guntur/medical-academy',
+    'assets/images/campuses/bapatla/junior-college',
     'assets/images/management',
     'assets/images/faculty',
     'assets/images/students',
@@ -236,8 +247,32 @@ async function runTests() {
     assert(files.length > 0, `Directory contains assets (${files.length} found): ${dir}`);
   });
 
-  // Check specific architectural SVGs for the new campuses
+  // Check specific architectural SVGs and centralized campus images
   const newSvgs = [
+    'assets/images/logo/oxford-vit-logo.svg',
+    'assets/images/logo/crest.svg',
+    'assets/images/campuses/campus-placeholder.svg',
+    'assets/images/campuses/narasaraopet/yashoda-bhavan/campus.svg',
+    'assets/images/campuses/narasaraopet/yashoda-bhavan/placeholder.svg',
+    'assets/images/campuses/narasaraopet/balaji-bhavan/campus.svg',
+    'assets/images/campuses/narasaraopet/balaji-bhavan/placeholder.svg',
+    'assets/images/campuses/narasaraopet/raman-bhavan/campus.svg',
+    'assets/images/campuses/narasaraopet/raman-bhavan/placeholder.svg',
+    'assets/images/campuses/narasaraopet/ksr-towers/campus.svg',
+    'assets/images/campuses/narasaraopet/ksr-towers/placeholder.svg',
+    'assets/images/campuses/narasaraopet/vit-olympiad-school/campus.svg',
+    'assets/images/campuses/narasaraopet/vit-olympiad-school/placeholder.svg',
+    'assets/images/campuses/narasaraopet/oxford-iit-school/campus.svg',
+    'assets/images/campuses/narasaraopet/oxford-iit-school/placeholder.svg',
+    'assets/images/campuses/guntur/balaji-tower/campus.svg',
+    'assets/images/campuses/guntur/balaji-tower/placeholder.svg',
+    'assets/images/campuses/guntur/vasavi-tower/campus.svg',
+    'assets/images/campuses/guntur/vasavi-tower/placeholder.svg',
+    'assets/images/campuses/guntur/medical-academy/campus.svg',
+    'assets/images/campuses/guntur/medical-academy/placeholder.svg',
+    'assets/images/campuses/bapatla/junior-college/campus.svg',
+    'assets/images/campuses/bapatla/junior-college/placeholder.svg',
+    'assets/images/events/cultural-sambaralu.svg',
     'assets/images/campuses/vit-olympiad-school.svg',
     'assets/images/campuses/oxford-iit-school.svg',
     'assets/images/campuses/guntur-balaji-tower.svg',

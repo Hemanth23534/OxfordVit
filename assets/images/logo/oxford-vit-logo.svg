@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 120" width="100%" height="100%">
+  <defs>
+    <linearGradient id="logoGold" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#D6B77A"/>
+      <stop offset="50%" stop-color="#F2DFB8"/>
+      <stop offset="100%" stop-color="#B89758"/>
+    </linearGradient>
+    <linearGradient id="shieldPlum" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#493B4C"/>
+      <stop offset="100%" stop-color="#2D2330"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Crest Shield -->
+  <g transform="translate(15, 10)">
+    <rect width="90" height="90" rx="18" fill="url(#logoGold)"/>
+    <path d="M45 12 L72 28 L72 62 L45 78 L18 62 L18 28 Z" fill="url(#shieldPlum)"/>
+    <path d="M45 22 L62 33 L62 57 L45 68 L28 57 L28 33 Z" fill="#F7F3E9"/>
+    <!-- Central Monogram OV -->
+    <text x="45" y="52" font-family="'Cinzel', 'Playfair Display', serif" font-size="24" font-weight="900" fill="url(#shieldPlum)" text-anchor="middle">OV</text>
+  </g>
+
+  <!-- Typography -->
+  <text x="125" y="52" font-family="'Cinzel', 'Playfair Display', serif" font-size="34" font-weight="800" fill="#493B4C" letter-spacing="4">OXFORD VIT</text>
+  <text x="127" y="76" font-family="'Space Grotesk', sans-serif" font-size="12" font-weight="700" fill="#526B54" letter-spacing="2">JUNIOR COLLEGE &amp; ACADEMY</text>
+  <text x="127" y="94" font-family="'Space Grotesk', sans-serif" font-size="10" font-weight="600" fill="#8C7E90" letter-spacing="1.5">NARASARAOPET • GUNTUR • BAPATLA</text>
+</svg>

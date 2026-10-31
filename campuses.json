@@ -79,7 +79,7 @@
       "phone": "+91 77991 37799 / +91 92467 64999 (Central Institutional Admissions Bureau)",
       "mapUrl": "https://www.google.com/maps/search/?api=1&query=Opposite+Kamma+Hostel+and+Indian+Petrol+Bunk+Ravipadu+Road+Reddy+Nagar+Narasaraopet",
       "mapEmbedQuery": "Opposite Kamma Hostel, Ravipadu Road, Narasaraopet",
-      "image": "assets/images/campuses/yashoda-bhavan.svg",
+      "image": "assets/images/campuses/narasaraopet/yashoda-bhavan/campus.svg",
       "galleryImages": [
         "assets/images/campuses/yashoda-bhavan.svg",
         "assets/images/events/prathibha-puraskaralu.svg",
@@ -112,7 +112,9 @@
         "Dedicated 35+ Bus Transit Fleet with GPS Tracking"
       ],
       "contactPhone": "+91 77991 37799 / +91 92467 64999 (Central Institutional Admissions Bureau)",
-      "badge": "Operational Main Campus & Flagship Girls Residential / Day-Scholar Wing"
+      "badge": "Operational Main Campus & Flagship Girls Residential / Day-Scholar Wing",
+      "imageSrc": "assets/images/campuses/narasaraopet/yashoda-bhavan/campus.svg",
+      "placeholder": "assets/images/campuses/narasaraopet/yashoda-bhavan/placeholder.svg"
     },
     {
       "id": "balaji-bhavan",
@@ -160,7 +162,7 @@
       "phone": "+91 92467 64999 / +91 77991 37799 (Central Institutional Admissions Bureau)",
       "mapUrl": "https://www.google.com/maps/search/?api=1&query=62VJ%2BP63+Palnadu+Road+Reddy+Nagar+Ravipadu+Narasaraopet",
       "mapEmbedQuery": "62VJ+P63, Palnadu Road, Reddy Nagar, Ravipadu, Narasaraopet",
-      "image": "assets/images/campuses/balaji-bhavan.svg",
+      "image": "assets/images/campuses/narasaraopet/balaji-bhavan/campus.svg",
       "galleryImages": [
         "assets/images/campuses/balaji-bhavan.svg",
         "assets/images/events/prathibha-puraskaralu.svg",
@@ -193,7 +195,9 @@
         "Round-the-Clock CCTV Surveillance & Security Command"
       ],
       "contactPhone": "+91 92467 64999 / +91 77991 37799 (Central Institutional Admissions Bureau)",
-      "badge": "Operational Senior & Junior Intermediate Campus / Super-60 Boys Residential & Day Wing"
+      "badge": "Operational Senior & Junior Intermediate Campus / Super-60 Boys Residential & Day Wing",
+      "imageSrc": "assets/images/campuses/narasaraopet/balaji-bhavan/campus.svg",
+      "placeholder": "assets/images/campuses/narasaraopet/balaji-bhavan/placeholder.svg"
     },
     {
       "id": "raman-bhavan",
@@ -236,7 +240,7 @@
       "phone": "+91 92467 64999 / +91 77991 37799 (Academic Directorate Desk)",
       "mapUrl": "https://www.google.com/maps/search/?api=1&query=Raman+Bhavan+Ravipadu+Road+Reddy+Nagar+Narasaraopet",
       "mapEmbedQuery": "Raman Bhavan, Ravipadu Road, Reddy Nagar, Narasaraopet",
-      "image": "assets/images/campuses/raman-bhavan.svg",
+      "image": "assets/images/campuses/narasaraopet/raman-bhavan/campus.svg",
       "galleryImages": [
         "assets/images/campuses/raman-bhavan.svg",
         "assets/images/events/science-day.svg",
@@ -269,7 +273,9 @@
         "High-Speed Gigabit Fiber Connectivity for Live CBT Mock Testing"
       ],
       "contactPhone": "+91 92467 64999 / +91 77991 37799 (Academic Directorate Desk)",
-      "badge": "Operational Senior Competitive Super Wing & National Testing Center"
+      "badge": "Operational Senior Competitive Super Wing & National Testing Center",
+      "imageSrc": "assets/images/campuses/narasaraopet/raman-bhavan/campus.svg",
+      "placeholder": "assets/images/campuses/narasaraopet/raman-bhavan/placeholder.svg"
     },
     {
       "id": "ksr-towers",
@@ -309,7 +315,7 @@
       "phone": "+91 92467 64999 / +91 77991 37799 (Central Office & Trust Desk)",
       "mapUrl": "https://www.google.com/maps/search/?api=1&query=KSR+Towers+Arundelpet+Narasaraopet+Town",
       "mapEmbedQuery": "KSR Towers, Arundelpet, Narasaraopet",
-      "image": "assets/images/campuses/ksr-towers.svg",
+      "image": "assets/images/campuses/narasaraopet/ksr-towers/campus.svg",
       "galleryImages": [
         "assets/images/campuses/ksr-towers.svg",
         "assets/images/events/prathibha-puraskaralu.svg",
@@ -342,7 +348,9 @@
         "Audio-Visual Institutional Briefing Media Room"
       ],
       "contactPhone": "+91 92467 64999 / +91 77991 37799 (Central Office & Trust Desk)",
-      "badge": "Historical Campus & Registered Administrative Headquarters / KSR Charitable Trust Archives"
+      "badge": "Historical Campus & Registered Administrative Headquarters / KSR Charitable Trust Archives",
+      "imageSrc": "assets/images/campuses/narasaraopet/ksr-towers/campus.svg",
+      "placeholder": "assets/images/campuses/narasaraopet/ksr-towers/placeholder.svg"
     },
     {
       "id": "vit-olympiad-school",
@@ -382,7 +390,7 @@
       "phone": "+91 92467 64999 / +91 77991 37799 (School Admissions Office)",
       "mapUrl": "https://www.google.com/maps/search/?api=1&query=Old+Samithi+Office+Road+Ramireddypet+Narasaraopet",
       "mapEmbedQuery": "Old Samithi Office Road, Ramireddypet, Narasaraopet",
-      "image": "assets/images/campuses/vit-olympiad-school.svg",
+      "image": "assets/images/campuses/narasaraopet/vit-olympiad-school/campus.svg",
       "galleryImages": [
         "assets/images/campuses/vit-olympiad-school.svg",
         "assets/images/events/science-day.svg",
@@ -415,7 +423,9 @@
         "CCTV Supervised Secure Entry Gate & Sanitized Dining Spaces"
       ],
       "contactPhone": "+91 92467 64999 / +91 77991 37799 (School Admissions Office)",
-      "badge": "School Wing — High School & Olympiad Foundation (Classes 6 to 10)"
+      "badge": "School Wing — High School & Olympiad Foundation (Classes 6 to 10)",
+      "imageSrc": "assets/images/campuses/narasaraopet/vit-olympiad-school/campus.svg",
+      "placeholder": "assets/images/campuses/narasaraopet/vit-olympiad-school/placeholder.svg"
     },
     {
       "id": "oxford-iit-school",
@@ -455,7 +465,7 @@
       "phone": "+91 92467 64999 / +91 77991 37799 (Concept School Helpline)",
       "mapUrl": "https://www.google.com/maps/search/?api=1&query=Near+Rickshaw+Centre+Prakash+Nagar+Narasaraopet",
       "mapEmbedQuery": "D.No. 12-9-7/6, Near Rickshaw Centre, Prakash Nagar, Narasaraopet",
-      "image": "assets/images/campuses/oxford-iit-school.svg",
+      "image": "assets/images/campuses/narasaraopet/oxford-iit-school/campus.svg",
       "galleryImages": [
         "assets/images/campuses/oxford-iit-school.svg",
         "assets/images/events/science-day.svg",
@@ -488,7 +498,9 @@
         "Filtered Drinking Water Stations & Hygienic Snack Canteen"
       ],
       "contactPhone": "+91 92467 64999 / +91 77991 37799 (Concept School Helpline)",
-      "badge": "Sister School Wing — High School & Early IIT-JEE Foundation (Classes 6 to 10)"
+      "badge": "Sister School Wing — High School & Early IIT-JEE Foundation (Classes 6 to 10)",
+      "imageSrc": "assets/images/campuses/narasaraopet/oxford-iit-school/campus.svg",
+      "placeholder": "assets/images/campuses/narasaraopet/oxford-iit-school/placeholder.svg"
     },
     {
       "id": "guntur-balaji-tower",
@@ -528,7 +540,7 @@
       "phone": "+91 92467 64999 / +91 77991 37799 (Guntur Admissions Desk)",
       "mapUrl": "https://www.google.com/maps/search/?api=1&query=8th+Lane+Extension+Behind+Reddy+Girls+Hostel+Syamala+Nagar+Guntur",
       "mapEmbedQuery": "8th Lane Extension, Syamala Nagar, Guntur",
-      "image": "assets/images/campuses/guntur-balaji-tower.svg",
+      "image": "assets/images/campuses/guntur/balaji-tower/campus.svg",
       "galleryImages": [
         "assets/images/campuses/guntur-balaji-tower.svg",
         "assets/images/events/prathibha-puraskaralu.svg",
@@ -561,7 +573,9 @@
         "Monitored Entrance Lobby & Biometric Attendance System"
       ],
       "contactPhone": "+91 92467 64999 / +91 77991 37799 (Guntur Admissions Desk)",
-      "badge": "Operational Urban Competitive Academy — IIT-JEE & Medical Wing"
+      "badge": "Operational Urban Competitive Academy — IIT-JEE & Medical Wing",
+      "imageSrc": "assets/images/campuses/guntur/balaji-tower/campus.svg",
+      "placeholder": "assets/images/campuses/guntur/balaji-tower/placeholder.svg"
     },
     {
       "id": "guntur-vasavi-tower",
@@ -601,7 +615,7 @@
       "phone": "+91 92467 64999 / +91 77991 37799 (Girls Campus Desk)",
       "mapUrl": "https://www.google.com/maps/search/?api=1&query=3rd+Lane+Ravindra+Nagar+Pattabhipuram+Guntur",
       "mapEmbedQuery": "3rd Lane, Ravindra Nagar, Pattabhipuram, Guntur",
-      "image": "assets/images/campuses/guntur-vasavi-tower.svg",
+      "image": "assets/images/campuses/guntur/vasavi-tower/campus.svg",
       "galleryImages": [
         "assets/images/campuses/guntur-vasavi-tower.svg",
         "assets/images/events/cultural-sambaralu.svg",
@@ -634,7 +648,9 @@
         "Indoor Recreation Hall for Yoga, Table Tennis & Relaxation"
       ],
       "contactPhone": "+91 92467 64999 / +91 77991 37799 (Girls Campus Desk)",
-      "badge": "Operational Girls Residential & Day Campus"
+      "badge": "Operational Girls Residential & Day Campus",
+      "imageSrc": "assets/images/campuses/guntur/vasavi-tower/campus.svg",
+      "placeholder": "assets/images/campuses/guntur/vasavi-tower/placeholder.svg"
     },
     {
       "id": "guntur-vit-medical",
@@ -674,7 +690,7 @@
       "phone": "+91 92467 64999 / +91 77991 37799 (Medical Academy Hotline)",
       "mapUrl": "https://www.google.com/maps/search/?api=1&query=VIT+Medical+Academy+NEET+Guntur",
       "mapEmbedQuery": "VIT Medical Academy, Guntur",
-      "image": "assets/images/campuses/guntur-vit-medical.svg",
+      "image": "assets/images/campuses/guntur/medical-academy/campus.svg",
       "galleryImages": [
         "assets/images/campuses/guntur-vit-medical.svg",
         "assets/images/events/prathibha-puraskaralu.svg",
@@ -707,7 +723,9 @@
         "Nutritious Vegetarian Kitchen Optimized for Brain Health"
       ],
       "contactPhone": "+91 92467 64999 / +91 77991 37799 (Medical Academy Hotline)",
-      "badge": "Specialized Intensive Coaching Wing — Long-Term NEET Medical Droppers"
+      "badge": "Specialized Intensive Coaching Wing — Long-Term NEET Medical Droppers",
+      "imageSrc": "assets/images/campuses/guntur/medical-academy/campus.svg",
+      "placeholder": "assets/images/campuses/guntur/medical-academy/placeholder.svg"
     },
     {
       "id": "bapatla-branch",
@@ -745,7 +763,7 @@
       "phone": "+91 92467 64999 (Central Hotline; Dedicated direct local line pending formal publication)",
       "mapUrl": "https://www.google.com/maps/search/?api=1&query=VIT+Junior+College+Bapatla",
       "mapEmbedQuery": "VIT Junior College, Bapatla",
-      "image": "assets/images/campuses/bapatla-branch.svg",
+      "image": "assets/images/campuses/bapatla/junior-college/campus.svg",
       "galleryImages": [
         "assets/images/campuses/bapatla-branch.svg",
         "assets/images/campuses/main-campus.svg",
@@ -776,7 +794,9 @@
         "Filtered Drinking Water Stations & Protected Boundary Perimeter"
       ],
       "contactPhone": "+91 92467 64999 (Central Hotline; Dedicated direct local line pending formal publication)",
-      "badge": "Regional Branch Profile — Pending Full Registry Confirmation"
+      "badge": "Regional Branch Profile — Pending Full Registry Confirmation",
+      "imageSrc": "assets/images/campuses/bapatla/junior-college/campus.svg",
+      "placeholder": "assets/images/campuses/bapatla/junior-college/placeholder.svg"
     }
   ]
 }

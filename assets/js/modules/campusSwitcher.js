@@ -81,10 +81,20 @@ export class CampusSwitcher {
         ? `<span class="badge" style="background: rgba(233, 161, 140, 0.25); color: #B34024; border: 1px solid var(--color-coral);">⚠️ Governance: Pending Verification</span>`
         : `<span class="badge badge-gold">${campus.governanceStatus || 'Verified Governance'}</span>`;
 
+      const primaryImg = campus.imageSrc || campus.image || (campus.galleryImages && campus.galleryImages[0]);
+      const fallbackPlaceholder = campus.placeholder || 'assets/images/campuses/campus-placeholder.svg';
+      const effectiveImg = primaryImg || fallbackPlaceholder;
+
       return `
         <article class="campus-card ${isHistorical ? 'historical-campus-card' : ''}" id="card-${campus.id}" data-category="${campus.category}" data-city="${campus.city}">
           <div class="campus-card-img-wrap">
-            <img src="${campus.imageSrc}" alt="${campus.name}" class="campus-card-img" loading="lazy" />
+            <img 
+              src="${effectiveImg}" 
+              alt="${campus.name}" 
+              class="campus-card-img" 
+              loading="lazy" 
+              onerror="this.onerror=null; this.src='${fallbackPlaceholder}'; this.classList.add('img-fallback');" 
+            />
             <div class="campus-type-pill">${campus.badge}</div>
             <div style="position: absolute; bottom: 12px; left: 12px; display: flex; flex-direction: column; gap: 4px; z-index: 2;">
               ${statusBadge}
@@ -190,10 +200,19 @@ export class CampusSwitcher {
     const isHistorical = campus.operationalStatus.includes('Historical');
     const isPending = campus.governanceStatus && campus.governanceStatus.includes('Pending Verification');
 
+    const primaryImg = campus.imageSrc || campus.image || (campus.galleryImages && campus.galleryImages[0]);
+    const fallbackPlaceholder = campus.placeholder || 'assets/images/campuses/campus-placeholder.svg';
+    const effectiveImg = primaryImg || fallbackPlaceholder;
+
     this.modalContent.innerHTML = `
       <div style="margin-bottom: 1.5rem;">
-        <div style="border-radius: var(--radius-lg); overflow: hidden; margin-bottom: 1.25rem; border: 1px solid var(--border-gold); max-height: 280px; background: #EFE9DC;">
-          <img src="${campus.imageSrc}" alt="${campus.name}" style="width: 100%; height: 100%; object-fit: contain; max-height: 280px;" />
+        <div style="border-radius: var(--radius-lg); overflow: hidden; margin-bottom: 1.25rem; border: 1px solid var(--border-gold); max-height: 280px; background: linear-gradient(135deg, #FAF7F0, #EFE9DC); aspect-ratio: 16 / 9; display: flex; align-items: center; justify-content: center;">
+          <img 
+            src="${effectiveImg}" 
+            alt="${campus.name}" 
+            style="width: 100%; height: 100%; object-fit: cover; max-height: 280px; display: block;" 
+            onerror="this.onerror=null; this.src='${fallbackPlaceholder}';" 
+          />
         </div>
         
         <div style="display: flex; gap: 0.5rem; flex-wrap: wrap; margin-bottom: 0.75rem;">

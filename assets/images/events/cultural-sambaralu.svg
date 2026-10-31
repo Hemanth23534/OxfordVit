@@ -1,0 +1,74 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400" width="100%" height="100%">
+  <defs>
+    <linearGradient id="cultSky" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#493B4C"/>
+      <stop offset="50%" stop-color="#6B5270"/>
+      <stop offset="100%" stop-color="#B9A8D8"/>
+    </linearGradient>
+    <linearGradient id="goldAcc" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#D6B77A"/>
+      <stop offset="50%" stop-color="#FFF2D6"/>
+      <stop offset="100%" stop-color="#D6B77A"/>
+    </linearGradient>
+    <linearGradient id="coralGlow" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#E9A18C"/>
+      <stop offset="100%" stop-color="#8F3118"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="600" height="400" rx="16" fill="url(#cultSky)"/>
+
+  <!-- Stage Curtains & Decorative Light Rays -->
+  <path d="M0 0 L140 0 C100 120 40 220 0 280 Z" fill="#2E2330" opacity="0.6"/>
+  <path d="M600 0 L460 0 C500 120 560 220 600 280 Z" fill="#2E2330" opacity="0.6"/>
+
+  <!-- Stage Spotlights -->
+  <polygon points="100,0 220,380 380,380 500,0" fill="#FFF2D6" opacity="0.08"/>
+
+  <!-- Intricate Traditional Telugu Rangoli Pattern -->
+  <g transform="translate(300, 220)" stroke="url(#goldAcc)" stroke-width="2" fill="none" opacity="0.85">
+    <circle r="85"/>
+    <circle r="60" stroke-dasharray="6 4"/>
+    <circle r="35"/>
+    <!-- Petals -->
+    <path d="M0 -85 Q20 -60 0 -35 Q-20 -60 0 -85 Z" fill="#E9A18C" opacity="0.3"/>
+    <path d="M0 85 Q20 60 0 35 Q-20 60 0 85 Z" fill="#E9A18C" opacity="0.3"/>
+    <path d="M-85 0 Q-60 20 -35 0 Q-60 -20 -85 0 Z" fill="#E9A18C" opacity="0.3"/>
+    <path d="M85 0 Q60 20 35 0 Q60 -20 85 0 Z" fill="#E9A18C" opacity="0.3"/>
+    <!-- Diagonals -->
+    <path d="M-60 -60 Q-25 -42 -25 -25 Q-42 -25 -60 -60 Z" fill="#526B54" opacity="0.4"/>
+    <path d="M60 -60 Q25 -42 25 -25 Q42 -25 60 -60 Z" fill="#526B54" opacity="0.4"/>
+    <path d="M-60 60 Q-25 42 -25 25 Q-42 25 -60 60 Z" fill="#526B54" opacity="0.4"/>
+    <path d="M60 60 Q25 42 25 25 Q42 25 60 60 Z" fill="#526B54" opacity="0.4"/>
+  </g>
+
+  <!-- Traditional Diyas / Lamps -->
+  <g transform="translate(180, 290)">
+    <path d="M-20 10 Q0 25 20 10 Q15 0 0 0 Q-15 0 -20 10 Z" fill="url(#coralGlow)"/>
+    <path d="M0 0 Q-5 -15 0 -25 Q5 -15 0 0 Z" fill="#FFF2D6"/>
+    <circle cx="0" cy="-12" r="3" fill="#E9A18C"/>
+  </g>
+  <g transform="translate(420, 290)">
+    <path d="M-20 10 Q0 25 20 10 Q15 0 0 0 Q-15 0 -20 10 Z" fill="url(#coralGlow)"/>
+    <path d="M0 0 Q-5 -15 0 -25 Q5 -15 0 0 Z" fill="#FFF2D6"/>
+    <circle cx="0" cy="-12" r="3" fill="#E9A18C"/>
+  </g>
+
+  <!-- Musical Notes Floating -->
+  <g fill="#FFF2D6" opacity="0.7">
+    <circle cx="160" cy="120" r="6"/>
+    <rect x="164" y="90" width="3" height="30"/>
+    <path d="M167 90 C180 90 185 105 185 105"/>
+    <circle cx="440" cy="110" r="5"/>
+    <rect x="443" y="85" width="2.5" height="25"/>
+    <path d="M445 85 C455 85 460 98 460 98"/>
+  </g>
+
+  <!-- Stage Plinth -->
+  <rect x="40" y="340" width="520" height="12" rx="6" fill="url(#goldAcc)"/>
+
+  <!-- Typography -->
+  <text x="300" y="55" font-family="'Cinzel', 'Playfair Display', serif" font-size="22" font-weight="700" fill="#FFF2D6" text-anchor="middle" letter-spacing="2">CULTURAL SAMBARALU</text>
+  <text x="300" y="80" font-family="'Space Grotesk', sans-serif" font-size="12" font-weight="600" fill="#D6B77A" text-anchor="middle" letter-spacing="1.5">ANNUAL STUDENT ARTS, DANCE &amp; TRADITIONS UTSAV</text>
+  <text x="300" y="375" font-family="'Space Grotesk', sans-serif" font-size="11" font-weight="500" fill="#F7F3E9" text-anchor="middle" opacity="0.85">OXFORD VIT JUNIOR COLLEGE &amp; ACADEMY</text>
+</svg>

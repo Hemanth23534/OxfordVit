@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="100%" height="100%">
+  <defs>
+    <linearGradient id="phBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FAF7F0"/>
+      <stop offset="50%" stop-color="#EFE9DC"/>
+      <stop offset="100%" stop-color="#DFD7C5"/>
+    </linearGradient>
+    <linearGradient id="phGold" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#B89758"/>
+      <stop offset="50%" stop-color="#D6B77A"/>
+      <stop offset="100%" stop-color="#B89758"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="800" height="500" fill="url(#phBg)"/>
+
+  <!-- Subtle Architectural Grid Pattern -->
+  <g stroke="#D6B77A" stroke-width="0.5" opacity="0.25">
+    <line x1="0" y1="100" x2="800" y2="100"/>
+    <line x1="0" y1="200" x2="800" y2="200"/>
+    <line x1="0" y1="300" x2="800" y2="300"/>
+    <line x1="0" y1="400" x2="800" y2="400"/>
+    <line x1="160" y1="0" x2="160" y2="500"/>
+    <line x1="320" y1="0" x2="320" y2="500"/>
+    <line x1="480" y1="0" x2="480" y2="500"/>
+    <line x1="640" y1="0" x2="640" y2="500"/>
+  </g>
+
+  <!-- Campus Emblem Backdrop -->
+  <circle cx="400" cy="220" r="130" fill="#FFFFFF" opacity="0.7"/>
+  <circle cx="400" cy="220" r="115" fill="none" stroke="url(#phGold)" stroke-width="1.5" stroke-dasharray="8 6"/>
+
+  <!-- Classical Architectural Classical Facade Icon -->
+  <g transform="translate(400, 215)" fill="#493B4C">
+    <!-- Pediment -->
+    <polygon points="-65,-40 0,-70 65,-40" fill="url(#phGold)"/>
+    <!-- Entablature -->
+    <rect x="-65" y="-38" width="130" height="8" rx="2" fill="#493B4C"/>
+    <!-- Columns -->
+    <rect x="-55" y="-28" width="10" height="55" rx="2" fill="#526B54"/>
+    <rect x="-25" y="-28" width="10" height="55" rx="2" fill="#526B54"/>
+    <rect x="15" y="-28" width="10" height="55" rx="2" fill="#526B54"/>
+    <rect x="45" y="-28" width="10" height="55" rx="2" fill="#526B54"/>
+    <!-- Base Plinth -->
+    <rect x="-70" y="27" width="140" height="12" rx="2" fill="#493B4C"/>
+    <rect x="-80" y="39" width="160" height="8" rx="2" fill="url(#phGold)"/>
+  </g>
+
+  <!-- Crest Monogram Pill -->
+  <g transform="translate(400, 95)">
+    <rect x="-60" y="-16" width="120" height="32" rx="16" fill="#493B4C"/>
+    <text x="0" y="5" font-family="'Cinzel', 'Playfair Display', serif" font-size="14" font-weight="700" fill="#D6B77A" text-anchor="middle" letter-spacing="3">OXFORD VIT</text>
+  </g>
+
+  <!-- Typography -->
+  <text x="400" y="380" font-family="'Cinzel', 'Playfair Display', serif" font-size="22" font-weight="700" fill="#493B4C" text-anchor="middle" letter-spacing="2">VERIFIED CAMPUS PROFILE</text>
+  <text x="400" y="408" font-family="'Space Grotesk', sans-serif" font-size="13" font-weight="600" fill="#526B54" text-anchor="middle" letter-spacing="1.5">NARASARAOPET • GUNTUR • BAPATLA</text>
+  <text x="400" y="432" font-family="'Space Grotesk', sans-serif" font-size="11" font-weight="500" fill="#8C7E90" text-anchor="middle" letter-spacing="0.5">Where Knowledge Takes Shape</text>
+</svg>
