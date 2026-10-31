@@ -151,18 +151,26 @@ export class ScrollAnimationEngine {
   }
 
   fallbackReveals() {
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('is-revealed');
-          observer.unobserve(entry.target);
-        }
-      });
-    }, { threshold: 0.15 });
+    const targets = document.querySelectorAll('.glass-card, .campus-card, .academic-program-card, .leader-card, .event-card, .youtube-preview-card');
+    
+    if (typeof IntersectionObserver !== 'undefined') {
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('is-revealed');
+            observer.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.15 });
 
-    document.querySelectorAll('.glass-card, .campus-card, .academic-program-card, .leader-card, .event-card, .youtube-preview-card').forEach((el) => {
-      el.classList.add('reveal-on-scroll');
-      observer.observe(el);
-    });
+      targets.forEach((el) => {
+        el.classList.add('reveal-on-scroll');
+        observer.observe(el);
+      });
+    } else {
+      targets.forEach((el) => {
+        el.classList.add('is-revealed');
+      });
+    }
   }
 }

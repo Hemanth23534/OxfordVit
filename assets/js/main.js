@@ -1,6 +1,7 @@
 /**
  * OXFORD VIT – THE LIVING CAMPUS EXPERIENCE
  * Main Orchestration Entrypoint (ES6+ Module)
+ * Resilient startup architecture with isolated subsystem protection
  */
 
 import { CinematicPreloader } from './modules/preloader.js';
@@ -24,11 +25,22 @@ import { PageTransitionsEngine } from './modules/pageTransitions.js';
 document.addEventListener('DOMContentLoaded', () => {
   console.log('🏛️ Initializing Oxford VIT – The Living Campus Experience...');
 
-  // 1. Initialize Cinematic Preloader
-  new CinematicPreloader();
+  // 1. Initialize Fault-Tolerant Cinematic Preloader (Immediate)
+  let preloaderInstance = null;
+  try {
+    preloaderInstance = new CinematicPreloader();
+  } catch (err) {
+    console.warn('Preloader initialization fallback:', err);
+    const preloaderEl = document.getElementById('cinematic-preloader');
+    if (preloaderEl) preloaderEl.style.display = 'none';
+  }
 
   // 2. Initialize Luxury Custom Cursor & Magnetic Interactions
-  new LuxuryCursor();
+  try {
+    new LuxuryCursor();
+  } catch (err) {
+    console.warn('Luxury cursor fallback:', err);
+  }
 
   // 3. Initialize 3D WebGL Living Campus Constellation
   try {
@@ -38,52 +50,108 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   // 4. Initialize Navigation & Mobile Drawer
-  new NavigationHandler();
+  try {
+    new NavigationHandler();
+  } catch (err) {
+    console.warn('Navigation handler fallback:', err);
+  }
 
   // 5. Initialize Multi-Campus Spatial Switcher
-  new CampusSwitcher();
+  try {
+    new CampusSwitcher();
+  } catch (err) {
+    console.warn('Campus switcher fallback:', err);
+  }
 
   // 6. Initialize Achievements & Hall of Fame
-  new AchievementsEngine();
+  try {
+    new AchievementsEngine();
+  } catch (err) {
+    console.warn('Achievements engine fallback:', err);
+  }
 
   // 7. Initialize Photo & Video Gallery Lightbox
-  new GalleryLightbox();
+  try {
+    new GalleryLightbox();
+  } catch (err) {
+    console.warn('Gallery lightbox fallback:', err);
+  }
 
   // 8. Initialize Admissions Bureau Form Logic
-  new AdmissionsHandler();
+  try {
+    new AdmissionsHandler();
+  } catch (err) {
+    console.warn('Admissions handler fallback:', err);
+  }
 
   // 8b. Initialize Subject-Wise Faculty Directory Logic
-  new FacultyDirectoryEngine();
+  try {
+    new FacultyDirectoryEngine();
+  } catch (err) {
+    console.warn('Faculty directory fallback:', err);
+  }
 
   // 8c. Initialize Institutional Events & Celebrations Engine
-  new EventsEngine();
+  try {
+    new EventsEngine();
+  } catch (err) {
+    console.warn('Events engine fallback:', err);
+  }
 
   // 8d. Initialize Detailed Campus Profile Engine
-  new CampusDetailEngine();
+  try {
+    new CampusDetailEngine();
+  } catch (err) {
+    console.warn('Campus detail engine fallback:', err);
+  }
 
   // 8e. Initialize Institutional History Timeline Engine
-  if (document.querySelector('.timeline-container') || document.querySelector('.timeline-cards-track')) {
-    new TimelineEngine();
+  try {
+    if (document.querySelector('.timeline-container') || document.querySelector('.timeline-cards-track')) {
+      new TimelineEngine();
+    }
+  } catch (err) {
+    console.warn('Timeline engine fallback:', err);
   }
 
   // 8f. Initialize Verified Social Media & Pulse Engine (@raghava_vit)
-  if (document.querySelector('.social-feed-section') || document.querySelector('.social-feed-grid')) {
-    new SocialFeedEngine();
+  try {
+    if (document.querySelector('.social-feed-section') || document.querySelector('.social-feed-grid')) {
+      new SocialFeedEngine();
+    }
+  } catch (err) {
+    console.warn('Social feed engine fallback:', err);
   }
 
   // 8g. Initialize Interactive Regional & Spatial Campus Map Engine
-  if (document.getElementById('interactive-campus-map')) {
-    new InteractiveCampusMap('interactive-campus-map');
+  try {
+    if (document.getElementById('interactive-campus-map')) {
+      new InteractiveCampusMap('interactive-campus-map');
+    }
+  } catch (err) {
+    console.warn('Interactive map fallback:', err);
   }
 
   // 9. Initialize 3D Tilt & Specular Glare Logic
-  new Tilt3DEngine();
+  try {
+    new Tilt3DEngine();
+  } catch (err) {
+    console.warn('Tilt engine fallback:', err);
+  }
 
   // 10. Initialize Editorial GSAP / ScrollTrigger Motion Engine
-  new ScrollAnimationEngine();
+  try {
+    new ScrollAnimationEngine();
+  } catch (err) {
+    console.warn('Scroll animation fallback:', err);
+  }
 
   // 11. Initialize Cinematic Dual-Curtain Page Transitions Engine
-  new PageTransitionsEngine();
+  try {
+    new PageTransitionsEngine();
+  } catch (err) {
+    console.warn('Page transitions fallback:', err);
+  }
 
   console.log('✨ Oxford VIT Platform successfully orchestrated.');
 });

@@ -187,6 +187,11 @@ export const historyMilestones = [
   }
 ];
 
+export const historyData = {
+  overview: historicalOverview,
+  milestones: historyMilestones
+};
+
 if (typeof module !== 'undefined' && module.exports) {
-  module.exports = { historicalOverview, historyMilestones };
+  module.exports = { historicalOverview, historyMilestones, historyData };
 }

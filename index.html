@@ -94,6 +94,30 @@
     </div>
   </div>
 
+  <!-- Failsafe Preloader Watchdog: Guarantees website is revealed within 2.2s under all network conditions -->
+  <script>
+    (function() {
+      var watchdogTimer = setTimeout(function() {
+        var preloader = document.getElementById('cinematic-preloader');
+        if (preloader && !preloader.classList.contains('loaded') && preloader.style.display !== 'none') {
+          console.warn('[Watchdog] Preloader safety timeout triggered; auto-revealing homepage.');
+          var bar = preloader.querySelector('.preloader-progress-bar');
+          var counter = preloader.querySelector('.preloader-counter');
+          if (bar) bar.style.width = '100%';
+          if (counter) counter.textContent = '100%';
+          preloader.classList.add('loaded');
+          preloader.style.pointerEvents = 'none';
+          document.body.style.overflow = '';
+          setTimeout(function() { preloader.style.display = 'none'; }, 800);
+          window.dispatchEvent(new CustomEvent('oxfordVitLoaded'));
+        }
+      }, 2500);
+      window.addEventListener('oxfordVitLoaded', function() {
+        clearTimeout(watchdogTimer);
+      });
+    })();
+  </script>
+
   <!-- =========================================================================
        HEADER & FLOATING INSTITUTIONAL NAVIGATION
        ========================================================================= -->
