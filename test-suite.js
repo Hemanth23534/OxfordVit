@@ -114,6 +114,14 @@ async function runTests() {
       assert(Array.isArray(found.events) && found.events.length > 0, `Campus ${id} has Campus Events (14)`);
       assert(Array.isArray(found.achievements) && found.achievements.length > 0, `Campus ${id} has Achievements (15)`);
 
+      // Standardized Unified Fields Verification
+      assert(typeof found.description === 'string' && found.description.length > 20 && !found.description.includes('undefined') && !found.description.includes('null'), `Campus ${id} has valid non-null Description`);
+      assert(typeof found.status === 'string' && found.status.length > 0, `Campus ${id} has Status field`);
+      assert(typeof found.focus === 'string' && found.focus.length > 0, `Campus ${id} has Focus field`);
+      assert(typeof found.verificationStatus === 'string' && found.verificationStatus.length > 0, `Campus ${id} has VerificationStatus field`);
+      assert(Array.isArray(found.contact) && found.contact.length > 0, `Campus ${id} has Contact array`);
+      assert(Array.isArray(found.facilities) && found.facilities.length > 0, `Campus ${id} has Facilities array`);
+
       if (id === 'ksr-towers') {
         assert(found.operationalStatus.includes('Historical'), 'KSR Towers correctly marked as Historical Campus / Archive');
       }

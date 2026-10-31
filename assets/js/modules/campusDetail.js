@@ -140,37 +140,44 @@ export class CampusDetailEngine {
 
           <!-- Status & Categorization Badges -->
           <div style="display: flex; gap: 0.65rem; flex-wrap: wrap; align-items: center; margin-bottom: 1rem;">
-            <span class="section-tag botanical" style="font-size: 0.75rem;">📍 ${campus.city} Hub (${campus.district})</span>
-            <span class="section-tag gold" style="font-size: 0.75rem;">${campus.campusType}</span>
+            <span class="section-tag botanical" style="font-size: 0.75rem;">📍 ${campus.city || 'Regional'} Hub (${campus.district || 'AP'})</span>
+            <span class="section-tag gold" style="font-size: 0.75rem;">${campus.badge || campus.campusType || 'Oxford VIT Campus'}</span>
             ${statusBadge}
             ${governanceBadge}
           </div>
 
           <!-- Dimension 1: Campus Name -->
           <h1 class="section-title" style="text-align: left; font-size: clamp(2rem, 4.5vw, 3.25rem); margin-bottom: 0.75rem; line-height: 1.15; color: var(--color-deep-plum);">
-            ${campus.name}
+            ${campus.name || 'Oxford VIT Campus'}
           </h1>
 
           <!-- Dimension 3: Full Address & Landmark Highlight -->
-          <div style="display: flex; align-items: flex-start; gap: 0.65rem; color: var(--color-botanical-green-dark); font-size: 1.05rem; font-weight: 600; margin-bottom: 1.5rem; max-width: 900px; line-height: 1.5;">
+          <div style="display: flex; align-items: flex-start; gap: 0.65rem; color: var(--color-botanical-green-dark); font-size: 1.05rem; font-weight: 600; margin-bottom: 1.25rem; max-width: 900px; line-height: 1.5;">
             <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="flex-shrink: 0; margin-top: 2px;">
               <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/>
               <circle cx="12" cy="10" r="3"/>
             </svg>
             <div>
-              <span>${campus.address}</span>
-              <div style="font-size: 0.85rem; color: var(--text-secondary); font-weight: 500; margin-top: 2px;">
-                Landmark Reference: <strong>${campus.landmark}</strong>
-              </div>
+              <span>${campus.address || campus.landmark || 'Information being updated'}</span>
+              ${campus.landmark ? `
+                <div style="font-size: 0.85rem; color: var(--text-secondary); font-weight: 500; margin-top: 2px;">
+                  Landmark Reference: <strong>${campus.landmark}</strong>
+                </div>
+              ` : ''}
             </div>
+          </div>
+
+          <!-- Institutional Overview & Description -->
+          <div class="lead" style="font-size: 1.05rem; line-height: 1.7; color: var(--text-primary); margin-bottom: 2rem; max-width: 950px; background: rgba(247, 243, 233, 0.7); padding: 1.25rem 1.5rem; border-radius: var(--radius-md); border-left: 3px solid var(--color-champagne-gold);">
+            ${campus.description || 'Information being updated'}
           </div>
 
           <!-- Quick Highlight Statistics Bar -->
           <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; margin-bottom: 2.5rem;">
             <div class="glass-card" style="padding: 1.25rem; border-left: 3px solid var(--color-champagne-gold);">
               <div style="font-size: 0.75rem; text-transform: uppercase; color: var(--text-muted); font-weight: 700;">Campus Type</div>
-              <div style="font-size: 0.95rem; font-weight: 700; color: var(--color-deep-plum); margin-top: 4px;">${campus.categoryLabel}</div>
-              <div style="font-size: 0.75rem; color: var(--color-botanical-green); font-weight: 600; margin-top: 2px;">${campus.operationalStatus}</div>
+              <div style="font-size: 0.95rem; font-weight: 700; color: var(--color-deep-plum); margin-top: 4px;">${campus.categoryLabel || 'Campus Division'}</div>
+              <div style="font-size: 0.75rem; color: var(--color-botanical-green); font-weight: 600; margin-top: 2px;">${campus.status || campus.operationalStatus || 'Operational'}</div>
             </div>
 
             <div class="glass-card" style="padding: 1.25rem; border-left: 3px solid var(--color-botanical-green);">
@@ -182,7 +189,7 @@ export class CampusDetailEngine {
             <div class="glass-card" style="padding: 1.25rem; border-left: 3px solid var(--color-coral);">
               <div style="font-size: 0.75rem; text-transform: uppercase; color: var(--text-muted); font-weight: 700;">Residence Type</div>
               <div style="font-size: 0.95rem; font-weight: 700; color: var(--color-deep-plum); margin-top: 4px;">
-                ${campus.residentialFacilities.includes('Residential') ? 'Residential &amp; Day-Scholar' : 'Day-Scholar Transit'}
+                ${(campus.residentialFacilities && campus.residentialFacilities.includes('Residential')) ? 'Residential &amp; Day-Scholar' : 'Day-Scholar Transit'}
               </div>
               <div style="font-size: 0.75rem; color: var(--text-secondary); margin-top: 2px;">24/7 Wardens &amp; CCTV</div>
             </div>
@@ -190,11 +197,19 @@ export class CampusDetailEngine {
             <div class="glass-card" style="padding: 1.25rem; border-left: 3px solid var(--color-lavender);">
               <div style="font-size: 0.75rem; text-transform: uppercase; color: var(--text-muted); font-weight: 700;">Official Campus Line</div>
               <div style="font-size: 0.95rem; font-weight: 700; color: var(--color-deep-plum); margin-top: 4px;">
-                <a href="tel:${campus.phone.replace(/[^0-9+]/g, '').slice(0, 13)}" style="color: var(--color-deep-plum); text-decoration: none;">
-                  ${campus.phone.split('(')[0].trim()}
-                </a>
+                ${(campus.contact && campus.contact[0] && !campus.contact[0].includes('not yet confirmed')) ? `
+                  <a href="tel:${campus.contact[0].replace(/[^0-9+]/g, '')}" style="color: var(--color-deep-plum); text-decoration: none;">
+                    ${campus.contact.join(' / ')}
+                  </a>
+                ` : (campus.phone && !campus.phone.includes('not yet confirmed')) ? `
+                  <a href="tel:${campus.phone.replace(/[^0-9+]/g, '').slice(0, 13)}" style="color: var(--color-deep-plum); text-decoration: none;">
+                    ${campus.phone.split('(')[0].trim()}
+                  </a>
+                ` : `
+                  <span style="font-size: 0.85rem; color: var(--text-secondary); font-weight: 600;">Contact information not yet confirmed</span>
+                `}
               </div>
-              <div style="font-size: 0.75rem; color: var(--color-champagne-gold-dark); font-weight: 600; margin-top: 2px;">Central Admissions Bureau</div>
+              <div style="font-size: 0.75rem; color: var(--color-champagne-gold-dark); font-weight: 600; margin-top: 2px;">Institutional Communications Desk</div>
             </div>
           </div>
 

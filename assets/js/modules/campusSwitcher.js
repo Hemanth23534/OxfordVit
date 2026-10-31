@@ -35,17 +35,39 @@ export class CampusSwitcher {
     let filtered = campusesData;
 
     if (this.currentCity !== 'all') {
-      filtered = filtered.filter(c => c.city.toLowerCase() === this.currentCity.toLowerCase());
+      filtered = filtered.filter(c => c.city && c.city.toLowerCase() === this.currentCity.toLowerCase());
     }
 
     if (this.currentCategory !== 'all') {
-      if (this.currentCategory === 'academic') {
-        filtered = filtered.filter(c => c.category === 'junior-college' || c.category === 'specialized-academy');
-      } else if (this.currentCategory === 'sister-school') {
-        filtered = filtered.filter(c => c.category === 'sister-school' || c.category === 'school-wing');
-      } else {
-        filtered = filtered.filter(c => c.category === this.currentCategory);
-      }
+      filtered = filtered.filter(c => {
+        const cat = (c.category || '').toLowerCase();
+        const type = (c.campusType || '').toLowerCase();
+        const label = (c.categoryLabel || '').toLowerCase();
+        const name = (c.name || '').toLowerCase();
+
+        if (this.currentCategory === 'junior-college') {
+          return cat === 'junior-college' || cat === 'operational-campus' ||
+                 label.includes('junior') || label.includes('intermediate') ||
+                 name.includes('junior') || name.includes('intermediate') ||
+                 type.includes('junior') || type.includes('intermediate');
+        }
+        if (this.currentCategory === 'specialized-academy') {
+          return cat === 'specialized-academy' || cat === 'coaching-wing' ||
+                 label.includes('academy') || label.includes('coaching') || label.includes('super wing') ||
+                 name.includes('academy') || name.includes('super wing') ||
+                 type.includes('academy') || type.includes('super wing');
+        }
+        if (this.currentCategory === 'sister-school') {
+          return cat === 'sister-school' || cat === 'school-wing' || cat === 'school-foundation' ||
+                 label.includes('school') || name.includes('school') || type.includes('school');
+        }
+        if (this.currentCategory === 'historical') {
+          const stat = (c.status || c.operationalStatus || '').toLowerCase();
+          return cat === 'historical' || cat === 'historical-location' || cat === 'historical-campus' ||
+                 stat.includes('historical') || label.includes('historical') || name.includes('historical');
+        }
+        return cat === this.currentCategory.toLowerCase();
+      });
     }
 
     if (filtered.length === 0) {
@@ -70,8 +92,10 @@ export class CampusSwitcher {
     }
 
     this.container.innerHTML = filtered.map((campus) => {
-      const isHistorical = campus.operationalStatus.includes('Historical');
-      const isPending = campus.governanceStatus && campus.governanceStatus.includes('Pending Verification');
+      const status = campus.status || campus.operationalStatus || 'Currently Operational';
+      const isHistorical = status.toLowerCase().includes('historical');
+      const verification = campus.verificationStatus || campus.governanceStatus || 'Verified Governance';
+      const isPending = verification.toLowerCase().includes('pending');
       
       const statusBadge = isHistorical
         ? `<span class="badge" style="background: rgba(73, 59, 76, 0.15); color: var(--color-deep-plum); border: 1px dashed var(--color-deep-plum);">🏛️ Historical Campus / Archive</span>`
@@ -79,47 +103,62 @@ export class CampusSwitcher {
 
       const governanceBadge = isPending
         ? `<span class="badge" style="background: rgba(233, 161, 140, 0.25); color: #B34024; border: 1px solid var(--color-coral);">⚠️ Governance: Pending Verification</span>`
-        : `<span class="badge badge-gold">${campus.governanceStatus || 'Verified Governance'}</span>`;
+        : `<span class="badge badge-gold">${verification}</span>`;
 
-      const primaryImg = campus.imageSrc || campus.image || (campus.galleryImages && campus.galleryImages[0]);
+      const hasSpecificPhoto = Boolean(campus.image || campus.imageSrc || (campus.galleryImages && campus.galleryImages[0]));
+      const primaryImg = campus.image || campus.imageSrc || (campus.galleryImages && campus.galleryImages[0]);
       const fallbackPlaceholder = campus.placeholder || 'assets/images/campuses/campus-placeholder.svg';
       const effectiveImg = primaryImg || fallbackPlaceholder;
+
+      const description = (campus.description && campus.description.trim()) || 'Information being updated';
+      const addressText = (campus.address && campus.address.trim()) || (campus.landmark && campus.landmark.trim()) || 'Information being updated';
+      const landmarkText = (campus.landmark && campus.landmark.trim()) || addressText;
+
+      const facilitiesList = (Array.isArray(campus.facilities) && campus.facilities.length > 0)
+        ? campus.facilities
+        : ((Array.isArray(campus.infrastructure) && campus.infrastructure.length > 0)
+          ? campus.infrastructure
+          : ['Academic Facilities', 'Laboratories', 'Digital Library']);
+
+      const categoryLabel = campus.categoryLabel || (campus.category ? campus.category.replace(/-/g, ' ').toUpperCase() : 'CAMPUS');
+      const badgeText = campus.badge || campus.campusType || 'Oxford VIT Campus';
 
       return `
         <article class="campus-card ${isHistorical ? 'historical-campus-card' : ''}" id="card-${campus.id}" data-category="${campus.category}" data-city="${campus.city}">
           <div class="campus-card-img-wrap">
             <img 
               src="${effectiveImg}" 
-              alt="${campus.name}" 
+              alt="${campus.name || 'Campus Photograph'}" 
               class="campus-card-img" 
               loading="lazy" 
               onerror="this.onerror=null; this.src='${fallbackPlaceholder}'; this.classList.add('img-fallback');" 
             />
-            <div class="campus-type-pill">${campus.badge}</div>
+            <div class="campus-type-pill">${badgeText}</div>
             <div style="position: absolute; bottom: 12px; left: 12px; display: flex; flex-direction: column; gap: 4px; z-index: 2;">
               ${statusBadge}
+              ${!hasSpecificPhoto ? `<span class="badge" style="background: rgba(73, 59, 76, 0.85); color: #FAF7F0; font-size: 0.65rem;">📷 Photograph coming soon</span>` : ''}
             </div>
           </div>
           <div class="campus-card-content">
             <div style="display: flex; align-items: center; justify-content: space-between; gap: 0.5rem; margin-bottom: 0.5rem;">
-              <span class="section-tag botanical" style="font-size: 0.7rem; padding: 2px 8px;">${campus.city} Hub</span>
-              <span style="font-size: 0.75rem; color: var(--text-muted); font-family: var(--font-mono); font-weight: 600;">${campus.categoryLabel}</span>
+              <span class="section-tag botanical" style="font-size: 0.7rem; padding: 2px 8px;">${campus.city || 'Regional'} Hub</span>
+              <span style="font-size: 0.75rem; color: var(--text-muted); font-family: var(--font-mono); font-weight: 600;">${categoryLabel}</span>
             </div>
 
-            <h3 class="campus-card-title">${campus.name}</h3>
+            <h3 class="campus-card-title">${campus.name || 'Oxford VIT Campus'}</h3>
             
             <p class="campus-card-address">
               <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                 <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/>
                 <circle cx="12" cy="10" r="3"/>
               </svg>
-              ${campus.landmark}
+              ${landmarkText}
             </p>
             
-            <p class="campus-card-desc">${campus.description}</p>
+            <p class="campus-card-desc">${description}</p>
             
             <div class="campus-amenities-tags">
-              ${campus.facilities.slice(0, 3).map(f => `<span class="amenity-tag">${f}</span>`).join('')}
+              ${facilitiesList.slice(0, 3).map(f => `<span class="amenity-tag">${f}</span>`).join('')}
             </div>
 
             <div style="margin-top: 0.75rem; margin-bottom: 0.75rem;">
@@ -197,58 +236,97 @@ export class CampusSwitcher {
     const campus = campusesData.find(c => c.id === id);
     if (!campus || !this.modal || !this.modalContent) return;
 
-    const isHistorical = campus.operationalStatus.includes('Historical');
-    const isPending = campus.governanceStatus && campus.governanceStatus.includes('Pending Verification');
+    const status = campus.status || campus.operationalStatus || 'Currently Operational';
+    const isHistorical = status.toLowerCase().includes('historical');
+    const verification = campus.verificationStatus || campus.governanceStatus || 'Verified Governance';
+    const isPending = verification.toLowerCase().includes('pending');
 
-    const primaryImg = campus.imageSrc || campus.image || (campus.galleryImages && campus.galleryImages[0]);
+    const hasSpecificPhoto = Boolean(campus.image || campus.imageSrc || (campus.galleryImages && campus.galleryImages[0]));
+    const primaryImg = campus.image || campus.imageSrc || (campus.galleryImages && campus.galleryImages[0]);
     const fallbackPlaceholder = campus.placeholder || 'assets/images/campuses/campus-placeholder.svg';
     const effectiveImg = primaryImg || fallbackPlaceholder;
 
+    const description = (campus.description && campus.description.trim()) || 'Information being updated';
+    const addressText = (campus.address && campus.address.trim()) || (campus.landmark && campus.landmark.trim()) || 'Information being updated';
+    const governanceText = campus.governance || 'Oxford VIT Directorate';
+
+    const facilitiesList = (Array.isArray(campus.facilities) && campus.facilities.length > 0)
+      ? campus.facilities
+      : ((Array.isArray(campus.infrastructure) && campus.infrastructure.length > 0)
+        ? campus.infrastructure
+        : ['Information being updated']);
+
+    const coursesList = (Array.isArray(campus.courses) && campus.courses.length > 0)
+      ? campus.courses
+      : ((Array.isArray(campus.programmes) && campus.programmes.length > 0)
+        ? campus.programmes
+        : ['Information being updated']);
+
+    let contactDisplay = 'Contact information not yet confirmed';
+    let rawPhone = '';
+    if (Array.isArray(campus.contact) && campus.contact.length > 0 && campus.contact[0] && !campus.contact[0].toLowerCase().includes('not yet confirmed')) {
+      contactDisplay = campus.contact.join(' / ');
+      rawPhone = campus.contact[0];
+    } else if (campus.phone && typeof campus.phone === 'string' && !campus.phone.toLowerCase().includes('not yet confirmed')) {
+      contactDisplay = campus.phone.split('(')[0].trim();
+      rawPhone = campus.phone;
+    }
+
+    const cityHubText = campus.city ? `${campus.city} Hub` : 'Regional Hub';
+    const districtText = campus.district ? `(${campus.district})` : '';
+    const badgeText = campus.badge || campus.campusType || 'Oxford VIT Campus';
+    const cityPageUrl = campus.cityPageUrl || (campus.city ? `${campus.city.toLowerCase()}.html` : 'campuses.html');
+
     this.modalContent.innerHTML = `
       <div style="margin-bottom: 1.5rem;">
-        <div style="border-radius: var(--radius-lg); overflow: hidden; margin-bottom: 1.25rem; border: 1px solid var(--border-gold); max-height: 280px; background: linear-gradient(135deg, #FAF7F0, #EFE9DC); aspect-ratio: 16 / 9; display: flex; align-items: center; justify-content: center;">
+        <div style="border-radius: var(--radius-lg); overflow: hidden; margin-bottom: 1.25rem; border: 1px solid var(--border-gold); max-height: 280px; background: linear-gradient(135deg, #FAF7F0, #EFE9DC); aspect-ratio: 16 / 9; display: flex; align-items: center; justify-content: center; position: relative;">
           <img 
             src="${effectiveImg}" 
-            alt="${campus.name}" 
+            alt="${campus.name || 'Campus Photograph'}" 
             style="width: 100%; height: 100%; object-fit: cover; max-height: 280px; display: block;" 
             onerror="this.onerror=null; this.src='${fallbackPlaceholder}';" 
           />
+          ${!hasSpecificPhoto ? `
+            <div style="position: absolute; bottom: 12px; right: 12px; background: rgba(73, 59, 76, 0.85); color: #FAF7F0; padding: 4px 12px; border-radius: 999px; font-size: 0.75rem; font-weight: 600;">
+              📷 Photograph coming soon
+            </div>
+          ` : ''}
         </div>
         
         <div style="display: flex; gap: 0.5rem; flex-wrap: wrap; margin-bottom: 0.75rem;">
-          <span class="section-tag gold">${campus.badge}</span>
-          <span class="section-tag botanical">${campus.city} Hub</span>
+          <span class="section-tag gold">${badgeText}</span>
+          <span class="section-tag botanical">${cityHubText}</span>
           ${isHistorical 
             ? `<span class="badge" style="background: rgba(73, 59, 76, 0.15); color: var(--color-deep-plum);">🏛️ Historical Building / Archive</span>` 
             : `<span class="badge badge-botanical">✓ Currently Operational Campus</span>`}
         </div>
 
-        <h2 style="margin-top: 0.5rem; margin-bottom: 0.5rem; font-size: 1.85rem; color: var(--color-deep-plum);">${campus.name}</h2>
+        <h2 style="margin-top: 0.5rem; margin-bottom: 0.5rem; font-size: 1.85rem; color: var(--color-deep-plum);">${campus.name || 'Oxford VIT Campus'}</h2>
         
         <p style="color: var(--color-botanical-green-dark); font-weight: 600; display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.5rem;">
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
             <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/>
             <circle cx="12" cy="10" r="3"/>
           </svg>
-          ${campus.address}
+          ${addressText}
         </p>
 
         <div style="padding: 0.75rem 1rem; border-radius: var(--radius-sm); margin-bottom: 1rem; background: ${isPending ? 'rgba(233, 161, 140, 0.15)' : 'rgba(214, 183, 122, 0.12)'}; border-left: 3px solid ${isPending ? 'var(--color-coral)' : 'var(--color-champagne-gold)'};">
           <div style="font-size: 0.8rem; font-weight: 700; color: var(--color-deep-plum);">Governance & Ownership Record:</div>
           <div style="font-size: 0.875rem; color: ${isPending ? '#B34024' : 'var(--text-secondary)'}; font-weight: 600;">
-            ${campus.governance} (${campus.governanceStatus})
+            ${governanceText} (${verification})
           </div>
-          ${isPending ? `<div style="font-size: 0.775rem; color: #B34024; margin-top: 2px;">Note: Independent society affiliation / regional board record pending official registry synchronization.</div>` : ''}
+          ${isPending ? `<div style="font-size: 0.775rem; color: #B34024; margin-top: 2px;">Note: Regional registry confirmation in progress under academic supervision.</div>` : ''}
         </div>
       </div>
 
-      <p class="lead" style="margin-bottom: 1.5rem; font-size: 1rem; line-height: 1.6;">${campus.description}</p>
+      <p class="lead" style="margin-bottom: 1.5rem; font-size: 1rem; line-height: 1.6;">${description}</p>
 
       <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1.5rem; margin-bottom: 2rem;">
         <div class="glass-card" style="padding: 1.25rem;">
           <h4 style="color: var(--color-champagne-gold-dark); margin-bottom: 0.75rem; font-family: var(--font-sans); font-size: 0.95rem; text-transform: uppercase; letter-spacing: 0.05em;">Infrastructure & Facilities</h4>
           <ul style="display: flex; flex-direction: column; gap: 0.5rem; font-size: 0.875rem;">
-            ${campus.facilities.map(f => `
+            ${facilitiesList.map(f => `
               <li style="display: flex; align-items: center; gap: 0.5rem;">
                 <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--color-botanical-green)" stroke-width="2.5">
                   <path d="M20 6 9 17l-5-5"/>
@@ -262,7 +340,7 @@ export class CampusSwitcher {
         <div class="glass-card" style="padding: 1.25rem;">
           <h4 style="color: var(--color-champagne-gold-dark); margin-bottom: 0.75rem; font-family: var(--font-sans); font-size: 0.95rem; text-transform: uppercase; letter-spacing: 0.05em;">Academic Programs</h4>
           <ul style="display: flex; flex-direction: column; gap: 0.5rem; font-size: 0.875rem;">
-            ${campus.courses.map(c => `
+            ${coursesList.map(c => `
               <li style="display: flex; align-items: center; gap: 0.5rem;">
                 <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--color-coral)" stroke-width="2.5">
                   <circle cx="12" cy="12" r="10"/>
@@ -278,18 +356,24 @@ export class CampusSwitcher {
       <div style="background: rgba(73, 59, 76, 0.05); padding: 1.25rem; border-radius: var(--radius-md); border: 1px solid var(--border-gold); display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 1rem;">
         <div>
           <div style="font-size: 0.8rem; text-transform: uppercase; color: var(--text-muted); font-weight: 600;">Location Hub</div>
-          <div style="font-weight: 700; color: var(--color-deep-plum);">${campus.city} (${campus.district})</div>
+          <div style="font-weight: 700; color: var(--color-deep-plum);">${campus.city || 'Regional'} ${districtText}</div>
         </div>
         <div style="display: flex; gap: 0.5rem; flex-wrap: wrap;">
-          <a href="${campus.cityPageUrl}" class="btn btn-outline btn-sm">
-            ${campus.city} City Portal
+          <a href="${cityPageUrl}" class="btn btn-outline btn-sm">
+            ${campus.city || 'City'} City Portal
           </a>
           <a href="campus-detail.html?id=${campus.id}" class="btn btn-gold btn-sm">
             Full 15-Dimension Profile ↗
           </a>
-          <a href="tel:${campus.phone.replace(/[^0-9+]/g, '').slice(0, 13)}" class="btn btn-outline btn-sm">
-            Helpline: ${campus.phone.split('(')[0].trim()}
-          </a>
+          ${rawPhone ? `
+            <a href="tel:${rawPhone.replace(/[^0-9+]/g, '').slice(0, 13)}" class="btn btn-outline btn-sm">
+              Helpline: ${contactDisplay}
+            </a>
+          ` : `
+            <span class="btn btn-outline btn-sm" style="cursor: default; opacity: 0.8;">
+              ${contactDisplay}
+            </span>
+          `}
         </div>
       </div>
     `;
