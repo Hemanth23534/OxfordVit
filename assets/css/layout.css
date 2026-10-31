@@ -1,0 +1,419 @@
+/* ==========================================================================
+   OXFORD VIT – THE LIVING CAMPUS EXPERIENCE
+   Layout: Header, Navigation, Footer, Grid & Dividers
+   ========================================================================== */
+
+/* -------------------------------------------------------------------------
+   Floating Institutional Header
+   ------------------------------------------------------------------------- */
+.site-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: var(--header-height);
+  z-index: var(--z-header);
+  transition: all var(--transition-normal);
+  padding: 0 clamp(1rem, 3vw, 2.5rem);
+  display: flex;
+  align-items: center;
+}
+
+.site-header.scrolled {
+  height: 72px;
+  background: rgba(247, 243, 233, 0.88);
+  backdrop-filter: blur(var(--blur-glass));
+  -webkit-backdrop-filter: blur(var(--blur-glass));
+  border-bottom: 1px solid var(--border-gold);
+  box-shadow: 0 10px 30px rgba(73, 59, 76, 0.08);
+}
+
+.header-container {
+  width: 100%;
+  max-width: var(--container-max);
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Institutional Logo & Crest */
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+  text-decoration: none;
+}
+
+.brand-crest {
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, var(--color-champagne-gold-light), var(--color-champagne-gold));
+  border-radius: var(--radius-sm);
+  color: var(--color-deep-plum-dark);
+  box-shadow: 0 4px 15px rgba(214, 183, 122, 0.35);
+  border: 1.5px solid rgba(255, 255, 255, 0.6);
+  flex-shrink: 0;
+  transition: transform var(--transition-fast);
+}
+
+.brand:hover .brand-crest {
+  transform: rotate(-6deg) scale(1.05);
+}
+
+.brand-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.brand-name {
+  font-family: var(--font-serif);
+  font-size: 1.35rem;
+  font-weight: 800;
+  color: var(--color-deep-plum);
+  letter-spacing: -0.01em;
+  line-height: 1.1;
+}
+
+.brand-subtitle {
+  font-family: var(--font-mono);
+  font-size: 0.6875rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--color-botanical-green);
+  margin-top: 2px;
+}
+
+/* Desktop Navigation */
+.main-nav {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.nav-list {
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+}
+
+.nav-link {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--color-deep-plum);
+  padding: 0.5rem 0.85rem;
+  border-radius: var(--radius-full);
+  transition: all var(--transition-fast);
+  position: relative;
+}
+
+.nav-link:hover {
+  color: var(--color-botanical-green-dark);
+  background: rgba(214, 183, 122, 0.18);
+}
+
+.nav-link.active {
+  color: var(--color-deep-plum-dark);
+  background: rgba(214, 183, 122, 0.28);
+  font-weight: 700;
+}
+
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+/* Hamburger Toggle Button */
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 44px;
+  height: 44px;
+  border-radius: var(--radius-md);
+  background: var(--surface-card-glass);
+  border: 1px solid var(--border-gold);
+  cursor: pointer;
+  gap: 5px;
+  z-index: 1010;
+}
+
+.menu-toggle span {
+  display: block;
+  width: 22px;
+  height: 2px;
+  background-color: var(--color-deep-plum);
+  transition: all var(--transition-fast);
+}
+
+.menu-toggle.active span:nth-child(1) {
+  transform: translateY(7px) rotate(45deg);
+}
+
+.menu-toggle.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.menu-toggle.active span:nth-child(3) {
+  transform: translateY(-7px) rotate(-45deg);
+}
+
+/* -------------------------------------------------------------------------
+   Mobile Navigation Drawer
+   ------------------------------------------------------------------------- */
+.mobile-drawer {
+  position: fixed;
+  top: 0;
+  right: -100%;
+  width: min(85vw, 380px);
+  height: 100vh;
+  background: var(--color-warm-ivory);
+  border-left: 1.5px solid var(--border-gold);
+  z-index: 1005;
+  padding: 6rem 2rem 2.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-shadow: -15px 0 45px rgba(73, 59, 76, 0.15);
+  transition: right var(--transition-normal);
+  overflow-y: auto;
+}
+
+.mobile-drawer.active {
+  right: 0;
+}
+
+.mobile-drawer-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(30, 22, 32, 0.6);
+  backdrop-filter: blur(6px);
+  z-index: 1004;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity var(--transition-normal);
+}
+
+.mobile-drawer-overlay.active {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.mobile-nav-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.mobile-nav-link {
+  font-family: var(--font-serif);
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--color-deep-plum);
+  padding: 0.65rem 0.5rem;
+  border-bottom: 1px solid rgba(73, 59, 76, 0.08);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.mobile-nav-link:hover, .mobile-nav-link.active {
+  color: var(--color-botanical-green);
+  padding-left: 0.75rem;
+}
+
+/* -------------------------------------------------------------------------
+   3D Canvas Wrapper (Living Campus Scene)
+   ------------------------------------------------------------------------- */
+#canvas3d-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none;
+  z-index: var(--z-canvas3d);
+  opacity: 0.88;
+}
+
+/* -------------------------------------------------------------------------
+   Institutional Footer
+   ------------------------------------------------------------------------- */
+.site-footer {
+  background: var(--color-deep-plum-dark);
+  color: var(--color-warm-ivory);
+  position: relative;
+  z-index: var(--z-content);
+  padding-top: clamp(4.5rem, 7vw, 6.5rem);
+  padding-bottom: 2.5rem;
+  border-top: 2px solid var(--color-champagne-gold);
+}
+
+.site-footer::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60%;
+  height: 1px;
+  background: radial-gradient(circle, var(--color-champagne-gold-light) 0%, transparent 80%);
+}
+
+.footer-top {
+  display: grid;
+  grid-template-columns: 2fr 1.2fr 1.2fr 1.6fr;
+  gap: clamp(2rem, 4vw, 4rem);
+  margin-bottom: 4rem;
+}
+
+.footer-brand .brand-name {
+  color: var(--color-champagne-gold-light);
+  font-size: 1.75rem;
+  margin-top: 0.5rem;
+  margin-bottom: 0.75rem;
+}
+
+.footer-brand p {
+  color: rgba(247, 243, 233, 0.75);
+  font-size: 0.9375rem;
+  line-height: 1.7;
+}
+
+.trust-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: rgba(214, 183, 122, 0.12);
+  border: 1px solid rgba(214, 183, 122, 0.35);
+  padding: 0.45rem 1rem;
+  border-radius: var(--radius-full);
+  font-size: 0.8125rem;
+  color: var(--color-champagne-gold-light);
+  margin-top: 1rem;
+}
+
+.footer-col h4 {
+  color: var(--color-champagne-gold);
+  font-family: var(--font-sans);
+  font-size: 1.05rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  margin-bottom: 1.5rem;
+  position: relative;
+  padding-bottom: 0.65rem;
+}
+
+.footer-col h4::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 30px;
+  height: 2px;
+  background: var(--color-champagne-gold);
+}
+
+.footer-links {
+  display: flex;
+  flex-direction: column;
+  gap: 0.65rem;
+}
+
+.footer-links a {
+  color: rgba(247, 243, 233, 0.75);
+  font-size: 0.9375rem;
+  transition: all var(--transition-fast);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.footer-links a:hover {
+  color: var(--color-champagne-gold-light);
+  transform: translateX(4px);
+}
+
+.footer-contact-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  margin-bottom: 1rem;
+  color: rgba(247, 243, 233, 0.8);
+  font-size: 0.9375rem;
+}
+
+.footer-contact-item svg {
+  color: var(--color-champagne-gold);
+  flex-shrink: 0;
+  margin-top: 3px;
+}
+
+.footer-bottom {
+  padding-top: 2rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1.25rem;
+  font-size: 0.875rem;
+  color: rgba(247, 243, 233, 0.6);
+}
+
+.social-links {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.social-btn {
+  width: 38px;
+  height: 38px;
+  border-radius: var(--radius-full);
+  background: rgba(247, 243, 233, 0.08);
+  border: 1px solid rgba(214, 183, 122, 0.25);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-champagne-gold-light);
+  transition: all var(--transition-fast);
+}
+
+.social-btn:hover {
+  background: var(--color-champagne-gold);
+  color: var(--color-deep-plum-dark);
+  transform: translateY(-3px);
+}
+
+/* -------------------------------------------------------------------------
+   Responsive Breakpoints
+   ------------------------------------------------------------------------- */
+@media (max-width: 1120px) {
+  .main-nav {
+    display: none;
+  }
+  .menu-toggle {
+    display: flex;
+  }
+  .footer-top {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 640px) {
+  .footer-top {
+    grid-template-columns: 1fr;
+  }
+  .footer-bottom {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}

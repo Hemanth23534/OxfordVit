@@ -1,0 +1,22 @@
+{
+  "name": "oxford-vit",
+  "version": "1.0.0",
+  "description": "Oxford VIT Junior College & Academy - The Living Campus Experience (Narasaraopet)",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "serve": "node server.js"
+  },
+  "keywords": [
+    "oxford-vit",
+    "narasaraopet",
+    "education",
+    "threejs",
+    "gsap",
+    "webgl",
+    "3d-website"
+  ],
+  "author": "Oxford VIT",
+  "license": "UNLICENSED",
+  "private": true
+}

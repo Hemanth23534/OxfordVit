@@ -1,0 +1,221 @@
+/* ==========================================================================
+   OXFORD VIT – THE LIVING CAMPUS EXPERIENCE
+   Base Reset, Typography & Global Styles
+   ========================================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,900;1,400;1,600&family=Space+Grotesk:wght@400;500;600;700&display=swap');
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: var(--color-warm-ivory);
+  color: var(--text-primary);
+  overflow-x: hidden;
+}
+
+body {
+  font-family: var(--font-sans);
+  font-size: 1.0625rem;
+  line-height: 1.68;
+  color: var(--text-primary);
+  background-color: var(--color-warm-ivory);
+  min-height: 100vh;
+  position: relative;
+  overflow-x: hidden;
+}
+
+/* -------------------------------------------------------------------------
+   Custom Scrollbar
+   ------------------------------------------------------------------------- */
+::-webkit-scrollbar {
+  width: 9px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-warm-ivory);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-champagne-gold);
+  border-radius: var(--radius-full);
+  border: 2px solid var(--color-warm-ivory);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-champagne-gold-dark);
+}
+
+/* -------------------------------------------------------------------------
+   Selection
+   ------------------------------------------------------------------------- */
+::selection {
+  background-color: var(--color-champagne-gold);
+  color: var(--color-deep-plum-dark);
+}
+
+/* -------------------------------------------------------------------------
+   Typography Defaults
+   ------------------------------------------------------------------------- */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-serif);
+  font-weight: 700;
+  line-height: 1.2;
+  color: var(--color-deep-plum);
+  letter-spacing: -0.015em;
+}
+
+h1 {
+  font-size: clamp(2.5rem, 5.5vw, 4.75rem);
+}
+
+h2 {
+  font-size: clamp(2rem, 3.8vw, 3.25rem);
+}
+
+h3 {
+  font-size: clamp(1.4rem, 2.5vw, 2.1rem);
+}
+
+h4 {
+  font-size: clamp(1.15rem, 1.8vw, 1.5rem);
+}
+
+p {
+  margin-bottom: 1.25rem;
+  color: var(--text-secondary);
+  font-weight: 400;
+}
+
+p.lead {
+  font-size: clamp(1.15rem, 1.6vw, 1.35rem);
+  line-height: 1.65;
+  color: var(--color-deep-plum);
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  transition: color var(--transition-fast);
+}
+
+img, svg, video {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+ul, ol {
+  list-style: none;
+}
+
+button, input, select, textarea {
+  font-family: inherit;
+  font-size: inherit;
+  color: inherit;
+  background: none;
+  border: none;
+  outline: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+/* -------------------------------------------------------------------------
+   Layout Utilities
+   ------------------------------------------------------------------------- */
+.container {
+  width: 100%;
+  max-width: var(--container-max);
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: var(--container-padding);
+  padding-right: var(--container-padding);
+}
+
+.section {
+  position: relative;
+  padding-top: clamp(4.5rem, 8vw, 7.5rem);
+  padding-bottom: clamp(4.5rem, 8vw, 7.5rem);
+  z-index: var(--z-content);
+}
+
+.section-header {
+  text-align: center;
+  max-width: 760px;
+  margin: 0 auto clamp(2.5rem, 5vw, 4.5rem);
+}
+
+.section-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-family: var(--font-mono);
+  font-size: 0.8125rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  color: var(--color-botanical-green);
+  background: rgba(82, 107, 84, 0.1);
+  padding: 0.35rem 1rem;
+  border-radius: var(--radius-full);
+  margin-bottom: 1rem;
+  border: 1px solid rgba(82, 107, 84, 0.2);
+}
+
+.section-tag.gold {
+  color: var(--color-champagne-gold-dark);
+  background: rgba(214, 183, 122, 0.15);
+  border-color: rgba(214, 183, 122, 0.3);
+}
+
+.section-tag.coral {
+  color: var(--color-coral-dark);
+  background: rgba(233, 161, 140, 0.15);
+  border-color: rgba(233, 161, 140, 0.3);
+}
+
+.section-tag.lavender {
+  color: var(--color-lavender-dark);
+  background: rgba(185, 168, 216, 0.2);
+  border-color: rgba(185, 168, 216, 0.4);
+}
+
+.section-title {
+  margin-bottom: 1.25rem;
+}
+
+.section-subtitle {
+  font-size: 1.125rem;
+  color: var(--text-secondary);
+  line-height: 1.7;
+}
+
+/* -------------------------------------------------------------------------
+   Screen Reader & Accessibility
+   ------------------------------------------------------------------------- */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+:focus-visible {
+  outline: 2px solid var(--color-champagne-gold);
+  outline-offset: 3px;
+}

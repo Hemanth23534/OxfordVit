@@ -1,0 +1,376 @@
+/* ==========================================================================
+   OXFORD VIT – THE LIVING CAMPUS EXPERIENCE
+   UI Components: Buttons, Cards, Modals, Tabs, Forms & Badges
+   ========================================================================== */
+
+/* -------------------------------------------------------------------------
+   Buttons
+   ------------------------------------------------------------------------- */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.65rem;
+  font-family: var(--font-sans);
+  font-size: 0.9375rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  padding: 0.85rem 1.75rem;
+  border-radius: var(--radius-full);
+  transition: all var(--transition-normal);
+  position: relative;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.btn svg {
+  transition: transform var(--transition-fast);
+}
+
+.btn:hover svg {
+  transform: translateX(4px);
+}
+
+.btn-lg {
+  padding: 1.05rem 2.25rem;
+  font-size: 1.05rem;
+}
+
+.btn-sm {
+  padding: 0.55rem 1.25rem;
+  font-size: 0.85rem;
+}
+
+/* Gold Button */
+.btn-gold {
+  background: linear-gradient(135deg, var(--color-champagne-gold-light), var(--color-champagne-gold));
+  color: var(--color-deep-plum-dark);
+  box-shadow: 0 4px 20px rgba(214, 183, 122, 0.35);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+.btn-gold::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent);
+  transition: left 0.75s ease;
+}
+
+.btn-gold:hover {
+  background: linear-gradient(135deg, #f5e8cf, var(--color-champagne-gold));
+  box-shadow: 0 8px 30px rgba(214, 183, 122, 0.55);
+  transform: translateY(-2px);
+}
+
+.btn-gold:hover::before {
+  left: 100%;
+}
+
+/* Botanical Green Button */
+.btn-botanical {
+  background-color: var(--color-botanical-green);
+  color: var(--color-warm-ivory);
+  box-shadow: 0 4px 18px rgba(82, 107, 84, 0.3);
+  border: 1px solid rgba(214, 183, 122, 0.3);
+}
+
+.btn-botanical:hover {
+  background-color: var(--color-botanical-green-dark);
+  box-shadow: 0 8px 26px rgba(82, 107, 84, 0.45);
+  transform: translateY(-2px);
+}
+
+/* Coral CTA Button */
+.btn-coral {
+  background: linear-gradient(135deg, var(--color-coral), var(--color-coral-dark));
+  color: #fff;
+  box-shadow: 0 4px 20px rgba(233, 161, 140, 0.4);
+}
+
+.btn-coral:hover {
+  box-shadow: 0 8px 30px rgba(233, 161, 140, 0.6);
+  transform: translateY(-2px);
+}
+
+/* Glass & Outline Buttons */
+.btn-glass {
+  background: var(--surface-card-glass);
+  backdrop-filter: blur(var(--blur-glass));
+  -webkit-backdrop-filter: blur(var(--blur-glass));
+  color: var(--color-deep-plum);
+  border: 1px solid var(--border-gold);
+}
+
+.btn-glass:hover {
+  background: rgba(247, 243, 233, 0.95);
+  border-color: var(--color-champagne-gold);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-card);
+}
+
+.btn-outline {
+  border: 1.5px solid var(--color-champagne-gold);
+  color: var(--color-deep-plum);
+}
+
+.btn-outline:hover {
+  background: var(--color-champagne-gold);
+  color: var(--color-deep-plum-dark);
+}
+
+.btn-outline-inverted {
+  border: 1.5px solid rgba(214, 183, 122, 0.6);
+  color: var(--color-warm-ivory);
+}
+
+.btn-outline-inverted:hover {
+  background: var(--color-champagne-gold);
+  color: var(--color-deep-plum-dark);
+  border-color: var(--color-champagne-gold);
+}
+
+/* -------------------------------------------------------------------------
+   Glass Cards & Surfaces
+   ------------------------------------------------------------------------- */
+.glass-card {
+  background: var(--surface-card-light);
+  backdrop-filter: blur(var(--blur-glass));
+  -webkit-backdrop-filter: blur(var(--blur-glass));
+  border: 1px solid var(--border-gold);
+  border-radius: var(--radius-lg);
+  padding: clamp(1.5rem, 3vw, 2.5rem);
+  box-shadow: var(--shadow-card);
+  transition: all var(--transition-normal);
+  position: relative;
+}
+
+.glass-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-card-hover);
+  border-color: var(--border-gold-bright);
+}
+
+.glass-card-dark {
+  background: var(--surface-card-dark);
+  backdrop-filter: blur(var(--blur-glass-deep));
+  -webkit-backdrop-filter: blur(var(--blur-glass-deep));
+  border: 1px solid rgba(214, 183, 122, 0.3);
+  border-radius: var(--radius-lg);
+  padding: clamp(1.5rem, 3vw, 2.5rem);
+  color: var(--text-inverted);
+  box-shadow: 0 16px 40px rgba(30, 22, 32, 0.35);
+  transition: all var(--transition-normal);
+}
+
+.glass-card-dark h3, .glass-card-dark h4 {
+  color: var(--color-champagne-gold-light);
+}
+
+.glass-card-dark p {
+  color: var(--text-inverted-secondary);
+}
+
+.glass-card-dark:hover {
+  transform: translateY(-5px);
+  border-color: var(--color-champagne-gold);
+  box-shadow: 0 20px 50px rgba(30, 22, 32, 0.5), 0 0 30px rgba(214, 183, 122, 0.15);
+}
+
+/* -------------------------------------------------------------------------
+   Badges, Pills & Status Tags
+   ------------------------------------------------------------------------- */
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 0.25rem 0.75rem;
+  border-radius: var(--radius-full);
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.badge-gold {
+  background: rgba(214, 183, 122, 0.2);
+  color: var(--color-champagne-gold-dark);
+  border: 1px solid rgba(214, 183, 122, 0.4);
+}
+
+.badge-botanical {
+  background: rgba(82, 107, 84, 0.15);
+  color: var(--color-botanical-green-dark);
+  border: 1px solid rgba(82, 107, 84, 0.3);
+}
+
+.badge-coral {
+  background: rgba(233, 161, 140, 0.2);
+  color: var(--color-coral-dark);
+  border: 1px solid rgba(233, 161, 140, 0.4);
+}
+
+.badge-lavender {
+  background: rgba(185, 168, 216, 0.25);
+  color: var(--color-lavender-dark);
+  border: 1px solid rgba(185, 168, 216, 0.45);
+}
+
+/* -------------------------------------------------------------------------
+   Interactive Switcher & Tabs
+   ------------------------------------------------------------------------- */
+.tab-nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  background: rgba(73, 59, 76, 0.06);
+  padding: 0.45rem;
+  border-radius: var(--radius-full);
+  border: 1px solid var(--border-gold);
+  margin-bottom: 2.5rem;
+  max-width: fit-content;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.tab-btn {
+  font-family: var(--font-sans);
+  font-size: 0.9375rem;
+  font-weight: 600;
+  padding: 0.65rem 1.35rem;
+  border-radius: var(--radius-full);
+  color: var(--text-secondary);
+  transition: all var(--transition-fast);
+  cursor: pointer;
+  border: 1px solid transparent;
+}
+
+.tab-btn:hover {
+  color: var(--color-deep-plum);
+}
+
+.tab-btn.active {
+  background: var(--color-deep-plum);
+  color: var(--color-champagne-gold-light);
+  box-shadow: 0 4px 14px rgba(73, 59, 76, 0.2);
+  border-color: rgba(214, 183, 122, 0.4);
+}
+
+/* -------------------------------------------------------------------------
+   Form Controls
+   ------------------------------------------------------------------------- */
+.form-group {
+  margin-bottom: 1.5rem;
+  position: relative;
+}
+
+.form-label {
+  display: block;
+  font-family: var(--font-sans);
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--color-deep-plum);
+  margin-bottom: 0.5rem;
+}
+
+.form-control {
+  width: 100%;
+  padding: 0.95rem 1.25rem;
+  font-size: 0.95rem;
+  color: var(--color-deep-plum);
+  background: rgba(255, 255, 255, 0.7);
+  border: 1.5px solid rgba(73, 59, 76, 0.15);
+  border-radius: var(--radius-md);
+  transition: all var(--transition-fast);
+}
+
+.form-control:focus {
+  background: #fff;
+  border-color: var(--color-champagne-gold-dark);
+  box-shadow: 0 0 0 3px rgba(214, 183, 122, 0.25);
+}
+
+.form-select {
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%23493B4C' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m6 9 6 6 6-6'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 1.25rem center;
+  background-size: 1rem;
+  cursor: pointer;
+}
+
+textarea.form-control {
+  resize: vertical;
+  min-height: 120px;
+}
+
+/* -------------------------------------------------------------------------
+   Modals & Lightbox
+   ------------------------------------------------------------------------- */
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(30, 22, 32, 0.75);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  z-index: var(--z-modal);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity var(--transition-normal);
+}
+
+.modal-overlay.active {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.modal-container {
+  background: var(--color-warm-ivory);
+  border: 1.5px solid var(--color-champagne-gold);
+  border-radius: var(--radius-xl);
+  max-width: 840px;
+  width: 100%;
+  max-height: 90vh;
+  overflow-y: auto;
+  padding: clamp(1.75rem, 4vw, 3rem);
+  box-shadow: 0 25px 70px rgba(0, 0, 0, 0.4);
+  position: relative;
+  transform: scale(0.95) translateY(20px);
+  transition: transform var(--transition-bounce);
+}
+
+.modal-overlay.active .modal-container {
+  transform: scale(1) translateY(0);
+}
+
+.modal-close {
+  position: absolute;
+  top: 1.25rem;
+  right: 1.25rem;
+  width: 40px;
+  height: 40px;
+  border-radius: var(--radius-full);
+  background: rgba(73, 59, 76, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-deep-plum);
+  transition: all var(--transition-fast);
+  cursor: pointer;
+}
+
+.modal-close:hover {
+  background: var(--color-coral);
+  color: #fff;
+  transform: rotate(90deg);
+}

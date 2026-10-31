@@ -1,0 +1,1242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Oxford VIT Junior College & Academy | The Living Campus Experience | Narasaraopet</title>
+  
+  <meta name="description" content="Oxford VIT Junior College & Academy, Narasaraopet. Premier intermediate education and integrated coaching for IIT-JEE, NEET, and Olympiads across 6 dedicated Bhavans. Under the patronage of KSR Charitable Trust.">
+  <meta name="keywords" content="Oxford VIT, Oxford VIT Narasaraopet, Junior College Narasaraopet, IIT JEE coaching, NEET coaching Palnadu, KSR Charitable Trust, Panadi Raghava, Balaji Bhavan, Yashoda Bhavan, Raman Bhavan">
+  <meta name="author" content="Oxford VIT Junior College & Academy">
+  <meta name="theme-color" content="#493B4C">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Oxford VIT Junior College & Academy | The Living Campus Experience">
+  <meta property="og:description" content="One unified educational institution representing all verified campuses in Narasaraopet. IIT-JEE, NEET, and IPE Excellence.">
+  <meta property="og:type" content="website">
+
+  <!-- Favicon Crest SVG -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='20' fill='%23D6B77A'/%3E%3Cpath d='M50 15 L80 32 L80 68 L50 85 L20 68 L20 32 Z' fill='%23493B4C'/%3E%3Cpath d='M50 25 L70 37 L70 63 L50 75 L30 63 L30 37 Z' fill='%23F7F3E9'/%3E%3Ctext x='50' y='58' font-family='serif' font-size='26' font-weight='bold' fill='%23493B4C' text-anchor='middle'%3EOV%3C/text%3E%3C/svg%3E">
+
+  <!-- Core Design Tokens & Stylesheets -->
+  <link rel="stylesheet" href="assets/css/variables.css">
+  <link rel="stylesheet" href="assets/css/base.css">
+  <link rel="stylesheet" href="assets/css/components.css">
+  <link rel="stylesheet" href="assets/css/layout.css">
+  <link rel="stylesheet" href="assets/css/sections.css">
+  <link rel="stylesheet" href="assets/css/animations.css">
+
+  <!-- Vendor Supporting Libraries (Local Self-Contained) -->
+  <script src="assets/vendor/three.min.js"></script>
+  <script src="assets/vendor/gsap.min.js"></script>
+  <script src="assets/vendor/ScrollTrigger.min.js"></script>
+</head>
+<body>
+
+  <!-- =========================================================================
+       3D WebGL Living Campus Background Canvas
+       ========================================================================= -->
+  <div id="canvas3d-container" aria-hidden="true"></div>
+
+  <!-- =========================================================================
+       Header & Floating Institutional Navigation
+       ========================================================================= -->
+  <header class="site-header" role="banner">
+    <div class="header-container">
+      <a href="#home" class="brand" aria-label="Oxford VIT Home">
+        <div class="brand-crest">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
+          </svg>
+        </div>
+        <div class="brand-text">
+          <span class="brand-name">OXFORD VIT</span>
+          <span class="brand-subtitle">Junior College & Academy • Narasaraopet</span>
+        </div>
+      </a>
+
+      <!-- Desktop Navigation Menu -->
+      <nav class="main-nav" role="navigation" aria-label="Primary Navigation">
+        <ul class="nav-list">
+          <li><a href="#home" class="nav-link active">Home</a></li>
+          <li><a href="#about" class="nav-link">About</a></li>
+          <li><a href="#campuses" class="nav-link">Our Campuses</a></li>
+          <li><a href="#academics" class="nav-link">Academics</a></li>
+          <li><a href="#achievements" class="nav-link">Achievements</a></li>
+          <li><a href="#management" class="nav-link">Management</a></li>
+          <li><a href="#faculty" class="nav-link">Faculty</a></li>
+          <li><a href="#student-life" class="nav-link">Student Life</a></li>
+          <li><a href="#events" class="nav-link">Events</a></li>
+          <li><a href="#gallery" class="nav-link">Gallery</a></li>
+          <li><a href="#contact" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-actions">
+        <a href="#admissions" class="btn btn-gold btn-sm">
+          <span>Apply for Admissions</span>
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="m9 18 6-6-6-6"/>
+          </svg>
+        </a>
+
+        <!-- Mobile Drawer Toggle -->
+        <button class="menu-toggle" aria-label="Toggle Navigation Menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer Overlay & Container -->
+  <div class="mobile-drawer-overlay"></div>
+  <aside class="mobile-drawer" role="dialog" aria-modal="true" aria-label="Mobile Navigation">
+    <div>
+      <div class="brand" style="margin-bottom: 2rem;">
+        <div class="brand-crest">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
+          </svg>
+        </div>
+        <div class="brand-text">
+          <span class="brand-name" style="font-size: 1.15rem;">OXFORD VIT</span>
+          <span class="brand-subtitle">Narasaraopet</span>
+        </div>
+      </div>
+
+      <ul class="mobile-nav-list">
+        <li><a href="#home" class="mobile-nav-link">Home <span>→</span></a></li>
+        <li><a href="#about" class="mobile-nav-link">About Oxford VIT <span>→</span></a></li>
+        <li><a href="#campuses" class="mobile-nav-link">Our Campuses <span>→</span></a></li>
+        <li><a href="#academics" class="mobile-nav-link">Academics <span>→</span></a></li>
+        <li><a href="#achievements" class="mobile-nav-link">Achievements <span>→</span></a></li>
+        <li><a href="#management" class="mobile-nav-link">Management Desk <span>→</span></a></li>
+        <li><a href="#faculty" class="mobile-nav-link">Faculty & Mentors <span>→</span></a></li>
+        <li><a href="#student-life" class="mobile-nav-link">Student Life <span>→</span></a></li>
+        <li><a href="#events" class="mobile-nav-link">Events & Traditions <span>→</span></a></li>
+        <li><a href="#gallery" class="mobile-nav-link">Photo Gallery <span>→</span></a></li>
+        <li><a href="#admissions" class="mobile-nav-link">Admissions <span>→</span></a></li>
+        <li><a href="#contact" class="mobile-nav-link">Contact & Transport <span>→</span></a></li>
+      </ul>
+    </div>
+
+    <div style="margin-top: 2rem;">
+      <a href="#admissions" class="btn btn-gold" style="width: 100%;">Admissions 2026-27</a>
+      <div style="margin-top: 1rem; font-size: 0.8125rem; color: var(--text-muted); text-align: center;">
+        Hotline: +91 92467 64999
+      </div>
+    </div>
+  </aside>
+
+  <!-- =========================================================================
+       MAIN CONTENT
+       ========================================================================= -->
+  <main>
+
+    <!-- =======================================================================
+         1. HERO SECTION: The Living Campus Experience
+         ======================================================================= -->
+    <section id="home" class="hero-section">
+      <div class="container">
+        <div class="hero-grid">
+          
+          <!-- Hero Left Column -->
+          <div class="hero-content">
+            <div class="hero-badge-wrap">
+              <span class="section-tag gold">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+                  <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
+                </svg>
+                The Living Campus Experience
+              </span>
+              <span class="badge badge-botanical">KSR Charitable Trust Patronage</span>
+            </div>
+
+            <h1 class="hero-title">
+              Where Ambition Meets
+              <span class="title-accent">Academic Mastery.</span>
+              <span class="title-gold">Oxford VIT.</span>
+            </h1>
+
+            <p class="hero-description">
+              One centralized institutional home uniting all verified campuses across Narasaraopet. Combining rigorous intermediate board excellence with premier competitive training for IIT-JEE, NEET, and Olympiads.
+            </p>
+
+            <div class="hero-cta-group">
+              <a href="#campuses" class="btn btn-gold btn-lg">
+                <span>Explore Our Campuses</span>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M5 12h14M12 5l7 7-7 7"/>
+                </svg>
+              </a>
+              <a href="#admissions" class="btn btn-glass btn-lg">Admissions Inquiry</a>
+            </div>
+
+            <!-- Stats Bar -->
+            <div class="hero-stats-bar">
+              <div class="stat-item">
+                <span class="stat-number">30<span class="accent">+</span></span>
+                <span class="stat-label">Years of Legacy</span>
+              </div>
+              <div class="stat-item">
+                <span class="stat-number">1000<span class="accent">+</span></span>
+                <span class="stat-label">IIT & NIT Selections</span>
+              </div>
+              <div class="stat-item">
+                <span class="stat-number">500<span class="accent">+</span></span>
+                <span class="stat-label">MBBS Medical Seats</span>
+              </div>
+              <div class="stat-item">
+                <span class="stat-number">6<span class="accent">✦</span></span>
+                <span class="stat-label">Dedicated Bhavans</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Hero Right Column: 3D Living Node Overview -->
+          <div class="hero-visual-card">
+            <div class="campus-radar-header">
+              <div>
+                <h4 style="font-size: 1.15rem; color: var(--color-deep-plum); margin-bottom: 2px;">Campus Spatial Radar</h4>
+                <span style="font-size: 0.78125rem; color: var(--text-muted);">Narasaraopet Centralized Ecosystem</span>
+              </div>
+              <div class="radar-live-indicator">
+                <span class="radar-dot"></span>
+                ACTIVE
+              </div>
+            </div>
+
+            <div class="hero-bhavans-list">
+              <div class="hero-bhavan-item" data-id="main-campus">
+                <div class="bhavan-item-info">
+                  <div class="bhavan-icon-wrap">🏛️</div>
+                  <div>
+                    <div class="bhavan-item-name">Main Junior College</div>
+                    <div class="bhavan-item-tag">Opp. Kamma Hostel, Ravipadu Rd</div>
+                  </div>
+                </div>
+                <span class="badge badge-gold">HQ</span>
+              </div>
+
+              <div class="hero-bhavan-item" data-id="balaji-bhavan">
+                <div class="bhavan-item-info">
+                  <div class="bhavan-icon-wrap">⭐</div>
+                  <div>
+                    <div class="bhavan-item-name">Balaji Bhavan</div>
+                    <div class="bhavan-item-tag">Super-60 & Boys Residential</div>
+                  </div>
+                </div>
+                <span class="badge badge-botanical">Residential</span>
+              </div>
+
+              <div class="hero-bhavan-item" data-id="yashoda-bhavan">
+                <div class="bhavan-item-info">
+                  <div class="bhavan-icon-wrap">🌸</div>
+                  <div>
+                    <div class="bhavan-item-name">Yashoda Bhavan</div>
+                    <div class="bhavan-item-tag">Dedicated Girls Academy & Hostel</div>
+                  </div>
+                </div>
+                <span class="badge badge-lavender">Girls Wing</span>
+              </div>
+
+              <div class="hero-bhavan-item" data-id="raman-bhavan">
+                <div class="bhavan-item-info">
+                  <div class="bhavan-icon-wrap">🔬</div>
+                  <div>
+                    <div class="bhavan-item-name">Raman Bhavan</div>
+                    <div class="bhavan-item-tag">Advanced STEM & Olympiad Hub</div>
+                  </div>
+                </div>
+                <span class="badge badge-coral">Olympiad</span>
+              </div>
+
+              <div class="hero-bhavan-item" data-id="ksr-towers">
+                <div class="bhavan-item-info">
+                  <div class="bhavan-icon-wrap">👑</div>
+                  <div>
+                    <div class="bhavan-item-name">KSR Towers</div>
+                    <div class="bhavan-item-tag">Directorate & Charitable Trust HQ</div>
+                  </div>
+                </div>
+                <span class="badge badge-gold">Administration</span>
+              </div>
+            </div>
+
+            <div style="margin-top: 1.5rem; text-align: center;">
+              <a href="#campuses" style="font-size: 0.8125rem; font-weight: 600; color: var(--color-champagne-gold-dark); display: inline-flex; align-items: center; gap: 0.35rem;">
+                Explore all 6 locations on map & directory →
+              </a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- =======================================================================
+         2. ABOUT OXFORD VIT SECTION
+         ======================================================================= -->
+    <section id="about" class="section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag botanical">Our Legacy & Philosophy</span>
+          <h2 class="section-title">An Educational Sanctuary Rooted in Discipline and Vision</h2>
+          <p class="section-subtitle">
+            Founded with an unwavering mission to empower students of Andhra Pradesh and beyond, Oxford VIT Junior College & Academy blends classical academic rigor with contemporary scientific discovery.
+          </p>
+        </div>
+
+        <div class="about-grid">
+          <!-- Left Column -->
+          <div>
+            <p class="lead">
+              For three decades, Oxford VIT has operated as a single, unified beacon of educational integrity in Narasaraopet. Under the guidance of our leadership team and the benevolent patronage of the KSR Charitable Trust, we cultivate leaders in engineering, medicine, and public service.
+            </p>
+            <p>
+              We reject one-size-fits-all education. Instead, our modular multi-campus system allows each student to thrive in dedicated learning environments—from the intensive competitive pods of Balaji Bhavan to the serene, secure residential environment of Yashoda Bhavan.
+            </p>
+
+            <div class="about-features-list">
+              <div class="about-feature">
+                <div class="feature-check-icon">✓</div>
+                <div>
+                  <h4 style="font-size: 1.1rem; margin-bottom: 0.25rem;">Integrated Two-Year Curriculum</h4>
+                  <p style="font-size: 0.9375rem; margin-bottom: 0;">Harmonized delivery of BIEAP Intermediate Board syllabus and national entrance exams (JEE, NEET, EAPCET).</p>
+                </div>
+              </div>
+
+              <div class="about-feature">
+                <div class="feature-check-icon">✓</div>
+                <div>
+                  <h4 style="font-size: 1.1rem; margin-bottom: 0.25rem;">Unrivaled IIT & NIT Faculty</h4>
+                  <p style="font-size: 0.9375rem; margin-bottom: 0;">Mentors with 15–30 years of classroom mastery who provide daily micro-doubt resolution and error analysis.</p>
+                </div>
+              </div>
+
+              <div class="about-feature">
+                <div class="feature-check-icon">✓</div>
+                <div>
+                  <h4 style="font-size: 1.1rem; margin-bottom: 0.25rem;">Holistic Residential Care</h4>
+                  <p style="font-size: 0.9375rem; margin-bottom: 0;">Hygienic steam-cooked nutrition, 24/7 security, resident doctors, and daily yoga sessions for peak mental well-being.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right Column: KSR Charitable Trust Pillar Card -->
+          <div class="trust-pillar-card">
+            <div class="trust-crest-icon">
+              <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/>
+              </svg>
+            </div>
+            <span class="badge badge-gold" style="margin-bottom: 1rem;">Philanthropic Anchor</span>
+            <h3 style="font-size: 1.85rem; margin-bottom: 1rem; color: var(--color-champagne-gold-light);">The KSR Charitable Trust</h3>
+            <p style="font-size: 1rem; line-height: 1.7; margin-bottom: 1.5rem;">
+              Established by Administrative Director K. Sambasiva Rao, the KSR Charitable Trust ensures that financial constraints never stand in the way of brilliance. Every year, the trust provides full and partial tuition waivers, textbook scholarships, and lodging grants to meritorious rural students across Palnadu and coastal Andhra.
+            </p>
+            <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
+              <div style="background: rgba(255,255,255,0.08); padding: 0.85rem 1.25rem; border-radius: var(--radius-md); border: 1px solid rgba(214,183,122,0.3);">
+                <div style="font-family: var(--font-mono); font-size: 1.35rem; font-weight: 700; color: var(--color-champagne-gold);">250+</div>
+                <div style="font-size: 0.75rem; color: rgba(247,243,233,0.7); text-transform: uppercase;">Annual Scholarships</div>
+              </div>
+              <div style="background: rgba(255,255,255,0.08); padding: 0.85rem 1.25rem; border-radius: var(--radius-md); border: 1px solid rgba(214,183,122,0.3);">
+                <div style="font-family: var(--font-mono); font-size: 1.35rem; font-weight: 700; color: var(--color-champagne-gold);">100%</div>
+                <div style="font-size: 0.75rem; color: rgba(247,243,233,0.7); text-transform: uppercase;">Merit-Based Transparency</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =======================================================================
+         3. OUR CAMPUSES SECTION (The 6 Bhavans Hub)
+         ======================================================================= -->
+    <section id="campuses" class="section" style="background: rgba(73, 59, 76, 0.02);">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag gold">Unified Multi-Campus Directory</span>
+          <h2 class="section-title">The Six Specialized Bhavans of Oxford VIT</h2>
+          <p class="section-subtitle">
+            Every building has a distinct purpose, yet all function as integral chambers of one living institutional organism in Narasaraopet.
+          </p>
+        </div>
+
+        <!-- Campus Interactive Filter Tabs -->
+        <div class="tab-nav campuses-tabs" role="tablist">
+          <button class="tab-btn active" data-filter="all" role="tab">All 6 Bhavans</button>
+          <button class="tab-btn" data-filter="academic" role="tab">Academic & STEM</button>
+          <button class="tab-btn" data-filter="residential" role="tab">Residential & Super-60</button>
+          <button class="tab-btn" data-filter="girls" role="tab">Girls Campus</button>
+          <button class="tab-btn" data-filter="administration" role="tab">Directorate & Trust</button>
+        </div>
+
+        <!-- Cards Grid populated dynamically via campusSwitcher.js -->
+        <div class="campus-cards-grid">
+          <!-- Injected via JavaScript -->
+        </div>
+      </div>
+    </section>
+
+    <!-- =======================================================================
+         4. ACADEMICS SECTION
+         ======================================================================= -->
+    <section id="academics" class="section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag botanical">Academic Architecture</span>
+          <h2 class="section-title">Precision Programs Engineered for National Eminence</h2>
+          <p class="section-subtitle">
+            A methodology structured around deep foundational clarity, daily formative testing, and personalized micro-mentoring.
+          </p>
+        </div>
+
+        <div class="academics-grid">
+          
+          <!-- Card 1: IIT-JEE Super-60 -->
+          <article class="academic-program-card featured">
+            <div class="program-header">
+              <span class="badge badge-gold">Premier Flagship</span>
+              <div class="program-icon-wrap">⚡</div>
+            </div>
+            <h3 class="program-card-title">IIT-JEE Super-60 Batch</h3>
+            <p style="color: var(--text-secondary); font-size: 0.95rem;">
+              An elite, high-velocity cohort for aspirants targeting Top 100 AIR in JEE Advanced and admissions to premier IITs, NITs, and BITS.
+            </p>
+            <ul class="program-highlights-list">
+              <li class="program-highlight-item">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg>
+                Curated 60-student batch with 1:15 faculty ratio
+              </li>
+              <li class="program-highlight-item">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg>
+                Daily Grand Tests with national-level percentile benchmarking
+              </li>
+              <li class="program-highlight-item">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg>
+                Advanced problem sets led by Panadi Raghava & Senior Chairs
+              </li>
+            </ul>
+            <div style="margin-top: auto; padding-top: 1.25rem; border-top: 1px solid var(--border-gold);">
+              <span style="font-family: var(--font-mono); font-size: 0.8125rem; color: var(--color-deep-plum);">Stream: Intermediate MPC</span>
+            </div>
+          </article>
+
+          <!-- Card 2: NEET Medical Academy -->
+          <article class="academic-program-card featured">
+            <div class="program-header">
+              <span class="badge badge-coral">Healthcare Elite</span>
+              <div class="program-icon-wrap" style="color: var(--color-coral); background: rgba(233,161,140,0.15);">🩺</div>
+            </div>
+            <h3 class="program-card-title">NEET Medical Academy</h3>
+            <p style="color: var(--text-secondary); font-size: 0.95rem;">
+              Comprehensive NCERT mastery integrated with high-yield clinical reasoning and negative-marking prevention for AIIMS and MBBS seats.
+            </p>
+            <ul class="program-highlights-list">
+              <li class="program-highlight-item">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg>
+                NCERT line-by-line Biology and Chemistry deep-dives
+              </li>
+              <li class="program-highlight-item">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg>
+                Physics numerical simplification & formula clinics
+              </li>
+              <li class="program-highlight-item">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg>
+                OMR accuracy drills & full-syllabus simulation series
+              </li>
+            </ul>
+            <div style="margin-top: auto; padding-top: 1.25rem; border-top: 1px solid var(--border-gold);">
+              <span style="font-family: var(--font-mono); font-size: 0.8125rem; color: var(--color-deep-plum);">Stream: Intermediate BiPC</span>
+            </div>
+          </article>
+
+          <!-- Card 3: Board Excellence -->
+          <article class="academic-program-card">
+            <div class="program-header">
+              <span class="badge badge-botanical">State Board</span>
+              <div class="program-icon-wrap">📘</div>
+            </div>
+            <h3 class="program-card-title">Intermediate Board Excellence</h3>
+            <p style="color: var(--text-secondary); font-size: 0.95rem;">
+              Complete mastery of the Andhra Pradesh State Board syllabus, consistently achieving 990+/1000 and 465+/470 state toppers.
+            </p>
+            <ul class="program-highlights-list">
+              <li class="program-highlight-item">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg>
+                Blueprint question bank with 10 years of solved question papers
+              </li>
+              <li class="program-highlight-item">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg>
+                Handwriting and presentation enhancement clinics
+              </li>
+              <li class="program-highlight-item">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg>
+                Full distinction in Physics, Chemistry & Bio practicals
+              </li>
+            </ul>
+            <div style="margin-top: auto; padding-top: 1.25rem; border-top: 1px solid var(--border-gold);">
+              <span style="font-family: var(--font-mono); font-size: 0.8125rem; color: var(--color-deep-plum);">Streams: MPC | BiPC | MEC | CEC</span>
+            </div>
+          </article>
+
+          <!-- Card 4: Olympiad & Foundation -->
+          <article class="academic-program-card">
+            <div class="program-header">
+              <span class="badge badge-lavender">STEM Foundation</span>
+              <div class="program-icon-wrap" style="color: var(--color-lavender-dark); background: rgba(185,168,216,0.25);">🧠</div>
+            </div>
+            <h3 class="program-card-title">Olympiad & Foundation Wing</h3>
+            <p style="color: var(--text-secondary); font-size: 0.95rem;">
+              Early competitive orientation focused on logical reasoning, analytical problem-solving, and international Olympiad readiness.
+            </p>
+            <ul class="program-highlights-list">
+              <li class="program-highlight-item">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg>
+                Mathematics & Science Olympiads (RMO, NSEP, NSEC, NSEB)
+              </li>
+              <li class="program-highlight-item">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg>
+                Higher-order thinking skills (HOTS) and puzzle workshops
+              </li>
+              <li class="program-highlight-item">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg>
+                Smooth transition bridge from Class 10 into Intermediate
+              </li>
+            </ul>
+            <div style="margin-top: auto; padding-top: 1.25rem; border-top: 1px solid var(--border-gold);">
+              <span style="font-family: var(--font-mono); font-size: 0.8125rem; color: var(--color-deep-plum);">Hub: Raman Bhavan</span>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- =======================================================================
+         5. ACHIEVEMENTS SECTION: Wall of Champions
+         ======================================================================= -->
+    <section id="achievements" class="section" style="background: rgba(73, 59, 76, 0.025);">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag coral">Wall of Champions</span>
+          <h2 class="section-title">Tangible Milestones of Undisputed Excellence</h2>
+          <p class="section-subtitle">
+            Our results speak for our pedagogical discipline. Realized ranks and state-wide distinctions achieved by Oxford VIT scholars.
+          </p>
+        </div>
+
+        <!-- Continuous Infinite Marquee Ticker -->
+        <div class="achievements-marquee-bar" aria-label="Achievements Ticker">
+          <div class="marquee-content">
+            <!-- Injected via achievements.js -->
+          </div>
+        </div>
+
+        <!-- Rankers Category Filter Tabs -->
+        <div class="tab-nav achievements-tabs" role="tablist">
+          <button class="tab-btn active" data-filter="all" role="tab">All Distinctions</button>
+          <button class="tab-btn" data-filter="jee" role="tab">JEE Advanced & Main</button>
+          <button class="tab-btn" data-filter="neet" role="tab">NEET Medical</button>
+          <button class="tab-btn" data-filter="board" role="tab">IPE State Toppers</button>
+          <button class="tab-btn" data-filter="eapcet" role="tab">AP EAPCET Ranks</button>
+        </div>
+
+        <!-- Rankers Grid -->
+        <div class="rankers-grid">
+          <!-- Injected dynamically via achievements.js -->
+        </div>
+      </div>
+    </section>
+
+    <!-- =======================================================================
+         6. MANAGEMENT & LEADERSHIP SECTION
+         ======================================================================= -->
+    <section id="management" class="section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag gold">Visionary Governance</span>
+          <h2 class="section-title">The Directorate & Academic Leadership</h2>
+          <p class="section-subtitle">
+            Guided by veteran educators and philanthropic leaders dedicated to molding the intellectual future of Andhra Pradesh.
+          </p>
+        </div>
+
+        <div class="management-grid">
+          
+          <!-- Leader 1: KSR -->
+          <article class="leader-card">
+            <div class="leader-header">
+              <div class="leader-avatar-wrap">KSR</div>
+              <div class="leader-meta">
+                <span class="badge badge-gold" style="margin-bottom: 4px;">Administrative Pillar</span>
+                <h3>K. Sambasiva Rao (KSR)</h3>
+                <div class="leader-role">Administrative Director & Founder</div>
+                <div class="leader-credentials">M.Sc., B.Ed., IIT Mathematics • 30+ Years Experience</div>
+              </div>
+            </div>
+            <p class="leader-message">
+              “Education is not a commercial enterprise; it is the sacred duty of building character, unshakeable discipline, and moral courage. At Oxford VIT and through the KSR Charitable Trust, we have devoted three decades to ensuring that no meritorious student is ever denied the opportunity to scale the heights of national accomplishment.”
+            </p>
+            <div style="margin-top: auto; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 0.75rem;">
+              <span class="trust-badge">Chairman, KSR Charitable Trust</span>
+              <span style="font-family: var(--font-mono); font-size: 0.8125rem; color: var(--color-deep-plum);">Office: KSR Towers</span>
+            </div>
+          </article>
+
+          <!-- Leader 2: Panadi Raghava -->
+          <article class="leader-card">
+            <div class="leader-header">
+              <div class="leader-avatar-wrap" style="background: linear-gradient(135deg, var(--color-lavender), var(--color-lavender-dark)); color: #fff;">PR</div>
+              <div class="leader-meta">
+                <span class="badge badge-lavender" style="margin-bottom: 4px;">Academic Dean</span>
+                <h3>Panadi Raghava</h3>
+                <div class="leader-role">Academic Director & Dean of Mathematics</div>
+                <div class="leader-credentials">IIT-JEE Mathematics Expert • Youth Motivational Mentor</div>
+              </div>
+            </div>
+            <p class="leader-message">
+              “Competitive mathematics and sciences are not about memorizing formulas; they are about training the mind to perceive patterns and dismantle complex problems with calm analytical logic. Our Super-60 methodology instills the exact mental fortitude required to conquer national examinations like JEE and NEET.”
+            </p>
+            <div style="margin-top: auto; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 0.75rem;">
+              <div style="display: flex; gap: 0.5rem; flex-wrap: wrap;">
+                <a href="https://www.instagram.com/raghava_vit/" target="_blank" rel="noopener noreferrer" class="social-pill-link">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <rect width="20" height="20" x="2" y="2" rx="5" ry="5"/>
+                    <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/>
+                    <line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/>
+                  </svg>
+                  @raghava_vit
+                </a>
+                <a href="https://www.threads.com/@raghava_vit" target="_blank" rel="noopener noreferrer" class="social-pill-link">
+                  @raghava_vit (Threads)
+                </a>
+              </div>
+              <span style="font-family: var(--font-mono); font-size: 0.8125rem; color: var(--color-deep-plum);">Hub: Raman Bhavan</span>
+            </div>
+          </article>
+
+        </div>
+
+        <!-- Governing Council Strip -->
+        <div class="glass-card" style="padding: 2rem;">
+          <h4 style="text-align: center; color: var(--color-champagne-gold-dark); text-transform: uppercase; letter-spacing: 0.1em; font-size: 0.9375rem; margin-bottom: 1.5rem;">
+            Institutional Governing Council & Board of Directors
+          </h4>
+          <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1.5rem; text-align: center;">
+            <div>
+              <div style="font-weight: 700; color: var(--color-deep-plum);">Dogiparthi Srinivasa Rao (DSR)</div>
+              <div style="font-size: 0.8125rem; color: var(--color-botanical-green);">Academic Director (B.Tech, IIT Delhi Ex-SRA)</div>
+            </div>
+            <div>
+              <div style="font-weight: 700; color: var(--color-deep-plum);">Ambati Muralikrishna</div>
+              <div style="font-size: 0.8125rem; color: var(--color-botanical-green);">Director (M.A., B.L.)</div>
+            </div>
+            <div>
+              <div style="font-weight: 700; color: var(--color-deep-plum);">Ambati Giridhar Kumar</div>
+              <div style="font-size: 0.8125rem; color: var(--color-botanical-green);">Director (M.A., B.Ed.)</div>
+            </div>
+            <div>
+              <div style="font-weight: 700; color: var(--color-deep-plum);">Ch. Raja Reddy</div>
+              <div style="font-size: 0.8125rem; color: var(--color-botanical-green);">Director (M.Com., B.Ed.)</div>
+            </div>
+            <div>
+              <div style="font-weight: 700; color: var(--color-deep-plum);">Adella Vijay Kumar</div>
+              <div style="font-size: 0.8125rem; color: var(--color-botanical-green);">Director (M.A., B.Ed.)</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =======================================================================
+         7. FACULTY & MENTORS SECTION
+         ======================================================================= -->
+    <section id="faculty" class="section" style="background: rgba(82, 107, 84, 0.025);">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag botanical">Master Educators</span>
+          <h2 class="section-title">Dedicated Department Chairs & Doubt Resolvers</h2>
+          <p class="section-subtitle">
+            Our faculty members are not visiting lecturers; they are resident mentors who spend their days and evenings guiding students through every conceptual hurdle.
+          </p>
+        </div>
+
+        <div class="faculty-grid">
+          <div class="faculty-card">
+            <div class="faculty-avatar">∑</div>
+            <h4 class="faculty-name">Department of Mathematics</h4>
+            <div class="faculty-subject">Calculus, Vectors & Algebra</div>
+            <div class="faculty-exp">Led by Panadi Raghava & Senior IIT Mentors</div>
+            <p style="font-size: 0.875rem; color: var(--text-secondary); margin-top: 0.75rem;">
+              Specializing in step-by-step problem reduction, speed calculation algorithms, and coordinate geometry mastery.
+            </p>
+          </div>
+
+          <div class="faculty-card">
+            <div class="faculty-avatar">⚛</div>
+            <h4 class="faculty-name">Department of Physics</h4>
+            <div class="faculty-subject">Mechanics, Electrodynamics & Optics</div>
+            <div class="faculty-exp">Senior NIT Alumnus Faculty</div>
+            <p style="font-size: 0.875rem; color: var(--text-secondary); margin-top: 0.75rem;">
+              Emphasis on physical intuition, experimental demonstrations at Raman Bhavan, and formula-free reasoning.
+            </p>
+          </div>
+
+          <div class="faculty-card">
+            <div class="faculty-avatar">🧪</div>
+            <h4 class="faculty-name">Department of Chemistry</h4>
+            <div class="faculty-subject">Organic, Inorganic & Physical</div>
+            <div class="faculty-exp">Doctorate & National Rank Mentors</div>
+            <p style="font-size: 0.875rem; color: var(--text-secondary); margin-top: 0.75rem;">
+              Reaction mechanism flowcharts, NCERT inorganic memory retention drills, and thermodynamics clarity.
+            </p>
+          </div>
+
+          <div class="faculty-card">
+            <div class="faculty-avatar">🧬</div>
+            <h4 class="faculty-name">Department of Biology</h4>
+            <div class="faculty-subject">Botany, Zoology & Genetics</div>
+            <div class="faculty-exp">Senior Medical Coaching Specialists</div>
+            <p style="font-size: 0.875rem; color: var(--text-secondary); margin-top: 0.75rem;">
+              Line-by-line NCERT diagrammatic mastery, physiological processes, and 360/360 target modules for NEET.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =======================================================================
+         8. STUDENT LIFE & HOSTELS SECTION
+         ======================================================================= -->
+    <section id="student-life" class="section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag lavender">Living Well</span>
+          <h2 class="section-title">The Residential Sanctuary: Safety, Health & Fellowship</h2>
+          <p class="section-subtitle">
+            An environment calibrated to eliminate stress, promote vitality, and foster lifelong camaraderie among aspiring champions.
+          </p>
+        </div>
+
+        <div class="student-life-grid">
+          <article class="life-aspect-card">
+            <div class="aspect-icon-wrap">🏡</div>
+            <h3 style="font-size: 1.35rem; margin-bottom: 0.75rem;">Balaji & Yashoda Hostels</h3>
+            <p style="font-size: 0.9375rem; color: var(--text-secondary);">
+              Well-ventilated, spacious student rooms with ergonomic study desks, solar hot water, individual storage, and silent study chambers supervised by resident wardens.
+            </p>
+          </article>
+
+          <article class="life-aspect-card">
+            <div class="aspect-icon-wrap" style="background: rgba(82,107,84,0.15); color: var(--color-botanical-green);">🥗</div>
+            <h3 style="font-size: 1.35rem; margin-bottom: 0.75rem;">Hygienic Pure Vegetarian Dining</h3>
+            <p style="font-size: 0.9375rem; color: var(--text-secondary);">
+              Steam-cooked nutritious meals planned by nutritionists. Unlimited pure cow milk, fresh seasonal fruits, sprouts, and energy snacks provided daily to fuel active minds.
+            </p>
+          </article>
+
+          <article class="life-aspect-card">
+            <div class="aspect-icon-wrap" style="background: rgba(233,161,140,0.2); color: var(--color-coral-dark);">🏸</div>
+            <h3 style="font-size: 1.35rem; margin-bottom: 0.75rem;">Sports & Physical Vitality</h3>
+            <p style="font-size: 0.9375rem; color: var(--text-secondary);">
+              Outdoor volleyball and shuttle badminton courts, table tennis, chess pods, and cricket nets for evening recreation and physical fitness.
+            </p>
+          </article>
+
+          <article class="life-aspect-card">
+            <div class="aspect-icon-wrap" style="background: rgba(214,183,122,0.2); color: var(--color-champagne-gold-dark);">🧘</div>
+            <h3 style="font-size: 1.35rem; margin-bottom: 0.75rem;">Mental Wellness & Daily Yoga</h3>
+            <p style="font-size: 0.9375rem; color: var(--text-secondary);">
+              Guided morning pranayama and meditation to sharpen focus, reduce examination anxiety, and cultivate mental balance throughout the two-year journey.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- =======================================================================
+         9. EVENTS & TRADITIONS SECTION
+         ======================================================================= -->
+    <section id="events" class="section" style="background: rgba(73, 59, 76, 0.02);">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag coral">Vibrant Campus Culture</span>
+          <h2 class="section-title">Traditions, Festivals & Celebrations of Talent</h2>
+          <p class="section-subtitle">
+            Beyond textbooks, Oxford VIT celebrates our rich cultural roots and the collective joy of intellectual discovery.
+          </p>
+        </div>
+
+        <div class="events-grid">
+          <article class="event-card">
+            <div class="event-card-banner">
+              <span class="event-tag-bubble">Cultural Glory</span>
+              <h3 style="font-size: 1.4rem; color: #fff; z-index: 2;">Sankranti Sambaralu</h3>
+            </div>
+            <div class="event-card-body">
+              <p style="font-size: 0.9375rem; color: var(--text-secondary); margin-bottom: 1.25rem;">
+                The signature annual celebration featuring traditional Telugu folk arts, Bhogi bonfires, elaborate Rangoli competitions, and a grand feast celebrating agricultural heritage.
+              </p>
+              <div class="badge badge-botanical">Celebrated Across All Campuses</div>
+            </div>
+          </article>
+
+          <article class="event-card">
+            <div class="event-card-banner" style="background: linear-gradient(135deg, var(--color-champagne-gold-dark), var(--color-deep-plum));">
+              <span class="event-tag-bubble">Annual Convocation</span>
+              <h3 style="font-size: 1.4rem; color: #fff; z-index: 2;">Prathibha Puraskaralu</h3>
+            </div>
+            <div class="event-card-body">
+              <p style="font-size: 0.9375rem; color: var(--text-secondary); margin-bottom: 1.25rem;">
+                Grand felicitation ceremony where JEE, NEET, and Board state rankers are rewarded with gold medals, cash prizes, and KSR Trust scholarships in the presence of their parents.
+              </p>
+              <div class="badge badge-gold">Annual Merit Honors</div>
+            </div>
+          </article>
+
+          <article class="event-card">
+            <div class="event-card-banner" style="background: linear-gradient(135deg, var(--color-lavender-dark), var(--color-botanical-green));">
+              <span class="event-tag-bubble">Scientific Innovation</span>
+              <h3 style="font-size: 1.4rem; color: #fff; z-index: 2;">National Science & Maths Day</h3>
+            </div>
+            <div class="event-card-body">
+              <p style="font-size: 0.9375rem; color: var(--text-secondary); margin-bottom: 1.25rem;">
+                Interactive science model exhibitions, live robotics experiments, mathematics speed contests, and seminars honoring Sir C.V. Raman and Srinivasa Ramanujan.
+              </p>
+              <div class="badge badge-lavender">Hosted at Raman Bhavan</div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- =======================================================================
+         10. PHOTO & VIDEO GALLERY SECTION
+         ======================================================================= -->
+    <section id="gallery" class="section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag gold">Visual Chronicle</span>
+          <h2 class="section-title">The Living Campus Photographic Archive</h2>
+          <p class="section-subtitle">
+            Glimpses into classroom discovery, laboratory breakthroughs, hostel life, and celebratory milestones at Oxford VIT.
+          </p>
+        </div>
+
+        <!-- Gallery Category Filter Tabs -->
+        <div class="tab-nav gallery-tabs" role="tablist">
+          <button class="tab-btn active" data-category="all" role="tab">All Glimpses</button>
+          <button class="tab-btn" data-category="campuses" role="tab">Campuses & Bhavans</button>
+          <button class="tab-btn" data-category="academics" role="tab">Labs & Classrooms</button>
+          <button class="tab-btn" data-category="celebrations" role="tab">Festivals & Honors</button>
+          <button class="tab-btn" data-category="life" role="tab">Residential Life</button>
+        </div>
+
+        <!-- Gallery Grid -->
+        <div class="gallery-grid">
+          <!-- Injected via galleryModal.js -->
+        </div>
+      </div>
+    </section>
+
+    <!-- =======================================================================
+         11. ADMISSIONS BUREAU SECTION
+         ======================================================================= -->
+    <section id="admissions" class="section" style="background: rgba(73, 59, 76, 0.02);">
+      <div class="container">
+        <div class="admissions-wrapper">
+          <div class="admissions-grid">
+            
+            <!-- Admissions Guidance Left -->
+            <div>
+              <span class="section-tag gold">Admissions 2026 – 2027</span>
+              <h2 style="font-size: 2.25rem; margin-top: 0.5rem; margin-bottom: 1rem;">Begin Your Journey of Mastery</h2>
+              <p style="color: var(--text-secondary); line-height: 1.7; margin-bottom: 1.5rem;">
+                Admissions for the 2026-27 academic session for Intermediate 1st Year (MPC, BiPC, MEC) and Integrated IIT-JEE/NEET Super-60 Batches are now open. Scholarships are available through the Oxford VIT Entrance & Scholarship Test (OVEST).
+              </p>
+
+              <div class="admissions-steps-list">
+                <div class="admission-step-item">
+                  <div class="step-num-pill">1</div>
+                  <div class="step-details">
+                    <h4>Submit Application / Inquiry</h4>
+                    <p>Fill out the online application form with academic preferences and contact details.</p>
+                  </div>
+                </div>
+
+                <div class="admission-step-item">
+                  <div class="step-num-pill">2</div>
+                  <div class="step-details">
+                    <h4>Counseling & OVEST Screening</h4>
+                    <p>Attend our personalized academic assessment and scholarship evaluation at KSR Towers or Main Campus.</p>
+                  </div>
+                </div>
+
+                <div class="admission-step-item">
+                  <div class="step-num-pill">3</div>
+                  <div class="step-details">
+                    <h4>Bhavan & Batch Allocation</h4>
+                    <p>Select day-scholar or residential campus accommodation (Balaji Bhavan or Yashoda Bhavan).</p>
+                  </div>
+                </div>
+              </div>
+
+              <div style="margin-top: 2rem; padding: 1.25rem; background: rgba(214,183,122,0.15); border-radius: var(--radius-md); border: 1px solid var(--border-gold);">
+                <div style="font-size: 0.8125rem; font-weight: 700; color: var(--color-champagne-gold-dark); text-transform: uppercase;">Admissions Helpline</div>
+                <div style="font-family: var(--font-mono); font-size: 1.25rem; font-weight: 700; color: var(--color-deep-plum);">+91 92467 64999 / +91 77991 37799</div>
+                <div style="font-size: 0.78125rem; color: var(--text-muted); margin-top: 2px;">Email: vitnrt@gmail.com</div>
+              </div>
+            </div>
+
+            <!-- Admissions Form Right -->
+            <div class="glass-card" style="padding: clamp(1.75rem, 3vw, 2.5rem); background: #fff;">
+              <h3 style="font-size: 1.6rem; margin-bottom: 1.5rem; color: var(--color-deep-plum);">Student Application Desk</h3>
+              
+              <form id="admissions-inquiry-form">
+                <div class="form-group">
+                  <label class="form-label" for="adm-name">Student Full Name *</label>
+                  <input type="text" id="adm-name" class="form-control" placeholder="Enter student's full name" required>
+                </div>
+
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
+                  <div class="form-group">
+                    <label class="form-label" for="adm-phone">Parent Mobile Number *</label>
+                    <input type="tel" id="adm-phone" class="form-control" placeholder="10-digit mobile number" required>
+                  </div>
+
+                  <div class="form-group">
+                    <label class="form-label" for="adm-marks">Class 10th Marks / GPA</label>
+                    <input type="text" id="adm-marks" class="form-control" placeholder="e.g. 580/600 or 10.0 GPA">
+                  </div>
+                </div>
+
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
+                  <div class="form-group">
+                    <label class="form-label" for="adm-stream">Target Stream & Track *</label>
+                    <select id="adm-stream" class="form-control form-select" required>
+                      <option value="">Select Stream</option>
+                      <option value="MPC-IIT">MPC + IIT-JEE Super-60</option>
+                      <option value="BiPC-NEET">BiPC + NEET Medical Academy</option>
+                      <option value="MPC-EAPCET">MPC + AP EAPCET Track</option>
+                      <option value="BiPC-Agri">BiPC + Agriculture / Vet</option>
+                      <option value="MEC-Commerce">MEC (Commerce & Maths)</option>
+                      <option value="Olympiad">Olympiad Foundation</option>
+                    </select>
+                  </div>
+
+                  <div class="form-group">
+                    <label class="form-label" for="adm-campus">Preferred Campus / Bhavan *</label>
+                    <select id="adm-campus" class="form-control form-select" required>
+                      <option value="">Select Campus</option>
+                      <option value="main">Main Junior College (Ravipadu Rd)</option>
+                      <option value="balaji">Balaji Bhavan (Boys Residential)</option>
+                      <option value="yashoda">Yashoda Bhavan (Girls Campus)</option>
+                      <option value="raman">Raman Bhavan (STEM & Olympiad)</option>
+                      <option value="padmavathi">Padmavathi Bhavan (Central)</option>
+                    </select>
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <label class="form-label" for="adm-message">Student Native Place / Village</label>
+                  <input type="text" id="adm-message" class="form-control" placeholder="Town, Mandal, or District">
+                </div>
+
+                <button type="submit" class="btn btn-gold" style="width: 100%; padding: 1.05rem;">
+                  <span>Submit Admission Application</span>
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M5 12h14M12 5l7 7-7 7"/>
+                  </svg>
+                </button>
+              </form>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =======================================================================
+         12. CONTACT & TRANSPORT SECTION
+         ======================================================================= -->
+    <section id="contact" class="section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag botanical">Reach Oxford VIT</span>
+          <h2 class="section-title">Institutional Contact Desk & Bus Transport Network</h2>
+          <p class="section-subtitle">
+            Centralized communications desk, physical addresses of all Bhavans, and our fleet bus routes servicing the entire Palnadu region.
+          </p>
+        </div>
+
+        <div class="contact-grid">
+          
+          <!-- Contact Left: Details & Addresses -->
+          <div class="contact-info-cards">
+            <div class="contact-card-item">
+              <div class="contact-icon-box">🏛️</div>
+              <div>
+                <h4 style="font-size: 1.15rem; margin-bottom: 0.35rem;">Headquarters / Main Junior College</h4>
+                <p style="font-size: 0.9rem; color: var(--text-secondary); margin-bottom: 0.5rem;">
+                  Opposite Kamma Hostel, Ravipadu Road, Narasaraopet, Palnadu District, Andhra Pradesh, PIN: 522601.
+                </p>
+                <div style="font-size: 0.8125rem; font-weight: 600; color: var(--color-botanical-green);">
+                  Open: Monday – Saturday (8:00 AM – 6:30 PM)
+                </div>
+              </div>
+            </div>
+
+            <div class="contact-card-item">
+              <div class="contact-icon-box" style="background: rgba(82,107,84,0.15); color: var(--color-botanical-green);">📞</div>
+              <div>
+                <h4 style="font-size: 1.15rem; margin-bottom: 0.35rem;">Direct Helplines & Information Desk</h4>
+                <p style="font-size: 0.9rem; color: var(--text-secondary); margin-bottom: 0.5rem;">
+                  Admissions Hotline: <strong style="color: var(--color-deep-plum);">+91 92467 64999</strong><br>
+                  Administrative Office: <strong style="color: var(--color-deep-plum);">+91 77991 37799</strong><br>
+                  Email: <span style="font-family: var(--font-mono);">vitnrt@gmail.com</span> / <span style="font-family: var(--font-mono);">vitacamdeynrt@gmail.com</span>
+                </p>
+              </div>
+            </div>
+
+            <div class="contact-card-item">
+              <div class="contact-icon-box" style="background: rgba(185,168,216,0.25); color: var(--color-deep-plum);">📱</div>
+              <div>
+                <h4 style="font-size: 1.15rem; margin-bottom: 0.35rem;">Directorate Social & Online Handles</h4>
+                <p style="font-size: 0.9rem; color: var(--text-secondary); margin-bottom: 0.5rem;">
+                  Instagram: <a href="https://www.instagram.com/raghava_vit/" target="_blank" rel="noopener noreferrer" style="color: var(--color-champagne-gold-dark); font-weight: 600;">@raghava_vit</a><br>
+                  Threads: <a href="https://www.threads.com/@raghava_vit" target="_blank" rel="noopener noreferrer" style="color: var(--color-champagne-gold-dark); font-weight: 600;">@raghava_vit (Threads)</a>
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Contact Right: Bus Route Finder Covering Palnadu -->
+          <div class="glass-card">
+            <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 0.5rem;">
+              <h3 style="font-size: 1.45rem;">College Transport Network</h3>
+              <span class="badge badge-botanical">GPS Tracked Fleet</span>
+            </div>
+            <p style="font-size: 0.9rem; color: var(--text-secondary); margin-bottom: 1.25rem;">
+              Our dedicated fleet of high-safety buses provides daily transit for day-scholars across Narasaraopet and surrounding mandals.
+            </p>
+
+            <div class="bus-routes-table-wrap">
+              <table class="bus-routes-table">
+                <thead>
+                  <tr>
+                    <th>Route No.</th>
+                    <th>Destination / Mandals</th>
+                    <th>Key Stops</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><strong>Route 01</strong></td>
+                    <td>Chilakaluripet Sector</td>
+                    <td>Purushothapatnam, Ganapavaram, Chilakaluripet Town</td>
+                  </tr>
+                  <tr>
+                    <td><strong>Route 02</strong></td>
+                    <td>Vinukonda Sector</td>
+                    <td>Savalyapuram, Vellaturu, Vinukonda Bus Stand</td>
+                  </tr>
+                  <tr>
+                    <td><strong>Route 03</strong></td>
+                    <td>Sattenapalle Sector</td>
+                    <td>Rompicherla, Muppalla, Sattenapalle Clock Tower</td>
+                  </tr>
+                  <tr>
+                    <td><strong>Route 04</strong></td>
+                    <td>Phirangipuram Sector</td>
+                    <td>Edlapadu, Phirangipuram, Perecherla Junction</td>
+                  </tr>
+                  <tr>
+                    <td><strong>Route 05</strong></td>
+                    <td>Narasaraopet Local</td>
+                    <td>Railway Station, Prakash Nagar, Arundelpet, Ravipadu Rd</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+            <div style="margin-top: 1.25rem; font-size: 0.8125rem; color: var(--text-muted);">
+              * Transport In-charge Hotline: +91 92467 64999 (Route timings 7:15 AM to 8:15 AM).
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- =========================================================================
+       INSTITUTIONAL FOOTER
+       ========================================================================= -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-top">
+        
+        <!-- Col 1: Brand & KSR Trust -->
+        <div class="footer-brand">
+          <div class="brand">
+            <div class="brand-crest">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
+              </svg>
+            </div>
+            <div class="brand-text">
+              <span class="brand-name">OXFORD VIT</span>
+              <span class="brand-subtitle" style="color: var(--color-champagne-gold);">Junior College & Academy</span>
+            </div>
+          </div>
+          <p style="margin-top: 1rem;">
+            One unified educational institution representing all verified campuses across Narasaraopet. Dedicated to scholastic eminence, ethical discipline, and national ranker development under the aegis of the KSR Charitable Trust.
+          </p>
+          <div class="trust-badge">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12 2L2 7l10 5 10-5-10-5z"/>
+            </svg>
+            KSR Charitable Trust Patronage
+          </div>
+        </div>
+
+        <!-- Col 2: The 6 Bhavans -->
+        <div class="footer-col">
+          <h4>The 6 Bhavans</h4>
+          <ul class="footer-links">
+            <li><a href="#campuses">Main Junior College</a></li>
+            <li><a href="#campuses">Balaji Bhavan (Boys Res.)</a></li>
+            <li><a href="#campuses">Yashoda Bhavan (Girls Wing)</a></li>
+            <li><a href="#campuses">Raman Bhavan (Olympiad)</a></li>
+            <li><a href="#campuses">Padmavathi Bhavan</a></li>
+            <li><a href="#campuses">KSR Towers (Directorate)</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 3: Academic Division -->
+        <div class="footer-col">
+          <h4>Academics</h4>
+          <ul class="footer-links">
+            <li><a href="#academics">IIT-JEE Super-60</a></li>
+            <li><a href="#academics">NEET Medical Academy</a></li>
+            <li><a href="#academics">Intermediate MPC & BiPC</a></li>
+            <li><a href="#academics">Intermediate MEC Stream</a></li>
+            <li><a href="#achievements">Wall of Champions</a></li>
+            <li><a href="#admissions">Admissions 2026-27</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 4: Central Headquarters Address -->
+        <div class="footer-col">
+          <h4>Central Office</h4>
+          <div class="footer-contact-item">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/>
+              <circle cx="12" cy="10" r="3"/>
+            </svg>
+            <span>Opposite Kamma Hostel, Ravipadu Road, Narasaraopet, Palnadu District, AP - 522601</span>
+          </div>
+
+          <div class="footer-contact-item">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+            </svg>
+            <span>+91 92467 64999 / +91 77991 37799</span>
+          </div>
+
+          <div class="footer-contact-item">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <rect width="20" height="16" x="2" y="4" rx="2"/>
+              <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/>
+            </svg>
+            <span>vitnrt@gmail.com</span>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="footer-bottom">
+        <div>
+          © 2026 Oxford VIT Junior College & Academy. All Rights Reserved.
+          <span style="display: block; font-size: 0.75rem; margin-top: 3px; color: rgba(247,243,233,0.45);">
+            Affiliated to Board of Intermediate Education, Andhra Pradesh (BIEAP).
+          </span>
+        </div>
+
+        <div class="social-links">
+          <a href="https://www.instagram.com/raghava_vit/" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="Instagram">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <rect width="20" height="20" x="2" y="2" rx="5" ry="5"/>
+              <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/>
+              <line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/>
+            </svg>
+          </a>
+          <a href="https://www.threads.com/@raghava_vit" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="Threads">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="12" cy="12" r="10"/>
+              <path d="M8 12a4 4 0 1 0 8 0c0-2-1.5-3-3-3s-3 1-3 3"/>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- =========================================================================
+       MODALS & DIALOGS
+       ========================================================================= -->
+
+  <!-- Campus Details Modal -->
+  <div id="campus-modal" class="modal-overlay" role="dialog" aria-modal="true" aria-label="Campus Information">
+    <div class="modal-container">
+      <button id="campus-modal-close" class="modal-close" aria-label="Close dialog">✕</button>
+      <div id="campus-modal-body">
+        <!-- Injected via campusSwitcher.js -->
+      </div>
+    </div>
+  </div>
+
+  <!-- Gallery Lightbox Modal -->
+  <div id="gallery-modal" class="modal-overlay" role="dialog" aria-modal="true" aria-label="Photo Lightbox">
+    <div class="modal-container">
+      <button id="gallery-modal-close" class="modal-close" aria-label="Close lightbox">✕</button>
+      <div id="gallery-modal-body">
+        <!-- Injected via galleryModal.js -->
+      </div>
+    </div>
+  </div>
+
+  <!-- Admissions Success Modal -->
+  <div id="admissions-success-modal" class="modal-overlay" role="dialog" aria-modal="true" aria-label="Submission Confirmation">
+    <div class="modal-container" style="text-align: center; max-width: 520px;">
+      <button id="admissions-success-close" class="modal-close" aria-label="Close">✕</button>
+      <div style="width: 72px; height: 72px; border-radius: 50%; background: rgba(82, 107, 84, 0.15); color: var(--color-botanical-green); display: flex; align-items: center; justify-content: center; margin: 0 auto 1.5rem; border: 2px solid var(--color-botanical-green);">
+        <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+          <path d="M20 6 9 17l-5-5"/>
+        </svg>
+      </div>
+      <span class="badge badge-gold" style="margin-bottom: 0.75rem;">Application Acknowledged</span>
+      <h3 style="font-size: 1.75rem; margin-bottom: 0.75rem; color: var(--color-deep-plum);">Admission Inquiry Received</h3>
+      <p style="color: var(--text-secondary); font-size: 0.95rem; line-height: 1.6; margin-bottom: 1.5rem;">
+        Thank you for choosing Oxford VIT. Our admissions advisory bureau at KSR Towers has logged your details. Our academic counseling coordinator will reach out to the registered mobile number within 24 hours.
+      </p>
+      <div style="background: rgba(73, 59, 76, 0.05); padding: 1rem; border-radius: var(--radius-md); border: 1.5px dashed var(--color-champagne-gold); margin-bottom: 1.5rem;">
+        <div style="font-size: 0.75rem; text-transform: uppercase; color: var(--text-muted); font-weight: 600;">Your Application Reference Token</div>
+        <div id="success-ref-code" style="font-family: var(--font-mono); font-size: 1.5rem; font-weight: 700; color: var(--color-coral); margin-top: 4px;">OXF-2026-7842</div>
+      </div>
+      <button class="btn btn-gold" onclick="document.getElementById('admissions-success-modal').classList.remove('active'); document.body.style.overflow='';" style="width: 100%;">
+        Done
+      </button>
+    </div>
+  </div>
+
+  <!-- Main ES6+ Orchestration Entrypoint -->
+  <script type="module" src="assets/js/main.js"></script>
+</body>
+</html>

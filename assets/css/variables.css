@@ -1,0 +1,123 @@
+/* ==========================================================================
+   OXFORD VIT – THE LIVING CAMPUS EXPERIENCE
+   Design Tokens & System Variables
+   ========================================================================== */
+
+:root {
+  /* -------------------------------------------------------------------------
+     Unique Institutional Color Palette
+     ------------------------------------------------------------------------- */
+  --color-warm-ivory: #F7F3E9;
+  --color-warm-ivory-rgb: 247, 243, 233;
+
+  --color-champagne-gold: #D6B77A;
+  --color-champagne-gold-rgb: 214, 183, 122;
+  --color-champagne-gold-light: #F0DFC0;
+  --color-champagne-gold-dark: #A38448;
+
+  --color-botanical-green: #526B54;
+  --color-botanical-green-rgb: 82, 107, 84;
+  --color-botanical-green-light: #739075;
+  --color-botanical-green-dark: #374938;
+
+  --color-lavender: #B9A8D8;
+  --color-lavender-rgb: 185, 168, 216;
+  --color-lavender-light: #D9CEEC;
+  --color-lavender-dark: #8372A5;
+
+  --color-coral: #E9A18C;
+  --color-coral-rgb: 233, 161, 140;
+  --color-coral-light: #F7C6B8;
+  --color-coral-dark: #C66E56;
+
+  --color-deep-plum: #493B4C;
+  --color-deep-plum-rgb: 73, 59, 76;
+  --color-deep-plum-light: #6A566E;
+  --color-deep-plum-dark: #2F2432;
+  --color-deep-plum-ultra: #1E1620;
+
+  /* -------------------------------------------------------------------------
+     Surfaces & Glassmorphism Tokens
+     ------------------------------------------------------------------------- */
+  --surface-canvas: var(--color-warm-ivory);
+  --surface-card-light: rgba(247, 243, 233, 0.85);
+  --surface-card-glass: rgba(247, 243, 233, 0.65);
+  --surface-card-dark: rgba(73, 59, 76, 0.92);
+  --surface-card-dark-glass: rgba(73, 59, 76, 0.72);
+  --surface-gold-tint: rgba(214, 183, 122, 0.12);
+  --surface-botanical-tint: rgba(82, 107, 84, 0.08);
+
+  --border-subtle: rgba(73, 59, 76, 0.1);
+  --border-gold: rgba(214, 183, 122, 0.45);
+  --border-gold-bright: rgba(214, 183, 122, 0.85);
+  --border-glass-light: rgba(255, 255, 255, 0.4);
+  --border-glass-dark: rgba(214, 183, 122, 0.25);
+
+  --blur-glass: 16px;
+  --blur-glass-deep: 24px;
+
+  /* -------------------------------------------------------------------------
+     Shadows & Atmospheric Depth
+     ------------------------------------------------------------------------- */
+  --shadow-subtle: 0 4px 16px rgba(73, 59, 76, 0.06);
+  --shadow-card: 0 12px 36px rgba(73, 59, 76, 0.08);
+  --shadow-card-hover: 0 24px 56px rgba(73, 59, 76, 0.15);
+  --shadow-gold-glow: 0 0 35px rgba(214, 183, 122, 0.35);
+  --shadow-lavender-glow: 0 0 35px rgba(185, 168, 216, 0.35);
+  --shadow-coral-glow: 0 0 30px rgba(233, 161, 140, 0.4);
+
+  /* -------------------------------------------------------------------------
+     Typography
+     ------------------------------------------------------------------------- */
+  --font-serif: 'Playfair Display', Georgia, 'Times New Roman', serif;
+  --font-sans: 'Outfit', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  --font-mono: 'Space Grotesk', 'Courier New', monospace;
+
+  --text-primary: var(--color-deep-plum);
+  --text-secondary: rgba(73, 59, 76, 0.78);
+  --text-muted: rgba(73, 59, 76, 0.55);
+  --text-inverted: var(--color-warm-ivory);
+  --text-inverted-secondary: rgba(247, 243, 233, 0.8);
+  --text-gold: var(--color-champagne-gold-dark);
+
+  /* -------------------------------------------------------------------------
+     Spacing Scale
+     ------------------------------------------------------------------------- */
+  --space-3xs: 0.25rem;
+  --space-2xs: 0.5rem;
+  --space-xs: 0.75rem;
+  --space-sm: 1rem;
+  --space-md: 1.5rem;
+  --space-lg: 2rem;
+  --space-xl: 3rem;
+  --space-2xl: 4.5rem;
+  --space-3xl: 6rem;
+  --space-4xl: 8rem;
+
+  /* -------------------------------------------------------------------------
+     Container & Layout
+     ------------------------------------------------------------------------- */
+  --container-max: 1380px;
+  --container-padding: clamp(1.25rem, 4vw, 3rem);
+  --header-height: 86px;
+  --radius-xs: 4px;
+  --radius-sm: 8px;
+  --radius-md: 14px;
+  --radius-lg: 22px;
+  --radius-xl: 32px;
+  --radius-full: 9999px;
+
+  /* -------------------------------------------------------------------------
+     Transitions & Motion
+     ------------------------------------------------------------------------- */
+  --transition-fast: 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+  --transition-normal: 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+  --transition-slow: 0.65s cubic-bezier(0.16, 1, 0.3, 1);
+  --transition-bounce: 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
+  
+  --z-canvas3d: 0;
+  --z-content: 10;
+  --z-header: 1000;
+  --z-modal: 2000;
+  --z-cursor: 9999;
+}
