@@ -108,7 +108,8 @@
       "galleryImages": [
         "assets/images/campuses/narasaraopet/yashoda-bhavan/campus.svg",
         "assets/images/events/prathibha-puraskaralu.svg",
-        "assets/images/events/cultural-sambaralu.svg"
+        "assets/images/events/cultural-sambaralu.svg",
+        "assets/images/events/ig-post-02-rashtriya-ekta-diwas.jpg"
       ],
       "events": [
         "Annual Prathibha Puraskaralu Ranker Convocation",
@@ -598,13 +599,15 @@
       "mapEmbedQuery": "Syamala Nagar 8th Lane Extension, Guntur",
       "galleryImages": [
         "assets/images/campuses/guntur/balaji-tower/campus.svg",
-        "assets/images/events/guntur-rankers.svg"
+        "assets/images/events/guntur-rankers.svg",
+        "assets/images/cultural-activities/ig-post-10-jalsa-dance-competition-guntur.jpg"
       ],
       "events": [
         "Guntur Regional Merit Scholarship Screening Test",
         "Mega NEET Simulation Mock Examination",
         "JEE Advanced Strategy Seminars by Ex-IITians",
-        "Parent-Dean Academic Orientation Meets"
+        "Parent-Dean Academic Orientation Meets",
+        "JALSA Annual Inter-Campus Cultural Dance Championship"
       ],
       "achievements": [
         "Top Guntur district marks in AP EAPCET Engineering stream",

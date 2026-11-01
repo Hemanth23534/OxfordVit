@@ -64,6 +64,13 @@ export class SocialFeedEngine {
 
   renderProfileCard() {
     if (!this.profileCard) return;
+    const instProfile = this.profiles['vitjuniorcollege'] || {
+      name: 'VIT Academy AP',
+      handle: '@vitjuniorcollege',
+      role: 'Official Institutional Broadcast Hub',
+      institution: 'Oxford VIT Junior College & Academy (Narasaraopet • Guntur • Bapatla)',
+      instagramUrl: 'https://www.instagram.com/vitjuniorcollege/'
+    };
     const author = this.profiles['raghava_vit'] || {
       name: 'Panadi Raghava',
       handle: '@raghava_vit',
@@ -74,32 +81,59 @@ export class SocialFeedEngine {
     };
 
     this.profileCard.innerHTML = `
-      <div class="social-author-banner">
-        <div class="author-avatar-wrap">
-          <div class="avatar-ring">
-            <span class="avatar-initials">PR</span>
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 1.5rem; width: 100%;">
+        <div class="social-author-banner" style="margin: 0;">
+          <div class="author-avatar-wrap">
+            <div class="avatar-ring" style="background: rgba(255,255,255,0.9); padding: 4px;">
+              <img src="assets/images/logo/oxford-vit-crest-transparent.png" alt="VIT Logo" style="width: 100%; height: 100%; object-fit: contain;">
+            </div>
+            <span class="verified-tick" title="Verified Official Institutional Handle">✓</span>
           </div>
-          <span class="verified-tick" title="Verified Institutional Management Profile">✓</span>
-        </div>
-        <div class="author-details">
-          <div class="author-title-row">
-            <h3 class="author-name">${author.name}</h3>
-            <span class="author-handle">${author.handle}</span>
-            <span class="badge badge-gold">Official Management Channel</span>
+          <div class="author-details">
+            <div class="author-title-row">
+              <h3 class="author-name">${instProfile.name}</h3>
+              <span class="author-handle">${instProfile.handle}</span>
+              <span class="badge badge-gold">Official Institutional Hub</span>
+            </div>
+            <p class="author-bio">
+              🎯 IIT-JEE &amp; NEET Academy &bull; 📍 Narasaraopet | Guntur | Bapatla &bull; 2,029+ Followers &bull; 📞 9246764999 &bull; Official institutional updates, student achievements, and campus celebrations.
+            </p>
           </div>
-          <p class="author-bio">
-            ${author.role} &bull; ${author.institution}. Sharing mathematical pedagogy, classroom milestones, ranker honors, and KSR Charitable Trust community initiatives.
-          </p>
+          <div class="author-actions">
+            <a href="${instProfile.instagramUrl}" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-sm social-channel-btn instagram-btn">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg>
+              Follow Official IG
+            </a>
+          </div>
         </div>
-        <div class="author-actions">
-          <a href="${author.instagramUrl}" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-sm social-channel-btn instagram-btn">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg>
-            Follow on Instagram
-          </a>
-          <a href="${author.threadsUrl}" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-sm social-channel-btn threads-btn">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12.186 24c-3.535 0-6.425-1.168-8.358-3.377C1.968 18.508 1 15.617 1 12.016 1 8.486 2.002 5.59 3.978 3.398 5.954 1.206 8.878 0 12.449 0c3.57 0 6.452 1.18 8.334 3.413C22.665 5.646 23.6 8.52 23.6 11.963v.787h-4.398v-.787c0-2.453-.615-4.444-1.826-5.918-1.212-1.474-3.033-2.254-5.412-2.254-2.38 0-4.227.78-5.49 2.316C5.21 7.644 4.58 9.61 4.58 11.963c0 2.38.618 4.372 1.836 5.927 1.218 1.556 3.036 2.345 5.4 2.345 2.102 0 3.76-.62 4.927-1.844.75-.788 1.248-1.802 1.48-3.013h-6.407v-3.792h10.427c.105.772.158 1.57.158 2.396 0 3.557-1.125 6.428-3.344 8.532C17.037 23.018 14.773 24 12.186 24z"/></svg>
-            Follow on Threads
-          </a>
+
+        <div class="social-author-banner" style="margin: 0;">
+          <div class="author-avatar-wrap">
+            <div class="avatar-ring">
+              <span class="avatar-initials">PR</span>
+            </div>
+            <span class="verified-tick" title="Verified Institutional Management Profile">✓</span>
+          </div>
+          <div class="author-details">
+            <div class="author-title-row">
+              <h3 class="author-name">${author.name}</h3>
+              <span class="author-handle">${author.handle}</span>
+              <span class="badge badge-gold">Academic Directorate</span>
+            </div>
+            <p class="author-bio">
+              ${author.role} &bull; ${author.institution}. Sharing mathematical pedagogy, classroom milestones, ranker honors, and KSR Charitable Trust community initiatives.
+            </p>
+          </div>
+          <div class="author-actions">
+            <a href="${author.instagramUrl}" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-sm social-channel-btn instagram-btn">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg>
+              Follow on Instagram
+            </a>
+            <a href="${author.threadsUrl}" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-sm social-channel-btn threads-btn">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12.186 24c-3.535 0-6.425-1.168-8.358-3.377C1.968 18.508 1 15.617 1 12.016 1 8.486 2.002 5.59 3.978 3.398 5.954 1.206 8.878 0 12.449 0c3.57 0 6.452 1.18 8.334 3.413C22.665 5.646 23.6 8.52 23.6 11.963v.787h-4.398v-.787c0-2.453-.615-4.444-1.826-5.918-1.212-1.474-3.033-2.254-5.412-2.254-2.38 0-4.227.78-5.49 2.316C5.21 7.644 4.58 9.61 4.58 11.963c0 2.38.618 4.372 1.836 5.927 1.218 1.556 3.036 2.345 5.4 2.345 2.102 0 3.76-.62 4.927-1.844.75-.788 1.248-1.802 1.48-3.013h-6.407v-3.792h10.427c.105.772.158 1.57.158 2.396 0 3.557-1.125 6.428-3.344 8.532C17.037 23.018 14.773 24 12.186 24z"/></svg>
+              Follow on Threads
+            </a>
+          </div>
         </div>
       </div>
     `;
@@ -152,8 +186,12 @@ export class SocialFeedEngine {
         <article class="social-feed-card" data-index="${index}" style="cursor: pointer;">
           <div class="social-card-header">
             <div class="social-header-user">
-              <div class="post-avatar">
-                <span>PR</span>
+              <div class="post-avatar" style="${post.handle === '@vitjuniorcollege' ? 'background: #fff; padding: 2px;' : ''}">
+                ${post.handle === '@vitjuniorcollege' ? `
+                  <img src="assets/images/logo/oxford-vit-crest-transparent.png" alt="VIT Logo" style="width: 100%; height: 100%; object-fit: contain;">
+                ` : `
+                  <span>PR</span>
+                `}
               </div>
               <div class="post-user-info">
                 <div class="user-name-row">

@@ -1,16 +1,46 @@
 {
-  "totalMedia": 20,
+  "totalMedia": 32,
   "campusRoster": [
-    { "id": "yashoda-bhavan", "name": "Yashoda Bhavan (Main Campus)" },
-    { "id": "balaji-bhavan", "name": "Balaji Bhavan (Senior & Junior Sections)" },
-    { "id": "raman-bhavan", "name": "Raman Bhavan (Senior IIT-JEE Super Wing)" },
-    { "id": "ksr-towers", "name": "KSR Towers (Directorate & Trust Archives)" },
-    { "id": "vit-olympiad-school", "name": "VIT Olympiad School (Classes 6 to 10)" },
-    { "id": "oxford-iit-school", "name": "Oxford IIT School / Concept School" },
-    { "id": "guntur-balaji-tower", "name": "Balaji Tower Campus (Guntur)" },
-    { "id": "guntur-vasavi-tower", "name": "Vasavi Tower Girls Campus (Guntur)" },
-    { "id": "guntur-vit-medical", "name": "VIT Medical Academy (Guntur NEET)" },
-    { "id": "bapatla-branch", "name": "VIT Junior College / Bapatla Branch" }
+    {
+      "id": "yashoda-bhavan",
+      "name": "Yashoda Bhavan (Main Campus)"
+    },
+    {
+      "id": "balaji-bhavan",
+      "name": "Balaji Bhavan (Senior & Junior Sections)"
+    },
+    {
+      "id": "raman-bhavan",
+      "name": "Raman Bhavan (Senior IIT-JEE Super Wing)"
+    },
+    {
+      "id": "ksr-towers",
+      "name": "KSR Towers (Directorate & Trust Archives)"
+    },
+    {
+      "id": "vit-olympiad-school",
+      "name": "VIT Olympiad School (Classes 6 to 10)"
+    },
+    {
+      "id": "oxford-iit-school",
+      "name": "Oxford IIT School / Concept School"
+    },
+    {
+      "id": "guntur-balaji-tower",
+      "name": "Balaji Tower Campus (Guntur)"
+    },
+    {
+      "id": "guntur-vasavi-tower",
+      "name": "Vasavi Tower Girls Campus (Guntur)"
+    },
+    {
+      "id": "guntur-vit-medical",
+      "name": "VIT Medical Academy (Guntur NEET)"
+    },
+    {
+      "id": "bapatla-branch",
+      "name": "VIT Junior College / Bapatla Branch"
+    }
   ],
   "mediaItems": [
     {
@@ -312,6 +342,186 @@
       "publicationDate": "2025-07-10",
       "verificationStatus": "Verified - Faculty Academic Conclave",
       "photoPermission": "Authorized Conclave Record"
+    },
+    {
+      "id": "gal-ig-01",
+      "campusId": "yashoda-bhavan",
+      "campusName": "Yashoda Bhavan — Main Campus",
+      "title": "Rashtriya Ekta Diwas & Sardar Patel Commemoration",
+      "category": "events",
+      "badge": "Institutional Observance",
+      "imagePath": "assets/images/events/ig-post-02-rashtriya-ekta-diwas.jpg",
+      "caption": "Rashtriya Ekta Diwas commemorative assembly at Oxford VIT. Inspiring student leadership, unity in effort, and patriotic dedication.",
+      "bgColor": "#493B4C",
+      "source": "Instagram @vitjuniorcollege",
+      "publicationDate": "2026-10-31",
+      "verificationStatus": "Verified Institutional Media",
+      "photoPermission": "Pending Approval"
+    },
+    {
+      "id": "gal-ig-02",
+      "campusId": "ksr-towers",
+      "campusName": "KSR Towers — Administrative Center",
+      "title": "Parent–Teacher Meeting (PTM) & Academic Roadmap",
+      "category": "events",
+      "badge": "Academic Consultation",
+      "imagePath": "assets/images/events/ig-post-03-parent-teacher-meeting.jpg",
+      "caption": "Parent–Teacher interactive assembly: educators, mentors, and parents strategizing exam preparation and academic progression.",
+      "bgColor": "#526B54",
+      "source": "Instagram @vitjuniorcollege",
+      "publicationDate": "2026-10-27",
+      "verificationStatus": "Verified Institutional Media",
+      "photoPermission": "Pending Approval"
+    },
+    {
+      "id": "gal-ig-03",
+      "campusId": "balaji-bhavan",
+      "campusName": "Balaji Bhavan — Senior & Junior Sections",
+      "title": "United Nations Day Global Perspective Session",
+      "category": "events",
+      "badge": "Global Awareness",
+      "imagePath": "assets/images/events/ig-post-04-un-day.jpg",
+      "caption": "Encouraging broad minds and grounded values: United Nations Day awareness session highlighting international cooperation.",
+      "bgColor": "#2E4057",
+      "source": "Instagram @vitjuniorcollege",
+      "publicationDate": "2026-10-24",
+      "verificationStatus": "Verified Institutional Media",
+      "photoPermission": "Pending Approval"
+    },
+    {
+      "id": "gal-ig-04",
+      "campusId": "yashoda-bhavan",
+      "campusName": "Yashoda Bhavan — Main Campus",
+      "title": "Vijaya Dashami & Cultural Celebrations",
+      "category": "cultural-activities",
+      "badge": "Festive Heritage",
+      "imagePath": "assets/images/cultural-activities/ig-post-06-dussehra-celebration.jpg",
+      "caption": "Dussehra celebrations reminding scholars that victory begins by overcoming doubt, distraction, and persevering toward high academic goals.",
+      "bgColor": "#8B4513",
+      "source": "Instagram @vitjuniorcollege",
+      "publicationDate": "2026-10-20",
+      "verificationStatus": "Verified Institutional Media",
+      "photoPermission": "Pending Approval"
+    },
+    {
+      "id": "gal-ig-05",
+      "campusId": "raman-bhavan",
+      "campusName": "Raman Bhavan — Senior IIT-JEE Super Wing",
+      "title": "Collaborative Study Pods & Intensive Problem Solving",
+      "category": "classrooms",
+      "badge": "Classroom Activities",
+      "imagePath": "assets/images/classrooms/ig-post-07-study-session.jpg",
+      "caption": "Intensive peer learning, error elimination worksheets, and supervised doubt resolution sessions in modern study chambers.",
+      "bgColor": "#1F3A3D",
+      "source": "Instagram @vitjuniorcollege",
+      "publicationDate": "2026-10-19",
+      "verificationStatus": "Verified Institutional Media",
+      "photoPermission": "Pending Approval"
+    },
+    {
+      "id": "gal-ig-06",
+      "campusId": "balaji-bhavan",
+      "campusName": "Balaji Bhavan — Senior & Junior Sections",
+      "title": "Nutritious Dining & Student Health Program",
+      "category": "students",
+      "badge": "Student Life",
+      "imagePath": "assets/images/students/ig-post-08-student-dining-nutrition.jpg",
+      "caption": "Hygienic campus dining halls serving balanced, energy-rich meals supporting long study hours and active physical health.",
+      "bgColor": "#4A5D4E",
+      "source": "Instagram @vitjuniorcollege",
+      "publicationDate": "2026-10-16",
+      "verificationStatus": "Verified Institutional Media",
+      "photoPermission": "Pending Approval"
+    },
+    {
+      "id": "gal-ig-07",
+      "campusId": "yashoda-bhavan",
+      "campusName": "Yashoda Bhavan — Main Campus",
+      "title": "World Students’ Day — Dr. APJ Abdul Kalam Tribute",
+      "category": "achievements",
+      "badge": "Scholastic Aspirations",
+      "imagePath": "assets/images/achievements/ig-post-09-world-students-day.jpg",
+      "caption": "Inspiring the next generation of engineers and doctors on the birth anniversary of Bharat Ratna Dr. A.P.J. Abdul Kalam.",
+      "bgColor": "#3D2B3D",
+      "source": "Instagram @vitjuniorcollege",
+      "publicationDate": "2026-10-15",
+      "verificationStatus": "Verified Institutional Media",
+      "photoPermission": "Pending Approval"
+    },
+    {
+      "id": "gal-ig-08",
+      "campusId": "guntur-balaji-tower",
+      "campusName": "Balaji Tower Campus — Guntur",
+      "title": "JALSA Youth Cultural Fest & Dance Showcase",
+      "category": "cultural-activities",
+      "badge": "Guntur Campus Event",
+      "imagePath": "assets/images/cultural-activities/ig-post-10-jalsa-dance-competition-guntur.jpg",
+      "caption": "Vibrant stage performances, rhythmic choreography, and celebration of artistic talent at JALSA 2026, VIT Junior College, Guntur Campus.",
+      "bgColor": "#5C2434",
+      "source": "Instagram @vitjuniorcollege",
+      "publicationDate": "2026-10-14",
+      "verificationStatus": "Verified Campus Activity (Guntur)",
+      "photoPermission": "Pending Approval"
+    },
+    {
+      "id": "gal-ig-09",
+      "campusId": "balaji-bhavan",
+      "campusName": "Balaji Bhavan — Inter Sections",
+      "title": "Inter-Campus Athletics & Softball Tournament",
+      "category": "sports",
+      "badge": "Sports & Athletics",
+      "imagePath": "assets/images/sports/ig-post-12-softball-sports.jpg",
+      "caption": "Outdoor field athletics and team sports fostering camaraderie, leadership, and athletic vigor among residential students.",
+      "bgColor": "#2D4A3E",
+      "source": "Instagram @vitjuniorcollege",
+      "publicationDate": "2026-10-10",
+      "verificationStatus": "Verified Institutional Media",
+      "photoPermission": "Pending Approval"
+    },
+    {
+      "id": "gal-fac-01",
+      "campusId": "ksr-towers",
+      "campusName": "KSR Towers — Administrative Directorate",
+      "title": "Senior Mathematics Academic Mentorship Directorate",
+      "category": "faculty",
+      "badge": "Academic Directorate",
+      "imagePath": "assets/images/faculty/mathematics-dept.svg",
+      "caption": "Senior IIT-JEE Mathematics leadership under Chairman K. Srinivasa Rao (KSR), Chairman D. Srinivasa Rao (DSR), and Principal Panadi Raghava.",
+      "bgColor": "#3E2723",
+      "source": "Oxford VIT Institutional Faculty Directorate",
+      "publicationDate": "2026-10-31",
+      "verificationStatus": "Verified Faculty Mentorship",
+      "photoPermission": "Authorized Institutional Asset"
+    },
+    {
+      "id": "gal-fac-02",
+      "campusId": "raman-bhavan",
+      "campusName": "Raman Bhavan — Senior IIT-JEE Super Wing",
+      "title": "Department of Physics — Senior JEE Advanced Wing",
+      "category": "faculty",
+      "badge": "Physics Faculty",
+      "imagePath": "assets/images/faculty/physics-dept.svg",
+      "caption": "Senior Physics faculty panel (MSR Sir, Ramesh Sir) directing advanced conceptual problem solving and experimental mechanics.",
+      "bgColor": "#1A237E",
+      "source": "Oxford VIT Institutional Faculty Directorate",
+      "publicationDate": "2026-10-31",
+      "verificationStatus": "Verified Faculty Mentorship",
+      "photoPermission": "Authorized Institutional Asset"
+    },
+    {
+      "id": "gal-fac-03",
+      "campusId": "guntur-vit-medical",
+      "campusName": "VIT Medical Academy — Guntur",
+      "title": "Department of Chemistry & Biology — Medical & NEET Mentorship",
+      "category": "faculty",
+      "badge": "Chemistry & Medical Faculty",
+      "imagePath": "assets/images/faculty/biology-dept.svg",
+      "caption": "Chemistry and Biology medical faculty (P.V. Ranga Rao Sir, VS Sir, Anji Sir) conducting daily diagnostic tests and NCERT masterclasses.",
+      "bgColor": "#004D40",
+      "source": "Oxford VIT Institutional Faculty Directorate",
+      "publicationDate": "2026-10-31",
+      "verificationStatus": "Verified Faculty Mentorship",
+      "photoPermission": "Authorized Institutional Asset"
     }
   ]
 }

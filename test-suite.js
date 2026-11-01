@@ -510,15 +510,19 @@ async function runTests() {
     const res = await httpRequest({ hostname: 'localhost', port: 3000, path: '/api/social', method: 'GET' });
     assert(res.statusCode === 200, 'GET /api/social returns HTTP 200');
     const soc = JSON.parse(res.data);
-    assert(soc.success === true && Array.isArray(soc.data) && soc.data.length === 10, `GET /api/social delivers all 10 social broadcasts (found ${soc.data.length})`);
+    assert(soc.success === true && Array.isArray(soc.data) && soc.data.length >= 10, `GET /api/social delivers all social broadcasts (found ${soc.data.length})`);
     assert(soc.profiles && soc.profiles.raghava_vit && typeof soc.profiles.raghava_vit.instagramUrl === 'string' && soc.profiles.raghava_vit.instagramUrl.includes('instagram.com/raghava_vit'), 'Profiles include official @raghava_vit Instagram URL');
     assert(soc.profiles && soc.profiles.raghava_vit && typeof soc.profiles.raghava_vit.threadsUrl === 'string' && soc.profiles.raghava_vit.threadsUrl.includes('threads.com/@raghava_vit'), 'Profiles include official @raghava_vit Threads URL');
+    assert(soc.profiles && soc.profiles.vitjuniorcollege && typeof soc.profiles.vitjuniorcollege.instagramUrl === 'string' && soc.profiles.vitjuniorcollege.instagramUrl.includes('instagram.com/vitjuniorcollege'), 'Profiles include official @vitjuniorcollege Instagram URL');
 
-    const p1 = soc.data[0];
-    assert(typeof p1.originalUrl === 'string' && p1.originalUrl.includes('raghava_vit'), 'Social post has originalUrl referencing @raghava_vit');
+    const p1 = soc.data.find(p => p.originalUrl && p.originalUrl.includes('raghava_vit'));
+    assert(p1 && typeof p1.originalUrl === 'string' && p1.originalUrl.includes('raghava_vit'), 'Social post has originalUrl referencing @raghava_vit');
     assert(typeof p1.verificationStatus === 'string' && p1.verificationStatus.length > 0, 'Social post has verificationStatus');
     assert(typeof p1.permissionStatus === 'string' && p1.permissionStatus.length > 0, 'Social post has permissionStatus');
     assert(typeof p1.campus === 'string' && p1.campus.length > 0, 'Social post is mapped to an institutional campus');
+
+    const pCollege = soc.data.find(p => p.handle === '@vitjuniorcollege');
+    assert(pCollege && pCollege.originalUrl && pCollege.originalUrl.includes('vitjuniorcollege'), 'Social feed includes verified @vitjuniorcollege post');
   } catch (e) {
     assert(false, `GET /api/social failed: ${e.message}`);
   }
@@ -690,6 +694,47 @@ async function runTests() {
   const preloaderHasNoOldCrest = !indexHtml.includes('class="preloader-crest"');
   assert(preloaderHasOfficialLogo, 'index.html cinematic preloader displays official Oxford VIT logo');
   assert(preloaderHasNoOldCrest, 'index.html cinematic preloader has zero geometric placeholder crests');
+
+  // 11. Official Instagram Media Library & Reference Database Verification
+  console.log('\n11. Official Instagram Media Library & Reference Database Verification:');
+  const igDbPath = path.join(__dirname, 'data/instagram-media.json');
+  assert(fs.existsSync(igDbPath), 'data/instagram-media.json exists');
+  
+  let igDb = [];
+  try {
+    igDb = JSON.parse(fs.readFileSync(igDbPath, 'utf-8'));
+    assert(Array.isArray(igDb) && igDb.length === 12, `data/instagram-media.json contains all 12 inspected posts (found ${igDb.length})`);
+  } catch (e) {
+    assert(false, `data/instagram-media.json failed JSON parsing: ${e.message}`);
+  }
+
+  const requiredFields = [
+    'id', 'source', 'postUrl', 'imagePath', 'caption',
+    'postDate', 'category', 'campus', 'facultyName',
+    'verificationStatus', 'permissionStatus'
+  ];
+
+  for (const item of igDb) {
+    for (const f of requiredFields) {
+      assert(f in item, `Post ${item.id} includes required field '${f}'`);
+    }
+    const fullImgPath = path.join(__dirname, item.imagePath);
+    assert(fs.existsSync(fullImgPath), `Image file exists: ${item.imagePath}`);
+    if (fs.existsSync(fullImgPath)) {
+      const stats = fs.statSync(fullImgPath);
+      assert(stats.size > 1024, `Image is valid non-empty asset (>1KB): ${item.imagePath}`);
+    }
+    assert(item.permissionStatus === 'Pending Approval', `Post ${item.id} has Pending Approval permission status`);
+  }
+
+  // Verify gallery 9 categories in gallery.html
+  const requiredCategories = [
+    'all', 'faculty', 'campuses', 'classrooms', 'students',
+    'events', 'cultural-activities', 'sports', 'achievements'
+  ];
+  for (const cat of requiredCategories) {
+    assert(galleryHtml.includes(`data-category="${cat}"`), `gallery.html includes filter button for category '${cat}'`);
+  }
 
   console.log('\n====================================================');
   console.log(`FINAL RESULTS: ${passedTests} PASSED, ${failedTests} FAILED out of ${totalTests} TOTAL CHECKS`);

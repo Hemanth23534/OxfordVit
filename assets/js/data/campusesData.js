@@ -1,11 +1,10 @@
 /**
  * OXFORD VIT – THE LIVING CAMPUS EXPERIENCE
- * Master Centralized Campuses Roster (ES6 Module)
- * Unified Multi-Location Architecture: Narasaraopet • Guntur • Bapatla
- * Standardized Schema: id, name, city, category, status, address, description, focus, image, facilities, contact, verificationStatus
+ * Master Campus Roster and Multi-Location Institutional Database
+ * Verified: Narasaraopet (6), Guntur (3), Bapatla (1) — 10 Operational Campuses
  */
 
-export const citiesData = [
+export const campusCities = [
   {
     "id": "narasaraopet",
     "name": "Narasaraopet",
@@ -40,6 +39,8 @@ export const citiesData = [
     "campusCount": 1
   }
 ];
+
+export const citiesData = campusCities;
 
 export const campusesData = [
   {
@@ -113,7 +114,8 @@ export const campusesData = [
     "galleryImages": [
       "assets/images/campuses/narasaraopet/yashoda-bhavan/campus.svg",
       "assets/images/events/prathibha-puraskaralu.svg",
-      "assets/images/events/cultural-sambaralu.svg"
+      "assets/images/events/cultural-sambaralu.svg",
+      "assets/images/events/ig-post-02-rashtriya-ekta-diwas.jpg"
     ],
     "events": [
       "Annual Prathibha Puraskaralu Ranker Convocation",
@@ -603,13 +605,15 @@ export const campusesData = [
     "mapEmbedQuery": "Syamala Nagar 8th Lane Extension, Guntur",
     "galleryImages": [
       "assets/images/campuses/guntur/balaji-tower/campus.svg",
-      "assets/images/events/guntur-rankers.svg"
+      "assets/images/events/guntur-rankers.svg",
+      "assets/images/cultural-activities/ig-post-10-jalsa-dance-competition-guntur.jpg"
     ],
     "events": [
       "Guntur Regional Merit Scholarship Screening Test",
       "Mega NEET Simulation Mock Examination",
       "JEE Advanced Strategy Seminars by Ex-IITians",
-      "Parent-Dean Academic Orientation Meets"
+      "Parent-Dean Academic Orientation Meets",
+      "JALSA Annual Inter-Campus Cultural Dance Championship"
     ],
     "achievements": [
       "Top Guntur district marks in AP EAPCET Engineering stream",

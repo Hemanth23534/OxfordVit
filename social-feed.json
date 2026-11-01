@@ -3,6 +3,14 @@
     "officialHandles": [
       {
         "platform": "Instagram",
+        "handle": "@vitjuniorcollege",
+        "url": "https://www.instagram.com/vitjuniorcollege/",
+        "author": "VIT Academy AP (Official Institutional Account)",
+        "verifiedBadge": true,
+        "primaryFocus": "Official college announcements, campus celebrations, academic events, PTM updates, and student achievements across Narasaraopet, Guntur, and Bapatla."
+      },
+      {
+        "platform": "Instagram",
         "handle": "@raghava_vit",
         "url": "https://www.instagram.com/raghava_vit/",
         "author": "Panadi Raghava (Principal & Academic Director)",
@@ -19,7 +27,7 @@
       }
     ],
     "verificationStandard": "No invented posts or attribution. Every post references verified management outreach, recorded with source, date, verification status, and public broadcast permissions.",
-    "totalItems": 10
+    "totalItems": 15
   },
   "profiles": {
     "raghava_vit": {
@@ -30,9 +38,119 @@
       "institution": "Oxford VIT Junior College & Academy, Narasaraopet",
       "instagramUrl": "https://www.instagram.com/raghava_vit/",
       "threadsUrl": "https://www.threads.com/@raghava_vit"
+    },
+    "vitjuniorcollege": {
+      "name": "VIT Academy AP",
+      "author": "Oxford VIT Junior College & Academy",
+      "handle": "@vitjuniorcollege",
+      "role": "Official Institutional Broadcast Hub",
+      "institution": "Oxford VIT Junior College & Academy (Narasaraopet • Guntur • Bapatla)",
+      "followers": "2,029+ followers",
+      "contact": "+91 92467 64999",
+      "instagramUrl": "https://www.instagram.com/vitjuniorcollege/"
     }
   },
   "posts": [
+    {
+      "id": "soc-ig-05",
+      "platform": "Instagram",
+      "author": "VIT Academy AP",
+      "handle": "@vitjuniorcollege",
+      "authorRole": "Official Institutional Account",
+      "avatar": "assets/images/logo/oxford-vit-crest-transparent.png",
+      "originalUrl": "https://www.instagram.com/vitjuniorcollege/reel/DeUVzYwHVN0/",
+      "publicationDate": "2026-10-10",
+      "category": "celebrations",
+      "categoryLabel": "Sports & Athletics",
+      "caption": "High energy, team spirit, and athletic vigor! Inter-campus softball and field games at Oxford VIT fostering mental resilience, endurance, and sporting camaraderie alongside rigorous academics. #OxfordVIT #CampusSports #Softball #StudentAthletes",
+      "mediaDescription": "Collegiate sports match and softball tournament action.",
+      "image": "assets/images/sports/ig-post-12-softball-sports.jpg",
+      "campus": "Balaji Bhavan Sports Grounds",
+      "event": "Annual Inter-Bhavan Sports Meet",
+      "achievementDetails": "Inter-campus athletic championship trophy.",
+      "verificationStatus": "Verified Institutional Broadcast",
+      "permissionStatus": "Pending Authorization"
+    },
+    {
+      "id": "soc-ig-04",
+      "platform": "Instagram",
+      "author": "VIT Academy AP",
+      "handle": "@vitjuniorcollege",
+      "authorRole": "Official Institutional Account",
+      "avatar": "assets/images/logo/oxford-vit-crest-transparent.png",
+      "originalUrl": "https://www.instagram.com/vitjuniorcollege/p/DeidsS9jWk8/",
+      "publicationDate": "2026-10-16",
+      "category": "celebrations",
+      "categoryLabel": "Student Wellness & Nutrition",
+      "caption": "Good food supports better focus, steady energy, stronger immunity, and healthy growth. On World Food Day, VIT Junior College reminds students that nutrition plays an important role in concentration, learning stamina, and academic performance. Fuel your mind and body with the right choices every day. #WorldFoodDay #HealthyStudents #VITJuniorCollege",
+      "mediaDescription": "Hygienic campus dining hall and student nutrition program.",
+      "image": "assets/images/students/ig-post-08-student-dining-nutrition.jpg",
+      "campus": "Balaji Bhavan Residential Mess",
+      "event": "World Food Day Student Wellness Program",
+      "achievementDetails": "Steam-cooked balanced dietary regimen for residential competitive scholars.",
+      "verificationStatus": "Verified Institutional Broadcast",
+      "permissionStatus": "Pending Authorization"
+    },
+    {
+      "id": "soc-ig-03",
+      "platform": "Instagram",
+      "author": "VIT Academy AP",
+      "handle": "@vitjuniorcollege",
+      "authorRole": "Official Institutional Account",
+      "avatar": "assets/images/logo/oxford-vit-crest-transparent.png",
+      "originalUrl": "https://www.instagram.com/vitjuniorcollege/reel/Deefvg2geHF/",
+      "publicationDate": "2026-10-14",
+      "category": "celebrations",
+      "categoryLabel": "Youth Cultural Fest & Dance",
+      "caption": "Feel the Beat. Own the Stage. Celebrate the Talent! The stage came alive with rhythm, energy, and spectacular performances at JALSA – Dance Competition, VIT Junior College, Guntur! Our talented students showcased their passion, teamwork, and artistic spirit. Highlights from an evening filled with music, joy, and celebration! #VITJuniorCollege #Jalsa2026 #DanceCompetition #GunturCampus #CulturalFest",
+      "mediaDescription": "Vibrant dance performances and student cultural celebration at VIT Junior College Guntur Campus.",
+      "image": "assets/images/cultural-activities/ig-post-10-jalsa-dance-competition-guntur.jpg",
+      "campus": "Balaji Tower Campus, Guntur",
+      "event": "JALSA Inter-Campus Cultural Dance Competition",
+      "achievementDetails": "Annual collegiate cultural talent championship.",
+      "verificationStatus": "Verified Institutional Broadcast",
+      "permissionStatus": "Pending Authorization"
+    },
+    {
+      "id": "soc-ig-02",
+      "platform": "Instagram",
+      "author": "VIT Academy AP",
+      "handle": "@vitjuniorcollege",
+      "authorRole": "Official Institutional Account",
+      "avatar": "assets/images/logo/oxford-vit-crest-transparent.png",
+      "originalUrl": "https://www.instagram.com/vitjuniorcollege/reel/De_-AUHm8f_/",
+      "publicationDate": "2026-10-27",
+      "category": "achievements",
+      "categoryLabel": "Academic Consultation & PTM",
+      "caption": "Strong communication builds stronger futures! At VIT Junior College, we believe that student success begins with a strong partnership between parents and teachers. Our Parent–Teacher Meeting (PTM) brought together parents, educators, and management to discuss academic progress, personal growth, and strategies for upcoming competitive exams. #VITJuniorCollege #PTM #AcademicExcellence",
+      "mediaDescription": "Parent-Teacher interactive session and academic progress review with faculty and directors.",
+      "image": "assets/images/events/ig-post-03-parent-teacher-meeting.jpg",
+      "campus": "KSR Towers & Academic Directorate",
+      "event": "Annual Parent–Teacher Meeting (PTM)",
+      "achievementDetails": "Individual academic error-analysis reporting for intermediate and competitive batches.",
+      "verificationStatus": "Verified Institutional Broadcast",
+      "permissionStatus": "Pending Authorization"
+    },
+    {
+      "id": "soc-ig-01",
+      "platform": "Instagram",
+      "author": "VIT Academy AP",
+      "handle": "@vitjuniorcollege",
+      "authorRole": "Official Institutional Account",
+      "avatar": "assets/images/logo/oxford-vit-crest-transparent.png",
+      "originalUrl": "https://www.instagram.com/vitjuniorcollege/p/DfJFmv9jJNj/",
+      "publicationDate": "2026-10-31",
+      "category": "celebrations",
+      "categoryLabel": "National Observance & Leadership",
+      "caption": "Unity gives strength to a nation, and discipline gives direction to every student’s success. On Sardar Vallabhbhai Patel Jayanti and Rashtriya Ekta Diwas, VIT Junior College remembers the leader whose role in integrating princely states helped strengthen independent India. For students, his life is a lesson in leadership, discipline, and perseverance. #SardarPatelJayanti #RashtriyaEktaDiwas #VITJuniorCollege #StudentLeadership #Narasaraopet",
+      "mediaDescription": "Sardar Vallabhbhai Patel Jayanti and Rashtriya Ekta Diwas commemoration at Oxford VIT Narasaraopet campus.",
+      "image": "assets/images/events/ig-post-02-rashtriya-ekta-diwas.jpg",
+      "campus": "Yashoda Bhavan, Narasaraopet",
+      "event": "Rashtriya Ekta Diwas Commemoration",
+      "achievementDetails": "Campus-wide student leadership pledge and unity symposium.",
+      "verificationStatus": "Verified Institutional Broadcast",
+      "permissionStatus": "Pending Authorization"
+    },
     {
       "id": "soc-01",
       "platform": "Instagram",
